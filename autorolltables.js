@@ -35,7 +35,7 @@ document.getElementById("selectlist").onchange = document.getElementById("select
   side(" ");
   side("Suggested Use: " + roll_table[index].use);
   side(" ");
-  side("Rolls:");
+  side("Rolls: " + roll_table[index].rolls.length);
   side(" ");
   for (var i = 0; i < roll_table[index].rolls.length; i++) {
     side(roll_table[index].rolls[i].title);
