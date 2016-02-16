@@ -6,30 +6,48 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <script type="text/javascript" src="table.js"></script>
+
+  <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Quicksand:400,700|Questrial" rel="stylesheet" />
+  <link href="default.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
+
 </head>
 
 
 <body>
-
+  <div id="header" class="container">
+    <div id="logo">
+      <h1><img src="http://uxrepo.com/static/icon-sets/windows/svg/dnd.svg" width="40" height="40"> Auto Roll Tables</h1>
+    </div>
+  </div>
+<div id="page-wrapper">
+<div id="page" class="container">
+  Select a table from the list on the left and click Roll
   <table border=0 cellpadding='5px'>
     <tr>
       <td valign='top'>
-        <input id='filter' value="filter" style="width:200px; display:none;">
-        <select id='selectlist' size="20" onClick="selected();" style="width:207px;">
+        <!-- <input id='filter' value="filter" style="width:200px; display:none;"> -->
+        <select id='selectlist' size="25" onClick="selected();" class="select">
         </select>
         <br>
-        <input type='button' id="roll" value='roll' onClick='jsRoll();' style="width:100%;">
+        <a class="button" id="roll" value="Roll" style="width:100%;">Roll</a>
+        <!-- <input type='button' id="roll" value='roll' onClick='jsRoll();' style="width:100%;"> -->
         <br>
         <br>
         <textarea id='output' style='height:100px;display:none;'></textarea>
         <br>
       </td>
-      <td style="width:100%;">
-        <textarea id="rightview" style='height:400px; width:100%;' class="js-copytextarea"></textarea><br/>
-        <input type='button' id='clipboard' value='Copy to Clipboard' style="width:100%" class="js-textareacopybtn">
+      <td style="width:100%;" valign='top'>
+        <textarea id="rightview" style='height:374px; width:100%;' class="js-copytextarea display"></textarea><br/>
+        <a class="button js-textareacopybtn" id="clipboard" value="Copy to Clipboard" style="width:100%;">Copy to Clipboard</a>
+        <!-- <input type='button' id='clipboard' value='Copy to Clipboard' style="width:100%" class="js-textareacopybtn"> -->
       </td>
     </tr>
   </table>
+
+
+</div>
+</div>
 </body>
 
 <script type="text/javascript" src="autorolltables.js"></script>
