@@ -3860,7 +3860,7 @@ top.roll_table = [
 "Throwing prey off a roof.",
 "Severely beating prey.",
 "Dismembering prey.",    ] },
-{  "title": "d6 The vampire’s goals include...",   "roll": [
+{  "title": "d8 The vampire’s goals include...",   "roll": [
 "Procreating.",
 "Corrupting and influencing the politics of the city or region.",
 "Domination of the city or region’s politics.",
@@ -5090,7 +5090,7 @@ top.roll_table = [
 "A hawk-like nose.",
 "A wide nose.",
 "A delicate nose.",    ] },
-{  "title": "d6 Chin or jaw: He/she has...",   "roll": [
+{  "title": "d8 Chin or jaw: He/she has...",   "roll": [
 "A pronounced chin.",
 "A cleft chin.",
 "A dimple on the chin.",
@@ -5164,7 +5164,7 @@ top.roll_table = [
 "Soft hands.",
 "A light touch.",
 "A heavy touch.",    ] },
-{  "title": "d4 Scar: The person has...",   "roll": [
+{  "title": "d8 Scar: The person has...",   "roll": [
 "A jagged scar.",
 "A dark purple scar.",
 "An angry red scar.",
@@ -5914,7 +5914,8 @@ top.roll_table = [
 "Dressed in motley.",
 "Dressed as a faux knight.",
 "Dressed as a faux wizard.",    ] },
-{  "title": "    Falling stunts.",   "roll": [
+{  "title": "d8 The fool gets the most laughs from...",   "roll": [
+"Falling stunts",
 "Gorging himself with food or drink.",
 "Singing silly songs.",
 "Being hit over the head.",
@@ -6348,7 +6349,7 @@ top.roll_table = [
 "Purchase or distribute crops.",
 "Purchase some livestock.",
 "Listen to a tale of woe.",    ] },
-{  "title": "d8 The peasant's primary crops and market fare include...",   "roll": [
+{  "title": "d6 The peasant's primary crops and market fare include...",   "roll": [
 "Grains (d6): 1. barley; 2. oats; 3. corn; 4. rice; 5. rye; 6. wheat.",
 "Meats (d8): 1. beef; 2. chicken; 3. duck; 4. goat; 5. goose; 6. pigeon; 7. pork; 8. mutton.",
 "Fruits (d8): 1. apples; 2. blackberries; 3. blueberries; 4. cherries; 5. lemons; 6. pears; 7. plums; 8. raspberries.",
@@ -6903,7 +6904,7 @@ top.roll_table = [
 "Bones, scalps, teeth, or other grisly trophies.",    ] },    ], },
 
 {  "title": "Military - Stable Hand/Squire/Valet",  "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
-{  "title": "d8 The servant is...",   "roll": [
+{  "title": "d7 The servant is...",   "roll": [
 "A squire from a noble house.",
 "A frightened link boy.",
 "A long-time valet or reformed criminal.",
@@ -7720,7 +7721,7 @@ top.roll_table = [
 "A wound from a blade.",
 "Falling from a great height.",
 "Old age.",    ] },
-{  "title": "d6 The seer is looking for...",   "roll": [
+{  "title": "d8 The seer is looking for...",   "roll": [
 "The answer to a riddle or prophecy.",
 "New clients for a reading.",
 "News regarding a missing person.",
@@ -7974,7 +7975,7 @@ top.roll_table = [
 "A ruffled shirt.",
 "A stylish coat.",
 "A handkerchief in his breast pocket.",    ] },
-{  "title": "d12 The thief carries...",   "roll": [
+{  "title": "d20 The thief carries...",   "roll": [
 "Some hemp rope and a silk handkerchief.",
 "Several over-sized sacks.",
 "Several torches and a much-used knife.",
@@ -8070,7 +8071,7 @@ top.roll_table = [
 "A tavern.",
 "The docks.",
 "The bridge.",    ] },
-{  "title": "d12 The thief's favorite marks include...",   "roll": [
+{  "title": "d20 The thief's favorite marks include...",   "roll": [
 "Fishermen and sailors.",
 "Beggars and hobos.",
 "Merchants and moneychangers.",
@@ -9744,7 +9745,7 @@ top.roll_table = [
 "The toothless mop-hand reminisces with a hobgoblin military has-been over ales about how an otyugh in the loo isn't as bad as the time a carrion crawler was in there.",
 "The barmaid is a doppelganger. When she returns to your table with your drinks she has taken the form of one of your party.",
 "A fat priest is doing an excellent jiggly dance in rhythm with the music. Either that or a gelatinous cube has made it's way onto the dance floor?",    ] },
-{  "title": "d5 Questionable drinks",   "roll": [
+{  "title": "d6 Questionable drinks",   "roll": [
 "Tonight's special cocktail: Pixiewine. Each glass of this crisp, floral-scented wine is served with a pixie.",
 "Tonight's special cocktail: Suckerpunch. Each glass of this potent purple-red punch has several small writhing tentacles that reach out of the glass to attach to your face with their suckers. It actually feels kind of nice.",
 "Tonight's special: Bring-Your-Own-Horn. Bring the horn of your favorite beast or monstrous humanoid (any size!), and we'll fill it with cheap ale or wine for 2 cp.",
@@ -10200,7 +10201,7 @@ top.roll_table = [
 "An empty coffin",    ] },    ], },
 
 {  "title": "Forest",  "use": "These are tables for adding quick flavor and encounters to a forested region. You can use these to generate a single forest location for an encounter or to set up a map of a forest region.",   "rolls": [
-{  "title": "d10 Interesting Location: You find...",   "roll": [
+{  "title": "d12 Interesting Location: You find...",   "roll": [
 "A cavern behind a waterfall.",
 "A small cave in the bank of a creek.",
 "An entrance to a rocky cave.",
@@ -10485,7 +10486,7 @@ top.roll_table = [
 "A forgotten king.",
 "An evil queen.",
 "A dark sorcerer.",    ] },
-{  "title": "d10 Who lives in the ancient ruins now?",   "roll": [
+{  "title": "d12 Who lives in the ancient ruins now?",   "roll": [
 "A high elf guardian.",
 "A wood elf druid.",
 "A pack of blink dogs.",
@@ -10574,7 +10575,7 @@ top.roll_table = [
 "An old witch.",
 "A lost child.",
 "A gravedigger.",    ] },
-{  "title": "d10 What’s in the cave/cavern?",   "roll": [
+{  "title": "d12 What’s in the cave/cavern?",   "roll": [
 "Several skeletons.",
 "Lots of bats.",
 "Many spider webs.",
@@ -10600,7 +10601,7 @@ top.roll_table = [
 "A skeletal hound.",
 "An ancient vampire.",
 "Huge, disorganized piles of bones.",    ] },
-{  "title": "d12 Who is in the grave?",   "roll": [
+{  "title": "d10 Who is in the grave?",   "roll": [
 "The corpse of a young maiden.",
 "The corpse of a child.",
 "The corpse of an old man.",
