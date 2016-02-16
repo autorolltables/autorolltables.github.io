@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC
+  "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ar" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <script type="text/javascript" src="table.js"></script>
+</head>
+
+
+<body>
+
+  <table border=0 cellpadding='5px'>
+    <tr>
+      <td valign='top'>
+        <input id='filter' value="filter" style="width:200px; display:none;">
+        <select id='selectlist' size="20" onClick="selected();" style="width:207px;">
+        </select>
+        <br>
+        <input type='button' id="roll" value='roll' onClick='jsRoll();' style="width:100%;">
+        <br>
+        <br>
+        <textarea id='output' style='height:100px;display:none;'></textarea>
+        <br>
+      </td>
+      <td style="width:100%;">
+        <textarea id="rightview" style='height:400px; width:100%;' class="js-copytextarea"></textarea><br/>
+        <input type='button' id='clipboard' value='Copy to Clipboard' style="width:100%" class="js-textareacopybtn">
+      </td>
+    </tr>
+  </table>
+</body>
+
+<script type="text/javascript" src="autorolltables.js"></script>
+
+</html>
