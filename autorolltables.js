@@ -25,7 +25,7 @@ function sideClear() {
   return 0;
 }
 
-document.getElementById("selectlist").onclick = function selected() {
+document.getElementById("selectlist").onchange = document.getElementById("selectlist").onclick = function selected() {
   var sel = document.getElementById("selectlist");
   var index = sel.selectedIndex;
   var seltext = sel.options;
@@ -40,7 +40,7 @@ document.getElementById("selectlist").onclick = function selected() {
   for (var i = 0; i < roll_table[index].rolls.length; i++) {
     side(roll_table[index].rolls[i].title);
     for (var z = 0; z < roll_table[index].rolls[i].roll.length; z++) {
-      side(" " + z + " - " + roll_table[index].rolls[i].roll[z]);
+      side(" " + (z+1) + " - " + roll_table[index].rolls[i].roll[z]);
     }
     side(" ");
   }
