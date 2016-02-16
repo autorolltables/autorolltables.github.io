@@ -604,7 +604,7 @@ top.roll_table = [
 "A statue of a recognizable figure.",    ] },    ], },
 
 {   "title": "- Monastery Encounter",   "use": "Use the tables to roll randomly",   "rolls": [
-{  "title": "d10 Encounters: You come upon...",   "roll": [
+{  "title": "d12 Encounters: You come upon...",   "roll": [
 "A bright-eyed student.",
 "An exhausted student.",
 "A patient initiate.",
