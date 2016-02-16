@@ -53,7 +53,7 @@ top.roll_table = [
 "An elderly lord or lady.",
 "A brash, young lord or lady.",
 "A mercenary company.",
-"A fearsome warlord or retired sellsword.",
+"A fearsome warlord or retired sell-sword.",
 "A wealthy merchant.",
 "A retired pirate or thief.",
 "A former adventurer.",
@@ -157,7 +157,7 @@ top.roll_table = [
 {  "title": "d20 Features: You notice...",   "roll": [
 "An armchair flanked by two sconces.",
 "A large armoire or buffet cabinet.",
-"A bench with a cusion.",
+"A bench with a cushion.",
 "A brazier.",
 "A candelabrum on a large table.",
 "A plain chair beside a window.",
@@ -190,8 +190,8 @@ top.roll_table = [
 "A healer checking over his potions.",    ] },
 {  "title": "d10 In peace: You come upon...",   "roll": [
 "The huntsman cleaning a recent kill.",
-"The kennelmaster leading a leashed dog.",
-"The horsemaster instructing a young rider.",
+"The kennel master leading a leashed dog.",
+"The horse master instructing a young rider.",
 "The armorer scolding an apprentice.",
 "A maid fussing over her lady’s dress.",
 "The tutor or sage lost in a book.",
@@ -501,7 +501,7 @@ top.roll_table = [
 "Sacred music.",
 "Ancient wisdom.",
 "Dark prophecies.",
-"Stunning archtecture.",
+"Stunning architecture.",
 "Unusual architecture.",
 "A famous sculpture or painting.",
 "Lengthy prayer services and vigils.",
@@ -516,7 +516,7 @@ top.roll_table = [
 "On the side of a mountain.",
 "Deep within a forest.",
 "Near a desert oasis.",
-"Belowground.",
+"Below ground.",
 "In the heart of a city.",    ] },
 {  "title": "d10 The monastery complex is...",   "roll": [
 "A tight cluster of buildings (or chambers).",
@@ -630,7 +630,7 @@ top.roll_table = [
 "Underneath a city, deep below ground.",
 "Behind walls in a fortified rural location (d4): 1. coastland; 2. farmland; 3. mining country; 4. ranchland.",
 "Below ground, in a hidden rural location (d4): 1. coastland; 2. farmland; 3. mining country; 4. ranchland.",
-"Behind walls in a fortified wilerness location (d6): 1. desert, 2. forest, 3. hills; 4. mountains, 5. swamp; 6. tundra.",
+"Behind walls in a fortified wilderness location (d6): 1. desert, 2. forest, 3. hills; 4. mountains, 5. swamp; 6. tundra.",
 "Below ground, in a hidden wilderness location (d6): 1. desert, 2. forest, 3. hills; 4. mountains, 5. swamp; 6. tundra.",    ] },
 {  "title": "d8 The prison was built by...",   "roll": [
 "A wise king or queen.",
@@ -838,12 +838,12 @@ top.roll_table = [
 "Lively prayer services and debates.",    ] },
 {  "title": "d6 The temple’s entrance is guarded by...",   "roll": [
 "A sworn order of devout warriors.",
-"Sellswords.",
+"Sell-swords.",
 "Frightening statues of monstrous beings.",
 "Impressive, colossal statues of warriors.",
 "Statues of beautiful maidens, beckoning visitors into a trap.",
 "Nothing; the temple welcomes all.",    ] },
-{  "title": "d8 The temple’s main floorplan is...",   "roll": [
+{  "title": "d8 The temple’s main floor plan is...",   "roll": [
 "Circular.",
 "Ellipsoidal.",
 "Triangular.",
@@ -975,7 +975,7 @@ top.roll_table = [
 "Difficult to access (d4): 1. up or down a cliff face; 2. down a deep hole; 3. in an underwater tunnel; 4. through an illusory rock or wall.",    ] },
 {  "title": "d10 The tomb’s entrance is guarded by...",   "roll": [
 "A sworn order of devout warriors.",
-"Sellswords.",
+"Sell-swords.",
 "Large, frightening statues of beasts (d8): 1. bats; 2. bears; 3. dragons; 4. eagles; 5. lions; 6. ravens; 7. snakes; 8. wolves.",
 "Impressive, colossal statues of warriors.",
 "Statues of beautiful maidens, beckoning visitors into a trap.",
@@ -1030,7 +1030,7 @@ top.roll_table = [
 "A chapel dedicated to protecting the souls of the deceased.",
 "A chapel dedicated to aiding the journey of the souls of the deceased.",
 "A grand crypt for a person of importance (d4): 1. well-known hero; 2. high priest; 3. powerful noble; 4. wealthy merchant.",
-"A false crypt to attract and to trap graverobbers and treasure hunters.",
+"A false crypt to attract and to trap grave-robbers and treasure hunters.",
 "A crypt for immediate family members.",
 "A crypt for previous generations of the family.",
 "A crypt for the spouse of the deceased.",
@@ -1039,7 +1039,7 @@ top.roll_table = [
 "A crypt for devoted servants or slaves.",
 "A room dedicated for specific rituals (d3): 1. divinations; 2. funerals; 3. necromancy.",
 "Gallery dedicated to the deceased (d3): 1. trophies; 2. statues; 3. paintings.",
-"A guardroom with guards (d8): 1. ghosts; 2. golems; 3. knights; 4. sellswords; 5. cultists; 6. skeletons; 5. wights; 6. zombies.",
+"A guardroom with guards (d8): 1. ghosts; 2. golems; 3. knights; 4. sell-swords; 5. cultists; 6. skeletons; 5. wights; 6. zombies.",
 "A priest’s robing room.",
 "Storage room for embalming tools.",
 "Storage room for tools and materials to maintain the tomb.",
@@ -1158,14 +1158,14 @@ top.roll_table = [
 "Burning alive.",
 "Feeding to animals.",    ] },
 {  "title": "d12 Guildmembers typically arm themselves with...",   "roll": [
-"Poisoned daggers and shortswords.",
+"Poisoned daggers and short swords.",
 "Throwing knives.",
 "Over-sized daggers.",
 "Serrated daggers.",
 "Daggers and crossbows.",
 "Axes and knives.",
 "Bows and arrows.",
-"Shortswords and crossbows.",
+"Short swords and crossbows.",
 "Sickles and scythes.",
 "Garrotes and daggers.",
 "Exotic blades and blowguns.",
@@ -1608,8 +1608,8 @@ top.roll_table = [
 {  "title": "d12 Many of the mercenaries in the troop are wielding...",   "roll": [
 "Longswords.",
 "Longswords and shields.",
-"Shortswords and spears.",
-"Shortswords and shields.",
+"Short swords and spears.",
+"Short swords and shields.",
 "Longswords and crossbows.",
 "Greatswords.",
 "Spears and shields.",
@@ -1836,11 +1836,11 @@ top.roll_table = [
 "Well-worn scale armor.",
 "Newly-forged scale armor.",    ] },
 {  "title": "d12 Most soldiers in the company are equipped with...",   "roll": [
-"Longswords and shortbows.",
+"Longswords and short bows.",
 "Longswords and crossbows.",
 "Longswords and shields.",
-"Shortswords and longbows.",
-"Shortswords and shields.",
+"Short swords and longbows.",
+"Short swords and shields.",
 "Mornngstars and crossbows.",
 "Battleaxes and handaxes.",
 "Warhammers and shields.",
@@ -2624,7 +2624,7 @@ top.roll_table = [
 "A wolf.",
 "A bear.",
 "An eagle.",    ] },
-{  "title": "d10 Gangmembers often sport matching...",   "roll": [
+{  "title": "d10 Gang members often sport matching...",   "roll": [
 "Shirts.",
 "Jackets.",
 "Scarves.",
@@ -2666,7 +2666,7 @@ top.roll_table = [
 "Revenge against a rival gang in another city.",
 "Revenge against the city's elite.",
 "Rebellion against the city's elite.",    ] },
-{  "title": "d10 Gangmembers typically arm themselves with...",   "roll": [
+{  "title": "d10 Gang members typically arm themselves with...",   "roll": [
 "Wooden clubs.",
 "Throwing knives.",
 "Over-sized daggers.",
@@ -2677,7 +2677,7 @@ top.roll_table = [
 "Shortswords.",
 "Brass knuckles.",
 "Bare fists.",    ] },
-{  "title": "d10 Gangmembers typically fight with...",   "roll": [
+{  "title": "d10 Gang members typically fight with...",   "roll": [
 "Swarm tactics.",
 "Hit-and-run tactics.",
 "Ambush tactics.",
@@ -2689,7 +2689,7 @@ top.roll_table = [
 "Kicking and stomping.",
 "Lots of head-butting.",    ] },
 {  "title": "d12 The gang's headquarters is hidden in or near...",   "roll": [
-"The residence of the leader or a senior gangmember.",
+"The residence of the leader or a senior gang member.",
 "An artisan's shop or guildhall.",
 "A merchant's office.",
 "A tavern.",
@@ -2705,7 +2705,7 @@ top.roll_table = [
 "Fishermen and sailors.",
 "Beggars and thieves.",
 "Merchants and moneychangers.",
-"Jewelers and gemcutters.",
+"Jewelers and gem cutters.",
 "Politicians and magistrates.",
 "Guards and sheriffs.",
 "Soldiers and warriors.",
@@ -2714,7 +2714,7 @@ top.roll_table = [
 "Servants and slaves.",
 "Priests and sages.",
 "Women and children.",    ] },
-{  "title": "d12 Distinguishing feature for an individual: The gangmember has...",   "roll": [
+{  "title": "d12 Distinguishing feature for an individual: The gang member has...",   "roll": [
 "A nose ring.",
 "Shiny leather boots.",
 "A hole in the toe of one boot.",
@@ -2984,7 +2984,7 @@ top.roll_table = [
 "A finely-crafted bow or knife.",
 "A vial containing a potent potion.",
 "Several magical mushrooms.",
-"A variety of herbs commonly used in potionmaking.",
+"A variety of herbs commonly used in potion making.",
 "A message from a faerie king or queen.",
 "A token from a past love.",
 "A string instrument (d4): 1. fiddle; 2. harp; 3. lute; 4. lyre.",
@@ -3051,7 +3051,7 @@ top.roll_table = [
 "Elves and rangers.",
 "Dwarves and gnomes.",    ] },
 {  "title": "d10 The goblins’ are currently planning a raid on...",   "roll": [
-"The residence of the leader or a senior gangmember.",
+"The residence of the leader or a senior gang member.",
 "An artisan's shop or guildhall.",
 "A merchant's office.",
 "A tavern or inn.",
@@ -3069,7 +3069,7 @@ top.roll_table = [
 "A well-known goblin war hero.",
 "A ruthless goblin hexer.",
 "A cunning gobliness.",
-"A brutal hobgoblin warpriest.",
+"A brutal hobgoblin war priest.",
 "A brilliant hobgoblin warlord.",
 "A calculating bugbear assassin.",    ] },
 {  "title": "d6 The goblins’ goals include (boss and rank-and-file members could have different goals)...",   "roll": [
@@ -3153,7 +3153,7 @@ top.roll_table = [
 "Burn scars.",
 "Only one ear.",
 "No front teeth.",
-"An unusal tattoo on the forehead.",
+"An unusual tattoo on the forehead.",
 "Stitches closing a wound on the jaw.",
 "A topknot above it.",
 "Several muddy smudges.",
@@ -3299,14 +3299,14 @@ top.roll_table = [
 "A barkeep or barmaid.",
 "A barbarian or gladiator.",
 "An herbalist or healer.",
-"A soldier or sellsword.",
+"A soldier or sell-sword.",
 "A hunter or assassin.",
 "A thief or bandit.",
 "A smuggler or con artist.",
 "A sailor or pirate.",    ] },
 {  "title": "d12 In humanoid form, the beastshifter’s face has...",   "roll": [
 "Unsightly nose and ear hair.",
-"A garish earing.",
+"A garish earring.",
 "An empty eye socket.",
 "A grisly scar.",
 "A grim look.",
@@ -3544,7 +3544,7 @@ top.roll_table = [
 "Jagged greatswords and shortbows.",
 "Greataxes and javelins.",    ] },    ], },
 
-{  "title": "- Indiviudal Orcs",   "use": "Use the tables to roll randomly",   "rolls": [
+{  "title": "- Individual Orcs",   "use": "Use the tables to roll randomly",   "rolls": [
 {  "title": "d8 Appearance: The orc has...",   "roll": [
 "Pale green skin.",
 "Yellowish green skin.",
@@ -3692,7 +3692,7 @@ top.roll_table = [
 "A minstrel or singer.",
 "A priest or monk.",
 "An herbalist or healer.",
-"A soldier or sellsword.",
+"A soldier or sell-sword.",
 "A cultist or preacher",
 "A hunter or assassin.",
 "A thief or bandit.",
@@ -3828,7 +3828,7 @@ top.roll_table = [
 "A con artist or gambler.",
 "A harlot or madame.",
 "A hunter or woodsman.",
-"A knight or sellsword.",
+"A knight or sell-sword.",
 "A lord or lady.",
 "A priest or monk.",
 "A sailor or pirate.",
@@ -4456,9 +4456,9 @@ top.roll_table = [
 "Was a force of evil.",
 "Had no magical talent.",    ] },    ], },
 
-{  "title": "Random Magical Device Mishaps",   "use": "Stored spell mishaps may not render the device inoperable, merely discharged. But the stored spell must be replaced. If you have sufficient understanding of the device, you can spend one hour repairing it after a stored spell mishap has occurred. You must be able to cast the stored spell (or an appropriate replacement for it) and expend a spell slot of appropriate level in order to do so (DM's discretion). I would use this table for random scroll-scribing mishaps. \n Alchemical Mishaps do not render the device inoperable. However, no one can attempt to operate the device again until its alchemical component has been replaced with the appropriate alchemical item or potion. Results 13-20 on the Alchemical Mishaps table do significant damage to the deivice, rendering it inoperable. If you have sufficient understanding of the device, you can spend one hour (or longer) repairing it after a damaging alchemical mishap has occurred. You might need appropriate tools, need to use an appropriate alchemical item or potion, need to expend a spell slot, or replace mechanical parts.\n A mechanical mishap renders the device inoperable until it is repaired. Repairing the device takes one hour (or longer). You might need appropriate tools, need access to special materials, or need to expend a spell slot.",   "rolls": [
+{  "title": "Random Magical Device Mishaps",   "use": "Stored spell mishaps may not render the device inoperable, merely discharged. But the stored spell must be replaced. If you have sufficient understanding of the device, you can spend one hour repairing it after a stored spell mishap has occurred. You must be able to cast the stored spell (or an appropriate replacement for it) and expend a spell slot of appropriate level in order to do so (DM's discretion). I would use this table for random scroll-scribing mishaps. \n Alchemical Mishaps do not render the device inoperable. However, no one can attempt to operate the device again until its alchemical component has been replaced with the appropriate alchemical item or potion. Results 13-20 on the Alchemical Mishaps table do significant damage to the device, rendering it inoperable. If you have sufficient understanding of the device, you can spend one hour (or longer) repairing it after a damaging alchemical mishap has occurred. You might need appropriate tools, need to use an appropriate alchemical item or potion, need to expend a spell slot, or replace mechanical parts.\n A mechanical mishap renders the device inoperable until it is repaired. Repairing the device takes one hour (or longer). You might need appropriate tools, need access to special materials, or need to expend a spell slot.",   "rolls": [
 {  "title": "d6 Magical Device Mishaps",   "roll": [
-"Nothing happens. You're not sure why. Any further attempts to use the device for the next 24 hours automatically fail, and you trigger a device mishap. (Reroll on this table if you roll a 1 again on subsequent attempts.)",
+"Nothing happens. You're not sure why. Any further attempts to use the device for the next 24 hours automatically fail, and you trigger a device mishap. (Re-roll on this table if you roll a 1 again on subsequent attempts.)",
 "Roll on Stored Spell Mishaps table.",
 "Roll on Alchemical Mishaps table.",
 "Roll on Mechanical Mishaps table.",
@@ -4806,7 +4806,7 @@ top.roll_table = [
 "Gods, you heretic half-wit.",
 "Mortals who aquired great power.",
 "Children of a now dead Pantheon.",
-"Devils who staged a sucessful coup.",
+"Devils who staged a successful coup.",
 "Fake, and their priests are frauds or misguided.",
 "Creatures from a distant plane never heard of.",    ] },
 {  "title": "d6 The gods relationship with their followers...",   "roll": [
@@ -5229,7 +5229,7 @@ top.roll_table = [
 "Foolish",
 "Strict",
 "Agreeable",
-"Mischeivious",
+"Mischievous",
 "Angry",
 "Fearful",
 "Manipulative",
@@ -5692,7 +5692,7 @@ top.roll_table = [
 "A favorite among the ladies.",    ] },
 {  "title": "d12 On the warrior’s face is...",   "roll": [
 "A bone through a nose piercing.",
-"A bone earing.",
+"A bone earring.",
 "An empty eye socket.",
 "A grisly scar.",
 "A serious expression.",
@@ -6146,7 +6146,7 @@ top.roll_table = [
 "A pick-ax and an old map.",
 "A satchel of potions, tonics, and remedies.",
 "A book of archaic earth magic and a bundle of notes.",
-"A knife, some lockpicks, and a lamp.",
+"A knife, some lock picks, and a lamp.",
 "A pair of magnifying glasses and a set of scales.",    ] },    ], },
 
 {  "title": "Dark Elves",  "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
@@ -6625,7 +6625,7 @@ top.roll_table = [
 {  "title": "d6 The servant works for...",   "roll": [
 "The steady pay.",
 "The adventure.",
-"The training and advancement opportunies.",
+"The training and advancement opportunities.",
 "No reason, other than being told.",
 "A chance to escape from life imprisonment.",
 "Romantic devotion.",    ] },
@@ -7983,7 +7983,7 @@ top.roll_table = [
 "A beautiful antique scabbard.",
 "A well-worn lantern.",
 "Climbing gear—pitons, hammer, and rope.",
-"An organized set of lockpicks.",
+"An organized set of lock picks.",
 "A crowbar.",
 "An adjustable lockpick.",
 "A mask.",
@@ -8283,7 +8283,7 @@ top.roll_table = [
 "Vision. The next few nights the vision comes to the seer in dreams",
 "Chanting. Messengers seen by all materialize and begin chanting the prophecy in unison",
 "Scribed. The seer loses control of their hands. The hands begin frantically writing the prophecy on the nearest surface. If no writing utensil is available they write it in their own blood",
-"Unconcious. The seer collapses and begins to experience the prophecy in a dream",
+"Unconscious. The seer collapses and begins to experience the prophecy in a dream",
 "Controlled. The seer very calmly begins speaking the prophecy",
 "Possessed. The seer’s eyes roll back and they mechanically start reciting",
 "Violent. The seer begins convulsing and screaming the prophecy in agony",    ] },
@@ -8389,7 +8389,7 @@ top.roll_table = [
 "the [figure] is dragging away a party member. It looks up and makes eye contact with you",
 "inside of a new nightmare. Take it from the top",    ] },    ], },
 
-{  "title": "Repuations & Rumors",  "use": "These tables are to help you determine what the PC's have heard when they bump into a new group, landmark, or story. The characters didn't live under a rock before they became adventurers, now they can know a bit about the world.",   "rolls": [
+{  "title": "Reputations & Rumors",  "use": "These tables are to help you determine what the PC's have heard when they bump into a new group, landmark, or story. The characters didn't live under a rock before they became adventurers, now they can know a bit about the world.",   "rolls": [
 {  "title": "d10 Mercenary Band, Positive",   "roll": [
 "Spotless, they are a reliable professional",
 "Eccentric, they are a capable professional with unusual methods",
@@ -8523,7 +8523,7 @@ top.roll_table = [
 "Bold. He stole the crown of the Dragon-Emperor right off his head.",
 "Audacious. He stole the maidenhood of the king's own daughter.",
 "Extraordinary. He single-handedly stole an entire wagon train of spices and silver in the Bleak Wastes.",
-"Amorous. He stole the heart of a Southron queen who's been after his head ever since he left her for a fortune teller.",
+"Amorous. He stole the heart of a Southern queen who's been after his head ever since he left her for a fortune teller.",
 "Daring. He stole the spellbook of the most powerful elf-witch in the world.",
 "Heroic. He crept into the Duke's camp and swapped the Duke's map for a phony that led him to maneuver his host right into the rebels trap.",
 "Magnanimous. He slipped in and out of the Pit of Despair six times to bring food and news to the captive prince.",
@@ -8687,7 +8687,7 @@ top.roll_table = [
 "sign post",
 "deep hole in the ground",
 "shop",
-"marketsplace",
+"marketplace",
 "ship",
 "gate",
 "tower",
@@ -8878,7 +8878,7 @@ top.roll_table = [
 "Cliffs of red stone.",
 "Tiny caves in a white hill.",
 "Old fortress ruins.",
-"Dried up creekbed.",
+"Dried up creek bed.",
 "Swift-running river.",
 "Waterfall.",
 "Abandoned village.",
@@ -9017,7 +9017,7 @@ top.roll_table = [
 "banished to another plane",
 "blown up",
 "set on fire",
-"polimorphed into an ottoman",
+"polymorphed into an ottoman",
 "fed to wild animals",
 "thrown into a pit",
 "tricked",
@@ -9114,7 +9114,7 @@ top.roll_table = [
 {  "title": "D20 CLUE a connection to...",   "roll": [
 "a local cult with rather extreme beliefs",
 "a lock of strange fur",
-"a rumoured jealous lover",
+"a rumored jealous lover",
 "a hot tempered spouse",
 "the local child, the one with the strangest eyes",
 "markings of something having entered from beyond",
@@ -9186,7 +9186,7 @@ top.roll_table = [
 "A carriage passing through a rutted street with armed guards and a dangerous looking wizard riding shotgun.",
 "A tailor trying hopelessly to impress a noble women with a variety of dresses, all of which she scoffs at.",
 "A gang of ruffians scoping out potential victims. They give you a nod of acknowledgement, one predator to another.",
-"A strumpet with a face like a racoon checks you out, then resignedly starts walking towards your party while putting on a fake smile.",
+"A strumpet with a face like a raccoon checks you out, then resignedly starts walking towards your party while putting on a fake smile.",
 "A group of guards escorts a morose prisoner to the gallows.",
 "A group of crows flies away from several bodies hanging at the gallows when people approach.",
 "A group of elves pass the party, holding handkerchiefs to their noses.",
@@ -9501,7 +9501,7 @@ top.roll_table = [
 "Soft-Lighted Window.",
 "The Shining Window.",
 "The Lighted Window.",
-"The Pink Winodw.",
+"The Pink Window.",
 "The Welcoming Window.",    ] },
 {  "title": "d20 The brothel is located...",   "roll": [
 "In the slums.",
