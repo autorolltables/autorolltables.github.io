@@ -80,6 +80,7 @@ document.getElementById("roll").onclick = function jsRoll() {
     side(roll_table[index].rolls[i].title + ": " + rand);
     side(" ");
   }
+  document.getElementById("selectlist").focus();
 }
 
 var copyTextareaBtn = document.querySelector('.js-textareacopybtn');
@@ -93,6 +94,7 @@ copyTextareaBtn.addEventListener('click', function(event) {
     var msg = successful ? 'successful' : 'unsuccessful';
     console.log('Copying text command was ' + msg);
     copyTextarea.innerHTML = "";
+    document.getElementById("selectlist").focus();
   } catch (err) {
     console.log('Oops, unable to copy');
   }
