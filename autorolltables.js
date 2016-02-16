@@ -78,7 +78,7 @@ document.getElementById("roll").onclick = function jsRoll() {
   for (var i = 0; i < roll_table[index].rolls.length; i++) {
     var rand = roll_table[index].rolls[i].roll[Math.floor(Math.random() * roll_table[index].rolls[i].roll.length)];
     side(roll_table[index].rolls[i].title + ": " + rand);
-    side(" ");
+    //side(" ");
   }
   document.getElementById("selectlist").focus();
 }
