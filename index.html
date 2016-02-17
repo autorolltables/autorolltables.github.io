@@ -1,23 +1,31 @@
-<!DOCTYPE html PUBLIC
-  "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html lang="ar" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <title>Auto Roll Tables</title>
 
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.js"></script>
+  <script type="text/javascript">
+  if (window.location.protocol == "https:") {
+      var restOfUrl = window.location.href.substr(6);
+      window.location = "http:" + restOfUrl;
+  }
+  </script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Quicksand:400,700|Questrial" rel="stylesheet" />
-  <link rel="stylesheet" href="default.css" type="text/css" media="all" />
-  <link rel="stylesheet" href="fonts.css" type="text/css" media="all" />
+  <!--<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Quicksand:400,700|Questrial" rel="stylesheet" />-->
+  <!--<link rel="stylesheet" href="default.css" type="text/css" media="all" />-->
+  <!--<link rel="stylesheet" href="fonts.css" type="text/css" media="all" />-->
+
+  <link rel="stylesheet" href="defaults.css" type="text/css" media="all" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
   <script src="json/dungeons.js"></script>
   <script src="json/factions.js"></script>
   <script src="json/monsters.js"></script>
   <script src="json/objects.js"></script>
+  <script src="json/npcs.js"></script>
   <script src="json/plots.js"></script>
   <script src="json/settlements.js"></script>
   <script src="json/wilderness.js"></script>
@@ -25,61 +33,98 @@
 </head>
 
 <body>
-  <div id="header" class="container">
-    <div id="logo">
+  <div id="header" class="container-fluid">
+    <div id="logo" class="row">
       <h1><img src="http://uxrepo.com/static/icon-sets/windows/svg/dnd.svg" width="40" height="40" class="ops"> Auto Roll Tables</h1>
-      <div id="menu">
-        <ul>
-          <li class="current page"><a href="#dungeons" accesskey="1" class='menuitem'>Dungeons</a></li>
-          <li><a href="#" accesskey="2" class='menuitem'>Factions</a></li>
-          <li><a href="#" accesskey="3" class='menuitem'>Monsters</a></li>
-          <li><a href="#" accesskey="4" class='menuitem'>Objects</a></li>
-          <li><a href="#" accesskey="5" class='menuitem'>Plots</a></li>
-          <li><a href="#" accesskey="6" class='menuitem'>Settlements</a></li>
-          <li><a href="#" accesskey="7" class='menuitem'>Wilderness</a></li>
-        </ul>
-        <span id='mydiv'></span>
+    </div>
+
+    <div id="menu-container" class="row">
+      <div id="menu" class="col-md-8 btn-group">
+        <a href="#dungeons" accesskey="1" class='menuitem btn'>Dungeons</a>
+        <a href="#" accesskey="2" class='menuitem btn'>Factions</a>
+        <a href="#" accesskey="3" class='menuitem btn'>Monsters</a>
+        <a href="#" accesskey="4" class='menuitem btn'>Objects</a>
+        <a href="#" accesskey="4" class='menuitem btn'>NPCs</a>
+        <a href="#" accesskey="5" class='menuitem btn'>Plots</a>
+        <a href="#" accesskey="6" class='menuitem btn'>Settlements</a>
+        <a href="#" accesskey="7" class='menuitem btn'>Wilderness</a>
+
+      </div>
+      <div id="side" class="col-md-4">
+        <span class="text-muted right-text">Select a table from the list on the left and click Roll</span>
       </div>
     </div>
   </div>
-<div id="page-wrapper">
-<div id="page" class="container">
-  Select a table from the list on the left and click Roll
-  <table border=0 cellpadding='5px'>
-    <tr>
-      <td valign='top'>
-        <!-- <input id='filter' value="filter" style="width:200px; display:none;"> -->
-        <select id='selectlist' size="25" onClick="selected();" class="select">
+
+  <div id="page" class="container-fluid">
+
+    <div class="row">
+      <div id="quote" class="col-md-12">
+        <p class="lead"></p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div id="leftnav" class="col-xs-12 col-sm-4">
+        <select id='selectlist' size="25" onClick="selected();" class="select form-control">
         </select>
-        <br>
-        <a class="button" id="roll" value="Roll" style="width:100%;">Roll</a>
-        <!-- <input type='button' id="roll" value='roll' onClick='jsRoll();' style="width:100%;"> -->
-        <br>
-        <br>
-        <textarea id='output' style='height:100px;display:none;'></textarea>
-        <br>
-      </td>
-      <td style="width:100%;" valign='top'>
-        <textarea id="rightview" style='height:393px;width:100%;' class="js-copytextarea display" spellcheck="false"></textarea><br/>
-        <a class="button js-textareacopybtn" id="clipboard" value="Copy To Clipboard" style="width:100%;">Copy To Clipboard</a>
-        <!-- <input type='button' id='clipboard' value='Copy to Clipboard' style="width:100%" class="js-textareacopybtn"> -->
-        <!-- <textarea id="debug" style='height:374px; width:100%;display:none;'></textarea> -->
-      </td>
-    </tr>
-  </table>
-</div>
-</div>
+      </div>
+
+      <div id="rightnav" class="col-xs-12 col-sm-8">
+        <textarea id="rightview" rows="21" spellcheck="false" class="js-copytextarea display form-control"></textarea>
+      </div>
+    </div>
+
+    <div class="row">
+      <div id="leftbuttons" class="col-md-4">
+        <a class="button btn bottom-btn" id="roll" value="Roll" style="width:100%;">Roll</a>
+      </div>
+      <div id="rightbuttons" class="col-md-8">
+        <a class="button js-textareacopybtn btn bottom-btn" id="clipboard" value="Copy To Clipboard" style="width:100%;">Copy To Clipboard</a>
+      </div>
+    </div>
+
+    <!--
+    <table border=0 cellpadding='5px'>
+      <tr>
+        <td valign='top'>
+          <!-- <input id='filter' value="filter" style="width:200px; display:none;">
+          <br>
+          <!-- <input type='button' id="roll" value='roll' onClick='jsRoll();' style="width:100%;">
+          <br>
+          <br>
+          <textarea id='output' style='height:100px;display:none;'></textarea>
+          <br>
+        </td>
+        <td style="width:100%;" valign='top'>
+          <br/>
+          <!-- <input type='button' id='clipboard' value='Copy to Clipboard' style="width:100%" class="js-textareacopybtn">
+          <!-- <textarea id="debug" style='height:374px; width:100%;display:none;'></textarea>
+        </td>
+      </tr>
+    </table>
+    -->
 
 
-<div id="copyright" class="container">
-  <p>
-    development by dangeratio | roll tables from OrkishBlade available <a href="https://www.reddit.com/r/BehindTheTables/wiki/index">here</a>
-  </p>
+  </div>
+
+
+
+<div id="copyright" class="container-fluid">
+  <div class="row">&nbsp;</div>
+  <div class="row">
+    <div class="col-md-12">
+      <p class="text-muted">development by dangeratio | roll tables from OrkishBlade available <a href="https://www.reddit.com/r/BehindTheTables/wiki/index">here</a>
+      </p>
+    </div>
+  </div>
 </div>
 
 
 </body>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script type="text/javascript" src="autorolltables.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
 </html>

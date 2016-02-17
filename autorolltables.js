@@ -12,6 +12,7 @@ loadScript("json/dungeons.js", null);
 loadScript("json/factions.js", null);
 loadScript("json/monsters.js", null);
 loadScript("json/objects.js", null);
+loadScript("json/npcs.js", null);
 loadScript("json/plots.js", null);
 loadScript("json/settlements.js", null);
 loadScript("json/wilderness.js", null);
