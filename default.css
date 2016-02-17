@@ -352,7 +352,12 @@
 		color: rgba(255,255,255,0.8);
 	}
 
-
+	img.ops
+	{
+		vertical-align: baseline;
+		opacity: 0.5;
+		filter: alpha(opacity=50); /* For IE8 and earlier */
+	}
 
 /*********************************************************************************/
 /* Menu                                                                          */
@@ -746,6 +751,7 @@
 	{
 		display: inline-block;
 		margin-top: 0em;
+		margin-left: 1em;
 		padding: 0.3em;
 		background: #16A085;
 		line-height: 1.1em;
@@ -755,4 +761,9 @@
 		font-size: 10pt;
 		color: #FFF;
 		border: 1px solid #ccc;
+	}
+
+	#clipboard {
+		margin-left: 1em;
+
 	}
