@@ -5,7 +5,23 @@
 //
 //
 
-var roll_table = top.roll_table;
+var current;
+
+/*
+loadScript("json/dungeons.js", null);
+loadScript("json/factions.js", null);
+loadScript("json/monsters.js", null);
+loadScript("json/objects.js", null);
+loadScript("json/plots.js", null);
+loadScript("json/settlements.js", null);
+loadScript("json/wilderness.js", null);
+*/
+
+function debug(obj) {
+  var output = document.getElementById("output");
+  output.innerHTML = output.innerHTML + obj + '\n';
+  return 0;
+}
 
 function out(obj) {
   var output = document.getElementById("output");
@@ -25,10 +41,73 @@ function sideClear() {
   return 0;
 }
 
+function clearSelect() {
+  var select = document.getElementById("selectlist");
+  var length = select.options.length;
+  for (i = select.options.length; i > -1; i--) {
+    select.options[i] = null;
+  }
+}
+
+
+// return table variable from table name
+function getTable(table_name) {
+  switch(table_name) {
+    case "dungeons":
+      return top.dungeons;
+      break;
+    case "factions":
+      return top.factions;
+      break;
+    case "monsters":
+      return top.monsters;
+      break;
+    case "npcs":
+      return top.npcs;
+      break;
+    case "objects":
+      return top.objects;
+      break;
+    case "plots":
+      return top.plots;
+      break;
+    case "settlements":
+      return top.settlements;
+      break;
+    case "wilderness":
+      return top.wilderness;
+      break;
+    default:
+      return top.dungeons;
+      break;
+  }
+}
+
+
+// fill select table helper function
+function loadSelect(curr_table) {
+  clearSelect();
+
+  var selectlist = document.getElementById("selectlist");
+  var rollbutton = document.getElementById("roll");
+
+  current = getTable(curr_table.toLowerCase());
+
+  //alert(current[0].title);
+
+  for (var i = 0; i < current.length; i++) {
+    selectlist.options[selectlist.options.length] = new Option(current[i].title, current[i].title);
+  }
+
+}
+
+
+// handle new selections
 document.getElementById("selectlist").onchange = document.getElementById("selectlist").onclick = function selected() {
   var sel = document.getElementById("selectlist");
   var index = sel.selectedIndex;
   var seltext = sel.options;
+  roll_table = current;
 
   sideClear();
   side("Title: " + roll_table[index].title);
@@ -47,22 +126,25 @@ document.getElementById("selectlist").onchange = document.getElementById("select
 
 }
 
+// initial load of select list
 function init() {
+  // default to dungeons
+  current = top.dungeons;
+
   // fill select
   var selectlist = document.getElementById("selectlist");
   var rollbutton = document.getElementById("roll");
 
-  for (var i = 0; i < roll_table.length; i++) {
-    var obj = roll_table[i];
-    selectlist.options[selectlist.options.length] = new Option(roll_table[i].title, roll_table[i].title);
+  for (var i = 0; i < current.length; i++) {
+    var obj = current[i];
+    selectlist.options[selectlist.options.length] = new Option(current[i].title, current[i].title);
   }
 
-  //selectlist.onclick = selected();
-  //rollbutton.onclick = jsRoll();
 }
 
+
+// roll button
 document.getElementById("roll").onclick = function jsRoll() {
-  //roll_table
   var sel = document.getElementById("selectlist");
   var index = sel.selectedIndex;
   var seltext = sel.options;
@@ -83,8 +165,9 @@ document.getElementById("roll").onclick = function jsRoll() {
   document.getElementById("selectlist").focus();
 }
 
-var copyTextareaBtn = document.querySelector('.js-textareacopybtn');
 
+// copy to clipboard
+var copyTextareaBtn = document.querySelector('.js-textareacopybtn');
 copyTextareaBtn.addEventListener('click', function(event) {
   var copyTextarea = document.querySelector('.js-copytextarea');
   copyTextarea.select();
@@ -101,4 +184,20 @@ copyTextareaBtn.addEventListener('click', function(event) {
 });
 
 
-init();
+// menu
+//
+$(function() {
+  $(".menuitem").click(function() {
+    loadSelect($(this).html());
+  });
+});
+
+$(function() {
+  $(".menuitem").mouseover(function() {
+    loadSelect($(this).html());
+  });
+});
+
+$(document).ready(function() {
+  init();
+});

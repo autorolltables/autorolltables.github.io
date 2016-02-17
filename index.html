@@ -7,19 +7,39 @@
   <title>Auto Roll Tables</title>
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <script type="text/javascript" src="table.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.js"></script>
 
   <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Quicksand:400,700|Questrial" rel="stylesheet" />
-  <link href="default.css" rel="stylesheet" type="text/css" media="all" />
-  <link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
+  <link rel="stylesheet" href="default.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="fonts.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+  <script src="json/dungeons.js"></script>
+  <script src="json/factions.js"></script>
+  <script src="json/monsters.js"></script>
+  <script src="json/objects.js"></script>
+  <script src="json/plots.js"></script>
+  <script src="json/settlements.js"></script>
+  <script src="json/wilderness.js"></script>
 
 </head>
-
 
 <body>
   <div id="header" class="container">
     <div id="logo">
-      <h1><img src="http://uxrepo.com/static/icon-sets/windows/svg/dnd.svg" width="40" height="40"> Auto Roll Tables</h1>
+      <h1><img src="http://uxrepo.com/static/icon-sets/windows/svg/dnd.svg" width="40" height="40" class="ops"> Auto Roll Tables</h1>
+      <div id="menu">
+        <ul>
+          <li class="current page"><a href="#dungeons" accesskey="1" class='menuitem'>Dungeons</a></li>
+          <li><a href="#" accesskey="2" class='menuitem'>Factions</a></li>
+          <li><a href="#" accesskey="3" class='menuitem'>Monsters</a></li>
+          <li><a href="#" accesskey="4" class='menuitem'>Objects</a></li>
+          <li><a href="#" accesskey="5" class='menuitem'>Plots</a></li>
+          <li><a href="#" accesskey="6" class='menuitem'>Settlements</a></li>
+          <li><a href="#" accesskey="7" class='menuitem'>Wilderness</a></li>
+        </ul>
+        <span id='mydiv'></span>
+      </div>
     </div>
   </div>
 <div id="page-wrapper">
@@ -40,9 +60,10 @@
         <br>
       </td>
       <td style="width:100%;" valign='top'>
-        <textarea id="rightview" style='height:374px; width:100%;' class="js-copytextarea display" spellcheck="false"></textarea><br/>
-        <a class="button js-textareacopybtn" id="clipboard" value="Copy to Clipboard" style="width:100%;">Copy to Clipboard</a>
+        <textarea id="rightview" style='height:393px;width:100%;' class="js-copytextarea display" spellcheck="false"></textarea><br/>
+        <a class="button js-textareacopybtn" id="clipboard" value="Copy To Clipboard" style="width:100%;">Copy To Clipboard</a>
         <!-- <input type='button' id='clipboard' value='Copy to Clipboard' style="width:100%" class="js-textareacopybtn"> -->
+        <!-- <textarea id="debug" style='height:374px; width:100%;display:none;'></textarea> -->
       </td>
     </tr>
   </table>
@@ -50,7 +71,11 @@
 </div>
 
 
-<div id="copyright" class="container"><p>development by dangeratio | content from OrkishBlade originally posted <a href="https://www.reddit.com/r/DnD/comments/452r6r/a_massive_and_growing_resource_of_random_tables/">here</a></p></div>
+<div id="copyright" class="container">
+  <p>
+    development by dangeratio | roll tables from OrkishBlade available <a href="https://www.reddit.com/r/BehindTheTables/wiki/index">here</a>
+  </p>
+</div>
 
 
 </body>
