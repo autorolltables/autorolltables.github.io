@@ -4,7 +4,7 @@
 
 top.monsters = [
 
-{   "title": "Random Faeriefolk",   "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
+{   "title": "Faeriefolk",   "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
 {  "title": "d12 The faerie is...",   "roll": [
 "A capricious nymph.",
 "An apprehensive nymph.",
@@ -100,7 +100,7 @@ top.monsters = [
 "A piece of sweet cake.",
 "A jug of wine."    ] }    ] },
 
-{   "title": "Random Goblin Gang",   "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
+{   "title": "Goblin Gang",   "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
 {  "title": "d10 The goblins’ primary “business” involves...",   "roll": [
 "Raiding villages and farms.",
 "Burglarizing storehouses and shops.",
@@ -278,7 +278,7 @@ top.monsters = [
 "A nervous twitch.",
 "A difficult time standing still."    ] }    ] },
 
-{   "title": "Random Lizardfolk",   "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
+{   "title": "Lizardfolk",   "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
 {  "title": "d8 Coloring: The lizardolk's scales are...",   "roll": [
 "Mottled green and brown.",
 "Dull and green.",
@@ -329,7 +329,7 @@ top.monsters = [
 "A gnarled wooden staff.",
 "A string of beads made from a variety of materials (d8): 1. bone; 2. clay; 3. copper; 4. silver; 5. stone; 6. teeth; 7. tin; 8. wood."    ] }    ] },
 
-{   "title": "Random Lycanthropes",   "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
+{   "title": "Lycanthropes",   "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
 {  "title": "d12 The beastshifter transforms into...",   "roll": [
 "A grizzly bear.",
 "A black bear.",
@@ -508,7 +508,7 @@ top.monsters = [
 "A spider.",
 "A swine."    ] }    ] },
 
-{   "title": "Random Orkish Clans",   "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
+{   "title": "Orkish Clans",   "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
 {  "title": "d12 The orcs are...",   "roll": [
 "Nomadic hunters, following game.",
 "Raiders displaced from their native lands.",
@@ -713,7 +713,60 @@ top.monsters = [
 "A place to rest and to sharpen weapons.",
 "A strong drink."    ] }    ] },
 
-{   "title": "Random Treefolk",   "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
+{  "title": "Snake Cultists",  "use": "These are tables for generating an interesting snake cultists to serve as foe or foil to your PCs, from slithering assassins to mad, venom-spitting zealots.",   "rolls": [
+{  "title": "d10 Profession: The cultist is...",   "roll": [
+"A cunning warrior.",
+"A battle-tested soldier.",
+"A stealthy assassin.",
+"A fanatical priest or priestess.",
+"A newly initiated acolyte.",
+"A charismatic preacher.",
+"A foolish zealot.",
+"A raving madman or madwoman.",
+"A scaly shapeshifter.",
+"An enthusiastic poisonmaker.",    ] },
+{  "title": "d12 Scaly Obsession: The cultist is particularly fond of or fearful of...",   "roll": [
+"Cobras and asps.",
+"Rattlers and sidewinders.",
+"Pythons and boas.",
+"Sea snakes.",
+"Black dragons.",
+"Green dragons.",
+"Female medusas.",
+"Male medusas.",
+"Giant snakes.",
+"Yuan-ti malisons.",
+"Yuan-ti abominations.",
+"Yuan-ti halfbloods.",    ] },
+{  "title": "d10 Distinguishing Feature: The cultist has...",   "roll": [
+"A bandaged thumb.",
+"A tattoo on the face.",
+"A tear at the knee of his or her robe.",
+"A forked tongue.",
+"A nervous twitch.",
+"Almost no nose.",
+"An unsettling laugh.",
+"A large scar on the throat.",
+"A profuse amount of sweat soaking through his or her robes.",
+"A hissing lisp when he or she speaks.",    ] },
+{  "title": "d6 Goal: The cultist is looking to...",   "roll": [
+"Recruit new members to the cult.",
+"Warn outsiders away from the cult.",
+"Collect captives for human sacrifice.",
+"Lead travelers into a trap near the cult's shrine or temple.",
+"Escape from the clutches of the cult's leadership.",
+"Slip some poison into someone’s drink.",    ] },
+{  "title": "d8 Possessions: The cultist carries or wears...",   "roll": [
+"Several eggs stolen from a snake’s nest.",
+"A necklace or bracelet of snake fangs.",
+"Snakeskin armor or boots.",
+"A book of prayers and curses.",
+"A sharp, ceremonial dagger.",
+"A scimitar and a set of lightweight, supple armor.",
+"A constrictor snake fashioned like a scarf about the shoulders.",
+"Several doses of a deadly poison.",    ] },    ], },
+
+{   "title": "Treefolk",   "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
 {  "title": "d8 The treeperson is...",   "roll": [
 "A dryad enchantress.",
 "A dryad protector.",
@@ -785,7 +838,7 @@ top.monsters = [
 "A sapling from an ancient tree.",
 "A cudgel made from the wood of a legendary tree."    ] }    ] },
 
-{   "title": "Random Restless Undead",   "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
+{   "title": "Restless Undead",   "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
 {  "title": "d20 The person was...",   "roll": [
 "A farmer or herder.",
 "A miner or fisher.",
@@ -928,7 +981,7 @@ top.monsters = [
 "Fidgeting nervously.",
 "Oozing ectoplasm."    ] }    ] },
 
-{   "title": "Random Vampires",   "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
+{   "title": "Vampires",   "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
 {  "title": "d12 In life, the vampire was...",   "roll": [
 "An alchemist or pyromancer.",
 "An assassin or poisonmaker.",
@@ -1109,4 +1162,187 @@ top.monsters = [
 "Garlic.",
 "Silver objects.",
 "Relics of the gods."    ] }    ] },
+
+
+{  "title": "Witches",  "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
+{  "title": "d20 The witch is...",   "roll": [
+"A femme fatale.",
+"The wife of a farmer, fisherman, or miner.",
+"The wife of a soldier.",
+"An old seamstress or weaver.",
+"A peasant girl.",
+"A noble woman.",
+"A slave or servant.",
+"An attractive shopkeeper.",
+"A stern barmaid.",
+"An old fortune teller.",
+"A talented dancer or singer.",
+"A heretical priestess.",
+"An herbalist or healer.",
+"A skilled hunter.",
+"A very young girl",
+"The daughter of a thief.",
+"The daughter of a sailor.",
+"An old crone.",
+"An old widow.",
+"An attractive young widow."    ] },
+{  "title": "d10 The witch learned her craft from...",   "roll": [
+"A fellow witch who kidnapped her as a young girl.",
+"A fellow witch who aided her in a time of need.",
+"A neighbor.",
+"Her mother.",
+"Her older sister.",
+"Her grandmother.",
+"Books of forbidden lore.",
+"Communication with the spirits of the dead.",
+"Consorting with a fiend.",
+"Participating in bacchanalian fey orgies."    ] },
+{  "title": "d12 The witch specializes in...",   "roll": [
+"Charms.",
+"Clairvoyance.",
+"Communing with the dead.",
+"Conjuring evil spirits.",
+"Curses.",
+"Demonology.",
+"Enchantments.",
+"Herbalism.",
+"Hexes.",
+"Poisons.",
+"Potions.",
+"Prophecies."    ] },
+{  "title": "d10 Trade: For coin or barter, the witch will...",   "roll": [
+"Read your palm.",
+"Gaze into her crystal ball.",
+"Contact a dead relative or friend.",
+"Place a hex on an enemy.",
+"Give you a piece of forbidden magical lore.",
+"Enchant an item.",
+"Curse an item.",
+"Prepare an herbal remedy.",
+"Prepare a potion.",
+"Give you an old family recipe."    ] },
+{  "title": "d12 The witch is seeking...",   "roll": [
+"The means to summon a fiend.",
+"The means to control a fiend.",
+"Eternal youth and beauty.",
+"The soul of a specific person.",
+"Vengeance against a powerful person.",
+"A long lost recipe.",
+"Instructions for a powerful ritual.",
+"The wand of a legendary witch or wizard.",
+"The staff of an ancient witch or wizard.",
+"The meaning of a cryptic prophecy.",
+"A baby or young child to steal.",
+"A baby or young child to eat."    ] },
+{  "title": "d8 The witch has uncovered dark secrets. She cannot be killed by...",   "roll": [
+"Hanging or strangulation.",
+"Drowning.",
+"Burning.",
+"Disease.",
+"Poisoning.",
+"The hand of a mortal man.",
+"Falling from a great height.",
+"Old age."    ] },
+{  "title": "d6 The witch prefers to travel by...",   "roll": [
+"Flying broomstick.",
+"Flying mount (giant owl or hippogriff).",
+"Horseback.",
+"Walking.",
+"Transforming into a beast (d8): 1. bat; 2. cat; 3. fox; 4. horse; 5. owl; 6. rat; 7. raven; 8. wolf.",
+"Teleportation."    ] },
+{  "title": "d10 The witch’s home is...",   "roll": [
+"In a cave.",
+"In a swamp.",
+"On an island.",
+"Beneath a large tree in a forest.",
+"In a cottage in the woods.",
+"Hidden in the mountains.",
+"In a quiet village.",
+"Just outside a quiet village.",
+"Down a dark alley in the city.",
+"In the castle or palace of a lord."    ] },
+{  "title": "d12 Distinguishing Feature: The witch has...",   "roll": [
+"A large wart on her nose.",
+"An oversized, crooked nose.",
+"A cute little button nose.",
+"A beauty mark on her cheek.",
+"A hairy mole on her cheek.",
+"A jagged scar on her cheek.",
+"An obnoxious cackling laugh.",
+"A hideous belting laugh.",
+"A nervous twittering laugh.",
+"Long straggly hair.",
+"Long beautiful hair.",
+"Her hair pulled up."    ] },
+{  "title": "d10 The witch's brew is percolating in...",   "roll": [
+"A delicate ceramic tea kettle.",
+"A large cast iron cauldron.",
+"A heavy-bottomed iron pot.",
+"A thick cast iron vat.",
+"A copper tea kettle.",
+"A thick copper vat.",
+"A heavy steel cook-pot.",
+"A blackened steel cauldron.",
+"A thick bronze cauldron.",
+"A large bronze cook-pot."    ] },
+{  "title": "d20 The witch's brew in the cauldron contains...",   "roll": [
+"Eye of newt.",
+"Toe of frog.",
+"Wool of bat.",
+"Tongue of dog.",
+"Adder's fork.",
+"Blind-worm's sting.",
+"Lizard's leg.",
+"Howlet's wing.",
+"Monkey's paw.",
+"Pint of blood.",
+"Pound of flesh.",
+"Cup of mud.",
+"Beak of duck.",
+"Housecat's tail.",
+"Glob of mold.",
+"Rusty nail.",
+"Garlic bulb.",
+"Cob of corn.",
+"Stirge's foot.",
+"Dryad's thorn."    ] },
+{  "title": "d8 The witch is currently brewing...",   "roll": [
+"A love potion.",
+"A fertility tonic.",
+"A magical cure-all.",
+"A terrible poison.",
+"A component for a summoning ritual.",
+"A component for a necromantic ritual.",
+"A component for a polymorphing hex.",
+"A component for a beguiling charm."    ] }    ] },
+
+{  "title": "- Familiar",  "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
+{  "title": "d12 The witch’s familiar is...",   "roll": [
+"An elemental spirit (d8): 1. air; 2. earth; 3. fire; 4. ice; 5. mud; 6. storm; 7. stone; 8. water.",
+"A fey spirit (d4): 1. animated toadstool; 2. pixie; 3. sprite; 4. talking songbird.",
+"A fiendish spirit (d4): 1. demon trapped in a book; 2. devil trapped in a gem; 3. imp; 4. quasit.",
+"An undead creature (d4): 1. crawling crawl; 2. disembodied voice; 3. floating skull; 4. formless ghost.",
+"A bat.",
+"A cat.",
+"An owl.",
+"A snake.",
+"A spider.",
+"A raven.",
+"A rat.",
+"A toad."    ] },
+{  "title": "d12 The witch’s familiar’s manner is...",   "roll": [
+"Calculating.",
+"Clever.",
+"Coy.",
+"Cruel.",
+"Gleeful.",
+"Grumpy.",
+"Insolent.",
+"Shy.",
+"Skittish.",
+"Surly.",
+"Suspicious.",
+"Talkative."    ] }    ] },
+
+
 ];

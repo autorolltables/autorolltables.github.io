@@ -126,7 +126,7 @@ top.wilderness = [
 "A pair of manticores.",
 "A dragon."    ] }    ] },
 
-{  "title": "Desert: Flame-Scorched",  "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
+{  "title": "Desert, Flame-Scorched",  "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
 {  "title": "d10 Interesting Location: You find...",   "roll": [
 "A cavern in a canyon wall.",
 "A hole under a large boulder.",
@@ -240,7 +240,7 @@ top.wilderness = [
 "A pair of manticores.",
 "A dragon."    ] }    ] },
 
-{  "title": "Shadowy Desert",  "use": "These are tables for adding quick flavor and encounters to a bleak, shadowy desert region. You can use these to generate a single wasteland location for an encounter or to set up a map of a shadowy wasteland region.",   "rolls": [
+{  "title": "Desert, Shadowy",  "use": "These are tables for adding quick flavor and encounters to a bleak, shadowy desert region. You can use these to generate a single wasteland location for an encounter or to set up a map of a shadowy wasteland region.",   "rolls": [
 {  "title": "d12 Interesting Location: You find...",   "roll": [
 "A cavern in a canyon wall.",
 "A hole under a large boulder.",
