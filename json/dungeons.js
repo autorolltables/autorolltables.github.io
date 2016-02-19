@@ -3,7 +3,7 @@
 
 top.dungeons = [
 
-  {   "title": "Random Castle: To the keep!...",   "use": "Use the tables to roll randomly",   "rolls": [
+  {   "title": "Castle: To the keep!...",   "use": "Use the tables to roll randomly",   "rolls": [
 
   {  "title": "d10 The castle sits...",   "roll": [
   "Atop a mountain.",
@@ -195,7 +195,116 @@ top.dungeons = [
   "A servant carrying a tray of food.",
   "Several archers practicing in the yard."    ] }    ] },
 
-  {   "title": "Random Cavern",   "use": "These are tables for adding quick flavor and encounters to natural caves and cavern complexes. You can use these to generate a single cavern location for an encounter or to set up a map of a subterranean region.",   "rolls": [
+  {  "title": "Castle Dungeons: In the Darkest Pits…",  "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
+ {  "title": "d6 The dungeon is located...",   "roll": [
+ "In a tower set apart from the main castle.",
+ "Beneath the keep.",
+ "In a flanking tower of the castle.",
+ "Beneath flanking tower in the castle.",
+ "In a corner tower of the castle.",
+ "Beneath the corner tower.",    ] },
+ {  "title": "d4 The dungeon was built...",   "roll": [
+ "As part of the original castle.",
+ "As a later addition.",
+ "For another purpose originally.",
+ "Long before most of the castle.",    ] },
+ {  "title": "d8 The dungeon is...",   "roll": [
+ "A sprawling maze of twisting passages.",
+ "A sprawling maze of narrow passages.",
+ "Organized into small, neat rows of cells or pits.",
+ "Organized around a large central cell block or pit.",
+ "Only a few rooms.",
+ "An endless series of long corridors.",
+ "An endless series of small rooms and staircases.",
+ "A series of corridors with very low ceilings.",    ] },
+ {  "title": "d10 Prisoners are held within...",   "roll": [
+ "Individual cells, in complete isolation.",
+ "Individual cells, but they can see and hear other prisoners.",
+ "Individual cells, but they can hear other prisoners.",
+ "Cells that accommodate up to two prisoners.",
+ "Cells that accommodate up to two prisoners, each shackled to the wall.",
+ "Cells that accommodate up to four prisoners.",
+ "Cells that accommodate up to four prisoners, each shackled to the wall.",
+ "A large chamber with many other prisoners, each shackled to the wall.",
+ "Individual pits or wells, open at the top.",
+ "One or more huge pit with many other prisoners.",    ] },
+ {  "title": "d4 The cells’ (or pits’) condition is...",   "roll": [
+ "Well-maintained; the walls are solid.",
+ "Aging, but sturdy; the walls have some cracks.",
+ "Decrepit; the walls are crumbling.",
+ "So dark it’s difficult to say.",    ] },
+ {  "title": "d4 Prisoners are treated...",   "roll": [
+ "Humanely; they receive reasonable meals, some exercise, and healing when needed.",
+ "Like dogs; they receive poor quality meals and enough healing to keep them alive.",
+ "Like rats; they receive terrible meals and are plagued by sickness.",
+ "Like they don’t exist; occasionally they receive food.",    ] },
+ {  "title": "d10 The dungeon is known for...",   "roll": [
+ "Many prisoners dying in a terrible plague.",
+ "A mass escape in the past.",
+ "The escape of a famous criminal.",
+ "Being the final home of a famous criminal.",
+ "Being the final home of a legendary hero.",
+ "Being haunted by vengeful ghosts.",
+ "Its horrific torture pits.",
+ "Never suffering a successful escape.",
+ "Its quirky jailer.",
+ "The quality of its meals.",    ] },
+ {  "title": "d8 According to rumor, within the castle’s dungeon lies...",   "roll": [
+ "A secret tunnel to the outside.",
+ "The bones of a long-lost hero.",
+ "The preserved head of an ancient villain.",
+ "A terrible beast to which prisoners are fed.",
+ "A missing lord or lady.",
+ "A famous jewel by a notorious prisoner.",
+ "A unique and terrible torture device.",
+ "The bones of a deposed king or queen.",    ] },
+ {  "title": "d10 Rooms: This chamber is...",   "roll": [
+ "A dungeon cell.",
+ "Another dungeon cell.",
+ "A passageway connecting cell blocks.",
+ "A guardroom.",
+ "The barracks.",
+ "The jailer’s quarters.",
+ "A yard or large indoor space for exercise.",
+ "A small dining room.",
+ "An interrogation room.",
+ "A torture chamber.",    ] },
+ {  "title": "d20 Features: You notice...",   "roll": [
+ "A wooden door reinforced with steel bands.",
+ "Steel bars where you expected a stone wall.",
+ "Empty manacles along the wall.",
+ "An empty sconce to hold a torch.",
+ "Distant torchlight.",
+ "The floor is uneven.",
+ "A crack in the stone floor.",
+ "A mouse skittering underfoot.",
+ "The stench of rotting flesh.",
+ "The scent of stale urine.",
+ "A putrid smell.",
+ "A dank and moldy odor.",
+ "An uncomfortable groaning.",
+ "A faint scratching sound.",
+ "An odd tapping sound.",
+ "The squeaking of rats.",
+ "The shouting of distant voices.",
+ "Howls of agony.",
+ "Horrific screams.",
+ "The clanking of chains.",    ] },
+ {  "title": "d12 Escape Encounters: You come upon...",   "roll": [
+ "A snoozing guard or jailer.",
+ "A pair of guards on patrol.",
+ "A quartet of guards playing cards or dice on their break.",
+ "A pack of trained hunting dogs commanded by a high-ranking guard who has been alerted of the escape attempt.",
+ "An inquisitor on-site to interrogate another prisoner about an unrelated case.",
+ "An ear-splitting shriek from a maidservant.",
+ "A wide, well-lit yard that must be crossed with guards watching it from towers.",
+ "A high wall directly in the path of escape.",
+ "A barred window in the path of escape.",
+ "The rat-infested kitchens.",
+ "An imprisoned nobleman who offers to help if you help him escape.",
+ "An imprisoned thief who is bent on revenge.",    ] },    ], },
+
+  {   "title": "Cavern",   "use": "These are tables for adding quick flavor and encounters to natural caves and cavern complexes. You can use these to generate a single cavern location for an encounter or to set up a map of a subterranean region.",   "rolls": [
   {  "title": "d10 Entrance: The cave mouth is...",   "roll": [
   "Wide and tall, letting much daylight into the entry chamber.",
   "A wide sinkhole.",
@@ -344,7 +453,7 @@ top.dungeons = [
   "A soldier (d6): 1. dark elf; 2. duergar; 3. dwarf; 4. goblin; 5. kobold; 6. orc.",
   "A spy (d4): 1. dark elf; 2. duergar; 3. goblin; 4. kobold."    ] }    ] },
 
-  {   "title": "Random Mine",   "use": "These are tables for adding quick flavor and encounters to natural caves and cavern complexes. You can use these to generate a single cavern location for an encounter or to set up a map of a subterranean region.",   "rolls": [
+  {   "title": "Mine",   "use": "These are tables for adding quick flavor and encounters to natural caves and cavern complexes. You can use these to generate a single cavern location for an encounter or to set up a map of a subterranean region.",   "rolls": [
   {  "title": "d20 The mine is a source of...",   "roll": [
   "Chalk.",
   "Coal.",
@@ -477,7 +586,7 @@ top.dungeons = [
   "Prisoners.",
   "Slaves."    ] }    ] },
 
-  {   "title": "Random Monastery",   "use": "Use these tables for laying out an active monastery for your PCs to visit, to infiltrate, or to seek wisdom and training.",   "rolls": [
+  {   "title": "Monastery",   "use": "Use these tables for laying out an active monastery for your PCs to visit, to infiltrate, or to seek wisdom and training.",   "rolls": [
   {  "title": "d12 Visitors to the monastery come seeking...",   "roll": [
   "Ancient knowledge.",
   "Mystic wisdom.",
@@ -613,7 +722,7 @@ top.dungeons = [
   "A strange energy.",
   "A feeling that you’re being watched."    ] }    ] },
 
-  {   "title": "Random Prison",   "use": "Use these tables for quick inspiration to lay out the basics for a prison complex.",   "rolls": [
+  {   "title": "Prison",   "use": "Use these tables for quick inspiration to lay out the basics for a prison complex.",   "rolls": [
   {  "title": "d12 The prison is located...",   "roll": [
   "On a small island on a remote coast.",
   "On a small island near a city.",
@@ -797,7 +906,7 @@ top.dungeons = [
   "He committed an act of fraud.",
   "Someone confused him with someone else."    ] }    ] },
 
-  {   "title": "Random Temple",   "use": "Use these tables for laying out an actively used temple complex. I tend to model temples after churches. There is a primary worship chamber where most prayer ceremonies are held. This chamber's size can vary greatly—in a city, the temple might accommodate 1,000 worshipers or more at a time with room for crowds to spill out into a square in front of the temple; in a rural setting or for an obscure faith, the temple might accommodate 100 worshipers or less. Then there are adjacent rooms, wings, or other nearby buildings to support the operation of the temple. These tables are designed to work primarily with this design model in mind, but other layouts are possible.",   "rolls": [
+  {   "title": "Temple",   "use": "Use these tables for laying out an actively used temple complex. I tend to model temples after churches. There is a primary worship chamber where most prayer ceremonies are held. This chamber's size can vary greatly—in a city, the temple might accommodate 1,000 worshipers or more at a time with room for crowds to spill out into a square in front of the temple; in a rural setting or for an obscure faith, the temple might accommodate 100 worshipers or less. Then there are adjacent rooms, wings, or other nearby buildings to support the operation of the temple. These tables are designed to work primarily with this design model in mind, but other layouts are possible.",   "rolls": [
   {  "title": "d6 Worshipers at the temple pray to...",   "roll": [
   "One god and only one god.",
   "One god primarily, but other gods occasionally or for specific petitions.",
@@ -933,7 +1042,7 @@ top.dungeons = [
   "A member of the temple’s serving staff.",
   "A member of the temple’s guard."    ] }    ] },
 
-  {   "title": "Random Tombs",   "use": "These tables are designed to quickly generate an interesting tomb for your PCs to explore and within which they may die.\nThere are many ways to build a tomb, but most tombs are not terribly complicated. I have tombs for important and wealthy individuals in mind with this set of tables. Each tomb will likely have an entry chamber that the PCs will find after passing through the tomb's entrance. The tomb will also have a grand crypt where the deceased individual honored by the tomb is buried—or, where it appears that the person is buried. Other functional rooms and crypts will be arranged in some manner that makes sense in relation to the entry chamber and the grand crypt, or at least makes sense in terms of the history of the tomb's building (and possible expansions).",   "rolls": [
+  {   "title": "Tombs",   "use": "These tables are designed to quickly generate an interesting tomb for your PCs to explore and within which they may die.\nThere are many ways to build a tomb, but most tombs are not terribly complicated. I have tombs for important and wealthy individuals in mind with this set of tables. Each tomb will likely have an entry chamber that the PCs will find after passing through the tomb's entrance. The tomb will also have a grand crypt where the deceased individual honored by the tomb is buried—or, where it appears that the person is buried. Other functional rooms and crypts will be arranged in some manner that makes sense in relation to the entry chamber and the grand crypt, or at least makes sense in terms of the history of the tomb's building (and possible expansions).",   "rolls": [
   {  "title": "d20 This tomb was built for...",   "roll": [
   "An ancient king.",
   "An ancient queen.",

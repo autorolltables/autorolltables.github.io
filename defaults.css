@@ -45,6 +45,14 @@ body
 .right-text {
   vertical-align: middle;
   float: right;
+  padding: 6px 12px;
+}
+
+.left-text {
+  vertical-align: middle;
+  float: left;
+  padding: 6px 12px;
+  margin-left: -2em;
 }
 
 img.ops
@@ -52,6 +60,11 @@ img.ops
   vertical-align: -15%;
   opacity: 0.5;
   filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+.nocolor:link{
+  color: #333;
+  text-decoration: none;
 }
 
 .menuitem {
@@ -65,6 +78,12 @@ img.ops
   border-color: #5A6668;
   border: 1px solid #5A6668;
   color: #5A6668;
+}
+
+.changelog {
+  vertical-align: middle;
+  float: left;
+  padding: 1em 1em 0em 1em;
 }
 
 #menu {

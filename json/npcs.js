@@ -314,7 +314,7 @@ top.npcs = [
 "Paces.",
 "Makes poor eye contact."    ] }    ] },
 
-{  "title": "Random Alchemists",  "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
+{  "title": "Alchemists",  "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
 {  "title": "d8 The alchemist is...",   "roll": [
 "An apothecary.",
 "A hedge wizard.",
@@ -404,6 +404,18 @@ top.npcs = [
 "A potent acid solvent.",
 "An explosive substance."    ] }    ] },
 
+{  "title": "Apprentice Crafter",  "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
+{  "title": "d4 The apprentice is...",   "roll": [
+"Bored.",
+"Eager to learn.",
+"Frustrated by his or her own mistakes.",
+"Nervously looking about."    ] },
+{  "title": "d4 The apprentice seeks someone to...",   "roll": [
+"Give him some tips in the craft.",
+"Purchase an item made by the apprentice.",
+"Tell a tale that inspires creativity.",
+"Sneak off for a drink and some kisses."    ] }    ] },
+
 {  "title": "Artisan",  "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
 {  "title": "d6 The artisan is...",   "roll": [
 "A young journeyman.",
@@ -469,18 +481,6 @@ top.npcs = [
 "Retiring rich.",
 "Running away from it all.",
 "A life of adventure."    ] }    ] },
-
-{  "title": "Apprentice Crafter",  "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
-{  "title": "d4 The apprentice is...",   "roll": [
-"Bored.",
-"Eager to learn.",
-"Frustrated by his or her own mistakes.",
-"Nervously looking about."    ] },
-{  "title": "d4 The apprentice seeks someone to...",   "roll": [
-"Give him some tips in the craft.",
-"Purchase an item made by the apprentice.",
-"Tell a tale that inspires creativity.",
-"Sneak off for a drink and some kisses."    ] }    ] },
 
 {  "title": "Assassins",  "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
 {  "title": "d12 The assassin is...",   "roll": [
@@ -610,7 +610,7 @@ top.npcs = [
 "The docks.",
 "The bridge."    ] }    ] },
 
-{  "title": "Barbarian Warriors",  "use": "Use these for inspiration or roll them up randomly. Some of the tables could be rolled more than once.",   "rolls": [
+{  "title": "Barbarians",  "use": "Use these for inspiration or roll them up randomly. Some of the tables could be rolled more than once.",   "rolls": [
 {  "title": "d8 The warrior is armored in...",   "roll": [
 "Nothing.",
 "Tattered leather.",
@@ -1065,6 +1065,155 @@ top.npcs = [
 "A quiver of newly made arrows.",
 "A bundle of fresh wood cuttings."    ] }    ] },
 
+{  "title": "Druids",  "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
+{  "title": "d20 The druid is...",   "roll": [
+"A wildling orphan.",
+"A seasoned herbalist.",
+"A militant environmentalist.",
+"A well-known healer.",
+"A brash, young fool.",
+"A rebellious noble.",
+"A patient teacher.",
+"A mysterious foreigner.",
+"A beautiful maiden.",
+"A rugged outdoorsman.",
+"A veteran wilderness guide.",
+"A beastly brute.",
+"A dark-hearted avenger.",
+"A curious philosopher.",
+"A shy beastfriend.",
+"A fierce guardian.",
+"An exiled spellcaster.",
+"A mystic shaman.",
+"A savage priest or priestess.",
+"A village elder.",    ] },
+{  "title": "d12 The druid learned the craft from...",   "roll": [
+"Apprenticing to a woodland witch.",
+"Studying wilderness lore at an academy.",
+"A parent who was also a druid.",
+"Running a menagerie or garden for royalty.",
+"Surviving in the wild alone for years.",
+"Conversing with primal spirits.",
+"An enchanted beast.",
+"Studying old books.",
+"The circle of druids that took him/her in as a child.",
+"A fey creature that offered redemption for past transgressions against nature.",
+"A mysterious village elder.",
+"Time spent stranded in a wild, foreign land.",    ] },
+{  "title": "d10 The druid has...",   "roll": [
+"Sky blue eyes.",
+"Deep sea blue eyes.",
+"Bright grass green eyes.",
+"Sunset golden eyes.",
+"Pale moss green eyes.",
+"Muddy brown eyes.",
+"Dark, stormy grey eyes.",
+"Night-sky purple eyes.",
+"Dusty brown eyes.",
+"Stony grey eyes.",    ] },
+{  "title": "d10 The druid has...",   "roll": [
+"An earthy scent.",
+"Bits of green under the fingernails.",
+"Stains of bird droppings on his/her clothes.",
+"A long, hooked, beak-like nose.",
+"Large bear-like shoulders and hands.",
+"A pointy, rodent-like nose.",
+"Very hairy arms and legs.",
+"Long, sharp fingernails.",
+"Beautiful, healthy skin.",
+"A greenish, mossy beard.",    ] },
+{  "title": "d12 The druid...",   "roll": [
+"Stares hungrily like a wolf.",
+"Stares suspiciously like a cat.",
+"Hisses like a snaking when he/she laughs.",
+"Barks like a seal when he/she laughs.",
+"Twitters like a bird when he/she laughs.",
+"Walks ponderously like an ox.",
+"Walks gracefully like a panther.",
+"Eats like a horse.",
+"Eats like a bird.",
+"Speaks very little.",
+"Fidgets like a squirrel.",
+"Pounces like a lion.",    ] },
+{  "title": "d20 The druid shares an especially close connection with...",   "roll": [
+"Aquatic mammals.",
+"Bears.",
+"Birds of prey.",
+"Cats.",
+"Hoofed mammals.",
+"Reptiles and amphibians.",
+"Songbirds and waterfowl.",
+"Wolves and dogs.",
+"Blizzards and snowstorms.",
+"Hurricanes and tides.",
+"Volcanoes, geysers, and hot springs.",
+"Earthquakes.",
+"Thunderstorms and floods.",
+"Forests and trees.",
+"Mountains and stone.",
+"Caves and shadows.",
+"Jungles and rainstorms.",
+"Glaciers and tundra.",
+"Deserts and sand.",
+"Swamps and marshes.",    ] },
+{  "title": "d10 The druid wields...",   "roll": [
+"A wooden staff.",
+"A wooden club.",
+"A club and a wooden shield.",
+"A scimitar.",
+"A scimitar and a wooden shield.",
+"A spear.",
+"A spear and a wooden shield.",
+"A dagger.",
+"A thorny whip made from a tough vine.",
+"Tooth and claw.",    ] },
+{  "title": "d8 The druid carries...",   "roll": [
+"A sprig of holly.",
+"A sprig of mistletoe.",
+"A yew wand.",
+"A cutting from a rare plant.",
+"A totem necklace, strung with pieces of beasts (d6): 1. beaks; 2. bones; 3. claws; 4. shells; 5. tiny skulls; 6. teeth.",
+"A totem rod, adorned with pieces of beasts (d4): 1. bones; 2. feathers; 3. fur; 4. scales.",
+"A totem necklace, strung with plant material (d4): 1. seed pods; 2. dried fruit; 3. root clippings; 4. fresh flowers.",
+"A totem rod, adorned with plant material (d4): 1. tree bark; 2. fresh leaves; 3. berries; 4. seeds and tree sap.",    ] },
+{  "title": "d12 The druid also carries...",   "roll": [
+"A small knife.",
+"A wooden flute.",
+"A hunting horn.",
+"A shard of obsidian, warm to the touch.",
+"A piece of crystal that glows in moonlight.",
+"A small pouch full of seeds.",
+"A small pouch full of herbal tea.",
+"Several vials of herbal extracts.",
+"A pair of herb snips",
+"A pocketbook field guide to flora and fauna in a region the druid has never visited.",
+"A book of Elvish poems and songs.",
+"Several vials of healing potions.",    ] },
+{  "title": "d10 The druid wears...",   "roll": [
+"Robes of earth tones.",
+"A dark green cape.",
+"Shiny leather boots with fur.",
+"Boots of soft leather.",
+"A leather baldric.",
+"Leather armor decorated with leafy motifs.",
+"Armor made from the hides of beasts.",
+"Leather armor studded with bone.",
+"A robe stained with bird droppings.",
+"A robe with vines growing from its pockets.",    ] },
+{  "title": "d12 The druid is looking to...",   "roll": [
+"Find a place where a rare herb grows.",
+"Drive away an unnatural intruder.",
+"Lead intruders into a trap.",
+"Help a wounded, legendary beast.",
+"Permanently transform into a beast.",
+"Locate a legendary garden or grove.",
+"Stop the spread of mining or grazing.",
+"Swap recipes and herb lore.",
+"Bear witness to nature’s awesome power.",
+"Provide a safe haven for a hunted beast.",
+"Inspire a love for nature.",
+"Drink some tea mixed with strong spirits.",    ] },    ], },
+
 {  "title": "Dwarves",  "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
 {  "title": "d10 The dwarf is...",   "roll": [
 "A greedy prospector.",
@@ -1329,6 +1478,71 @@ top.npcs = [
 "Dairy or eggs (d8): 1. cow's milk; 2. goat's milk; 3. sheep's milk; 4. hard cheese; 5. mild cheese; 6. pungent cheese; 7. sharp cheese; 8. soft cheese; 9. eggs; 10. goose eggs.",
 "Herbs and spices (d10): 1. basil; 2. garlic; 3. ginger; 4. mint; 5. oregano; 6. parsley; 7. pepper; 8. rosemary; 9. sage; 10. thyme."    ] }    ] },
 
+{   "title": "Fisherfolk",   "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
+{  "title": "d10 The fisherman fishes in...",   "roll": [
+"A quiet creek.",
+"A wide river.",
+"A small pond.",
+"A large lake.",
+"A swamp.",
+"A marsh.",
+"A protected bay.",
+"A natural harbor.",
+"A narrow channel.",
+"The open ocean."    ] },
+{  "title": "d6 The fisherman typically fishes from...",   "roll": [
+"A sandy or rocky beach.",
+"An embankment, sandbar, or levee.",
+"A pier or bridge.",
+"His/her own boat.",
+"A boat owned by someone else.",
+"Wherever the fish can be reached."    ] },
+{  "title": "d8 The fisherman uses...",   "roll": [
+"A rod and reel with a baited hook.",
+"A rod and reel with a lure.",
+"Baited lines.",
+"Baited traps.",
+"Nets.",
+"Baited lines and nets.",
+"Baited lines and baited traps.",
+"An unusual technique (d4): 1. harpoon; 2. spear; 3. bare hands; 4. trained beast."    ] },
+{  "title": "d6 The fisherman prefers to fish...",   "roll": [
+"Alone, in silence.",
+"Alone, while whistling or humming.",
+"Alone, but within earshot of other fishermen.",
+"With a trusted partner.",
+"With an apprentice fisherman.",
+"With an experienced fisherman."    ] },
+{  "title": "d8 The fisherman is seeking...",   "roll": [
+"A new apprentice.",
+"The answer to a riddle.",
+"To tell the tale of the one that got away.",
+"Rumors of new locations to fish.",
+"Revenge against a rival.",
+"Assistance repairing a boat, net, or some other fishing gear.",
+"Fishing companions.",
+"Drinking companions."    ] },
+{  "title": "d8 Tattoo: The fisherman has...",   "roll": [
+"An anchor tattoo.",
+"A pair of crossed bones tattoo.",
+"A fish tattoo.",
+"An octopus tattoo.",
+"A whale tattoo.",
+"A lobster tattoo.",
+"A mermaid tattoo.",
+"A dragon tattoo."    ] },
+{  "title": "d10 Distinguishing feature: The fisherman has...",   "roll": [
+"A wooden pipe.",
+"Rotten teeth.",
+"A gold tooth.",
+"A terrible scar on the forearm.",
+"A handkerchief tied atop the head.",
+"Wild eyes.",
+"A trimmed black beard.",
+"A long, hooked nose.",
+"An open shirt and a very hairy chest.",
+"Long mutton chop sideburns."    ] }    ] },
+
 {  "title": "Gladiators",  "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
 {  "title": "d8 The gladiator is armored in...",   "roll": [
 "Nothing.",
@@ -1416,6 +1630,72 @@ top.npcs = [
 "An obscene amount of oil.",
 "An intimidating amount of hair."    ] }    ] },
 
+{  "title": "Graverobbers",  "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
+{  "title": "d10 The graverobber is...",   "roll": [
+"A veteran treasure hunter.",
+"A desperate thief.",
+"A reckless fortune seeker.",
+"A well-known criminal.",
+"A brash, young fool.",
+"A student of anatomy.",
+"An out-of-work artisan.",
+"A displaced peasant.",
+"A combat veteran.",
+"A foreign refugee.",    ] },
+{  "title": "d10 The graverobber has...",   "roll": [
+"A long, hooked nose.",
+"A cute little button nose.",
+"A broad, flat nose.",
+"A scar below the left eye.",
+"Piercing blue eyes.",
+"Pockmarked cheeks.",
+"A pointy chin.",
+"Several missing teeth.",
+"A jagged scar above one eye.",
+"Extremely bushy eyebrows.",    ] },
+{  "title": "d12 The graverobber wears...",   "roll": [
+"A flashy earring.",
+"A dark grey cape.",
+"Filthy leather boots.",
+"Boots with a hole in the left toe.",
+"A heavy gold belt buckle.",
+"A wide-brimmed hat.",
+"A tattoo on the forearm (d6): 1. dagger; 2. dragon; 3. nude figure; 4. skull; 5. snake; 6. thorns.",
+"A long dark ponytail.",
+"Luscious golden curls.",
+"A handkerchief in his breast pocket.",
+"An open shirt and a very hairy chest.",
+"Unruly mustaches.",    ] },
+{  "title": "d6 The graverobber...",   "roll": [
+"Hums or sings while digging.",
+"Constantly brushes the hair back from out of his or her face.",
+"Laughs maniacally at everything.",
+"Never smiles and never laughs.",
+"Spits constantly.",
+"Scratches the elbow frequently.",
+"Picks at his or her teeth after meals.",
+"Is fond of placing corpses in rude poses.",    ] },
+{  "title": "d10 The graverobber carries...",   "roll": [
+"A sturdy shovel and a dirty handkerchief.",
+"A blunt pick-ax and several torches.",
+"A narrow shovel and a length of hempen rope.",
+"A new steel shovel and a length of silk rope.",
+"Several over-sized sacks.",
+"A sap and a large sack.",
+"An ornately crafted lantern.",
+"A simple lantern and a dagger.",
+"A pocketbook of notes on gravesites.",
+"A dagger and a crossbow.",    ] },
+{  "title": "d8 The graverobber is looking for...",   "roll": [
+"A fresh grave.",
+"The entrance to an ancient crypt.",
+"A pair of strong arms to help dig.",
+"Tales of recently deceased members of the nobility.",
+"The location of the ruling family's personal cemetery.",
+"A pair of strong arms to move dirt.",
+"An ear to listen to some boasting.",
+"A drink and a break from digging.",    ] },    ], },
+
 {  "title": "Harlots",  "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
 {  "title": "d10 The harlot is...",   "roll": [
 "A veteran who may have been beautiful.",
@@ -1464,7 +1744,7 @@ top.npcs = [
 "Hatch a plan for revenge against the man who ruined her life.",
 "Drink some wine and have a laugh."    ] }    ] },
 
-{  "title": "Sworn Swords",  "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
+{  "title": "Knights/Sworn Swords",  "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
 {  "title": "d20 The knight’s house’s colors are...",   "roll": [
 "Black.",
 "Red / scarlet.",
@@ -1581,7 +1861,7 @@ top.npcs = [
 "A trophy from a fallen enemy.",
 "A ribbon from a faraway maiden."    ] }    ] },
 
-{  "title": "Servants",  "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
+{  "title": "- Servants",  "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
 {  "title": "d12 The servant is...",   "roll": [
 "A squire from a powerful noble house.",
 "A squire from a minor noble house.",
@@ -1611,6 +1891,39 @@ top.npcs = [
 "A look of confusion.",
 "A long, hooked nose.",
 "Pronounced ears."    ] }    ] },
+
+{  "title": "Merchant",  "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
+{  "title": "d6 The merchant is...",   "roll": [
+"A member of a trading clan.",
+"A minor lord or lady.",
+"An enterprising trader.",
+"A member of a prominent family.",
+"Of common birth.",
+"The representative of a more powerful merchant."    ] },
+{  "title": "d4 The merchant wears...",   "roll": [
+"An unpleasant grin.",
+"An arrogant smirk.",
+"Too much perfume.",
+"A baggy shirt to cover a fat belly."    ] },
+{  "title": "d4 The merchant seeks someone to...",   "roll": [
+"Obtain a mysterious artifact.",
+"Negotiate a trade contract.",
+"Sabotage a rival merchant.",
+"Have a good time with."    ] },
+{  "title": "d6 The merchant carries...",   "roll": [
+"A family heirloom.",
+"Several inventories and invoices.",
+"Some very valuable jewels.",
+"A compromising love letter.",
+"A small knife.",
+"A vial of healing potion, just in case."    ] },
+{  "title": "d6 Currency: Besides coin, the merchant will trade in...",   "roll": [
+"Gems and jewelry.",
+"Gold and silver bullion.",
+"Water, provisions, and other goods.",
+"Shells, beads, and trinkets.",
+"Favors.",
+"Scandalous information."    ] }    ] },
 
 {  "title": "Merchants - Caravan Master",  "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
 {  "title": "d8 The caravan master is...",   "roll": [
@@ -2289,7 +2602,7 @@ top.npcs = [
 "A black stone that radiates evil.",
 "A small notebook filled with notes on (d4): 1. anatomy; 2. behavior of zombies; 3. crypt architecture; 4. ghostly hauntings."    ] }    ] },
 
-{  "title": "Familiars",  "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
+{  "title": "- Familiars",  "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
 {  "title": "d10 The necromancer's familiar is...",   "roll": [
 "A fiendish spirit (d4): 1. demon trapped in a book; 2. devil trapped in a gem; 3. imp; 4. quasit.",
 "An undead creature (d4): 1. crawling crawl; 2. disembodied voice; 3. floating skull; 4. formless ghost.",
@@ -2456,189 +2769,6 @@ top.npcs = [
 "An opportunity to tell a fable.",
 "The bottom of a goblet."    ] }    ] },
 
-{  "title": "Town NPCs - Alchemist",  "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
-{  "title": "d6 The alchemist is...",   "roll": [
-"An apothecary.",
-"A hedge wizard.",
-"An herbalist.",
-"A poisonmaker.",
-"A potioneer.",
-"A pyromancer."    ] },
-{  "title": "d4 The alchemist is looking for...",   "roll": [
-"Delivery help.",
-"New recipes.",
-"Purchasers.",
-"Rare ingredients."    ] },
-{  "title": "d4 The alchemist carries...",   "roll": [
-"Several vials of acid.",
-"Several curatives.",
-"An unusual potion.",
-"A pyrophoric substance."    ] }    ] },
-
-{  "title": "Town NPCs - Criminal",  "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
-{  "title": "d6 The criminal is...",   "roll": [
-"An assassin.",
-"A con artist.",
-"A gambler.",
-"A poacher.",
-"A smuggler.",
-"A thief."    ] },
-{  "title": "d6 The criminal is looking for...",   "roll": [
-"Accomplices for a specific task.",
-"Revenge against a rival criminal.",
-"An easy mark.",
-"Extra muscle for some work.",
-"Rumors that may lead to a big score.",
-"A rowdy evening of carousing."    ] },
-{  "title": "d6 The criminal carries...",   "roll": [
-"A crossbow with poisoned darts.",
-"Several daggers.",
-"A short sword.",
-"A lucky charm.",
-"The token of a love.",
-"Letters for blackmail."    ] }    ] },
-
-{  "title": "Town NPCs - Law Official",  "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
-{  "title": "d4 The law official is...",   "roll": [
-"A constable.",
-"A sheriff.",
-"A guard captain.",
-"A magistrate."    ] },
-{  "title": "d6 The law official seeks someone to...",   "roll": [
-"Capture a fugitive.",
-"Catch a thief.",
-"Guard a specific location or person.",
-"Investigate a disappearance.",
-"Solve a murder mystery.",
-"Have an ale with."    ] },
-{  "title": "d4 The law official carries...",   "roll": [
-"An arrest warrant for an outlaw.",
-"A proclamation for a reward.",
-"A knife or sword of the office.",
-"A pocketbook of local laws."    ] }    ] },
-
-{  "title": "Town NPCs - Noble",  "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
-{  "title": "d6 The noble is...",   "roll": [
-"A knight.",
-"An old lord.",
-"A young lord.",
-"An old lady.",
-"A young lady.",
-"A wealthy merchant."    ] },
-{  "title": "d6 The noble seeks someone to...",   "roll": [
-"Dispose of an enemy.",
-"Negotiate a trade contract.",
-"Prepare an army for war.",
-"Sabotage a rival.",
-"Secure a marriage.",
-"Have a good time with."    ] },
-{  "title": "d6 The noble carries...",   "roll": [
-"Several deeds and titles.",
-"A family heirloom.",
-"Several inventories and invoices.",
-"Some very valuable jewels.",
-"A compromising love letter.",
-"A letter from a powerful lord or lady."    ] }    ] },
-
-{  "title": "Town NPCs - Priest",  "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
-{  "title": "d6 The priest is...",   "roll": [
-"An acolyte.",
-"A healer.",
-"A monk.",
-"A preacher.",
-"A scholar.",
-"A witch-hunter."    ] },
-{  "title": "d4 The priest is looking for...",   "roll": [
-"New converts.",
-"Heretics.",
-"Relics and rare lore.",
-"The bottom of a goblet."    ] },
-{  "title": "d4 The priest carries...",   "roll": [
-"A well-used cudgel.",
-"A prominently displayed holy symbol.",
-"A pocketbook of sacred texts.",
-"A wineskin."    ] }    ] },
-
-{  "title": "Town NPCs - Seer",  "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
-{  "title": "d6 The seer is...",   "roll": [
-"An astrologer.",
-"A fortune teller.",
-"A mystic",
-"A lorekeeper.",
-"A prophet.",
-"A psychic."    ] },
-{  "title": "d4 The seer is looking for...",   "roll": [
-"The answer to a riddle or prophecy.",
-"New clients for a reading.",
-"News regarding a missing person.",
-"Some juicy gossip."    ] },
-{  "title": "d4 The seer carries...",   "roll": [
-"A crystal ball.",
-"A dowsing rod.",
-"A large, sharp-pointed knife.",
-"Several star charts."    ] }    ] },
-
-{  "title": "Town NPCs - Smith",  "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
-{  "title": "d4 The smith is...",   "roll": [
-"An armorer.",
-"A blacksmith.",
-"A farrier.",
-"A weaponsmith."    ] },
-{  "title": "d4 The smith is looking for...",   "roll": [
-"A new apprentice.",
-"A journeyman craftsman.",
-"Rare metals.",
-"A mug of strong ale."    ] },
-{  "title": "d4 The smith carries...",   "roll": [
-"A hammer.",
-"A metal trinket made by the smith.",
-"A contract commissioning a sword.",
-"Little more than a few coins."    ] }    ] },
-
-{  "title": "Town NPCs - Traveler",  "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
-{  "title": "d8 The traveler is...",   "roll": [
-"An exile.",
-"A minstrel.",
-"A peddler.",
-"A pilgrim.",
-"A refugee.",
-"A sellsword.",
-"A storyteller.",
-"A treasure hunter."    ] },
-{  "title": "d10 The traveler is seeking...",   "roll": [
-"Accomplices on a quest.",
-"The answer to a riddle",
-"An audience to entertain.",
-"A long lost friend.",
-"The return of something stolen.",
-"Revenge against a bitter rival.",
-"A permanent home.",
-"Steady work.",
-"Traveling companions.",
-"Drinking companions."    ] }    ] },
-
-{  "title": "Town NPCs - Barkeep/Barmaid",  "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
-{  "title": "d8 The server greets you with...",   "roll": [
-"A mug of ale.",
-"A goblet of wine.",
-"A glass of water.",
-"An offer to move to a better table.",
-"A look of exasperation.",
-"A warm handshake.",
-"A pat on the back.",
-"A pretty smile."    ] },
-{  "title": "d6 The server is looking for...",   "roll": [
-"An excuse to kick you out.",
-"Someone more important to talk to.",
-"Someone to do some pest removal.",
-"A big tip.",
-"A good joke or story.",
-"The bottom of a bottle."    ] },
-{  "title": "d4 The server carries...",   "roll": [
-"A filthy rag.",
-"A pristine silk handkerchief.",
-"A piece of conspicuous jewelry.",
-"An unusual belt purse."    ] }    ] },
 
 {  "title": "Seers",  "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
 {  "title": "d10 The seer is...",   "roll": [
@@ -2862,7 +2992,7 @@ top.npcs = [
 "Social status.",
 "Facial hair."    ] }    ] },
 
-{  "title": "Shop Keeper",  "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
+{  "title": "Shopkeeper",  "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
 {  "title": "d4 The shopkeeper is...",   "roll": [
 "Bored.",
 "Eager to help.",
@@ -2874,38 +3004,346 @@ top.npcs = [
 "Listen to some whining.",
 "Share some wine and chat."    ] }    ] },
 
-{  "title": "Merchant",  "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
-{  "title": "d6 The merchant is...",   "roll": [
-"A member of a trading clan.",
-"A minor lord or lady.",
-"An enterprising trader.",
-"A member of a prominent family.",
-"Of common birth.",
-"The representative of a more powerful merchant."    ] },
-{  "title": "d4 The merchant wears...",   "roll": [
-"An unpleasant grin.",
-"An arrogant smirk.",
-"Too much perfume.",
-"A baggy shirt to cover a fat belly."    ] },
-{  "title": "d4 The merchant seeks someone to...",   "roll": [
-"Obtain a mysterious artifact.",
+{  "title": "Strange People",  "use": "A few tables to generate random strange people.\nThe basic structure is supposed to be this:\nX is a AGE + SEX with HAIRTYPE + HAIRCOLOR + HAIRSTYLE and MARK, who’s living HOME + LOCATION.\nX is OCCUPATION + SUBTABLE. People in town RENOWN.\nX is BUILD. A characteristic feature of X is DESCRIPTOR PHYSICAL. X talks SPEECH.\nAll X really wants is to MOTIVE.",   "rolls": [
+{  "title": "D8 AGE X is",   "roll": [
+"a barely teenaged",
+"a young adult",
+"an adult",
+"a middleaged",
+"an older",
+"an ancient",
+"more dead than living",
+"non-aging",    ] },
+{  "title": "D4 SEX",   "roll": [
+"woman",
+"man",
+"person whose sex is hard to tell",
+"creature",    ] },
+{  "title": "D8 HAIRTYPE with",   "roll": [
+"greasy",
+"healthy",
+"neat",
+"spotty",
+"thin",
+"thick",
+"curly",
+"seemingly living",    ] },
+{  "title": "D8 HAIRCOLOR",   "roll": [
+"white, almost glowing",
+"grey",
+"black",
+"dark brown",
+"light brown",
+"blonde",
+"platinum blonde",
+"red",    ] },
+{  "title": "D12 HAIRSTYLE",   "roll": [
+"and extraordinarily long hair reaching all the way down the back",
+"shoulder long hair",
+"long hair",
+"long hair done up in a bun",
+"long hair done up in a ponytail",
+"long braided hair",
+"long hair with strange objects braided into it",
+"long completely tangled and matted hair",
+"long completely tangled and matted hair with strange objects attached",
+"short hair",
+"stubs after having been shaved off just recently",
+"lost long ago to baldness",    ] },
+{  "title": "D24 MARK (1d6d6) and",   "roll": [
+"an eye patch",
+"a lazy eye",
+"a glass eye",
+"greasy glasses",
+"glasses",
+"a blindfold over the eyes",
+"a hat",
+"the remnants of a hat",
+"a mouth without teeth",
+"a mouth filled with gold teeth",
+"an alluring smile",
+"a great scar",
+"a sad look",
+"a constant grin",
+"a quiet demeanor",
+"eyes staring straight into your soul",
+"a mutilated face",
+"a deformed face",
+"a pointy nose",
+"the nose cut off",
+"an obscure symbol branded on the neck",
+"an otherwise extraordinarily ordinary appearance",
+"a very long tongue",
+"a terrifying libido",    ] },
+{  "title": "D10 HOME who's living",   "roll": [
+"in a small apartment (D4): 1. on top of a small shop; 2. in an immense apartment building; 3. in a damp tenement; 4. in a moldy boarding house;",
+"in a shack (D4): 1. build of garbage; 2. in a public park; 3. under a bridge; 4. up in a tree;",
+"in an inherited (D4): 1. villa; 2. estate; 3. townhouse; 4. carriage;",
+"in a small townhouse (D4): 1. with boarded up windows; 2. with heavy curtains covering the windows; 3. with a wilderness for a garden; 4. without any windows at all;",
+"in a burned down (D4): 1. warehouse; 2. villa; 3. church; 4. workshop;",
+"in an abandoned overgrown (D4): 1. warehouse; 2. villa; 3. church; 4. workshop;",
+"in a tent (D4): 1. in a public park; 2. on a graveyard; 3. under a bridge; 4. in someone else’s garden;",
+"in a grand (D4): 1. estate; 2. villa; 3. apartment; 4. mansion;",
+"in the basement (D4): 1. of an abandoned hospital; 2. of a workshop; 3. of someone else’s house; 4. of a sketchy tavern",
+"in a supposedly enchanted (D4): 1. closet; 2. shed; 3. tree-house; 4. hole in the wall;",    ] },
+{  "title": "D10 LOCATION",   "roll": [
+"somewhere in town",
+"somewhere outside of town",
+"somewhere in the nice part of town",
+"somewhere in the slums",
+"on the streets, for some reason.",
+"… Beneath the city?",
+"in a cave",
+"somewhere we’ve all suppressed from our memories.",
+"in an otherwise desolate part of town",
+"near the waterfront",    ] },
+{  "title": "D10 OCCUPATION X is",   "roll": [
+"an archivist (D4): 1. with an interest for the hideous; 2. with a large collection of obscure trinkets; 3. organizing the strange collection of the local museum; 4. who collects very particular books;",
+"a priest (D4): 1. with little interest in his flock; 2. who’s slowly but steadily deviating from the pious path; 3. who lives in seclusion; 4. with a veiled interest in the obscure;",
+"a collector (D8): 1. of peculiar stones; 2. of primordial artifacts; 3. of cats; 4. of obscure art; 5. of ancient books; 6. of old diaries; 7. of crime memorabilia; 8. of toys;",
+"an adventurer (D4): 1. who’s only ever seen leaving home at night; 2. with a staggering hatred for the undead; 3. who’s constantly preparing for the apocalypse; 4. who’s always just getting wasted alone",
+"a doctor (D4): 1. with dubious credentials; 2. who’s working on an alternative treatment for a rare malady; 3. who’s obsessed with immortality; 4. who’s offering treatment to everyone, whether healthy or ill;",
+"a known thief (D4): 1. who allegedly has buried the past; 2. who’s always on the lookout for someone… Or something; 3. who’s getting by selling strange otherworldly goods in an alley; 4. who’s only ever stealing from the same person;",
+"a prostitute (D4): 1. always providing for the same mysterious customer; 2. who’s always stumbling around in the streets at night; 3. who’s always seen crying; 4. who always gently takes the hand of a PC and starts growling;",
+"a blacksmith (D4): 1. who’s always making nails; 2. who’s making iron masks of customers faces; 3. with an affection for toys and dolls; 4. who’s always make the same small figurines;",
+"a guard (D4): 1. who enjoys humiliating civilians; 2. with a worrying love for power; 3. who’s only talking to the towns kids and animals; 4. with a clear disdain for a local religious order;",
+"a merchant (D4): 1. dealing in very cheap meats; 2. and alleged grave robber; 3. providing a strange assortment of quality products incredibly cheap; 4. whose worryingly old products never seem to be exchanged;",    ] },
+{  "title": "D10 RENOWN people in town",   "roll": [
+"love X",
+"hate X",
+"fear X",
+"adore X",
+"worship X",
+"tolerate X",
+"barely recognizes X",
+"has forgotten about X",    ] },
+{  "title": "D10 BUILD X is",   "roll": [
+"fat and round",
+"built like horse",
+"of athletic stature",
+"muscular and strong",
+"scrawny",
+"physically mostly reminiscent of a curled up dry carrot",
+"tall and lanky",
+"a midget",
+"easily confused with a giant",
+"looking more dead than alive",    ] },
+{  "title": "D20 DESCRIPTOR A characteristic feature of X is",   "roll": [
+"the cane",
+"the strange jumpy walk",
+"the beautiful clothes",
+"the disgusting clothes",
+"the weird objects hanging from the belt",
+"the singing",
+"the constant tears",
+"the dancing",
+"the heavy drinking",
+"the bird on the shoulder",
+"the marks on the wrists left by handcuffs",
+"the whispering",
+"the constant blinking",
+"the constant head scratching",
+"the bleeding wounds",
+"the bandages",
+"the affection for fire",
+"the pale skin",
+"the dog",
+"the cat",    ] },
+{  "title": "D8 SPEECH X talks",   "roll": [
+"with a lisp",
+"with a deep voice",
+"with a dry hoarse voice",
+"with a light squeaking voice",
+"with a soft pleasant voice",
+"with a seductive voice",
+"in a strange tongue",
+"with a sleazy voice",    ] },
+{  "title": "D20 MOTIVE All X really wants is to",   "roll": [
+"keep the secret",
+"runaway and hide",
+"survive",
+"taste it once again",
+"never see it again",
+"brand him with a hot iron",
+"set it all on fire and start over",
+"answer the voices",
+"honor her trust",
+"keep the promise",
+"find it",
+"hide it",
+"destroy it",
+"impress him",
+"impress her",
+"built the construction from the perpetual dreams",
+"get revenge",
+"prepare for the inevitable",
+"make it come alive",
+"to finally ascend as promised",    ] },    ], },
+
+{  "title": "Town NPCs - Alchemist",  "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
+{  "title": "d6 The alchemist is...",   "roll": [
+"An apothecary.",
+"A hedge wizard.",
+"An herbalist.",
+"A poisonmaker.",
+"A potioneer.",
+"A pyromancer."    ] },
+{  "title": "d4 The alchemist is looking for...",   "roll": [
+"Delivery help.",
+"New recipes.",
+"Purchasers.",
+"Rare ingredients."    ] },
+{  "title": "d4 The alchemist carries...",   "roll": [
+"Several vials of acid.",
+"Several curatives.",
+"An unusual potion.",
+"A pyrophoric substance."    ] }    ] },
+
+{  "title": "Town NPCs - Criminal",  "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
+{  "title": "d6 The criminal is...",   "roll": [
+"An assassin.",
+"A con artist.",
+"A gambler.",
+"A poacher.",
+"A smuggler.",
+"A thief."    ] },
+{  "title": "d6 The criminal is looking for...",   "roll": [
+"Accomplices for a specific task.",
+"Revenge against a rival criminal.",
+"An easy mark.",
+"Extra muscle for some work.",
+"Rumors that may lead to a big score.",
+"A rowdy evening of carousing."    ] },
+{  "title": "d6 The criminal carries...",   "roll": [
+"A crossbow with poisoned darts.",
+"Several daggers.",
+"A short sword.",
+"A lucky charm.",
+"The token of a love.",
+"Letters for blackmail."    ] }    ] },
+
+{  "title": "Town NPCs - Law Official",  "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
+{  "title": "d4 The law official is...",   "roll": [
+"A constable.",
+"A sheriff.",
+"A guard captain.",
+"A magistrate."    ] },
+{  "title": "d6 The law official seeks someone to...",   "roll": [
+"Capture a fugitive.",
+"Catch a thief.",
+"Guard a specific location or person.",
+"Investigate a disappearance.",
+"Solve a murder mystery.",
+"Have an ale with."    ] },
+{  "title": "d4 The law official carries...",   "roll": [
+"An arrest warrant for an outlaw.",
+"A proclamation for a reward.",
+"A knife or sword of the office.",
+"A pocketbook of local laws."    ] }    ] },
+
+{  "title": "Town NPCs - Noble",  "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
+{  "title": "d6 The noble is...",   "roll": [
+"A knight.",
+"An old lord.",
+"A young lord.",
+"An old lady.",
+"A young lady.",
+"A wealthy merchant."    ] },
+{  "title": "d6 The noble seeks someone to...",   "roll": [
+"Dispose of an enemy.",
 "Negotiate a trade contract.",
-"Sabotage a rival merchant.",
+"Prepare an army for war.",
+"Sabotage a rival.",
+"Secure a marriage.",
 "Have a good time with."    ] },
-{  "title": "d6 The merchant carries...",   "roll": [
+{  "title": "d6 The noble carries...",   "roll": [
+"Several deeds and titles.",
 "A family heirloom.",
 "Several inventories and invoices.",
 "Some very valuable jewels.",
 "A compromising love letter.",
-"A small knife.",
-"A vial of healing potion, just in case."    ] },
-{  "title": "d6 Currency: Besides coin, the merchant will trade in...",   "roll": [
-"Gems and jewelry.",
-"Gold and silver bullion.",
-"Water, provisions, and other goods.",
-"Shells, beads, and trinkets.",
-"Favors.",
-"Scandalous information."    ] }    ] },
+"A letter from a powerful lord or lady."    ] }    ] },
+
+{  "title": "Town NPCs - Priest",  "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
+{  "title": "d6 The priest is...",   "roll": [
+"An acolyte.",
+"A healer.",
+"A monk.",
+"A preacher.",
+"A scholar.",
+"A witch-hunter."    ] },
+{  "title": "d4 The priest is looking for...",   "roll": [
+"New converts.",
+"Heretics.",
+"Relics and rare lore.",
+"The bottom of a goblet."    ] },
+{  "title": "d4 The priest carries...",   "roll": [
+"A well-used cudgel.",
+"A prominently displayed holy symbol.",
+"A pocketbook of sacred texts.",
+"A wineskin."    ] }    ] },
+
+{  "title": "Town NPCs - Smith",  "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
+{  "title": "d4 The smith is...",   "roll": [
+"An armorer.",
+"A blacksmith.",
+"A farrier.",
+"A weaponsmith."    ] },
+{  "title": "d4 The smith is looking for...",   "roll": [
+"A new apprentice.",
+"A journeyman craftsman.",
+"Rare metals.",
+"A mug of strong ale."    ] },
+{  "title": "d4 The smith carries...",   "roll": [
+"A hammer.",
+"A metal trinket made by the smith.",
+"A contract commissioning a sword.",
+"Little more than a few coins."    ] }    ] },
+
+{  "title": "Town NPCs - Traveler",  "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
+{  "title": "d8 The traveler is...",   "roll": [
+"An exile.",
+"A minstrel.",
+"A peddler.",
+"A pilgrim.",
+"A refugee.",
+"A sellsword.",
+"A storyteller.",
+"A treasure hunter."    ] },
+{  "title": "d10 The traveler is seeking...",   "roll": [
+"Accomplices on a quest.",
+"The answer to a riddle",
+"An audience to entertain.",
+"A long lost friend.",
+"The return of something stolen.",
+"Revenge against a bitter rival.",
+"A permanent home.",
+"Steady work.",
+"Traveling companions.",
+"Drinking companions."    ] }    ] },
+
+{  "title": "Town NPCs - Barkeep/Barmaid",  "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
+{  "title": "d8 The server greets you with...",   "roll": [
+"A mug of ale.",
+"A goblet of wine.",
+"A glass of water.",
+"An offer to move to a better table.",
+"A look of exasperation.",
+"A warm handshake.",
+"A pat on the back.",
+"A pretty smile."    ] },
+{  "title": "d6 The server is looking for...",   "roll": [
+"An excuse to kick you out.",
+"Someone more important to talk to.",
+"Someone to do some pest removal.",
+"A big tip.",
+"A good joke or story.",
+"The bottom of a bottle."    ] },
+{  "title": "d4 The server carries...",   "roll": [
+"A filthy rag.",
+"A pristine silk handkerchief.",
+"A piece of conspicuous jewelry.",
+"An unusual belt purse."    ] }    ] },
 
 {  "title": "Thieves",  "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
 {  "title": "d12 The thief is...",   "roll": [
@@ -3244,5 +3682,67 @@ top.npcs = [
 "Surly.",
 "Suspicious.",
 "Talkative."    ] }    ] },
+
+{  "title": "Woodsmen",  "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
+{  "title": "d10 Facial Feature: The woodsman has...",   "roll": [
+"A nose that's been broken.",
+"A twinkle in his eye.",
+"A sour grimace.",
+"A face like stone.",
+"Eyes that do not smile.",
+"A long, hooked nose.",
+"A scar across the brow.",
+"A neatly trimmed beard.",
+"A long, tangled beard.",
+"A thick, lush mustache.",    ] },
+{  "title": "d8 Apparel: The woodsman wears...",   "roll": [
+"Scuffed leather boots.",
+"Hardy boots and a large belt-buckle.",
+"A boot with a hole in the toe.",
+"A thick fur coat or cloak (d4): 1. bear; 2. otter; 3. sable; 4. wolf.",
+"A rough-spun cloak of sable or grey.",
+"Pants with patched knees.",
+"A fur cap (d4): 1. beaver; 2. fox; 3. raccoon; 4. skunk.",
+"An open shirt and a very hairy chest.",    ] },
+{  "title": "d8 Mannerism: The woodsman has...",   "roll": [
+"A hearty laugh.",
+"A forced laugh.",
+"An easy grin.",
+"Shifty eyes.",
+"A habit of looking away when speaking.",
+"A slow way of speaking.",
+"Few things to say.",
+"A habit of staring.",    ] },
+{  "title": "d8 Profession: The woodsman is...",   "roll": [
+"A strange herbalist.",
+"A scholarly botanist.",
+"A skilled hunter.",
+"A desperate poacher.",
+"A fugitive from justice.",
+"A reclusive trapper.",
+"A poor woodcutter.",
+"A bearded lumberjack.",    ] },
+{  "title": "d10 Goal: The woodsman is looking to...",   "roll": [
+"Track an unusual beast.",
+"Find the lair of a rare beast.",
+"Find a spot where a rare flower grows.",
+"Find a place where game is plentiful.",
+"Find a place where the trees grow tall.",
+"Purchase salt, spices, and other hard-to-come-by supplies.",
+"Sell some of his wares.",
+"Learn some new campfire recipes.",
+"Swap tales and rumors.",
+"Meet a nice girl and settle down.",    ] },
+{  "title": "d10 Possessions: The woodsman carries or wears...",   "roll": [
+"A sturdy hatchet.",
+"A bundle of firewood.",
+"A spear or walking staff.",
+"A large knife and a hunting trap.",
+"A finely made longbow.",
+"A trophy or piece of a wild beast.",
+"An unusual, curved blade.",
+"A double-bladed axe.",
+"A memento from a faraway sweetheart.",
+"A cotton handkerchief.",    ] },    ], }, 
 
 ];

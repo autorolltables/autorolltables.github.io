@@ -3,7 +3,7 @@
 
 top.objects = [
 
-{   "title": "Random Books",   "use": "These are tables for adding some flavorful books to any library, study, or treasure hoard... I've expanded each in-line sub-table to d6, so once I get a cheat sheet made, I can throw a d20 and d6 together to generate a topic for a book in a single toss.",   "rolls": [
+{   "title": "Books",   "use": "These are tables for adding some flavorful books to any library, study, or treasure hoard... I've expanded each in-line sub-table to d6, so once I get a cheat sheet made, I can throw a d20 and d6 together to generate a topic for a book in a single toss.",   "rolls": [
 {  "title": "d20 The book's subject is...",   "roll": [
 "Alchemy and potions (d6): 1. healing tonics; 2. metallurgy; 3. pyromancy; 4. poisoncraft; 5. potionmaking; 6. recipes.",
 "Art and architecture (d6): 1. fortresses and palaces; 2. painting; 3. sketching; 4. sculpture; 5. stonemasonry; 6. temples and tombs.",
@@ -61,7 +61,7 @@ top.objects = [
 "A collection of works by the same author.",
 "An anthology of works by several authors."    ] }    ] },
 
-{   "title": "Random Coins",   "use": "Use these tables to quickly generate interesting coins from pickpocket attempts or treasure hordes. Make those 200 GP interesting in their own right. ",   "rolls": [
+{   "title": "Coins",   "use": "Use these tables to quickly generate interesting coins from pickpocket attempts or treasure hordes. Make those 200 GP interesting in their own right. ",   "rolls": [
 {  "title": "D10 Material",   "roll": [
 "Gold",
 "Silver",
@@ -140,72 +140,7 @@ top.objects = [
 "A pile of coins corroded over time into one large mass.",
 "A charred bag of soot stained coins."    ] }    ] },
 
-{   "title": "Fisherfolk",   "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
-{  "title": "d10 The fisherman fishes in...",   "roll": [
-"A quiet creek.",
-"A wide river.",
-"A small pond.",
-"A large lake.",
-"A swamp.",
-"A marsh.",
-"A protected bay.",
-"A natural harbor.",
-"A narrow channel.",
-"The open ocean."    ] },
-{  "title": "d6 The fisherman typically fishes from...",   "roll": [
-"A sandy or rocky beach.",
-"An embankment, sandbar, or levee.",
-"A pier or bridge.",
-"His/her own boat.",
-"A boat owned by someone else.",
-"Wherever the fish can be reached."    ] },
-{  "title": "d8 The fisherman uses...",   "roll": [
-"A rod and reel with a baited hook.",
-"A rod and reel with a lure.",
-"Baited lines.",
-"Baited traps.",
-"Nets.",
-"Baited lines and nets.",
-"Baited lines and baited traps.",
-"An unusual technique (d4): 1. harpoon; 2. spear; 3. bare hands; 4. trained beast."    ] },
-{  "title": "d6 The fisherman prefers to fish...",   "roll": [
-"Alone, in silence.",
-"Alone, while whistling or humming.",
-"Alone, but within earshot of other fishermen.",
-"With a trusted partner.",
-"With an apprentice fisherman.",
-"With an experienced fisherman."    ] },
-{  "title": "d8 The fisherman is seeking...",   "roll": [
-"A new apprentice.",
-"The answer to a riddle.",
-"To tell the tale of the one that got away.",
-"Rumors of new locations to fish.",
-"Revenge against a rival.",
-"Assistance repairing a boat, net, or some other fishing gear.",
-"Fishing companions.",
-"Drinking companions."    ] },
-{  "title": "d8 Tattoo: The fisherman has...",   "roll": [
-"An anchor tattoo.",
-"A pair of crossed bones tattoo.",
-"A fish tattoo.",
-"An octopus tattoo.",
-"A whale tattoo.",
-"A lobster tattoo.",
-"A mermaid tattoo.",
-"A dragon tattoo."    ] },
-{  "title": "d10 Distinguishing feature: The fisherman has...",   "roll": [
-"A wooden pipe.",
-"Rotten teeth.",
-"A gold tooth.",
-"A terrible scar on the forearm.",
-"A handkerchief tied atop the head.",
-"Wild eyes.",
-"A trimmed black beard.",
-"A long, hooked nose.",
-"An open shirt and a very hairy chest.",
-"Long mutton chop sideburns."    ] }    ] },
-
-{   "title": "- Fishing Boat",   "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
+{   "title": "Fishing Boat",   "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
 {  "title": "d6 The boat is...",   "roll": [
 "A flat raft.",
 "A pontoon raft.",
@@ -330,6 +265,96 @@ top.objects = [
 "An eel (fights).",
 "A prawn."    ] }    ] },
 
+{  "title": "Herb Lore",  "use": "This is far from complete, and there are some awesome resources out there. I might expand it in the future, but for now, it should serve for quickly coming up with a little mechanics-free herb lore for a druid, herbalist, or healer-type NPC in your game.\nFor side effects and mishaps, I might refer to the Alchemical Mishaps table in the absence of something better.",   "rolls": [
+{  "title": "d12 The herbal concoction will help...",   "roll": [
+"A wound heal more quickly.",
+"Reduce pain.",
+"Prevent infection in a wound.",
+"Lower a fever.",
+"Clear out congestion.",
+"Reduce itchiness.",
+"Recover one’s strength.",
+"Prevent nausea.",
+"Cure indigestion.",
+"One stay awake.",
+"One fall asleep.",
+"Make one fertile or virile.",    ] },
+{  "title": "d10 The herbal concoction is...",   "roll": [
+"A thick paste.",
+"A thin paste.",
+"A specially treated leaf.",
+"A fluffy powder.",
+"A crystalline substance.",
+"A lotion or balm.",
+"An unpalatable potion.",
+"A sweet-tasting potion.",
+"A strong tea.",
+"A fragrant tea.",    ] },
+{  "title": "d10 The herbal concoction’s color could be described as...",   "roll": [
+"Pale green.",
+"Dark green.",
+"Blue green.",
+"Olive green.",
+"Yellowish green.",
+"Greenish gold.",
+"Brownish gold.",
+"Deep red.",
+"Brownish red.",
+"White.",
+"Pale grey.",
+"Dark grey.",
+"Bluish grey.",
+"Purplish grey.",
+"Greenish grey.",
+"Brownish grey.",
+"Black.",
+"Light brown.",
+"Dark brown.",
+"Reddish brown.",    ] },
+{  "title": "d20 The herbal concoction contains...",   "roll": [
+"Root hairs.",
+"Ground roots.",
+"Shredded roots.",
+"Ground tree bark.",
+"Wood shavings.",
+"Fresh leaves.",
+"Dried leaves.",
+"Crumbled leaves.",
+"Leaf buds.",
+"Flower petals.",
+"Pollen.",
+"Fruit peels.",
+"Berries.",
+"Moss.",
+"Mushrooms.",
+"Fuzzy mold.",
+"Spores.",
+"Ground thorns.",
+"Seeds.",
+"A shrubbery.",    ] },
+{  "title": "d10 The herbal concoction preparation involves...",   "roll": [
+"Vigorous mixing.",
+"Boiling slowly.",
+"Boiling rapidly.",
+"Roasting.",
+"Smoking.",
+"Sun-drying.",
+"Soaking.",
+"Brining.",
+"Brewing.",
+"Steeping.",    ] },
+{  "title": "d10 To use, the herbal concoction must be...",   "roll": [
+"Consumed immediately after preparation.",
+"Consumed after it ages for a few hours.",
+"Consumed after it ages for a few years.",
+"Applied topically to the target area.",
+"Taken with food.",
+"Taken with water.",
+"Taken before going to bed.",
+"Taken with caution; side effects are likely.",
+"Taken with a supplement to ameliorate the side effects.",
+"Taken at a time that matches a natural cycle (d12): 1. spring equinox; 2. summer solstice; 3. autumn equinox; 4. winter solstice; 5. new moon; 6. waxing moon; 7. full moon; 8. waning moon; 9. dawn; 10. midday; 11. at dusk; 12. midnight.",    ] },    ], },
+
 {   "title": "Legendary Weapons",   "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
 {  "title": "d8 The weapon is...",   "roll": [
 "A longsword.",
@@ -409,7 +434,7 @@ top.objects = [
 "It can only be wielded by the pure of heart.",
 "It can only be wielded by the just."    ] }    ] },
 
-{   "title": "Magic Wand Generator",   "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
+{   "title": "Magic Wands",   "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
 {  "title": "d8 The wand's tip is...",   "roll": [
 "An orb of lightning.",
 "A shard of crystal.",
@@ -454,7 +479,7 @@ top.objects = [
 "Was a force of evil.",
 "Had no magical talent."    ] }    ] },
 
-{  "title": "Random Magical Device Mishaps",   "use": "Stored spell mishaps may not render the device inoperable, merely discharged. But the stored spell must be replaced. If you have sufficient understanding of the device, you can spend one hour repairing it after a stored spell mishap has occurred. You must be able to cast the stored spell (or an appropriate replacement for it) and expend a spell slot of appropriate level in order to do so (DM's discretion). I would use this table for random scroll-scribing mishaps. \n Alchemical Mishaps do not render the device inoperable. However, no one can attempt to operate the device again until its alchemical component has been replaced with the appropriate alchemical item or potion. Results 13-20 on the Alchemical Mishaps table do significant damage to the device, rendering it inoperable. If you have sufficient understanding of the device, you can spend one hour (or longer) repairing it after a damaging alchemical mishap has occurred. You might need appropriate tools, need to use an appropriate alchemical item or potion, need to expend a spell slot, or replace mechanical parts.\n A mechanical mishap renders the device inoperable until it is repaired. Repairing the device takes one hour (or longer). You might need appropriate tools, need access to special materials, or need to expend a spell slot.",   "rolls": [
+{  "title": "Magical Device Mishaps",   "use": "Stored spell mishaps may not render the device inoperable, merely discharged. But the stored spell must be replaced. If you have sufficient understanding of the device, you can spend one hour repairing it after a stored spell mishap has occurred. You must be able to cast the stored spell (or an appropriate replacement for it) and expend a spell slot of appropriate level in order to do so (DM's discretion). I would use this table for random scroll-scribing mishaps. \n Alchemical Mishaps do not render the device inoperable. However, no one can attempt to operate the device again until its alchemical component has been replaced with the appropriate alchemical item or potion. Results 13-20 on the Alchemical Mishaps table do significant damage to the device, rendering it inoperable. If you have sufficient understanding of the device, you can spend one hour (or longer) repairing it after a damaging alchemical mishap has occurred. You might need appropriate tools, need to use an appropriate alchemical item or potion, need to expend a spell slot, or replace mechanical parts.\n A mechanical mishap renders the device inoperable until it is repaired. Repairing the device takes one hour (or longer). You might need appropriate tools, need access to special materials, or need to expend a spell slot.",   "rolls": [
 {  "title": "d6 Magical Device Mishaps",   "roll": [
 "Nothing happens. You're not sure why. Any further attempts to use the device for the next 24 hours automatically fail, and you trigger a device mishap. (Re-roll on this table if you roll a 1 again on subsequent attempts.)",
 "Roll on Stored Spell Mishaps table.",
@@ -815,7 +840,7 @@ top.objects = [
 "Is strained. The followers have done something to offend their god recently.",
 "Must be Crazy. The god has done something recently that befuddles his/her followers."    ] }    ] },
 
-{  "title": "Random Pickpocket Loot",   "use": "Use these tables for quick inspiration or roll them up randomly.",   "rolls": [
+{  "title": "Pickpocket Loot",   "use": "Use these tables for quick inspiration or roll them up randomly.",   "rolls": [
 {  "title": "d10 On a successful pickpocket check, the thief finds...",   "roll": [
 "A scrap of paper or parchment with an unintelligible note scribbled on it.",
 "A scrap of paper or parchment with a list of mundane items or tasks written on it.",

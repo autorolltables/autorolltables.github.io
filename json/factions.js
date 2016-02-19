@@ -3,7 +3,7 @@
 
 top.factions = [
 
-  {   "title": "Random Assassins' Guild",   "use": "Use these for inspiration or roll them up randomly, some of the tables could be rolled more than once.",   "rolls": [
+  {   "title": "Assassins' Guild",   "use": "Use these for inspiration or roll them up randomly, some of the tables could be rolled more than once.",   "rolls": [
   {  "title": "d12 The guild’s symbol is...",   "roll": [
   "A skull.",
   "An eye.",
@@ -139,7 +139,7 @@ top.factions = [
   "Women and children.",
   "Other assassins.",    ] },    ], },
 
-  {   "title": "Random Crafting Guild",   "use": "These are tables for quickly fleshing out a crafting guild and for adding some quick flavor to an artisan or apprentice craftsman NPC. You really should read /u/TheatreLife's posts to get the most out of this, which includes more information on the materials-to-manufacture pipeline and on gaining renown within a guild.",   "rolls": [
+  {   "title": "Crafting Guild",   "use": "These are tables for quickly fleshing out a crafting guild and for adding some quick flavor to an artisan or apprentice craftsman NPC. You really should read /u/TheatreLife's posts to get the most out of this, which includes more information on the materials-to-manufacture pipeline and on gaining renown within a guild.",   "rolls": [
   {  "title": "d20 This is a guild for...",   "roll": [
   "Miners.",
   "Foresters.",
@@ -290,7 +290,7 @@ top.factions = [
   "Running away from it all.",
   "A life of adventure.",    ] },    ], },
 
-  {   "title": "Random Cult",   "use": "Use these tables for inspiration or roll them randomly. Some of the tables could be rolled more than once.",   "rolls": [
+  {   "title": "Cult",   "use": "Use these tables for inspiration or roll them randomly. Some of the tables could be rolled more than once.",   "rolls": [
   {  "title": "d12 The cultists revere...",   "roll": [
   "A dragon.",
   "A demon lord.",
@@ -388,7 +388,60 @@ top.factions = [
   "Eating meat.",
   "Sobriety.",    ] },    ], },
 
-  {   "title": "Random Mercenary Troops",   "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
+  {  "title": "- Individual Cultist",  "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
+{  "title": "d6 The cultist...",   "roll": [
+"Is an outspoken true believer.",
+"Is a raving lunatic.",
+"Is a quiet, fervent believer.",
+"Has doubts, but is devoted to the cult's leader.",
+"Has doubts, but is too afraid to voice them.",
+"Doesn't care about the religious stuff; the cult meets other needs.",    ] },
+{  "title": "d10 The cultist wears...",   "roll": [
+"A bandage on the thumb.",
+"A face tattoo of a holy symbol.",
+"A tattoo depicting an evil icon.",
+"A string of garlic around the neck.",
+"A robe with a tear at the knee.",
+"A fine silk robe.",
+"A large gold ring on one hand.",
+"A hooded robe.",
+"A robe emblazoned with a holy symbol.",
+"A lush, full beard.",    ] },
+{  "title": "d10 The cultist has...",   "roll": [
+"A ceremonial dagger in hand.",
+"A book protruding from his or her pocket.",
+"A large scar on the throat.",
+"Scraggly matted hair.",
+"A shaved head.",
+"Scars on the wrists.",
+"A protruding chin.",
+"A maniacal grin.",
+"A surly curl of the lip.",
+"A gap between the front teeth.",    ] },
+ {  "title": "d10 The cultist is...",   "roll": [
+ "Humming an eerie incantation.",
+ "Sweating profusely.",
+ "Breathing heavily.",
+ "Twitching nervously.",
+ "Laughing hysterically.",
+ "Muttering under his/her breath.",
+ "Coughing up a lung.",
+ "Whispering a prayer.",
+ "Moving with a limp.",
+ "Stinking of wine.",    ] },
+ {  "title": "d10 The cultist is looking for...",   "roll": [
+ "Ways to impress the cult’s leader.",
+ "Tips for seducing the cult’s leader.",
+ "Methods to assassinate the cult’s leader.",
+ "Something that will impress his/her god.",
+ "Something to eat.",
+ "Something to kill.",
+ "Ways to advance the cult’s goals.",
+ "New recruits.",
+ "Religious scholars to debate.",
+ "A bottle of wine.",    ] },    ], },
+
+  {   "title": "Mercenary Troops",   "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
   {  "title": "d12 The mercenary troop’s colors are...",   "roll": [
   "Black.",
   "Red / scarlet.",
@@ -500,7 +553,7 @@ top.factions = [
   "Scimitars.",
   "Scimitars and a shields.",    ] },    ], },
 
-  {   "title": "Random Merchant Guild",   "use": "These are tables for quickly fleshing out a merchant guild or trading company and for adding some quick flavor to shopkeeper or merchant NPC. You really should read /u/TheatreLife's posts to get the most out of this, which includes more information on the materials-to-manufacture pipeline and on gaining renown within a guild.",   "rolls": [
+  {   "title": "Merchant Guild",   "use": "These are tables for quickly fleshing out a merchant guild or trading company and for adding some quick flavor to shopkeeper or merchant NPC. You really should read /u/TheatreLife's posts to get the most out of this, which includes more information on the materials-to-manufacture pipeline and on gaining renown within a guild.",   "rolls": [
   {  "title": "d8 The guild is controlled by...",   "roll": [
   "A no-nonsense kingpin who despises bureaucracy.",
   "A small and pinched-face gnome with a sinister desire for money.",
@@ -630,7 +683,7 @@ top.factions = [
   "Favors.",
   "Scandalous information.",    ] },    ], },
 
-  {   "title": "Random Military Company",   "use": "Use the tables to roll randomly",   "rolls": [
+  {   "title": "Military Company",   "use": "Use the tables to roll randomly",   "rolls": [
   {  "title": "d20 The company’s colors are...",   "roll": [
   "Black.",
   "Red / scarlet.",
@@ -791,7 +844,7 @@ top.factions = [
   "A trophy from a fallen enemy.",
   "A ribbon from a faraway maiden.",    ] },    ], },
 
-  {   "title": "Random Noble House",   "use": "Use these tables for inspiration or roll them up randomly, some of the tables could be rolled more than once.",   "rolls": [
+  {   "title": "Noble House",   "use": "Use these tables for inspiration or roll them up randomly, some of the tables could be rolled more than once.",   "rolls": [
   {  "title": "d6 The house is...",   "roll": [
   "Ancient and well-respected by all houses, great and small.",
   "Ancient and greatly diminished in standing from what it once was.",
@@ -904,7 +957,50 @@ top.factions = [
   "A desert plateau.",
   "An idyllic hill country.",    ] },    ], },
 
-  {   "title": "Random Outlaw Band",   "use": "Use these for inspiration or roll them up randomly. Some of the tables could be rolled more than once.",   "rolls": [
+  {  "title": "- Individual Noble",  "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
+ {  "title": "d6 The noble is...",   "roll": [
+ "A knight.",
+ "An old lord.",
+ "A young lord.",
+ "An old lady.",
+ "A young lady.",
+ "A wealthy merchant.",    ] },
+ {  "title": "d8 The noble seeks someone to...",   "roll": [
+ "Dispose of an enemy.",
+ "Negotiate a trade contract.",
+ "Deliver a letter.",
+ "Prepare an army for war.",
+ "Sabotage a rival.",
+ "Secure an advantageous marriage for himself or herself.",
+ "Secure an advantageous marriage for a friend or family member.",
+ "Have a good time with.",    ] },
+ {  "title": "d6 The noble carries...",   "roll": [
+ "Several deeds and titles.",
+ "A family heirloom.",
+ "Several inventories and invoices.",
+ "Some very valuable jewels.",
+ "A compromising love letter.",
+ "A letter from a powerful lord or lady.",    ] },
+ {  "title": "d8 The noble wears…",   "roll": [
+ "A flashy gold necklace or chain.",
+ "Shiny leather boots.",
+ "An ornate signet ring.",
+ "Fine silk clothes.",
+ "A handsome grin.",
+ "An extremely ugly scowl.",
+ "An arrogant sneer.",
+ "Beautifully-styled hair and/or facial hair.",    ] },
+ {  "title": "d8 The noble has…",   "roll": [
+ "A loud, deep laugh.",
+ "A high-pitched laugh.",
+ "A twittering nervous laugh.",
+ "A nervous habit of fidgeting.",
+ "A silver tongue.",
+ "A commanding presence.",
+ "Complete disregard for commoners.",
+ "Not a care in the world.",    ] },    ], },
+
+  {   "title": "Outlaw Band",   "use": "Use these for inspiration or roll them up randomly. Some of the tables could be rolled more than once.",   "rolls": [
   {  "title": "d10 The outlaw band’s primary “business” involves...",   "roll": [
   "Poaching from the sovereign's preserve or a prominent noble’s lands.",
   "Harboring fugitives.",
@@ -1072,7 +1168,7 @@ top.factions = [
   "The captain of the guard or a local sheriff.",
   "The sovereign’s main rival.",    ] },    ], },
 
-  {   "title": "Random Pirate Crew",   "use": "Use these for inspiration or roll them up randomly, some of the tables could be rolled more than once.",   "rolls": [
+  {   "title": "Pirate Crew",   "use": "Use these for inspiration or roll them up randomly, some of the tables could be rolled more than once.",   "rolls": [
   {  "title": "d10 The pirates' ship is...",   "roll": [
   "Little more than a raft.",
   "A galley.",
@@ -1252,7 +1348,7 @@ top.factions = [
   "An open shirt and a very hairy chest.",
   "Extravagant mustaches.",    ] },    ], },
 
-  {   "title": "Random Savage Horde",   "use": "Use these for inspiration or roll them up randomly. Some of the tables could be rolled more than once.",   "rolls": [
+  {   "title": "Savage Horde",   "use": "Use these for inspiration or roll them up randomly. Some of the tables could be rolled more than once.",   "rolls": [
   {  "title": "d6 The barbarians are...",   "roll": [
   "A tribe of nomads, following game.",
   "A tribe that began raiding after being displaced from their native lands.",
@@ -1333,7 +1429,7 @@ top.factions = [
   "Hostile and suspicious.",
   "Hostile and eager to fight.",    ] },    ], },
 
-  {   "title": "Random Secret Society",   "use": "Use these for inspiration or roll them up randomly. Some tables could be rolled more than once.",   "rolls": [
+  {   "title": "Secret Society",   "use": "Use these for inspiration or roll them up randomly. Some tables could be rolled more than once.",   "rolls": [
   {  "title": "d6 The society's main goal is to...",   "roll": [
   "Foil the plans of another secret society.",
   "Bring about the destruction of the city, region, or world.",
@@ -1453,7 +1549,7 @@ top.factions = [
   "Members of specific ancient lineages (noble houses, descendants of heroes, etc.)",
   "An eclectic mix of society.",    ] },    ], },
 
-  {   "title": "Random Urban Gangs",   "use": "Use these for inspiration or roll them up randomly, some of the tables could be rolled more than once.",   "rolls": [
+  {   "title": "Urban Gangs",   "use": "Use these for inspiration or roll them up randomly, some of the tables could be rolled more than once.",   "rolls": [
   {  "title": "d8 The gang's money-making schemes include...",   "roll": [
   "Distributing drugs (d4): 1. smokeleaf; 2. hallucinogenic mushrooms; 3. sleepysalt (a downer); 4. sharpsugar (an upper).",
   "Running heists of and/or fencing stolen gems and precious metals.",
@@ -1609,7 +1705,7 @@ top.factions = [
   "An open shirt and a very hairy chest.",
   "Extravagant mustaches.",    ] },    ], },
 
-  {   "title": "Random Watchmen",   "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
+  {   "title": "Watchmen",   "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
   {  "title": "d12 The watch’s colors are...",   "roll": [
   "Black.",
   "Red / scarlet.",
