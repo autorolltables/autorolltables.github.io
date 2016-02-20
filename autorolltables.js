@@ -149,10 +149,14 @@ var indicator_match = /\<\*>.? ? ?([^\d]*)/;
 
 // sub roll (for inline string rolls)
 function inline_roll(roll_text) {
+
+  console.log("roll_text:" + roll_text);
+
   var result = "";
 
   // identify roll type
   roll_type = roll_text.match(sub_roll_match);
+  roll_description = roll_text.substring(0, roll_type.index).trim();
   roll_text_without = roll_text.replace(roll_type,"");
   roll_type = roll_type[0].replace(":","").replace(" ","").replace(")","").replace("(","").replace("d","").replace("D","");
 
@@ -174,7 +178,7 @@ function inline_roll(roll_text) {
   result = roll_text_without[1].replace(/^\s+/, '').replace(/\s+$/, '').replace(/[;,.]$/, '');
 
   // return display in a clear format
-  return "(d" + roll_type + "): " + result;
+  return "(d" + roll_type + ") " + roll_description + ": " + result;
 }
 
 // roll button
