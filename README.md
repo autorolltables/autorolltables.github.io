@@ -5,7 +5,7 @@ developed by dangeratio
 roll tables content by OrkishBlade
 
 <a href="http://autorolltables.github.io/">
-<img src="https://i.imgur.com/EAZomtO.png">
+<img src="https://i.imgur.com/VlaYzgB.png">
 </a>
 
 # JSON table structure
@@ -29,7 +29,3 @@ roll_table
 				item
 				item
 ```
-
-
-	
-	

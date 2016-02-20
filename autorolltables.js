@@ -143,6 +143,39 @@ function init() {
 
 }
 
+// regex for identifying sub-rolls
+var sub_roll_match = /\([dD][\d]{1,3}\) ?:/;
+var indicator_match = /\<\*>.? ? ?([^\d]*)/;
+
+// sub roll (for inline string rolls)
+function inline_roll(roll_text) {
+  var result = "";
+
+  // identify roll type
+  roll_type = roll_text.match(sub_roll_match);
+  roll_text_without = roll_text.replace(roll_type,"");
+  roll_type = roll_type[0].replace(":","").replace(" ","").replace(")","").replace("(","").replace("d","").replace("D","");
+
+  // attempt to pull integer out of it, if not, send back source string
+  try {
+    roll_type = parseInt(roll_type);
+  } catch(e) {
+    return roll_text;
+  }
+
+  // roll a random 1 - roll_type
+  var rand = Math.floor(Math.random() * roll_type) + 1;
+
+  // find that number with a period afterwards, capture next non-whitespace character through until next decimal number detected.
+  roll_text_without = roll_text_without.replace(rand,"<*>");
+
+  // regex match for indicator string <*> to the next decimal, caputring
+  roll_text_without = roll_text_without.match(indicator_match);
+  result = roll_text_without[1].replace(/^\s+/, '').replace(/\s+$/, '').replace(/[;,.]$/, '');
+
+  // return display in a clear format
+  return "(d" + roll_type + "): " + result;
+}
 
 // roll button
 document.getElementById("roll").onclick = function jsRoll() {
@@ -159,9 +192,16 @@ document.getElementById("roll").onclick = function jsRoll() {
   side(" ");
 
   for (var i = 0; i < roll_table[index].rolls.length; i++) {
-    var rand = roll_table[index].rolls[i].roll[Math.floor(Math.random() * roll_table[index].rolls[i].roll.length)];
-    side(roll_table[index].rolls[i].title + ": " + rand);
-    //side(" ");
+
+    var returned = roll_table[index].rolls[i].roll[Math.floor(Math.random() * roll_table[index].rolls[i].roll.length)];
+
+    if(returned.match(sub_roll_match)) {
+      //side(returned + ": matched");
+      returned = inline_roll(returned);
+    }
+
+    // add roll
+    side(roll_table[index].rolls[i].title + ": " + returned);
   }
   document.getElementById("selectlist").focus();
 }

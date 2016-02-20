@@ -21,10 +21,14 @@ body
 
 .select {
   height:400px;
+  opacity: 0.90;
+  filter: alpha(opacity=90); /* For IE8 and earlier */
 }
 
 .display {
   height: 100%;
+  opacity: 0.90;
+  filter: alpha(opacity=90); /* For IE8 and earlier */
   /*height:425px;*/
 }
 
@@ -58,8 +62,15 @@ body
 img.ops
 {
   vertical-align: -15%;
-  opacity: 0.5;
-  filter: alpha(opacity=50); /* For IE8 and earlier */
+  opacity: 0.3;
+  filter: alpha(opacity=30); /* For IE8 and earlier */
+}
+
+.bgimage {
+  margin: -10em;
+  position: fixed;
+  opacity: 0.3;
+  filter: alpha(opacity=30); /* For IE8 and earlier */
 }
 
 .nocolor:link{
