@@ -5,7 +5,7 @@ developed by dangeratio
 roll tables content by OrkishBlade
 
 <a href="http://autorolltables.github.io/">
-<img src="https://i.imgur.com/VlaYzgB.png">
+<img src="https://i.imgur.com/tGEZtHv.png">
 </a>
 
 # JSON table structure
