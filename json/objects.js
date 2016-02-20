@@ -265,7 +265,7 @@ top.objects = [
 "An eel (fights).",
 "A prawn."    ] }    ] },
 
-{  "title": "Herb Lore",  "use": "This is far from complete, and there are some awesome resources out there. I might expand it in the future, but for now, it should serve for quickly coming up with a little mechanics-free herb lore for a druid, herbalist, or healer-type NPC in your game.\nFor side effects and mishaps, I might refer to the Alchemical Mishaps table in the absence of something better.",   "rolls": [
+{  "title": "Herbalism",  "use": "This is far from complete, and there are some awesome resources out there. I might expand it in the future, but for now, it should serve for quickly coming up with a little mechanics-free herb lore for a druid, herbalist, or healer-type NPC in your game.\nFor side effects and mishaps, I might refer to the Alchemical Mishaps table in the absence of something better.",   "rolls": [
 {  "title": "d12 The herbal concoction will help...",   "roll": [
 "A wound heal more quickly.",
 "Reduce pain.",

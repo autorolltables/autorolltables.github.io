@@ -68,7 +68,7 @@ img.ops
 
 .bgimage {
   margin: -10em;
-  position:absolute;
+  position: fixed;
   opacity: 0.3;
   filter: alpha(opacity=30); /* For IE8 and earlier */
 }
