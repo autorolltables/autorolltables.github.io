@@ -496,7 +496,7 @@ top.plots = [
 "A noblewoman (d8): 1. beautiful maiden; 2. young princess; 3. ugly princess; 4. young queen; 5. old queen; 6. wicked queen; 7. faerie queen; 8. old widow.",
 "A priestess (d8): 1. young novice; 2. innocent virgin; 3. high priestess; 4. sister of mercy; 5. old prude; 6. oracle; 7. temptress; 8. zealot.",
 "A witch (d8): 1. crone; 2. enchantress; 3. gypsy woman; 4. fortune teller; 5. potion-maker; 6. seer; 7. dark sorceress; 8. wicked witch.",
-"A wizard (d8): 1. alchemist; 2. conjurer; 4. illusionist; 4. magician; 5. necromancer; 6. pyromancer; 7. old wizard; 8. apprentice mage.",
+"A wizard (d8): 1. alchemist; 2. conjurer; 3. illusionist; 4. magician; 5. necromancer; 6. pyromancer; 7. old wizard; 8. apprentice mage.",
 "A warrior (d8): 1. barbarian; 2. gladiator; 3. guard captain; 4. young knight; 5. proud knight; 6. old knight; 7. mystery knight; 8. sellsword.",
 "A rogue (d8): 1. bandit; 2. gambler; 3. jester; 4. outlaw; 5. pirate; 6. singer; 7. smuggler; 8. thief.",
 "A priest (d8): 1. young acolyte; 2. exorcist; 3. healer; 4. stoic monk; 5. preacher; 6. old priest; 7. young scholar; 8. wise master.",

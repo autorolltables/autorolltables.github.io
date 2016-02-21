@@ -179,7 +179,7 @@ top.npcs = [
 "Gold.",
 "Platinum.",
 "Copper.",
-"One or more gemstones (d10): 1. diamond; 2. emerald; 3. jade; 5. obsidian; 5. opal; 6. pearl; 7. ruby; 8. sapphire; 9. topaz; 10. turquoise."    ] },
+"One or more gemstones (d10): 1. diamond; 2. emerald; 3. jade; 4. obsidian; 5. opal; 6. pearl; 7. ruby; 8. sapphire; 9. topaz; 10. turquoise."    ] },
 {  "title": "d8 Clothes: The person’s clothing is...",   "roll": [
 "Crisp and new.",
 "Fashionable and hip.",
@@ -288,7 +288,7 @@ top.npcs = [
 {  "title": "d6 The person is prejudice against...",   "roll": [
 "Other genders.",
 "An age group (d3): 1. children; 2. teenagers; 3. elderly.",
-"A social class (d3): 1. ruling class and authority figures; 2. powerful rich; 2. destitute poor.",
+"A social class (d3): 1. ruling class and authority figures; 2. powerful rich; 3. destitute poor.",
 "Social deviants (d3): 1. beggars; 2. drunks; 3. drug-users.",
 "A profession (d12): 1. farmers; 2. artists; 3. clergy; 4. soldiers; 5. fishers; 6. harlots; 7. miners; 8. merchants; 9. scholars; 10. herders; 11. sailors; 12. mages",
 "A race (d8): 1. dwarves; 2. elves; 3. gnomes;; 4. goblins; 5. half-breeds; 5. halflings; 6. humans; 7. orcs; 8. reptilians."    ] },
@@ -775,7 +775,7 @@ top.npcs = [
 "A heavy peddler’s pack.",
 "A wide-brimmed hat with a large exotic feather (d10): 1. cockatrice; 2. giant eagle; 3. giant owl; 4. griffon; 5. hippogriff; 6. ostrich 7. peacock; 8. phoenix; 9. roc; 10. shadowraven.",
 "Shiny boots made from an exotic hide (d8): 1. basilisk; 2. crocodile; 3. demonskin; 4. dragonscale; 5. drake; 6. flamesnake; 7. lightning lizard; 8. wyvern.",
-"A coat made from an exotic hide (d6): 1. dragonscale; leopard; 3. owlbear; 4. sharkskin; 5. tiger; 6. zebra.",
+"A coat made from an exotic hide (d6): 1. dragonscale; 2. leopard; 3. owlbear; 4. sharkskin; 5. tiger; 6. zebra.",
 "A large golden necklace.",
 "Flashy earrings.",
 "Dancing shoes.",
@@ -829,7 +829,7 @@ top.npcs = [
 "A dark prison cell.",
 "A grand festival.",
 "A savage and wild land.",
-"A haunted castle.",    ] },    ], }, 
+"A haunted castle.",    ] },    ], },
 
 {  "title": "Castle - Nobleman",  "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
 {  "title": "d6 The lord is...",   "roll": [
@@ -956,7 +956,7 @@ top.npcs = [
 {  "title": "d4 The archer carries...",   "roll": [
 "A longbow with a fraying string.",
 "A longbow crafted of superior wood.",
-"Arrows fletched with the feathers of a wild bird (d8): 1. eagle; 2. hawk; 3. owl; 4. pheasant; 5. raven; 6. swan.",
+"Arrows fletched with the feathers of a wild bird (d6): 1. eagle; 2. hawk; 3. owl; 4. pheasant; 5. raven; 6. swan.",
 "A flask containing a strong drink."    ] }    ] },
 
 {  "title": "Castle - Armorer / Smith",  "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [

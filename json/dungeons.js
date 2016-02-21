@@ -1143,7 +1143,7 @@ top.dungeons = [
   "A crypt for devoted servants or slaves.",
   "A room dedicated for specific rituals (d3): 1. divinations; 2. funerals; 3. necromancy.",
   "Gallery dedicated to the deceased (d3): 1. trophies; 2. statues; 3. paintings.",
-  "A guardroom with guards (d8): 1. ghosts; 2. golems; 3. knights; 4. sell-swords; 5. cultists; 6. skeletons; 5. wights; 6. zombies.",
+  "A guardroom with guards (d8): 1. ghosts; 2. golems; 3. knights; 4. sell-swords; 5. cultists; 6. skeletons; 7. wights; 8. zombies.",
   "A priest’s robing room.",
   "Storage room for embalming tools.",
   "Storage room for tools and materials to maintain the tomb.",
