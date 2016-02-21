@@ -347,7 +347,7 @@ top.factions = [
   "Animal sacrifice (d10): 1. bulls; 2. calves; 3. cats; 4. chickens; 5. dogs; 6. goats; 7. pigeons; 8. rabbits; 9. rams; 10. songbirds.",
   "Human sacrifice (d6): 1. children; 2. elderly; 3. harlots; 4. nonbelievers; 5. priests and priestesses; 6. virgins.",
   "Self-mutilation (d10): 1. arm; 2. back; 3. cheek; 4. chest; 5. ear; 6. eye.; 7. feet; 8. finger; 9. genitalia; 10. nose.",
-  "Burnt offerings (d8): 1. herbs; 2. incense; 3. meat; 4. prisoners.",
+  "Burnt offerings (d4): 1. herbs; 2. incense; 3. meat; 4. prisoners.",
   "Offerings of gold, gems, and valuables.",
   "Strange incantations.",
   "Public acts of violence (d4): 1. beatings; 2. looting; 3. murders; 4. riots.",

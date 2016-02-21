@@ -22,7 +22,7 @@ top.objects = [
 "Plays (d6): 1. comedy; 2. drama; 3. history; 4. romance; 5. satire; 6. tragedy.",
 "Poetry and music (d6): 1. ballads; 2. bawdy songs; 3. epic poetry; 4. hymns; 5. love poetry; 6. lyric poetry.",
 "Prophecies and omens (d6): 1. apocalypse; 2. astronomical events; 3. birds; 4. dreams; 5. visions; 6. weather.",
-"Theology (d6): 1. afterlife; 2. rituals and practices; 3. saints and martyrs; 5. sacred symbols; 6. sacred texts.",
+"Theology (d6): 1. afterlife; 2. rituals and practices; 3. saints and martyrs; 4. sacred objects 5. sacred symbols; 6. sacred texts.",
 "True magic (d6): 1. elementalism; 2. enchantment; 3. illusions; 4. summoning; 5. teleportation and travel; 6. warding.",
 "Travel and trade (d6): 1. ancient ruins; 2. exotic travelogue; 3. economics and taxation; 4. foreign cultures; 5. regional landmarks and terrain; 6. trade routes."    ] },
 {  "title": "d10 The book's condition is...",   "roll": [

@@ -336,7 +336,7 @@ top.settlements = [
 "It is secretly the home to a dark cult.",
 "All the inmates there are related.",
 "Nothing much, a popular girl is with child.",
-"You can pay for services with things other than coin (d6): 1. contract work; 2. goods; 3. religious services; 5. secrets; 6. stock."    ] },
+"You can pay for services with things other than coin (d6): 1. contract work; 2. goods; 3. religious services; 4. high-profile invitations; 5. secrets; 6. stock."    ] },
 {  "title": "d10 People talk about this place; rumors suggest that recently...",   "roll": [
 "A nobleman got one of the girls with child but refuses to acknowledge her or the baby.",
 "Someone slaughtered half of the workers and clients in the night.",
@@ -430,7 +430,7 @@ top.settlements = [
 "(d8): 1. Armory Street; 2. Barricade Street; 3. Knight Street; 4. Moat Street; 5. Pike Street; 6. Rampart Street; 7. Shield Street; 8. Spear Street.",
 "(d6): 1. Arch Street; 2. Bridge Street; 3. Canal Street; 4. Cross Street; 5. Pole Street; 6. River Street.",
 "(d6): 1. Castle Street; 2. House Street; 3. Keep Street; 4. Manor Street; 5. Rock Way; 6. Tower Street.",
-"(d8): 1. Cattle Road; 2. Common Street; 3. Green Street; 4. Greenway Street; 5. Meadow Lane; 6. Orchard Street; 9. Pasture Road; 8. Wildflower Lane.",
+"(d8): 1. Cattle Road; 2. Common Street; 3. Green Street; 4. Greenway Street; 5. Meadow Lane; 6. Orchard Street; 7. Pasture Road; 8. Wildflower Lane.",
 "(d12): 1. Anvil Street; 2. Cooper Street; 3. Forge Street; 4. Hammer Street; 5. Horseshoe Street; 6. Iron Street; 7. Mason Street; 8. Steel Street. 9. Tailor Street; 10. Stone Street; 11. Wright Street; 12. Weaver Street.",
 "(d8): 1. Bluff Street; 2. Cliff Street; 3. Crestline Way; 4. High Street; 5. Highland Way; 6. Hill Street; 7. Hilltop Lane; 8. Ridge Street; 9. Ridgeline Way; 10. Summit Street.",
 "(d8): 1. Devil's Alley; 2. Devil's Lane; 3. Low Street; 4. Magpie Lane; 5. Paupers Street; 6. Penny Lane; 7. Rat's Alley; 8. Serpent's Alley.",
