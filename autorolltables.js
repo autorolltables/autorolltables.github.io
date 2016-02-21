@@ -7,17 +7,6 @@
 
 var current;
 
-/*
-loadScript("json/dungeons.js", null);
-loadScript("json/factions.js", null);
-loadScript("json/monsters.js", null);
-loadScript("json/objects.js", null);
-loadScript("json/npcs.js", null);
-loadScript("json/plots.js", null);
-loadScript("json/settlements.js", null);
-loadScript("json/wilderness.js", null);
-*/
-
 function debug(obj) {
   var output = document.getElementById("output");
   output.innerHTML = output.innerHTML + obj + '\n';
@@ -151,7 +140,6 @@ var indicator_match = /\<\*>.? ? ?([^\d]*)/;
 function inline_roll(roll_text) {
 
   console.log("roll_text:" + roll_text);
-
   var result = "";
 
   // identify roll type
@@ -179,6 +167,33 @@ function inline_roll(roll_text) {
 
   // return display in a clear format
   return "(d" + roll_type + ") " + roll_description + ": " + result;
+}
+
+// test button
+document.getElementById("test").onclick = function roll_test() {
+  var sel = document.getElementById("selectlist");
+  var index = sel.selectedIndex;
+  var seltext = sel.options;
+
+  sideClear();
+  side("Tests:");
+
+  // get length of all
+  var total=0;
+  for (var z = 0; z < roll_table.length; z++){
+    for (var i = 0; i < roll_table[z].rolls.length; i++) {
+      for (var a = 0; a < roll_table[z].rolls[i].roll.length; a++){
+        var returned = roll_table[z].rolls[i].roll[a];
+
+        if(returned.match(sub_roll_match)) {
+          //side(returned + ": matched");
+          returned = inline_roll(returned);
+        }
+      }
+    }
+  }
+
+  document.getElementById("test").focus();
 }
 
 // roll button
