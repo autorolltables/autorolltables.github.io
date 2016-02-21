@@ -775,7 +775,7 @@ top.npcs = [
 "A heavy peddler’s pack.",
 "A wide-brimmed hat with a large exotic feather (d10): 1. cockatrice; 2. giant eagle; 3. giant owl; 4. griffon; 5. hippogriff; 6. ostrich 7. peacock; 8. phoenix; 9. roc; 10. shadowraven.",
 "Shiny boots made from an exotic hide (d8): 1. basilisk; 2. crocodile; 3. demonskin; 4. dragonscale; 5. drake; 6. flamesnake; 7. lightning lizard; 8. wyvern.",
-"A coat made from an exotic hide (d6): 1. dragonscale; leopard; 3. owlbear; 4. sharkskin; 5. tiger; 6. zebra.",
+"A coat made from an exotic hide (d6): 1. dragonscale; 2. leopard; 3. owlbear; 4. sharkskin; 5. tiger; 6. zebra.",
 "A large golden necklace.",
 "Flashy earrings.",
 "Dancing shoes.",
@@ -829,7 +829,7 @@ top.npcs = [
 "A dark prison cell.",
 "A grand festival.",
 "A savage and wild land.",
-"A haunted castle.",    ] },    ], }, 
+"A haunted castle.",    ] },    ], },
 
 {  "title": "Castle - Nobleman",  "use": "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",   "rolls": [
 {  "title": "d6 The lord is...",   "roll": [
