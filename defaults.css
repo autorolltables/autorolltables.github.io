@@ -97,6 +97,10 @@ img.ops
   padding: 1em 1em 0em 1em;
 }
 
+.subtitle {
+  color: #5A6668;
+}
+
 #menu {
   display: block;
   margin: auto;

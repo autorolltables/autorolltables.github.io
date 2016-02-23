@@ -63,7 +63,7 @@ top.factions = [
   "Several other guildmembers.",
   "The details of the guild’s organization.",
   "Nothing about the guild’s leadership.",
-  "The names of the guild’s leaders, though they’ve never any of them.",
+  "The names of the guild’s leaders, though they’ve never met any of them.",
   "One of the guild’s leading members and no other guildmembers.",    ] },
   {  "title": "d12 The guild’s leader is...",   "roll": [
   "A dangerous megalomaniac.",
