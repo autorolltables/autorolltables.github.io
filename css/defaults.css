@@ -101,6 +101,11 @@ img.ops
   color: #5A6668;
 }
 
+.padsome {
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
 #menu {
   display: block;
   margin: auto;
