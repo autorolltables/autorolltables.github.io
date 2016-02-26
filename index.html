@@ -13,29 +13,18 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!--<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Quicksand:400,700|Questrial" rel="stylesheet" />-->
-  <!--<link rel="stylesheet" href="default.css" type="text/css" media="all" />-->
-  <!--<link rel="stylesheet" href="fonts.css" type="text/css" media="all" />-->
-
-  <link rel="stylesheet" href="defaults.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="css/defaults.css" type="text/css" media="all" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
-  <script src="json/dungeons.js"></script>
-  <script src="json/factions.js"></script>
-  <script src="json/monsters.js"></script>
-  <script src="json/objects.js"></script>
-  <script src="json/npcs.js"></script>
-  <script src="json/plots.js"></script>
-  <script src="json/settlements.js"></script>
-  <script src="json/wilderness.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/rolls.js"></script>
 
 </head>
 
 <body>
   <div class="bgimg">
     <img src="http://dungeonmastering.net/wp-content/uploads/2015/06/dndlogo1.png" class="bgimage">
-    <!-- <img src="http://uxrepo.com/static/icon-sets/windows/svg/dnd.svg" class="bgimage"> -->
   </div>
 
   <div id="header" class="container-fluid">
@@ -47,7 +36,8 @@
 
     <div id="menu-container" class="row">
       <div id="menu" class="col-md-8 btn-group">
-        <a href="#dungeons" accesskey="1" class='menuitem btn'>Dungeons/Locations</a>
+
+        <a href="#dungeons" accesskey="1" class='menuitem btn'>Dungeons</a>
         <a href="#" accesskey="2" class='menuitem btn'>Factions</a>
         <a href="#" accesskey="3" class='menuitem btn'>Monsters</a>
         <a href="#" accesskey="4" class='menuitem btn'>Objects</a>
@@ -58,7 +48,7 @@
 
       </div>
       <div id="side" class="col-md-4">
-        <span class="text-muted right-text">Select a table from the list on the left and click Roll</span>
+        <span class="subtitle right-text">Select a table from the list on the left and click Roll</span>
       </div>
     </div>
   </div>
@@ -122,7 +112,7 @@
   <div class="row">&nbsp;</div>
   <div class="row">
     <div class="col-md-12">
-      <p class="text-muted">development by dangeratio | roll tables from OrkishBlade available <a href="https://www.reddit.com/r/BehindTheTables/wiki/index">here</a> | <a href="changelog.html">updates</a>
+      <p class="text-muted">development by dangeratio | most roll tables from OrkishBlade at: <a href="https://www.reddit.com/r/BehindTheTables/wiki/index">/r/BehindTheTables</a>, see <a href="changelog.html">credits</a> for all contributors | <a href="changelog.html">change log</a>
       </p>
     </div>
   </div>
@@ -132,7 +122,7 @@
 </body>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script type="text/javascript" src="autorolltables.js"></script>
+<script type="text/javascript" src="js/autorolltables.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
 

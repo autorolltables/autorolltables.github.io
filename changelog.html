@@ -17,18 +17,9 @@
   <!--<link rel="stylesheet" href="default.css" type="text/css" media="all" />-->
   <!--<link rel="stylesheet" href="fonts.css" type="text/css" media="all" />-->
 
-  <link rel="stylesheet" href="defaults.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="css/defaults.css" type="text/css" media="all" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-
-  <script src="json/dungeons.js"></script>
-  <script src="json/factions.js"></script>
-  <script src="json/monsters.js"></script>
-  <script src="json/objects.js"></script>
-  <script src="json/npcs.js"></script>
-  <script src="json/plots.js"></script>
-  <script src="json/settlements.js"></script>
-  <script src="json/wilderness.js"></script>
 
 </head>
 
@@ -45,19 +36,38 @@
         <h1>Auto Roll Tables</h1>
       </a>
     </div>
-      <div id="side" class="col-md-4">
-        <span class="left-text">Changelog</span>
+    <div class="row">
+      <div id="side" class="col-md-6">
+        <span class="left-text padsome">Change Log</span>
       </div>
+      <div class="col-md-6">
+        <span class="left-text padsome">Credits</span>
+      </div>
+    </div>
     </div>
   </div>
 
   <div id="page" class="container-fluid">
 
     <div class="row">
-      <div id="quote" class="col-md-12 changelog">
-        <p><b>2/19/16</b>  : Added Bards, added Songs, added inline-roll execution (if some roll answers are another roll, that roll will be performed)
+      <div id="quote" class="col-md-6 changelog">
+        <p><b>2/25/16</b> : Added magical shops, added poisons, added campaign descriptions, added unconventional rewards.
+        <p><b>2/23/16</b> : Changed structure of stored rolls and menu to allow for triggered rolls and further sub-rolls.</p>
+        <p><b>2/19/16</b> : Added Bards, added Songs, added inline-roll execution (if some roll answers are another roll, that roll will be performed)</p>
         <p><b>2/18/16</b>	:	Added a Changelog, added Castle Dungons, added Individual Cultist, added Random Snake Cultists, added Serial Killers to Monsters, added Witches to Monsters, moved Fisherfolk to NPCs, reordered NPCs List, Herbalism, removed the word 'Random' from most titles, added Druids, added Graverobbers, added Strange People, added Woodsman, added Damsel in Distress, added Nightmares Variant, added Vignettes II. </p>
         <p><b>2/16/16</b>	:	Changed Look/Feel, Removed Green</p>
+      </div>
+      <div id="quote" class="col-md-6 changelog">
+        <p>developed by dangeratio</p>
+        <hr>
+        <p>Roll Tables from:</p>
+        <p><b>OrkishBlade</b></p>
+        <p>Joxxill</p>
+        <p>Minitaz2001</p>
+        <p>famoushippopotamus</p>
+        <p>TuesdayTastic</p>
+        <p>micka190</p>
+
       </div>
     </div>
   </div>
@@ -66,7 +76,7 @@
   <div class="row">
     <div class="col-md-12">
       <hr>
-      <p class="text-muted">development by dangeratio | roll tables from OrkishBlade available <a href="https://www.reddit.com/r/BehindTheTables/wiki/index">here</a> | <a href="index.html">back</a>
+      <p class="text-muted"><a href="index.html">back to roll tables</a>
       </p>
     </div>
   </div>
@@ -76,7 +86,7 @@
 </body>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script type="text/javascript" src="autorolltables.js"></script>
+<script type="text/javascript" src="js/autorolltables.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
 

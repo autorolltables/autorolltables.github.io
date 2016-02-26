@@ -7,10 +7,8 @@
 
 var current;
 
-function debug(obj) {
-  var output = document.getElementById("output");
-  output.innerHTML = output.innerHTML + obj + '\n';
-  return 0;
+function log(obj) {
+  console.log(obj);
 }
 
 function out(obj) {
@@ -39,10 +37,10 @@ function clearSelect() {
   }
 }
 
-
-// return table variable from table name
-function getTable(table_name) {
-  switch(table_name) {
+// used in main menu select as well as select onclick
+function get_table(table){
+  //log("switch:"+table);
+  switch(table) {
     case "dungeons":
       return top.dungeons;
       break;
@@ -67,9 +65,6 @@ function getTable(table_name) {
     case "wilderness":
       return top.wilderness;
       break;
-    default:
-      return top.dungeons;
-      break;
   }
 }
 
@@ -77,60 +72,141 @@ function getTable(table_name) {
 // fill select table helper function
 function loadSelect(curr_table) {
   clearSelect();
-
   var selectlist = document.getElementById("selectlist");
   var rollbutton = document.getElementById("roll");
 
-  current = getTable(curr_table.toLowerCase());
-
-  //alert(current[0].title);
-
-  for (var i = 0; i < current.length; i++) {
-    selectlist.options[selectlist.options.length] = new Option(current[i].title, current[i].title);
+  // find the correct menu (from the selected menu item)
+  menu = top.menu;
+  for(i=0;i<menu.length;i++){
+    if(menu[i].title==curr_table){
+      current = menu[i];
+    }
   }
 
+  // iterate that menu, and add items to select
+  for (var i = 0; i < current.items.length; i++) {
+    selectlist.options[selectlist.options.length] = new Option(current.items[i].title,current.items[i].title);
+  }
+}
+
+// return menu variable from table name
+function get_menu(table_name) {
+  menu = top.menu;
+  for(i=0;i<menu.length;i++){
+    if(menu[i].id==table_name){
+      return menu[i];
+    }
+  }
+}
+
+// get table split from main_roll id
+function get_roll_table(id_string){
+  var tmp = id_string.split("/");
+  return tmp[0];
+}
+
+// get id split from main_roll id
+function get_roll_id(id_string){
+  var tmp = id_string.split("/");
+  return tmp[1];
+}
+
+// return menu variable from table name
+function get_roll_array(roll_name, title) {
+  menu = top.menu
+  for(i=0;i<menu.length;i++){
+    //log("compare:"+menu[i].id+"|"+title);
+    if(menu[i].id==title){
+      for(z=0;z<menu[i].items.length;z++){
+        //log("compare:"+menu[i].items[z].title+"|"+roll_name);
+        if(menu[i].items[z].title==roll_name){
+          return menu[i].items[z];
+        }
+      }
+    }
+  }
+}
+
+// get title of roll from roll id and table
+function get_roll(id, table){
+  //log("get_roll_init:"+id+"|"+table);
+  table = get_table(table);
+  for(i=0;i<table.length;i++){
+    if(table[i].id==id){
+      return table[i];
+    }
+  }
+  return "";
 }
 
 
 // handle new selections
 document.getElementById("selectlist").onchange = document.getElementById("selectlist").onclick = function selected() {
+
   var sel = document.getElementById("selectlist");
   var index = sel.selectedIndex;
-  var seltext = sel.options;
-  roll_table = current;
+  var seltext = sel.options[index].value;
+
+  //log("seltext:"+seltext);
+  //log("id:"+current.id);
+
+  roll_table = get_roll_array(seltext, current.id);
+
+  //log("returned table:"+roll_table.title);
 
   sideClear();
-  side("Title: " + roll_table[index].title);
+
+  side("Title: " + roll_table.title);
   side(" ");
-  side("Suggested Use: " + roll_table[index].use);
+  side("Suggested Use: " + roll_table.use);
   side(" ");
-  side("Rolls: " + roll_table[index].rolls.length);
+  side("Rolls: " + roll_table.main_rolls.length);
   side(" ");
-  for (var i = 0; i < roll_table[index].rolls.length; i++) {
-    side(roll_table[index].rolls[i].title);
-    for (var z = 0; z < roll_table[index].rolls[i].roll.length; z++) {
-      side(" " + (z+1) + " - " + roll_table[index].rolls[i].roll[z]);
+  // iterate the menu, displaying the titles for the rolls
+  for (var i = 0; i < roll_table.main_rolls.length; i++) {
+    id = get_roll_id(roll_table.main_rolls[i]);
+    table = get_roll_table(roll_table.main_rolls[i]);
+    toss = get_roll(id, table);
+
+    side(toss.title);
+
+    // iterate each roll, displaying the roll values
+    for (var z = 0; z < toss.roll.length; z++) {
+      side(" " + (z+1) + " - " + toss.roll[z]);
     }
     side(" ");
   }
 
 }
 
+//find a roll title
+function get_roll_title(val) {
+  rolls = top.rolls;
+  for(i=0; i<rolls.length; i++) {
+    //console.log("compare:"+rolls[i].id+" | "+val);
+    if(rolls[i].id == val) {
+      return i.title;
+    }
+  }
+}
+
+
 // initial load of select list
 function init() {
   // default to dungeons
-  current = top.dungeons;
+  current = top.menu[0];
 
   // fill select
   var selectlist = document.getElementById("selectlist");
   var rollbutton = document.getElementById("roll");
 
-  for (var i = 0; i < current.length; i++) {
-    var obj = current[i];
-    selectlist.options[selectlist.options.length] = new Option(current[i].title, current[i].title);
+  for (var i = 0; i < current.items.length; i++) {
+    var title = current.items[i].title
+    selectlist.options[selectlist.options.length] = new Option(title, title);
   }
 
 }
+
 
 // regex for identifying sub-rolls
 var sub_roll_match = /\([dD][\d]{1,3}\) ?:/;
@@ -139,7 +215,7 @@ var indicator_match = /\<\*>.? ? ?([^\d]*)/;
 // sub roll (for inline string rolls)
 function inline_roll(roll_text) {
 
-  console.log("roll_text:" + roll_text);
+  //console.log("roll_text:" + roll_text);
   var result = "";
 
   // identify roll type
@@ -171,6 +247,7 @@ function inline_roll(roll_text) {
 
 // test button
 document.getElementById("test").onclick = function roll_test() {
+
   var sel = document.getElementById("selectlist");
   var index = sel.selectedIndex;
   var seltext = sel.options;
@@ -196,34 +273,58 @@ document.getElementById("test").onclick = function roll_test() {
   document.getElementById("test").focus();
 }
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function roll_roll(id, table){
+  table = get_table(table);
+  for(i=0;i<table.length;i++){
+    if(table[i].id==id){
+      var length = table[i].roll.length;
+      var rand = Math.floor(Math.random() * length);
+      //log("roll:"+rand);
+      //log("roll:"+table[i].roll[rand]);
+      return table[i].roll[rand];
+    }
+  }
+  return "";
+}
+
+
+
 // roll button
-document.getElementById("roll").onclick = function jsRoll() {
+document.getElementById("roll").onclick = function perform_roll() {
+
   var sel = document.getElementById("selectlist");
   var index = sel.selectedIndex;
-  var seltext = sel.options;
+  var seltext = sel.options[index].value;
+
+  roll_table = get_roll_array(seltext, current.id);
 
   sideClear();
-  side("Title: " + roll_table[index].title);
+
+  side("Title: " + roll_table.title);
   side(" ");
-  side("Suggested Use: " + roll_table[index].use);
+  side("Suggested Use: " + roll_table.use);
   side(" ");
-  side("Rolls: " + roll_table[index].rolls.length);
+  side("Rolls: " + roll_table.main_rolls.length);
   side(" ");
 
-  for (var i = 0; i < roll_table[index].rolls.length; i++) {
+  // iterate the menu, displaying the values for rolls
+  for (var i = 0; i < roll_table.main_rolls.length; i++) {
+    id = get_roll_id(roll_table.main_rolls[i]);
+    table = get_roll_table(roll_table.main_rolls[i]);
+    roll = get_roll(id, table);
+    value = roll_roll(id, table);
 
-    var returned = roll_table[index].rolls[i].roll[Math.floor(Math.random() * roll_table[index].rolls[i].roll.length)];
+    // care for sub-rolls if they exist
+    if(value.match(sub_roll_match)) {value = inline_roll(value);}
 
-    if(returned.match(sub_roll_match)) {
-      //side(returned + ": matched");
-      returned = inline_roll(returned);
-    }
-
-    // add roll
-    side(roll_table[index].rolls[i].title + ": " + returned);
+    side(roll.title + " : " + value);
   }
+
   document.getElementById("selectlist").focus();
 }
+
 
 
 // copy to clipboard
@@ -243,8 +344,29 @@ copyTextareaBtn.addEventListener('click', function(event) {
   }
 });
 
+// create menu
+// <a href="#dungeons" accesskey="1" class='menuitem btn'>Dungeons/Locations</a>
+// <a href="#" accesskey="2" class='menuitem btn'>Factions</a>
+// <a href="#" accesskey="3" class='menuitem btn'>Monsters</a>
+// <a href="#" accesskey="4" class='menuitem btn'>Objects</a>
+// <a href="#" accesskey="4" class='menuitem btn'>NPCs</a>
+// <a href="#" accesskey="5" class='menuitem btn'>Plots</a>
+// <a href="#" accesskey="6" class='menuitem btn'>Settlements</a>
+// <a href="#" accesskey="7" class='menuitem btn'>Wilderness</a>
 
-// menu
+var menu_item_template = "<a href='#' class='menuitem btn'>DESC</a>";
+menu = top.menu;
+for(i=0;i<menu.length;i++){
+  $(".menu").append(menu_item_template.replace("DESC",menu[i].title));
+  //console.log(menu[i].title);
+}
+
+//href("#")
+
+
+
+
+// menu realtime
 //
 $(function() {
   $(".menuitem").click(function() {
