@@ -17,6 +17,22 @@ body
   margin: auto;
   width:100%;
   background-color: #00ff00;
+
+}
+
+#quote {
+  background-color: #c0c0c0;
+  border-width:2px;
+  border-style:solid;
+  border-radius:1em;
+  opacity: 0.90;
+  filter: alpha(opacity=90); /* For IE8 and earlier */
+
+  margin-right: 1em;
+  margin-left: 1em;
+
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 .select {
