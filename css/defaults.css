@@ -21,10 +21,11 @@ body
 }
 
 #quote {
-  background-color: #c0c0c0;
-  border-width:2px;
+  background-color: white;
+  border-width:1px;
   border-style:solid;
   border-radius:1em;
+  border-color: #c0c0c0;
   opacity: 0.90;
   filter: alpha(opacity=90); /* For IE8 and earlier */
 
@@ -111,6 +112,8 @@ img.ops
   vertical-align: middle;
   float: left;
   padding: 1em 1em 0em 1em;
+
+
 }
 
 .subtitle {
