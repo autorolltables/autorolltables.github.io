@@ -6,26 +6,43 @@
 //
 
 var current;
+var output;
+var side_obj;
 
 function log(obj) {
   console.log(obj);
 }
 
+function display_output(){
+  document.getElementById("output").innerHTML = document.getElementById("output").innerHTML + output
+}
+
 function out(obj) {
-  var output = document.getElementById("output");
-  output.innerHTML = output.innerHTML + obj + '\n';
+  output = output + obj + "\n";
+  // var output = document.getElementById("output");
+  // output.innerHTML = output.innerHTML + obj + '\n';
   return 0;
 }
 
+function outClear() {
+  document.getElementById("output").innerHTML = "";
+  output = "";
+}
+
+function display_side(){
+  document.getElementById("rightview").innerHTML = document.getElementById("rightview").innerHTML + side_obj;
+}
+
 function side(obj) {
-  var side = document.getElementById("rightview");
-  side.innerHTML = side.innerHTML + obj + '\n';
+  side_obj = side_obj + obj + "\n"
+  // var side = document.getElementById("rightview");
+  // side.innerHTML = side.innerHTML + obj + '\n';
   return 0;
 }
 
 function sideClear() {
-  var side = document.getElementById("rightview");
-  side.innerHTML = "";
+  document.getElementById("rightview").innerHTML = "";
+  side_obj = "";
   return 0;
 }
 
@@ -177,6 +194,8 @@ document.getElementById("selectlist").onchange = document.getElementById("select
     side(" ");
   }
 
+  display_side();
+
 }
 
 //find a roll title
@@ -270,6 +289,8 @@ document.getElementById("test").onclick = function roll_test() {
     }
   }
 
+  display_side();
+
   document.getElementById("test").focus();
 }
 
@@ -321,6 +342,8 @@ document.getElementById("roll").onclick = function perform_roll() {
 
     side(roll.title + " : " + value);
   }
+
+  display_side();
 
   document.getElementById("selectlist").focus();
 }
