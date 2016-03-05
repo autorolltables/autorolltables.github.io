@@ -16,19 +16,15 @@ Here is the structure used in table.js if you want to make your own tables in a 
 
 ```
 menu_title
-menu_id
-items []
-	item
-		item_title
-		item_use
-		item_main_rolls []
-			roll_id
-			roll_id
-			roll_id
-		item_sub_rolls []
-			roll_id
-			roll_id
-			roll_id
+item
+	main_rolls []
+		js/roll_id
+		js/roll_id
+		js/roll_id
+	sub_rolls []
+		js/roll_id
+		js/roll_id
+		js/roll_id
 ```
 
 ## rolls - js/rolls.js

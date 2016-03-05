@@ -1,0 +1,24 @@
+Castle with 4d4 rooms, 10d4 inhabitants
+  4d4 Number of Rooms
+    Roll each room details
+  10d4 Number of inhabitants
+    d40 Castle Inhabitant
+
+Castle with 4d4 rooms, 50% chance of encounter per room
+
+
+
+
+---
+
+Note: Sub rolls are either: a number roll for X rolls in turn, or a trigger roll (ex: d10 creatures, then roll type of creature)
+
+Method to execute sub roll
+
+1. Determine if number roll or triggering roll (see note above)
+
+Number Roll
+2. Execute sub-roll determined number/percentage of times
+
+Triggering Roll
+2. Execute sub-roll determined number/percentage of times, in turn execute triggered roll(s)
