@@ -321,8 +321,6 @@ document.getElementById("test").onclick = function roll_test() {
   document.getElementById("test").focus();
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 function get_roll_title(id, table) {
   table = get_table(table);
   for(i=0;i<table.length;i++){
@@ -338,9 +336,8 @@ function roll_roll(id, table){
   for(i=0;i<table.length;i++){
     if(table[i].id==id){
       var length = table[i].roll.length;
+      // log("roll length:"+length);
       var rand = Math.floor(Math.random() * length);
-      //log("roll:"+rand);
-      //log("roll:"+table[i].roll[rand]);
       return table[i].roll[rand];
     }
   }
@@ -398,19 +395,8 @@ function roll_sub_roll(id, table) {
               if(value.match(inline_roll_match)) {value = inline_roll(value);}
 
               result = result + pre + sub_title + " : " + value + "\n";
-
             }
-
           }
-
-          // ************
-          // ************
-          // ************
-          // ************
-          // ************
-          // ************
-
-
         } else if(type=="amount") {
           var length = table[i].rolls.length;
           var amount = get_roll_value(number);
@@ -427,8 +413,6 @@ function roll_sub_roll(id, table) {
             for(var x=0;x<length;x++) {
               // roll sub-roll this number of times
 
-              // var current_table = table[i];
-              // var current_roll = current_table.rolls[x];
               id = get_roll_id(table[i].rolls[x]);
               sub_table = get_roll_table(table[i].rolls[x]);
               sub_title = get_roll_title(id, sub_table);
@@ -444,11 +428,6 @@ function roll_sub_roll(id, table) {
       }
     }
   }
-
-  // add this to each individual roll
-  // care for inline-rolls if they exist
-  // if(value.match(inline_roll_match)) {value = inline_roll(value);}
-
 
   if(result!=""){
     return result;
