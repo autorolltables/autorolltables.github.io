@@ -82,6 +82,9 @@ function get_table(table){
     case "wilderness":
       return top.wilderness;
       break;
+    case "subrolls":
+      return top.subrolls;
+      break;
   }
 }
 
@@ -124,7 +127,7 @@ function get_roll_table(id_string){
 
 // get id split from main_roll id
 function get_roll_id(id_string){
-  var tmp = id_string.split("/");
+  var tmp = id_string.toString().split("/");
   return tmp[1];
 }
 
@@ -177,21 +180,44 @@ document.getElementById("selectlist").onchange = document.getElementById("select
   side(" ");
   side("Suggested Use: " + roll_table.use);
   side(" ");
-  side("Rolls: " + roll_table.main_rolls.length);
+  side("Main Rolls: " + roll_table.main_rolls.length);
+  side("Sub Rolls: " + roll_table.sub_rolls.length);
   side(" ");
-  // iterate the menu, displaying the titles for the rolls
+
+  side("Main Rolls:");
+  // iterate the menu, displaying the titles for the main rolls
   for (var i = 0; i < roll_table.main_rolls.length; i++) {
     id = get_roll_id(roll_table.main_rolls[i]);
     table = get_roll_table(roll_table.main_rolls[i]);
     toss = get_roll(id, table);
 
     side(toss.title);
+    // log("main toss:"+toss.title);
 
-    // iterate each roll, displaying the roll values
-    for (var z = 0; z < toss.roll.length; z++) {
-      side(" " + (z+1) + " - " + toss.roll[z]);
-    }
+    //
+    // // iterate each roll, displaying the roll values
+    // for (var z = 0; z < toss.roll.length; z++) {
+    //   side(" " + (z+1) + " - " + toss.roll[z]);
+    // }
+    // side(" ");
+  }
+
+  // iterate the sub rolls, displaying the titles for them
+  if(roll_table.sub_rolls.length>0){
     side(" ");
+    side("Sub Rolls (these may roll many times each):");
+
+    for (var i=0; i<roll_table.sub_rolls.length;i++){
+      id = get_roll_id(roll_table.sub_rolls[i]);
+      table = get_roll_table(roll_table.sub_rolls[i]);
+      // log("id:"+id);
+      // log("table:"+table);
+      toss = get_roll(id, table);
+
+      side(toss.title);
+
+      // iteate sub rolls?
+    }
   }
 
   display_side();
@@ -228,8 +254,9 @@ function init() {
 
 
 // regex for identifying sub-rolls
-var sub_roll_match = /\([dD][\d]{1,3}\) ?:/;
+var inline_roll_match = /\([dD][\d]{1,3}\) ?:/;
 var indicator_match = /\<\*>.? ? ?([^\d]*)/;
+var d_match = /^[dD]/;
 
 // sub roll (for inline string rolls)
 function inline_roll(roll_text) {
@@ -238,7 +265,7 @@ function inline_roll(roll_text) {
   var result = "";
 
   // identify roll type
-  roll_type = roll_text.match(sub_roll_match);
+  roll_type = roll_text.match(inline_roll_match);
   roll_description = roll_text.substring(0, roll_type.index).trim();
   roll_text_without = roll_text.replace(roll_type,"");
   roll_type = roll_type[0].replace(":","").replace(" ","").replace(")","").replace("(","").replace("d","").replace("D","");
@@ -251,7 +278,7 @@ function inline_roll(roll_text) {
   }
 
   // roll a random 1 - roll_type
-  var rand = Math.floor(Math.random() * roll_type) + 1;
+  var rand = Math.ceil(Math.random() * roll_type);
 
   // find that number with a period afterwards, capture next non-whitespace character through until next decimal number detected.
   roll_text_without = roll_text_without.replace(rand,"<*>");
@@ -281,7 +308,7 @@ document.getElementById("test").onclick = function roll_test() {
       for (var a = 0; a < roll_table[z].rolls[i].roll.length; a++){
         var returned = roll_table[z].rolls[i].roll[a];
 
-        if(returned.match(sub_roll_match)) {
+        if(returned.match(inline_roll_match)) {
           //side(returned + ": matched");
           returned = inline_roll(returned);
         }
@@ -295,6 +322,16 @@ document.getElementById("test").onclick = function roll_test() {
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function get_roll_title(id, table) {
+  table = get_table(table);
+  for(i=0;i<table.length;i++){
+    if(table[i].id==id){
+      return table[i].title;
+    }
+  }
+  return "";
+}
 
 function roll_roll(id, table){
   table = get_table(table);
@@ -311,6 +348,147 @@ function roll_roll(id, table){
 }
 
 
+function roll_sub_roll(id, table) {
+  var table = get_table(table);
+  var result = "";
+
+  for(var i=0;i<table.length;i++) {
+    if(table[i].id==id){
+      // found correct sub-roll id
+      var title = table[i].title;
+      var type = table[i].roll_type;
+      var number = table[i].number;
+      var percent_of = table[i].percent_of;
+      var percent_to = table[i].percent_to;
+
+      if(Math.ceil(Math.random() * 100)<=percent_to){
+
+        if(type=="type"){
+          // execute type roll
+
+          var length = table[i].roll.length;
+          var amount = get_roll_value(number);
+
+          amount = Math.ceil(amount * (percent_of / 100));
+          result = result + title + " : " + amount + "\n";
+          // roll that many times
+          for(var z=0;z<amount;z++){
+            // roll for each roll
+            var pre_title = "(" + (z+1) + ") ";
+            var pre = "     ";
+
+            // for each roll in total amount, roll main (random * length), then roll all sub-attributes accordingly
+            var rand = Math.floor(Math.random() * length);  // floor to match array counting (start at 0)
+            log("rand:"+rand);
+            var rolls = table[i].roll[rand].main_rolls;
+
+            // show title of this result
+            result = result + pre_title + table[i].roll[rand].title + "\n";
+
+            for(var x=0; x<rolls.length;x++){
+
+              log("rolls[x]:"+rolls[x]);
+              id = get_roll_id(rolls[x]);
+              sub_table = get_roll_table(rolls[x]);
+              log("id:"+id);
+              log("sub_table:"+sub_table);
+              sub_title = get_roll_title(id, sub_table);
+              value = roll_roll(id, sub_table);
+
+              if(value.match(inline_roll_match)) {value = inline_roll(value);}
+
+              result = result + pre + sub_title + " : " + value + "\n";
+
+            }
+
+          }
+
+          // ************
+          // ************
+          // ************
+          // ************
+          // ************
+          // ************
+
+
+        } else if(type=="amount") {
+          var length = table[i].rolls.length;
+          var amount = get_roll_value(number);
+
+          amount = Math.ceil(amount * (percent_of / 100));
+          result = result + "\n" + title + " : " + amount + "\n";
+          // roll that many times
+          for(var z=0;z<amount;z++){
+            // roll for each roll
+
+            result = result + "(" + (z+1) + ") \n";
+            var pre = "     ";
+
+            for(var x=0;x<length;x++) {
+              // roll sub-roll this number of times
+
+              // var current_table = table[i];
+              // var current_roll = current_table.rolls[x];
+              id = get_roll_id(table[i].rolls[x]);
+              sub_table = get_roll_table(table[i].rolls[x]);
+              sub_title = get_roll_title(id, sub_table);
+              value = roll_roll(id, sub_table);
+
+              if(value.match(inline_roll_match)) {value = inline_roll(value);}
+
+              result = result + pre + sub_title + " : " + value + "\n";
+
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // add this to each individual roll
+  // care for inline-rolls if they exist
+  // if(value.match(inline_roll_match)) {value = inline_roll(value);}
+
+
+  if(result!=""){
+    return result;
+  } else {
+    return "";
+  }
+
+}
+
+function get_roll_value(str) {
+
+  // interpret various rolls - d10, 1d10, 4d4, maybe even 6d6+10 someday (but not currently)
+  var value=0;
+
+  // log("value:"+str);
+  if(str.match(d_match)) {
+    // single roll (no number before the "d")
+
+    // remove the d
+    str = str.toLowerCase().replace("d","");
+    // roll randomly
+    var rand = Math.ceil(Math.random() * parseInt(str));
+    return rand;
+
+  } else {
+    // multiple rolls (split on the "d" and execute a random [1] [0] times)
+
+    // var tmp = id_string.split("/");
+    // return tmp[1];
+    str = str.toLowerCase().split("d");
+
+    var total = 0;
+    for(var a=0;a<str[0];a++){
+      var rand = Math.ceil(Math.random() * parseInt(str[1]));
+      total = total + rand;
+    }
+    return total;
+  }
+  return "";
+}
 
 // roll button
 document.getElementById("roll").onclick = function perform_roll() {
@@ -327,10 +505,13 @@ document.getElementById("roll").onclick = function perform_roll() {
   side(" ");
   side("Suggested Use: " + roll_table.use);
   side(" ");
-  side("Rolls: " + roll_table.main_rolls.length);
+  side("Main Rolls: " + roll_table.main_rolls.length);
+  side("Sub Rolls: " + roll_table.sub_rolls.length);
+  side(" ");
+  side("Main Rolls:");
   side(" ");
 
-  // iterate the menu, displaying the values for rolls
+  // iterate the menu, displaying the values for main rolls
   for (var i = 0; i < roll_table.main_rolls.length; i++) {
     id = get_roll_id(roll_table.main_rolls[i]);
     table = get_roll_table(roll_table.main_rolls[i]);
@@ -338,10 +519,33 @@ document.getElementById("roll").onclick = function perform_roll() {
     value = roll_roll(id, table);
 
     // care for sub-rolls if they exist
-    if(value.match(sub_roll_match)) {value = inline_roll(value);}
+    if(value.match(inline_roll_match)) {value = inline_roll(value);}
 
     side(roll.title + " : " + value);
   }
+
+  side(" ");
+  side("Sub Rolls:");
+
+  // iterate the menu, displaying the values for sub rolls
+  for (var i = 0; i < roll_table.sub_rolls.length; i++) {
+    // log("roll_table.sub_rolls[i]:"+roll_table.sub_rolls[i]);
+    id = get_roll_id(roll_table.sub_rolls[i]);
+    // log("id:"+id);
+    table = get_roll_table(roll_table.sub_rolls[i]);
+    // log("table:"+table);
+    roll = get_roll(id, table);
+    value = roll_sub_roll(id, table);
+
+    side(value);
+  }
+
+
+
+
+
+
+
 
   display_side();
 
