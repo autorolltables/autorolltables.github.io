@@ -240,7 +240,7 @@ top.factions = [
 "Tell a tale that inspires creativity.",
 "Sneak off for a drink and some kisses.",
 ]},
-{"title": "d6 The artisan is...", "id":"d6theartisanis", "roll":[
+{"title": "d6 The artisan is...", "id":"guildd6theartisanis", "roll":[
 "A young journeyman.",
 "A mediocre journeyman.",
 "A skilled journeyman.",
@@ -248,7 +248,7 @@ top.factions = [
 "A master of the craft.",
 "An old crafter.",
 ]},
-{"title": "d8 The artisan has...", "id":"d8theartisanhas", "roll":[
+{"title": "d8 The artisan has...", "id":"guildd8theartisanhas", "roll":[
 "A friendly smile.",
 "Keen eyes.",
 "Watery eyes.",
@@ -258,7 +258,7 @@ top.factions = [
 "Tired eyes.",
 "An amused smirk.",
 ]},
-{"title": "d8 The artisan has...", "id":"d8theartisanhas", "roll":[
+{"title": "d8 The artisan has...", "id":"guildd8theartisanhas2", "roll":[
 "A limp.",
 "A hunchback.",
 "Unsteady hands when they aren’t at work.",
@@ -296,7 +296,7 @@ top.factions = [
 "A pipe and some tobacco.",
 "A flask of whisky.",
 ]},
-{"title": "d6 The artisan is...", "id":"d6theartisanis", "roll":[
+{"title": "d6 The artisan is...", "id":"guildd6theartisanis2", "roll":[
 "A well-known member of the guild.",
 "An established or up-and-coming leader in the guild.",
 "A new member of the guild, having recently relocated from a distant land.",
@@ -621,16 +621,6 @@ top.factions = [
 "Spotty, depending on the will of the coin and the market this guild may be drinking Elven wine or rotten grog.",
 "Unquestioned, they exert complete dominance over all other guilds in the area.",
 "Questionable, though they claim to have control, some operators have undermined it.",
-]},
-{"title": "d8 This guild's headquarters is...", "id":"d8thisguildsheadquartersis", "roll":[
-"The leader's or leaders' personal residence, a large manor.",
-"The dusty basement of the city's capital hall.",
-"A single, thin, and very tall townhouse that leans slightly into the street.",
-"A moored ship, especially curious in landlocked cities.",
-"An open-air pavilion centered in the city's bazaar.",
-"Doubling as a large and prestigious bank.",
-"An opulent demiplane hidden in a shady back-alley.",
-"Jointly shared with all the guilds of the city, and the thieves guild lurks in the sewers below.",
 ]},
 {"title": "d8 Minor Quest: The guild has been having some trouble with...", "id":"d8minorquesttheguildhasbeenhavingsometroublewith", "roll":[
 "A merchant was recently shaken down by a lowly thug, send a message.",

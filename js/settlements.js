@@ -452,7 +452,7 @@ top.settlements = [
 "A large mirror against one wall.",
 "A large mirror on the ceiling over the bed.",
 ]},
-{"title": "d20 Features: You notice...", "id":"d20featuresyounotice", "roll":[
+{"title": "d20 Features: You notice...", "id":"brotheld20featuresyounotice", "roll":[
 "The scent of lavender.",
 "The scent of lilac perfume.",
 "The scent of ginger and cinnamon.",
