@@ -378,7 +378,6 @@ function roll_sub_roll(id, table) {
 
             // for each roll in total amount, roll main (random * length), then roll all sub-attributes accordingly
             var rand = Math.floor(Math.random() * length);  // floor to match array counting (start at 0)
-            log("rand:"+rand);
             var rolls = table[i].roll[rand].main_rolls;
 
             // show title of this result
@@ -386,11 +385,8 @@ function roll_sub_roll(id, table) {
 
             for(var x=0; x<rolls.length;x++){
 
-              log("rolls[x]:"+rolls[x]);
               id = get_roll_id(rolls[x]);
               sub_table = get_roll_table(rolls[x]);
-              log("id:"+id);
-              log("sub_table:"+sub_table);
               sub_title = get_roll_title(id, sub_table);
               value = roll_roll(id, sub_table);
 
