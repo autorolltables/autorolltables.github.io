@@ -185,6 +185,7 @@ document.getElementById("selectlist").onchange = document.getElementById("select
   side(" ");
 
   side("Main Rolls:");
+  side(" ");
   // iterate the menu, displaying the titles for the main rolls
   for (var i = 0; i < roll_table.main_rolls.length; i++) {
     id = get_roll_id(roll_table.main_rolls[i]);
@@ -206,6 +207,7 @@ document.getElementById("selectlist").onchange = document.getElementById("select
   if(roll_table.sub_rolls.length>0){
     side(" ");
     side("Sub Rolls (these may roll many times each):");
+    side(" ");
 
     for (var i=0; i<roll_table.sub_rolls.length;i++){
       id = get_roll_id(roll_table.sub_rolls[i]);

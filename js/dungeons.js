@@ -161,7 +161,7 @@ top.dungeons = [
   "The throne room.",
   "A treasure vault (likely hidden and/or protected by traps).",
   ]},
-  {"title": "d20 Features: You notice...", "id":"d20featuresyounotice", "roll":[
+  {"title": "d20 Features: You notice...", "id":"castled20featuresyounotice", "roll":[
   "An armchair flanked by two sconces.",
   "A large armoire or buffet cabinet.",
   "A bench with a cushion.",
@@ -277,7 +277,7 @@ top.dungeons = [
   "A unique and terrible torture device.",
   "The bones of a deposed king or queen.",
   ]},
-  {"title": "d10 Rooms: This chamber is...", "id":"d10roomsthischamberis", "roll":[
+  {"title": "d10 Rooms: This chamber is...", "id":"castledungeond10roomsthischamberis", "roll":[
   "A dungeon cell.",
   "Another dungeon cell.",
   "A passageway connecting cell blocks.",
@@ -289,7 +289,7 @@ top.dungeons = [
   "An interrogation room.",
   "A torture chamber.",
   ]},
-  {"title": "d20 Features: You notice...", "id":"d20featuresyounotice", "roll":[
+  {"title": "d20 Features: You notice...", "id":"castledungeond20featuresyounotice", "roll":[
   "A wooden door reinforced with steel bands.",
   "Steel bars where you expected a stone wall.",
   "Empty manacles along the wall.",
@@ -401,7 +401,7 @@ top.dungeons = [
   "Living in unintentional isolation.",
   "Severely out of place in this cave.",
   ]},
-  {"title": "d20 Distinguishing Landmark: You see...", "id":"d20distinguishinglandmarkyousee", "roll":[
+  {"title": "d20 Distinguishing Landmark: You see...", "id":"cavernd20distinguishinglandmarkyousee", "roll":[
   "A trickle of water flowing down the walls and across the floor.",
   "An underground lake of potable water.",
   "A pool of stagnant water.",
@@ -423,7 +423,7 @@ top.dungeons = [
   "A large cavern with a strong echo.",
   "A claustrophobic tunnel with a low ceiling.",
   ]},
-  {"title": "d12 Features: You notice...", "id":"d12featuresyounotice", "roll":[
+  {"title": "d12 Features: You notice...", "id":"cavernd12featuresyounotice", "roll":[
   "A cache of abandoned, decrepit mining equipment.",
   "Some old dry bones.",
   "Many bones underfoot.",
@@ -569,18 +569,6 @@ top.dungeons = [
   "Umber hulk.",
   "Wraith.",
   ]},
-  {"title": "d10 Ecology: The creature is...", "id":"d10ecologythecreatureis", "roll":[
-  "A predator or a hunter.",
-  "A food source for other denizens.",
-  "A recently-arrived squatter or invader.",
-  "A long-time resident.",
-  "A parasite or a scavenger.",
-  "A host or the dominant species.",
-  "Unusually abundant.",
-  "Living in deliberate isolation.",
-  "Living in unintentional isolation.",
-  "Severely out of place in this mine.",
-  ]},
   {"title": "d12 Neighbors: The miners complain of trouble from a nearby colony of...", "id":"d12neighborstheminerscomplainoftroublefromanearbycolonyof", "roll":[
   "Cyclops.",
   "Duergar.",
@@ -595,7 +583,7 @@ top.dungeons = [
   "Troglodytes.",
   "Trolls.",
   ]},
-  {"title": "d20 Distinguishing Landmark: You see...", "id":"d20distinguishinglandmarkyousee", "roll":[
+  {"title": "d20 Distinguishing Landmark: You see...", "id":"mined20distinguishinglandmarkyousee", "roll":[
   "A trickle of water flowing down the walls and across the floor.",
   "An underground lake of potable water.",
   "A pool of stagnant water.",
@@ -617,7 +605,7 @@ top.dungeons = [
   "A partially excavated wall with plentiful ore.",
   "A heap of excavated rock.",
   ]},
-  {"title": "d12 Features: You notice...", "id":"d12featuresyounotice", "roll":[
+  {"title": "d12 Features: You notice...", "id":"mined12featuresyounotice", "roll":[
   "Some broken mining equipment.",
   "Some old dry bones.",
   "Evidence of a recent, brief encampment.",
@@ -761,7 +749,7 @@ top.dungeons = [
   "A brewery.",
   "A barn.",
   ]},
-  {"title": "d20 Features: You notice...", "id":"d20featuresyounotice", "roll":[
+  {"title": "d20 Features: You notice...", "id":"monasteryd20featuresyounotice", "roll":[
   "A small altar set in an alcove in the wall.",
   "The sound of bells ringing in a tower.",
   "A wall sconce holding many candles.",
@@ -883,7 +871,7 @@ top.dungeons = [
   "A unique and terrible torture device.",
   "The bones of a deposed king or queen.",
   ]},
-  {"title": "d10 Rooms: This chamber is...", "id":"d10roomsthischamberis", "roll":[
+  {"title": "d10 Rooms: This chamber is...", "id":"prisond10roomsthischamberis", "roll":[
   "A prison cell.",
   "Another prison cell.",
   "A passageway connecting cell blocks.",
@@ -895,7 +883,7 @@ top.dungeons = [
   "An interrogation room.",
   "A torture chamber.",
   ]},
-  {"title": "d20 Features: You notice...", "id":"d20featuresyounotice", "roll":[
+  {"title": "d20 Features: You notice...", "id":"prisond20featuresyounotice", "roll":[
   "A wooden door reinforced with steel bands.",
   "Steel bars where you expected a stone wall.",
   "Empty manacles along the wall.",
@@ -1079,7 +1067,7 @@ top.dungeons = [
   "Vaulted.",
   "Domes or cupolas.",
   ]},
-  {"title": "d20 The purpose of this room is...", "id":"d20thepurposeofthisroomis", "roll":[
+  {"title": "d20 The purpose of this room is...", "id":"templed20thepurposeofthisroomis", "roll":[
   "An armory or barracks.",
   "A guardroom or sentry post.",
   "A cell for solitary prayer.",
@@ -1101,7 +1089,7 @@ top.dungeons = [
   "A stable or kennel.",
   "A workshop for temple craftsmen.",
   ]},
-  {"title": "d20 Features: You notice...", "id":"d20featuresyounotice", "roll":[
+  {"title": "d20 Features: You notice...", "id":"templed20featuresyounotice", "roll":[
   "A small altar set in an alcove in the wall.",
   "The sound of bells ringing in a tower.",
   "A wall sconce holding many candles.",
@@ -1223,7 +1211,7 @@ top.dungeons = [
   "House the remains of someone whose body is widely believed to have been lost.",
   "Have already been cleared of monsters and gold by treasure hunters.",
   ]},
-  {"title": "d20 The purpose of this room is...", "id":"d20thepurposeofthisroomis", "roll":[
+  {"title": "d20 The purpose of this room is...", "id":"tombd20thepurposeofthisroomis", "roll":[
   "An antechamber to a crypt or chapel.",
   "A chapel dedicated to protecting the souls of the deceased.",
   "A chapel dedicated to aiding the journey of the souls of the deceased.",
@@ -1245,7 +1233,7 @@ top.dungeons = [
   "A crypt hidden by a secret door where the most important person in the tomb rests.",
   "A priest’s quarters or robing room.",
   ]},
-  {"title": "d20 Features: You notice...", "id":"d20featuresyounotice", "roll":[
+  {"title": "d20 Features: You notice...", "id":"tombd20featuresyounotice", "roll":[
   "A small altar set in an alcove in the wall.",
   "A plaque listing a family lineage.",
   "A plaque noting birth and death dates.",
