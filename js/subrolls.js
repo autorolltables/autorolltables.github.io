@@ -6,6 +6,61 @@
 
 // names = ["npcs/dxmalefirstname", "npcs/dxfemalefirstname", "npcs/dxsurname", ];
 
+town_npcs = [
+
+  {"title":"Alchemist", "main_rolls":["npcs/dxfirstname", "npcs/dxsurname", "npcs/dxpersonality","npcs/d6thealchemistis", "npcs/d4thealchemistislookingfor", "npcs/d4thealchemistcarries", ],"sub_rolls":[],},
+  {"title":"Apprentice Crafter", "main_rolls":["npcs/dxfirstname", "npcs/dxsurname", "npcs/dxpersonality", "npcs/d4theapprenticeis", "npcs/d4theapprenticeseekssomeoneto", ],"sub_rolls":[],},
+  {"title":"Apprentice Crafter", "main_rolls":["npcs/dxfirstname", "npcs/dxsurname", "npcs/dxpersonality", "npcs/d4theapprenticeis", "npcs/d4theapprenticeseekssomeoneto", ],"sub_rolls":[],},
+  {"title":"Apprentice Crafter", "main_rolls":["npcs/dxfirstname", "npcs/dxsurname", "npcs/dxpersonality", "npcs/d4theapprenticeis", "npcs/d4theapprenticeseekssomeoneto", ],"sub_rolls":[],},
+  {"title":"Artisan", "main_rolls":["npcs/dxfirstname", "npcs/dxsurname", "npcs/dxpersonality","npcs/d6theartisanis", "npcs/d8theartisanhas", "npcs/d8theartisanhas", "npcs/d6theartisanisparticularlyskilledat", "npcs/d8theartisanislookingfor", "npcs/d6theartisaniscarrying", "npcs/d6theartisanis", "npcs/d6theartisandreamsof", ],"sub_rolls":[],},
+  {"title":"Bard", "main_rolls":["npcs/dxfirstname", "npcs/dxsurname", "npcs/dxpersonality","npcs/d20thebardis", "npcs/d20alwayspreparedtomakeamelodyorrhythmthebardcarrieshisher", "npcs/d10thebardsmusicalinstrumentis", "npcs/d12ifthingsgetroughthebardhas", "npcs/d12thebardalsocarries", "npcs/d12thebardiswearing", "npcs/d12thebardhas", "npcs/d12thebardislookingfor", "npcs/d10thebardisalwaysabighitamong", "npcs/d12thebardtellsataleofarecentvisitto", ],"sub_rolls":[],},
+  {"title":"Bard", "main_rolls":["npcs/dxfirstname", "npcs/dxsurname", "npcs/dxpersonality","npcs/d20thebardis", "npcs/d20alwayspreparedtomakeamelodyorrhythmthebardcarrieshisher", "npcs/d10thebardsmusicalinstrumentis", "npcs/d12ifthingsgetroughthebardhas", "npcs/d12thebardalsocarries", "npcs/d12thebardiswearing", "npcs/d12thebardhas", "npcs/d12thebardislookingfor", "npcs/d10thebardisalwaysabighitamong", "npcs/d12thebardtellsataleofarecentvisitto", ],"sub_rolls":[],},
+  {"title":"Barkeep/Barmaid", "main_rolls":["npcs/dxfirstname", "npcs/dxsurname", "npcs/dxpersonality","npcs/d8theservergreetsyouwith", "npcs/d6theserverislookingfor", "npcs/d4theservercarries", ],"sub_rolls":[],},
+  {"title":"Barkeep/Barmaid", "main_rolls":["npcs/dxfirstname", "npcs/dxsurname", "npcs/dxpersonality","npcs/d8theservergreetsyouwith", "npcs/d6theserverislookingfor", "npcs/d4theservercarries", ],"sub_rolls":[],},
+  {"title":"Barkeep/Barmaid", "main_rolls":["npcs/dxfirstname", "npcs/dxsurname", "npcs/dxpersonality","npcs/d8theservergreetsyouwith", "npcs/d6theserverislookingfor", "npcs/d4theservercarries", ],"sub_rolls":[],},
+  {"title":"Boyer/Fletcher", "main_rolls":["npcs/dxfirstname", "npcs/dxsurname", "npcs/dxpersonality","npcs/d4thebowyeris", "npcs/d4thebowyerislookingfor", "npcs/d4thebowyercarries", ],"sub_rolls":[],},
+  {"title":"Cook", "main_rolls":["npcs/dxfirstname", "npcs/dxsurname", "npcs/dxpersonality","npcs/d6thecookislookingfor", ],"sub_rolls":[],},
+  {"title":"Cook", "main_rolls":["npcs/dxfirstname", "npcs/dxsurname", "npcs/dxpersonality","npcs/d6thecookislookingfor", ],"sub_rolls":[],},
+  {"title":"Cook", "main_rolls":["npcs/dxfirstname", "npcs/dxsurname", "npcs/dxpersonality","npcs/d6thecookislookingfor", ],"sub_rolls":[],},
+  {"title":"Criminal", "main_rolls":["npcs/dxfirstname", "npcs/dxsurname", "npcs/dxpersonality","npcs/d6thecriminalis", "npcs/d6thecriminalislookingfor", "npcs/d6thecriminalcarries", ],"sub_rolls":[],},
+  {"title":"Farmfolk", "main_rolls":["npcs/dxfirstname", "npcs/dxsurname", "npcs/dxpersonality","npcs/d8thepeasantis", "npcs/d8thepeasantseekssomeoneto", "npcs/d6thepeasantsprimarycropsandmarketfareinclude", ],"sub_rolls":[],},
+  {"title":"Farmfolk", "main_rolls":["npcs/dxfirstname", "npcs/dxsurname", "npcs/dxpersonality","npcs/d8thepeasantis", "npcs/d8thepeasantseekssomeoneto", "npcs/d6thepeasantsprimarycropsandmarketfareinclude", ],"sub_rolls":[],},
+  {"title":"Farmfolk", "main_rolls":["npcs/dxfirstname", "npcs/dxsurname", "npcs/dxpersonality","npcs/d8thepeasantis", "npcs/d8thepeasantseekssomeoneto", "npcs/d6thepeasantsprimarycropsandmarketfareinclude", ],"sub_rolls":[],},
+  {"title":"Farmfolk", "main_rolls":["npcs/dxfirstname", "npcs/dxsurname", "npcs/dxpersonality","npcs/d8thepeasantis", "npcs/d8thepeasantseekssomeoneto", "npcs/d6thepeasantsprimarycropsandmarketfareinclude", ],"sub_rolls":[],},
+  {"title":"Farmfolk", "main_rolls":["npcs/dxfirstname", "npcs/dxsurname", "npcs/dxpersonality","npcs/d8thepeasantis", "npcs/d8thepeasantseekssomeoneto", "npcs/d6thepeasantsprimarycropsandmarketfareinclude", ],"sub_rolls":[],},
+  {"title":"Fisherfolk", "main_rolls":["npcs/dxfirstname", "npcs/dxsurname", "npcs/dxpersonality","npcs/d10thefishermanfishesin", "npcs/d6thefishermantypicallyfishesfrom", "npcs/d8thefishermanuses", "npcs/d6thefishermanpreferstofish", "npcs/d8thefishermanisseeking", "npcs/d8tattoothefishermanhas", "npcs/d10distinguishingfeaturethefishermanhas", ],"sub_rolls":[],},
+  {"title":"Fisherfolk", "main_rolls":["npcs/dxfirstname", "npcs/dxsurname", "npcs/dxpersonality","npcs/d10thefishermanfishesin", "npcs/d6thefishermantypicallyfishesfrom", "npcs/d8thefishermanuses", "npcs/d6thefishermanpreferstofish", "npcs/d8thefishermanisseeking", "npcs/d8tattoothefishermanhas", "npcs/d10distinguishingfeaturethefishermanhas", ],"sub_rolls":[],},
+  {"title":"Fisherfolk", "main_rolls":["npcs/dxfirstname", "npcs/dxsurname", "npcs/dxpersonality","npcs/d10thefishermanfishesin", "npcs/d6thefishermantypicallyfishesfrom", "npcs/d8thefishermanuses", "npcs/d6thefishermanpreferstofish", "npcs/d8thefishermanisseeking", "npcs/d8tattoothefishermanhas", "npcs/d10distinguishingfeaturethefishermanhas", ],"sub_rolls":[],},
+  {"title":"Fisherfolk", "main_rolls":["npcs/dxfirstname", "npcs/dxsurname", "npcs/dxpersonality","npcs/d10thefishermanfishesin", "npcs/d6thefishermantypicallyfishesfrom", "npcs/d8thefishermanuses", "npcs/d6thefishermanpreferstofish", "npcs/d8thefishermanisseeking", "npcs/d8tattoothefishermanhas", "npcs/d10distinguishingfeaturethefishermanhas", ],"sub_rolls":[],},
+  {"title":"Fisherfolk", "main_rolls":["npcs/dxfirstname", "npcs/dxsurname", "npcs/dxpersonality","npcs/d10thefishermanfishesin", "npcs/d6thefishermantypicallyfishesfrom", "npcs/d8thefishermanuses", "npcs/d6thefishermanpreferstofish", "npcs/d8thefishermanisseeking", "npcs/d8tattoothefishermanhas", "npcs/d10distinguishingfeaturethefishermanhas", ],"sub_rolls":[],},
+  {"title":"Harlot", "main_rolls":["npcs/dxfemalefirstname", "npcs/dxsurname", "npcs/dxpersonality","npcs/d10theharlotis", "npcs/d6everyoneisbeautifultheharlothas", "npcs/d8nooneisflawlesstheharlothas", "npcs/d4theharlotsflawis", "npcs/d6theharlotisparticularlyskilledat", "npcs/d6theharlotislookingto", ],"sub_rolls":[],},
+  {"title":"Harlot", "main_rolls":["npcs/dxfemalefirstname", "npcs/dxsurname", "npcs/dxpersonality","npcs/d10theharlotis", "npcs/d6everyoneisbeautifultheharlothas", "npcs/d8nooneisflawlesstheharlothas", "npcs/d4theharlotsflawis", "npcs/d6theharlotisparticularlyskilledat", "npcs/d6theharlotislookingto", ],"sub_rolls":[],},
+  {"title":"Harlot", "main_rolls":["npcs/dxfemalefirstname", "npcs/dxsurname", "npcs/dxpersonality","npcs/d10theharlotis", "npcs/d6everyoneisbeautifultheharlothas", "npcs/d8nooneisflawlesstheharlothas", "npcs/d4theharlotsflawis", "npcs/d6theharlotisparticularlyskilledat", "npcs/d6theharlotislookingto", ],"sub_rolls":[],},
+  {"title":"Knight", "main_rolls":["npcs/dxmalefirstname", "npcs/dxsurname", "npcs/dxpersonality","npcs/d20theknightshousescolorsare", "npcs/d8theknightshousessymbolis", "npcs/d6theknighthassworntoanoblelordorladyto", "npcs/d8aboveallelsetheknightvalues", "npcs/d4theknightisarmoredin", "npcs/d6theknightsarmoris", "npcs/d12theknightiswielding", "npcs/d6theknightsmountis", "npcs/d12theknightis", "npcs/d12ontheknightsfaceis", "npcs/d10theknightcarries", ],"sub_rolls":[],},
+  {"title":"Law Official", "main_rolls":["npcs/dxfirstname", "npcs/dxsurname", "npcs/dxpersonality","npcs/d4thelawofficialis", "npcs/d6thelawofficialseekssomeoneto", "npcs/d4thelawofficialcarries", ],"sub_rolls":[],},
+  {"title":"Noble", "main_rolls":["npcs/dxfirstname", "npcs/dxsurname", "npcs/dxpersonality","npcs/d6thenobleis", "npcs/d6thenobleseekssomeoneto", "npcs/d6thenoblecarries", ],"sub_rolls":[],},
+  {"title":"Noble", "main_rolls":["npcs/dxfirstname", "npcs/dxsurname", "npcs/dxpersonality","npcs/d6thenobleis", "npcs/d6thenobleseekssomeoneto", "npcs/d6thenoblecarries", ],"sub_rolls":[],},
+  {"title":"Priest", "main_rolls":["npcs/dxfirstname", "npcs/dxsurname", "npcs/dxpersonality","npcs/d6thepriestis", "npcs/d4thepriestislookingfor", "npcs/d4thepriestcarries", ],"sub_rolls":[],},
+  {"title":"Shopkeeper", "main_rolls":["npcs/dxfirstname", "npcs/dxsurname", "npcs/dxpersonality","npcs/d4theshopkeeperis", "npcs/d4theshopkeeperseekssomeoneto", ],"sub_rolls":[],},
+  {"title":"Shopkeeper", "main_rolls":["npcs/dxfirstname", "npcs/dxsurname", "npcs/dxpersonality","npcs/d4theshopkeeperis", "npcs/d4theshopkeeperseekssomeoneto", ],"sub_rolls":[],},
+  {"title":"Shopkeeper", "main_rolls":["npcs/dxfirstname", "npcs/dxsurname", "npcs/dxpersonality","npcs/d4theshopkeeperis", "npcs/d4theshopkeeperseekssomeoneto", ],"sub_rolls":[],},
+  {"title":"Shopkeeper", "main_rolls":["npcs/dxfirstname", "npcs/dxsurname", "npcs/dxpersonality","npcs/d4theshopkeeperis", "npcs/d4theshopkeeperseekssomeoneto", ],"sub_rolls":[],},
+  {"title":"Shopkeeper", "main_rolls":["npcs/dxfirstname", "npcs/dxsurname", "npcs/dxpersonality","npcs/d4theshopkeeperis", "npcs/d4theshopkeeperseekssomeoneto", ],"sub_rolls":[],},
+  {"title":"Shopkeeper", "main_rolls":["npcs/dxfirstname", "npcs/dxsurname", "npcs/dxpersonality","npcs/d4theshopkeeperis", "npcs/d4theshopkeeperseekssomeoneto", ],"sub_rolls":[],},
+  {"title":"Smith", "main_rolls":["npcs/dxfirstname", "npcs/dxsurname", "npcs/dxpersonality","npcs/d4thesmithis", "npcs/d4thesmithislookingfor", "npcs/d4thesmithcarries", ],"sub_rolls":[],},
+  {"title":"Squire", "main_rolls":["npcs/dxfirstname", "npcs/dxsurname", "npcs/dxpersonality","npcs/d12theservantis", "npcs/d6theservantworksfor", "npcs/d8ontheservantsfaceis", ],"sub_rolls":[],},
+  {"title":"Stable Hand", "main_rolls":["npcs/dxfirstname", "npcs/dxsurname", "npcs/dxpersonality","npcs/d4thestablehandis", "npcs/d4thestablehandhas", "npcs/d4thestablehandwantsto", ],"sub_rolls":[],},
+  {"title":"Traveler", "main_rolls":["npcs/dxfirstname", "npcs/dxsurname", "npcs/dxpersonality","npcs/d8thetraveleris", "npcs/d10thetravelerisseeking", ],"sub_rolls":[],},
+  {"title":"Traveler", "main_rolls":["npcs/dxfirstname", "npcs/dxsurname", "npcs/dxpersonality","npcs/d8thetraveleris", "npcs/d10thetravelerisseeking", ],"sub_rolls":[],},
+  {"title":"Traveler", "main_rolls":["npcs/dxfirstname", "npcs/dxsurname", "npcs/dxpersonality","npcs/d8thetraveleris", "npcs/d10thetravelerisseeking", ],"sub_rolls":[],},
+  {"title":"Traveler", "main_rolls":["npcs/dxfirstname", "npcs/dxsurname", "npcs/dxpersonality","npcs/d8thetraveleris", "npcs/d10thetravelerisseeking", ],"sub_rolls":[],},
+  {"title":"Traveler", "main_rolls":["npcs/dxfirstname", "npcs/dxsurname", "npcs/dxpersonality","npcs/d8thetraveleris", "npcs/d10thetravelerisseeking", ],"sub_rolls":[],},
+  {"title":"Traveler", "main_rolls":["npcs/dxfirstname", "npcs/dxsurname", "npcs/dxpersonality","npcs/d8thetraveleris", "npcs/d10thetravelerisseeking", ],"sub_rolls":[],},
+  {"title":"Tutor/Sage", "main_rolls":["npcs/dxfirstname", "npcs/dxsurname", "npcs/dxpersonality","npcs/d6thetutoris", "npcs/d4thetutorschargesviewhimheras", "npcs/d12thetutorisparticularlywellversedin", ],"sub_rolls":[],},
+  {"title":"Woodsmen", "main_rolls":["npcs/dxmalefirstname", "npcs/dxsurname", "npcs/dxpersonality","npcs/d10facialfeaturethewoodsmanhas", "npcs/d8apparelthewoodsmanwears", "npcs/d8mannerismthewoodsmanhas", "npcs/d8professionthewoodsmanis", "npcs/d10goalthewoodsmanislookingto", "npcs/d10possessionsthewoodsmancarriesorwears", ],"sub_rolls":[],},
+
+];
+
 castle_npcs = [
 
   {"title":"Nobleman", "main_rolls":["npcs/dxmalefirstname", "npcs/dxsurname", "npcs/dxpersonality", "npcs/d6thelordis", "npcs/d6thelordseekssomeoneto", "npcs/d6thelordcarries", ],"sub_rolls":[],},
@@ -75,6 +130,14 @@ pantheon = [
   {"title":"The War/Tyrant God", "main_rolls":["objects/d6thiswartyrantgodisoftencalled", "objects/d6heholdsdominionover", "objects/d6hisfollowersmust", ],"sub_rolls":[],},
 ];
 
+fishing_catch = [
+  {"title":"- Cold Ocean Fishing", "main_rolls":["objects/d10nearshorecatchyouhaulin", "objects/d10deepseacatchyouhaulin", "objects/d6rarecatchyouhaulin", ],"sub_rolls":[],},
+  {"title":"- Warm Ocean Fishing", "main_rolls":["objects/d8nearshorecatchyouhaulin", "objects/d10deepseacatchyouhaulin", "objects/d8rarecatchyouhaulin", ],"sub_rolls":[],},
+  {"title":"- Freshwater Fishing", "main_rolls":["objects/d10coldwatercatchyouhaulin", "objects/d10warmwatercatchyouhaulin", "objects/d6swampwatercatchyouhaulin", ],"sub_rolls":[],},
+  {"title":"- Seafood Harvesting", "use":"To harvest seafood the player must have a hunting trap, and must succeed on a skill check vs a DC 12. If he or she has proficiency in Survival then the player can make this check with advantage. The player can only harvest their traps after 24 hours have passed.", "main_rolls":[ "objects/d12seafood",],"sub_rolls":[],},
+];
+
+
 top.subrolls = [
 
   // dungeons/locations
@@ -86,6 +149,7 @@ top.subrolls = [
   {"title":"16d6 Amount of d50 Castle Inhabitants", "id":"castle16d6amountofd50inhabitants", "roll_type":"type", "number":"16d6", "percent_to":"100", "percent_of":"100", "roll":castle_npcs,},
   {"title":"15d6 Castle Rooms", "id":"castle15d6rooms", "roll_type":"amount", "number":"15d6", "percent_to":"100", "percent_of":"100", "rolls":["dungeons/d20roomsthischamberis", "dungeons/castled20featuresyounotice",],},
   {"title":"30d6 Amount of d50 Castle Inhabitants", "id":"castle30d6amountofd50inhabitants", "roll_type":"type", "number":"30d6", "percent_to":"100", "percent_of":"100", "roll":castle_npcs,},
+  {"title":"4d6 Monastery Rooms", "id":"monastery4d6rooms", "roll_type":"amount", "number":"4d6", "percent_to":"100", "percent_of":"100", "rolls":["dungeons/d12thisbuildingchamberis", "dungeons/monasteryd20featuresyounotice",],},
   {"title":"4d6 Prison Rooms", "id":"prison4d6rooms", "roll_type":"amount", "number":"4d6", "percent_to":"100", "percent_of":"100", "rolls":["subrolls/prisond10roomsthischamberis", "dungeons/prisond20featuresyounotice",],},
   {"title":"4d4 Jailers", "id":"prison4d4jailers", "roll_type":"amount", "number":"4d4", "percent_to":"100", "percent_of":"100", "rolls":["npcs/dxmalefirstname", "npcs/dxfemalefirstname", "npcs/dxsurname", "npcs/dxpersonality", "dungeons/d8thejaileris", "dungeons/d4thejailerisconcernedabout", "dungeons/d4thejailerislookingto", "dungeons/d8thejailercarries",],},
   {"title":"10d6 Prisoners ", "id":"prison10d6prisoners", "roll_type":"amount", "number":"10d6", "percent_to":"100", "percent_of":"100", "rolls":["npcs/dxmalefirstname", "npcs/dxfemalefirstname", "npcs/dxsurname", "npcs/dxpersonality", "dungeons/d4theprisonerhas", "dungeons/d6theprisonerisherebecause",],},
@@ -112,6 +176,30 @@ top.subrolls = [
   // objects
   {"title":"1d12 Gods", "id":"1d12gods", "roll_type":"type", "number":"1d12", "percent_to":"100", "percent_of":"100", "roll":pantheon,},
   {"title":"3d6 Relationships", "id":"3d6relationships", "roll_type":"amount", "number":"3d6", "percent_to":"100", "percent_of":"100", "rolls":["objects/d10intrapantheonrelationshipsthisdeityisthe_____ofthatdeity", "objects/d6thegodsare", "objects/d6thegodsrelationshipwiththeirfollowers", ],},
+  {"title":"6d6 Books", "id":"6d6books", "roll_type":"amount", "number":"6d6", "percent_to":"100", "percent_of":"100", "rolls":["objects/d20thebookssubjectis", "objects/d10thebooksconditionis", "objects/d12thebookscoveris", "objects/d10thebookis", ],},
+  {"title":"6d6 Sailors", "id":"6d6sailors", "roll_type":"amount", "number":"6d6", "percent_to":"100", "percent_of":"100", "rolls":["npcs/d12thesailoris", "npcs/d20tattoothesailorhas", "npcs/d20thesailorstattooisamementoof", "npcs/d12distinguishingfacialfeaturethesailorhas", "npcs/d12accessoriesthesailoriswearingorcarrying", "npcs/d12attheendofalongvoyagethesailoriseagerto", "npcs/d12whendrunkthesailorisproneto", "npcs/d12whatthesailorreallywantsisto", ],},
+  {"title":"1d4 Days Fishing", "id":"1d4catch", "roll_type":"type", "number":"1d4", "percent_to":"100", "percent_of":"100", "roll":fishing_catch,},
+
+  // monsters
+  {"title":"6d6 Goblins", "id":"6d6goblins", "roll_type":"amount", "number":"6d6", "percent_to":"100", "percent_of":"100", "rolls":["npcs/dxpersonality", "monsters/d12thegoblinisparticularlyskilledat", "monsters/d12thegoblinwields", "monsters/d12thegoblinwears", "monsters/d12thegoblinsfacehas", "monsters/d8thegoblinhas", ],},
+  {"title":"6d6 Lycanthropes", "id":"6d6lycanthropes", "roll_type":"amount", "number":"6d6", "percent_to":"100", "percent_of":"100", "rolls":["monsters/d12thebeastshiftertransformsinto", "monsters/d6thebeastshiftertransformsinvoluntarily", "monsters/d8whiletransformedthebeastshifterbehaves", "monsters/d8thebeastshifterlives", "monsters/d12thebeastshiftermakesitshome", "monsters/d8thebeastshifterhasatendencyto", "monsters/d8inhumanoidformthebeastshifterfightswith", "monsters/d12inhumanoidformthebeastshifterpresentsitselfas", "monsters/d12inhumanoidformthebeastshiftersfacehas", "monsters/d20thebeastshiftersfavoritepreyare",],},
+  {"title":"1d4 Uncommon Lycanthropes", "id":"1d4uncommonlycanthropes", "roll_type":"amount", "number":"1d4", "percent_to":"100", "percent_of":"100", "rolls":["monsters/d20thebeastshiftertransformsinto", "monsters/d6thebeastshiftertransformsinvoluntarily", "monsters/d8whiletransformedthebeastshifterbehaves", "monsters/d8thebeastshifterlives", "monsters/d12thebeastshiftermakesitshome", "monsters/d8thebeastshifterhasatendencyto", "monsters/d8inhumanoidformthebeastshifterfightswith", "monsters/d12inhumanoidformthebeastshifterpresentsitselfas", "monsters/d12inhumanoidformthebeastshiftersfacehas", "monsters/d20thebeastshiftersfavoritepreyare",],},
+  {"title":"6d6 Orcs", "id":"6d6orcs", "roll_type":"amount", "number":"6d6", "percent_to":"100", "percent_of":"100", "rolls":["monsters/d8appearancetheorchas", "monsters/d6tattootheorchas", "monsters/d8roletheorcis", "monsters/d8skillevenamongorcstheorcisparticularlygoodat", "monsters/d8armortheorcisarmoredin", "monsters/d8weapontheorciswielding", "monsters/d6motivationtheorcislookingfor", ],},
+
+  // settlements
+  // settlements - city generation
+  {"title":"8d4 Landmarks/Districts", "id":"8d4landmarks", "roll_type":"amount", "number":"8d4", "percent_to":"100", "percent_of":"100", "rolls":["settlements/d20landmarkyouseeaan", "settlements/d20thispartofthecityisthe", ],},
+  {"title":"4d4 Landmarks/Districts", "id":"4d4landmarks", "roll_type":"amount", "number":"4d4", "percent_to":"100", "percent_of":"100", "rolls":["settlements/d20landmarkyouseeaan", "settlements/d20thispartofthecityisthe", ],},
+  {"title":"2d4 Landmarks/Districts", "id":"2d4landmarks", "roll_type":"amount", "number":"2d4", "percent_to":"100", "percent_of":"100", "rolls":["settlements/d20landmarkyouseeaan", "settlements/d20thispartofthecityisthe", ],},
+  {"title":"1d4 Landmarks/Districts", "id":"1d4landmarks", "roll_type":"amount", "number":"1d4", "percent_to":"100", "percent_of":"100", "rolls":["settlements/d20landmarkyouseeaan", "settlements/d20thispartofthecityisthe", ],},
+  {"title":"10d4 Street Names", "id":"10d4streetnames", "roll_type":"amount", "number":"10d4", "percent_to":"100", "percent_of":"100", "rolls":["settlements/d20thelocalscallthisstreet", ],},
+  {"title":"8d4 Street Names", "id":"8d4streetnames", "roll_type":"amount", "number":"8d4", "percent_to":"100", "percent_of":"100", "rolls":["settlements/d20thelocalscallthisstreet", ],},
+  {"title":"4d4 Street Names", "id":"4d4streetnames", "roll_type":"amount", "number":"4d4", "percent_to":"100", "percent_of":"100", "rolls":["settlements/d20thelocalscallthisstreet", ],},
+  {"title":"2d4 Street Names", "id":"2d4streetnames", "roll_type":"amount", "number":"2d4", "percent_to":"100", "percent_of":"100", "rolls":["settlements/d20thelocalscallthisstreet", ],},
+  {"title":"10d6 Amount of d50 Town Inhabitants", "id":"10d6amountofd50towninhabitants", "roll_type":"type", "number":"10d6", "percent_to":"100", "percent_of":"100", "roll":town_npcs,},
+  {"title":"8d6 Amount of d50 Town Inhabitants", "id":"8d6amountofd50towninhabitants", "roll_type":"type", "number":"8d6", "percent_to":"100", "percent_of":"100", "roll":town_npcs,},
+  {"title":"6d6 Amount of d50 Town Inhabitants", "id":"6d6amountofd50towninhabitants", "roll_type":"type", "number":"6d6", "percent_to":"100", "percent_of":"100", "roll":town_npcs,},
+  {"title":"4d6 Amount of d50 Town Inhabitants", "id":"4d6amountofd50towninhabitants", "roll_type":"type", "number":"4d6", "percent_to":"100", "percent_of":"100", "roll":town_npcs,},
 
 
 
