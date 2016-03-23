@@ -7,6 +7,15 @@ top.objects = [
 // beginning of objects
 
 
+ {"title": "d8 The bookshelves are...", "id":"d8thebookshelvesare", "roll":[
+"A little dusty.",
+"Very dusty.",
+"Covered in cobwebs.",
+"Recently dusted.",
+"Numbered using an arcane library reference system.",
+"Labeled by topic.",
+"Sliding on rollers that reveal more bookshelves behind.",
+"Equipped with a sliding ladder.",   ]},
 
 
  {"title": "d21 Ales", "id":"d21ales", "roll":[
