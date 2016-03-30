@@ -258,6 +258,7 @@ top.monsters = [
 "Adult.",
 "Ancient One.",   ]},
  {"title": "d10 Colour The Dragon is coloured...", "id":"d10colourthedragoniscoloured", "roll":[
+"Black, a sadistic beast fond of torture.",
 "Blue, as proud as it is deadly.",
 "Green, treacherously cunning.",
 "Red, fiery and mad.",
