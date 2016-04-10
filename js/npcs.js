@@ -9,6 +9,139 @@ top.npcs = [
 
 
 
+{"title": "d12 This vendor is selling wares from...", "id":"d12thisvendorissellingwaresfrom", "roll":[
+"A little push cart.",
+"A small, mule-drawn cart.",
+"A sizable, horse- or ox-drawn wagon.",
+"A handful of crates or chests the vendor has set up.",
+"A large rug on which the vendor has laid out the merchandise.",
+"A flimsy wooden booth.",
+"A sturdy wooden booth with a cotton awning.",
+"A semi-permanent wooden stall.",
+"A permanent stone stall.",
+"A huge sack the merchant has set down on the ground.",
+"A one- or two-man tent.",
+"A myriad of pockets in the vendor's clothes or a hidden demiplane.",   ]},
+ {"title": "d8 This vendor specializes in...", "id":"d8thisvendorspecializesin", "roll":[
+"Raw foodstuffs.",
+"Prepared foodstuffs.",
+"Arms and armor.",
+"Clothing, apparel, or accessories.",
+"Tools, trinkets, or other household goods.",
+"Potions, talismans, religious relics, or other magical goods.",
+"Live animals.",
+"Raw materials.",   ]},
+ {"title": "d8 This vendor's wares were produced or prepared...", "id":"d8thisvendorswareswereproducedorprepared", "roll":[
+"In a foreign land.",
+"In a local workshop.",
+"By slaves.",
+"By skilled laborers or crafters.",
+"By the vendor him- or herself.",
+"By laborers or crafters working under horrible conditions.",
+"In a distant city or region known for goods of this type.",
+"Somewhere by someone; the vendor neither knows nor cares.",   ]},
+ {"title": "d8 This vendor's goods are...", "id":"d8thisvendorsgoodsare", "roll":[
+"Of poor quality.",
+"Cheap but usable, a real bargain.",
+"Priced for more than they are worth.",
+"Of decent quality and fairly priced.",
+"Of the highest quality and quite expensive.",
+"A mixed bag of low-quality and high-quality stuff.",
+"Of mysterious origin.",
+"Possibly stolen.",   ]},
+ {"title": "d8 The vendor is...", "id":"d8thevendoris", "roll":[
+"An old woman.",
+"An old man.",
+"A fat man.",
+"A scrawny man.",
+"A hardy woman.",
+"A plain-faced maid.",
+"A large woman.",
+"An odd foreigner.",   ]},
+ {"title": "d8 2 The vendor is...", "id":"d82thevendoris", "roll":[
+"Cheerful.",
+"Surly.",
+"Suspicious.",
+"Friendly.",
+"Alert.",
+"Sleepy.",
+"Nervous.",
+"Frightened.",   ]},
+ {"title": "d4 3 This vendor is...", "id":"d43thisvendoris", "roll":[
+"Very busy; customers are waiting in line to make purchases.",
+"Reasonably busy; the vendor makes a sale every few minutes.",
+"A little slow; the vendor makes a few sales every hour.",
+"Very slow; the vendor makes only a few sales a day.",   ]}, 
+
+
+
+ {"title": "d6 The jailer is...", "id":"d6thejaileris", "roll":[
+"A coward who likes to act tough.",
+"A bully in every sense of the word.",
+"A man who grew up among criminals.",
+"A sadistic thug.",
+"A mild-mannered man of faith.",
+"A resentful cripple.",   ]},
+ {"title": "d4 The jailer is concerned about...", "id":"d4thejailerisconcernedabout", "roll":[
+"Rumors of an upcoming escape attempt.",
+"Losing his job after a messy prisoner death.",
+"Facing a prisoner who creeps him out.",
+"Ways to make a little extra silver.",   ]},
+ {"title": "d4 The jailer is looking to...", "id":"d4thejailerislookingto", "roll":[
+"Abuse someone who is defenseless.",
+"Make himself feel powerful.",
+"Reach out to a disturbed prisoner.",
+"Swap grisly tales.",   ]},
+ {"title": "d8 The jailer carries...", "id":"d8thejailercarries", "roll":[
+"A large ring of keys.",
+"A large knife and a sap.",
+"A pale of cold porridge from the kitchens.",
+"Loot seized from several prisoners.",
+"A pocket-sized prayer book.",
+"A spiked club.",
+"A scourge or whip.",
+"A wineskin.",   ]},
+
+
+
+ {"title": "d4 The prisoner has...", "id":"d4theprisonerhas", "roll":[
+"A long scraggly beard.",
+"A patchy beard.",
+"Skin draped loosely over his bones.",
+"Boils and sores on his skin.",   ]},
+ {"title": "d6 The prisoner is here because...", "id":"d6theprisonerisherebecause", "roll":[
+"He stole something.",
+"He killed someone.",
+"He raped someone.",
+"He was caught poaching on his liege’s land.",
+"He committed an act of fraud.",
+"Someone confused him with someone else.",   ]},
+ {"title": "d4 The prisoner has...", "id":"d4theprisonerhas", "roll":[
+"No hope of escape.",
+"A foolish optimism of his escape prospects.",
+"A tenuous grasp on sanity.",
+"Been driven mad.",   ]},
+
+
+ {"title": "d4 The torturer is...", "id":"d4thetortureris", "roll":[
+"The bastard son of a noble house.",
+"A priest with a puritanical agenda.",
+"A horrible sadist.",
+"A wicked little man.",   ]},
+ {"title": "d4 The torturer is looking to...", "id":"d4thetorturerislookingto", "roll":[
+"Impress his liege with efficient confessions.",
+"Make himself feel powerful.",
+"Break a particularly willful prisoner.",
+"Frighten someone with grisly tales.",   ]},
+ {"title": "d6 The torturer carries...", "id":"d6thetorturercarries", "roll":[
+"A large knight and a scourge.",
+"A leatherbound set of blades, hooks, and prongs.",
+"Several strange potions and poisons.",
+"A trophy taken from a tortured prisoner.",
+"A pocket-sized prayer book.",
+"A flask of spirits.",   ]},
+
+
 {"title": "d12 The sailor is...", "id":"d12thesailoris", "roll":[
 "A veteran of many voyages.",
 "A survivor of a notorious shipwreck.",

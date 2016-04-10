@@ -62,6 +62,9 @@ function get_table(table){
     case "factions":
       return top.factions;
       break;
+    case "food":
+      return top.food;
+      break;
     case "monsters":
       return top.monsters;
       break;
