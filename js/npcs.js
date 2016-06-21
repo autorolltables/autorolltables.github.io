@@ -7,6 +7,53 @@ top.npcs = [
 // beginning of npcs
 
 
+ {"title": "d12 Race The character is...", "id":"d12racethecharacteris_playercharacter", "roll":[
+"A dragonborn.",
+"A dwarf.",
+"A dark elf.",
+"A high elf.",
+"A wood elf.",
+"A gnome.",
+"A half-elf.",
+"A half-orc.",
+"A halfling.",
+"A human.",
+"A tiefling.",
+"A monster or member of an exotic race (d20): 1. centaur; 2. dryad; 3. duergar; 4. kobold; 5. genasi; 6. goblin; 7. hobgoblin; 8. medusa; 9. minotaur; 10. lizardfolk; 11. ogre; 12. pixie; 13. revenant; 14. satyr; 15. shadar-kai; 16. troll; 17. vampire; 18. werebear; 19. wererat; 20. werewolf.",   ]},
+ {"title": "d12 Class The character is...", "id":"d12classthecharacteris_playercharacter", "roll":[
+"A barbarian (d2): 1. Berserker. 2. Totem Warrior.",
+"A bard (d2): 1. College of Lore; 2. College of Valor.",
+"A cleric (d8): 1. Death Domain; 2. Life Domain; 3. Light Domain; 4. Knowledge Domain; 5. Nature Domain. 6. Tempest Domain. 7. Trickery Domain. 8. War Domain.",
+"A druid (d2): 1. Circle of the Land; 2. Circle of the Moon.",
+"A fighter (d3): 1. Battle Master; 2. Champion; 3. Eldritch Knight.",
+"A monk (d3): 1. Way of the Four Elements; 2. Way of the Open Hand; 3. Way of Shadow.",
+"A paladin (d4): 1. Oath of the Ancients; 2. Oath of Devotion; 3. Oath of Vengeance; 4. Oathbreaker.",
+"A ranger (d2): 1. Hunter; 2. Beastmaster.",
+"A rogue (d3): 1. Arcane Trickster; 2. Assassin; 3. Thief.",
+"A sorcerer (d2): 1. Draconic Bloodline; 2. Wild Magic.",
+"A warlock (d3): 1. Archfey Otherworldly Patron; 2. Fiend Otherworldly Patron; 3. Great Old One Otherworldly Patron.",
+"A wizard (d8): 1. School of Abjuration; 2. School of Conjuration; 3. School of Divination; 4. School of Enchantment; 5. School of Evocation; 6. School of Illusion; 7. School of Necromancy; 8. School of Transmutation.",   ]},
+ {"title": "d20 Background The character is or was...", "id":"d20backgroundthecharacterisorwas_playercharacter", "roll":[
+"An acolyte.",
+"A charlatan.",
+"A criminal.",
+"An entertainer.",
+"A folk hero.",
+"A gladiator.",
+"A guild artisan.",
+"A guild merchant.",
+"A hermit.",
+"A knight.",
+"A noble.",
+"An outlander.",
+"A pirate.",
+"A sage.",
+"A sailor.",
+"A soldier.",
+"A spy.",
+"An urchin.",
+"An amnesiac who has faint memories of a past life (d12): 1. acolyte; 2. charlatan; 3. criminal; 4. entertainer; 5. gladiator; 6. guild artisan; 7. guild merchant; 8. knight; 9. noble; 10. sailor; 11. soldier; 12. spy.",
+"A hero of prophecy who left behind a previous life to take up the hero's journey (d12): 1. acolyte; 2. criminal; 3. folk hero. 4. gladiator; 5. hermit; 6. knight; 7. noble; 8. outlander; 9. pirate; 10. sage; 11. soldier; 12. urchin.",   ]},
 
 
 {"title": "d12 This vendor is selling wares from...", "id":"d12thisvendorissellingwaresfrom", "roll":[
@@ -71,7 +118,7 @@ top.npcs = [
 "Very busy; customers are waiting in line to make purchases.",
 "Reasonably busy; the vendor makes a sale every few minutes.",
 "A little slow; the vendor makes a few sales every hour.",
-"Very slow; the vendor makes only a few sales a day.",   ]}, 
+"Very slow; the vendor makes only a few sales a day.",   ]},
 
 
 
