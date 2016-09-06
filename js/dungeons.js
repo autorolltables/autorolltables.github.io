@@ -7,6 +7,97 @@ top.dungeons = [
 // start of dungeons
 
 
+{"title": "d10 The master of this tower is...", "id":"d10themasterofthistoweris_magetower", "roll":[
+"An elven sorceress.",
+"A terrifying witch.",
+"A creepy necromancer.",
+"A mystic seer.",
+"A long-bearded sage.",
+"A half-mad elementalist.",
+"A legendary conjurer.",
+"A retired explorer.",
+"The leader of a cabal of tricky witches.",
+"The head of a secret society of wizards.",   ]},
+{"title": "d10 The tower's shape is approximately that of...", "id":"d10thetowersshapeisapproximatelythatof_magetower", "roll":[
+"A cylinder.",
+"A pyramid.",
+"A stepped pyramid.",
+"A cone.",
+"A triangular prism.",
+"A rectangular prism.",
+"A pentagonal prism.",
+"A hexagonal prism.",
+"An octagonal prism.",
+"An icosahedron.",   ]},
+{"title": "d10 The tower is built of...", "id":"d10thetowerisbuiltof_magetower", "roll":[
+"Clay bricks.",
+"Limestone.",
+"Sandstone.",
+"Marble.",
+"Obsidian.",
+"Enchanted wood.",
+"Crystal.",
+"Bones.",
+"Granite.",
+"Solid gold.",   ]},
+{"title": "d10 The exterior of the tower features...", "id":"d10theexteriorofthetowerfeatures_magetower", "roll":[
+"Spider webs.",
+"Ooze.",
+"Fruit-bearing vines.",
+"Thorny vines.",
+"Extensive repairs.",
+"Ancient hieroglyphs.",
+"Arcane runes.",
+"Steel plates.",
+"Scorch marks.",
+"Scratch marks.",   ]},
+{"title": "d10 The tower's entrance is guarded by...", "id":"d10thetowersentranceisguardedby_magetower", "roll":[
+"An ill-tempered dragon.",
+"A watchful golem (d6): 1. bone; 2. chain; 3. clay; 4. flesh; 5. iron; 6. stone.",
+"An angry giant (d6): 1. eldritch; 2. fire; 3. frost; 4. shadow; 5. stone; 6. storm.",
+"Cruel gargoyles.",
+"Terrifying elementals (d6): 1. air; 2. earth; 3. fire; 4. ice; 5. storm; 6. water.",
+"Undead minions (d6): 1. ghosts; 2. ghouls; 3. phantom warriors; 4. spectres; 5. wights; 6. zombies.",
+"Devious traps.",
+"A cunning sphinx.",
+"A ferocious, talking beast (d6): 1. bear; 2. griffon; 3. eagle; 4. lion; 5. serpent; 6. wolf.",
+"A menacing, tentacled beast.",   ]},
+{"title": "d10 The most well-protected room in the tower is...", "id":"d10themostwell-protectedroominthetoweris_magetower", "roll":[
+"The mage's laboratory.",
+"The mage's library.",
+"The mage's bedchamber.",
+"The mage's wine cellar.",
+"The mage's treasure vault.",
+"A chamber specially prepared for divination rituals.",
+"A chamber specially prepared for summoning rituals.",
+"A chamber specially prepared for magical duels.",
+"An inescapable prison.",
+"The crypt of someone important to the mage (d6): 1. master; 2. teacher; 3. child; 4. parent; 5. lover; 6. vanquished rival.",   ]},
+{"title": "d10 The room is protected by...", "id":"d10theroomisprotectedby_magetower", "roll":[
+"A gauntlet of mechanical traps.",
+"A series of sophisticated magical traps.",
+"An exploding ward.",
+"A powerful charm that makes it easy to ignore.",
+"A powerful charm that makes it impossible for intruders to open the door.",
+"Illusions that make it difficult to find the door.",
+"A powerful curse that frightens those who approach the door.",
+"A powerful curse that causes pain in those who approach the door.",
+"An indefatigable construct.",
+"A bound guardian (d6): 1. devil; 2. demon; 3. elemental; 4. enchanted beast; 5. troll; 6. wraith.",   ]},
+{"title": "d10 Rumor has it that within the walls of the tower, the mage keeps...", "id":"d10rumorhasitthatwithinthewallsofthetowerthemagekeeps_magetower", "roll":[
+"The weapon of a storied hero.",
+"The staff of an infamous sorcerer or necromancer.",
+"The wand of a famous witch or wizard.",
+"The spellbook of a notorious magic-user.",
+"The artifacts of an elvish hero.",
+"Monstrosities of the mage's own creation.",
+"A legendary stone, mirror, or pool used for watching the world from afar.",
+"A fabled book of dangerous lore (d6): 1. demonology; 2. curses of undeath; 3. dream travel; 4. love and war; 5. planar portals; 6. vile darkness.",
+"An imprisoned being of terrible power (d6): 1. aberration; 2. devil; 3. demon; 4. djinni; 5. efreeti; 6. vampire lord.",
+"A captive princess.",   ]},
+
+
+
 
 {"title": "d10 This place is (or was) a...", "id":"d10thisplaceisorwasa_dungeondetails", "roll":[
 "A stronghold.",
@@ -96,7 +187,7 @@ top.dungeons = [
 "Chests of silver carried by a lost ship or caravan.",
 "Crown jewels of a long-dead queen.",
 "Largest diamond found in this part of the world.",
-"Staff of an infamous sorcerer or necromancer.",   ]}, 
+"Staff of an infamous sorcerer or necromancer.",   ]},
 
 
 
