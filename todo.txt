@@ -1,0 +1,2 @@
+Add NPC Motivations table: https://redd.it/4q6c0h
+Build out continents sub-rolls (in wilderness)
