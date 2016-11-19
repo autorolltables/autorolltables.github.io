@@ -2116,7 +2116,7 @@ top.monsters = [
 "An underwater wreckage of a galley. Perhaps with caverns and ruins below it.",
 "An abandoned mine. The mineshafts are filled with minions to defend the dragon.",
 "A cavern carved out of the stone by the dragon. The walls are full of these sharp cuts scraped by the dragon and the chambers are shaped similarly to the dragons wingspan.",
-"A reclaimed castle. The surrounding area is planes or desert, the castle most likely abandoned by its old owners.",
+"A reclaimed castle. The surrounding area is plaines or desert, the castle most likely abandoned by its old owners.",
 "A desert pyramid, surrounded by dangerous deserts.",
 "A giant tree. Perhaps dead, or in a lush environment, a tree large enough to hold a dragon is impressive.",
 "Underdark Caverns. The underdark can be a great place for a dragon that’s trying to hide away.",
