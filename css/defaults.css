@@ -1,3 +1,5 @@
+@import url('http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css');
+
 html, body
 {
   height: 100%;
@@ -138,4 +140,22 @@ img.ops
 
 #header {
   background-color: #879CA3;
+}
+
+.noborder {
+  border:0px;
+}
+
+/* Alerts */
+.overlay {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+}
+
+.alert {
+  margin: 10px;
+  float: right;
+  white-space:nowrap;
 }
