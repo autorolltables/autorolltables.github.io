@@ -12,13 +12,11 @@ function log(obj) {
 }
 
 function display_output(){
-  document.getElementById("output").innerHTML = document.getElementById("output").innerHTML + output
+  document.getElementById("output").innerHTML = document.getElementById("output").innerHTML + output;
 }
 
 function out(obj) {
   output = output + obj + "\n";
-  // var output = document.getElementById("output");
-  // output.innerHTML = output.innerHTML + obj + '\n';
   return 0;
 }
 
@@ -28,18 +26,30 @@ function outClear() {
 }
 
 function display_side(){
-  document.getElementById("rightview").innerHTML = document.getElementById("rightview").innerHTML + side_obj;
+  separator42 = "------------------------------------------\n";
+  side_obj = display_filter(side_obj);
+  document.getElementById("rightview-current").innerHTML = document.getElementById("rightview-current").innerHTML + side_obj;
+  document.getElementById("rightview-history").innerHTML = document.getElementById("rightview-history").innerHTML + separator42 + side_obj;
+}
+
+function display_filter(obj) {
+  blank_sub_rolls = "Sub Rolls:\n";
+
+  if ( obj.substring(obj.length-11, obj.length) == blank_sub_rolls ) {
+    obj = obj.substring(0, obj.length-12)
+  }
+  return obj;
 }
 
 function side(obj) {
   side_obj = side_obj + obj + "\n"
-  // var side = document.getElementById("rightview");
+  // var side = document.getElementById("rightview-current");
   // side.innerHTML = side.innerHTML + obj + '\n';
   return 0;
 }
 
 function sideClear() {
-  document.getElementById("rightview").innerHTML = "";
+  document.getElementById("rightview-current").innerHTML = "";
   side_obj = "";
   return 0;
 }
@@ -160,73 +170,6 @@ function get_roll(id, table){
   return "";
 }
 
-
-// handle new selections
-document.getElementById("selectlist").onchange = document.getElementById("selectlist").onclick = function selected() {
-
-  var sel = document.getElementById("selectlist");
-  var index = sel.selectedIndex;
-  var seltext = sel.options[index].value;
-
-  //log("seltext:"+seltext);
-  //log("id:"+current.id);
-
-  roll_table = get_roll_array(seltext, current.id);
-
-  //log("returned table:"+roll_table.title);
-
-  sideClear();
-
-  side("Title: " + roll_table.title);
-  side(" ");
-  side("Suggested Use: " + roll_table.use);
-  side(" ");
-  side("Main Rolls: " + roll_table.main_rolls.length);
-  side("Sub Rolls: " + roll_table.sub_rolls.length);
-  side(" ");
-
-  side("Main Rolls:");
-  side(" ");
-  // iterate the menu, displaying the titles for the main rolls
-  for (var i = 0; i < roll_table.main_rolls.length; i++) {
-    id = get_roll_id(roll_table.main_rolls[i]);
-    table = get_roll_table(roll_table.main_rolls[i]);
-    toss = get_roll(id, table);
-
-    side(toss.title);
-    // log("main toss:"+toss.title);
-
-    //
-    // // iterate each roll, displaying the roll values
-    // for (var z = 0; z < toss.roll.length; z++) {
-    //   side(" " + (z+1) + " - " + toss.roll[z]);
-    // }
-    // side(" ");
-  }
-
-  // iterate the sub rolls, displaying the titles for them
-  if(roll_table.sub_rolls.length>0){
-    side(" ");
-    side("Sub Rolls (these may roll many times each):");
-    side(" ");
-
-    for (var i=0; i<roll_table.sub_rolls.length;i++){
-      id = get_roll_id(roll_table.sub_rolls[i]);
-      table = get_roll_table(roll_table.sub_rolls[i]);
-      // log("id:"+id);
-      // log("table:"+table);
-      toss = get_roll(id, table);
-
-      side(toss.title);
-
-      // iteate sub rolls?
-    }
-  }
-
-  display_side();
-
-}
-
 //find a roll title
 function get_roll_title(val) {
   rolls = top.rolls;
@@ -252,6 +195,10 @@ function init() {
     var title = current.items[i].title
     selectlist.options[selectlist.options.length] = new Option(title, title);
   }
+
+  //hide initially hidden
+  $('#rightview-history').hide();
+  $("#new-alert").hide();
 
 }
 
@@ -295,7 +242,7 @@ function inline_roll(roll_text) {
 }
 
 // test button
-document.getElementById("test").onclick = function roll_test() {
+function roll_test() {
 
   var sel = document.getElementById("selectlist");
   var index = sel.selectedIndex;
@@ -468,8 +415,9 @@ function get_roll_value(str) {
   return "";
 }
 
-// roll button
-document.getElementById("roll").onclick = function perform_roll() {
+// roll function
+
+function perform_roll() {
 
   var sel = document.getElementById("selectlist");
   var index = sel.selectedIndex;
@@ -518,36 +466,94 @@ document.getElementById("roll").onclick = function perform_roll() {
     side(value);
   }
 
-
-
-
-
-
-
-
   display_side();
 
   document.getElementById("selectlist").focus();
 }
 
 
-
-// copy to clipboard
-var copyTextareaBtn = document.querySelector('.js-textareacopybtn');
+// copy to clipboard - current roll
+var copyTextareaBtn = document.querySelector('.current-copy-button');
 copyTextareaBtn.addEventListener('click', function(event) {
-  var copyTextarea = document.querySelector('.js-copytextarea');
+  showcurrent();
+  var copyTextarea = document.querySelector('.current-textarea');
   copyTextarea.select();
 
   try {
     var successful = document.execCommand('copy');
     var msg = successful ? 'successful' : 'unsuccessful';
-    console.log('Copying text command was ' + msg);
+    console.log('Copying command was ' + msg);
+    copyTextarea.innerHTML = "";
+    //document.getElementById("selectlist").focus();
+    $("#selectlist").focus();
+    showalert('copy current');
+  } catch (err) {
+    console.log('Oops, unable to copy');
+  }
+
+});
+
+// copy to clipboard - history rolls
+var copyTextareaBtn = document.querySelector('.history-copy-button');
+copyTextareaBtn.addEventListener('click', function(event) {
+  showhistory();
+  var copyTextarea = document.querySelector('.history-textarea');
+  copyTextarea.select();
+
+  try {
+    var successful = document.execCommand('copy');
+    var msg = successful ? 'successful' : 'unsuccessful';
+    console.log('Copying command was ' + msg);
     copyTextarea.innerHTML = "";
     document.getElementById("selectlist").focus();
+    showalert('copy history');
   } catch (err) {
     console.log('Oops, unable to copy');
   }
 });
+
+function showhistory() {
+  $('#rightview-current').hide();
+  $('#rightview-history').show();
+  $('#current-roll-tab').removeClass('active');
+  $('#history-roll-tab').addClass('active');
+  $('#rightview-history').focus();
+}
+
+function showcurrent() {
+  $('#rightview-history').hide();
+  $('#rightview-current').show();
+  $('#history-roll-tab').removeClass('active');
+  $('#current-roll-tab').addClass('active');
+  $('#rightview-current').focus();
+}
+
+function clearhistory() {
+  $('#rightview-current').html("");
+  $('#rightview-history').html("");
+  showalert("clear history");
+}
+
+function showalert(alert){
+
+  var alert_text = "";
+
+  switch(alert) {
+    case "copy history":
+      alert_text = "Copied History Successfully <span class='glyphicon glyphicon-ok'></span>";
+      break;
+    case "copy current":
+      alert_text = "Copied Current Roll Successfully <span class='glyphicon glyphicon-ok'></span>";
+      break;
+    case "clear history":
+      alert_text = "Cleared History <span class='glyphicon glyphicon-ok'></span>";
+      break;
+    }
+
+  $('#new-alert').html(alert_text);
+  console.log("alert:"+alert_text);
+  $('#new-alert').fadeIn("slow", function() { $(this).delay(500).fadeOut(); });
+}
 
 // create menu
 // <a href="#dungeons" accesskey="1" class='menuitem btn'>Dungeons/Locations</a>
@@ -566,8 +572,19 @@ for(i=0;i<menu.length;i++){
   //console.log(menu[i].title);
 }
 
-//href("#")
 
+// events
+
+document.getElementById("selectlist").onchange == function select_on_change() { perform_roll(); }
+document.getElementById("selectlist").onclick = function select_on_click() { perform_roll(); }
+document.getElementById("roll").onclick = function roll_clicked() { perform_roll(); }
+document.getElementById("test").onclick = function test_clicked() { roll_test(); }
+
+$('#selectlist').bind('onchange', function() { perform_roll(); });
+
+$('#history-roll-tab').bind('click', function() { showhistory(); });
+$('#current-roll-tab').bind('click', function() { showcurrent(); });
+$('#clear-history-roll-tab').bind('click', function() { clearhistory(); });
 
 
 

@@ -67,7 +67,7 @@
 
       </div>
       <div id="side" class="col-md-4">
-        <span class="subtitle right-text">Select a table from the list on the left and click Roll</span>
+        <span class="subtitle right-text">Select a item from the list to roll</span>
       </div>
     </div>
   </div>
@@ -82,22 +82,34 @@
 
     <div class="row">
       <div id="leftnav" class="col-xs-12 col-sm-4">
-        <select id='selectlist' size="25" onClick="selected();" class="select form-control">
+        <select id='selectlist' size="26" onClick="selected();" class="noborder select form-control">
         </select>
       </div>
 
       <div id="rightnav" class="col-xs-12 col-sm-8">
-        <textarea id="rightview" rows="21" spellcheck="false" class="js-copytextarea display form-control"></textarea>
+
+        <ul class="nav nav-tabs" style="border-bottom-style:none;">
+          <li id="current-roll-tab" role="presentation" class="active"><a href="#">Current Roll</a></li>
+          <li id="history-roll-tab" role="presentation"><a href="#">History</a></li>
+          <li id="clear-history-roll-tab" role="presentation"><a href="#">Clear History</a></li>
+        </ul>
+
+        <textarea id="rightview-current" rows="20" spellcheck="false" class="current-textarea display form-control"></textarea>
+        <textarea id="rightview-history" rows="20" spellcheck="false" class="history-textarea display form-control"></textarea>
       </div>
     </div>
 
     <div class="row">
       <div id="leftbuttons" class="col-md-4">
-        <a class="button btn bottom-btn" id="roll" value="Roll" style="width:100%;">Roll</a>
+
+        <a class="button btn bottom-btn" id="roll" value="Roll" style="width:100%;">Re-Roll</a>
         <a class="button btn bottom-btn" id="test" value="Test" style="width:100%; display:none;">Test</a>
       </div>
-      <div id="rightbuttons" class="col-md-8">
-        <a class="button js-textareacopybtn btn bottom-btn" id="clipboard" value="Copy To Clipboard" style="width:100%;">Copy To Clipboard</a>
+      <div id="rightbuttons" class="col-md-4">
+        <a class="button current-copy-button btn bottom-btn" id="copy-current-button" value="Copy To Clipboard" style="width:100%;">Copy Current Roll</a>
+      </div>
+      <div id="rightbuttons" class="col-md-4">
+        <a class="button history-copy-button btn bottom-btn" id="copy-history-button" value="Copy To Clipboard" style="width:100%;">Copy History</a>
       </div>
     </div>
   </div>
@@ -114,6 +126,9 @@
   </div>
 </div>
 
+<div id='alerts' class='overlay'>
+  <div id='new-alert' class='alert alert-success' data-alert='alert'></div>
+</div>
 
 </body>
 
