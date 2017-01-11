@@ -621,6 +621,7 @@ function clearhistory() {
   side_obj = "";
   side_obj_display = "";
   showalert("clear history");
+  $("#selectlist").focus();
 }
 
 function showalert(alert){
