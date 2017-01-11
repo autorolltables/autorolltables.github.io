@@ -1,88 +1,21 @@
+/*
+*   autorolltables.github.io style sheet
+*
+*/
+
 
 html, body
 {
   height: 100%;
 }
 
-
 body
 {
   margin: 0px;
   padding: 0px;
-  background: #16A085;
-  font-family: 'Questrial', sans-serif;
+  font-family: Ubuntu, sans-serif !important;
   font-size: 12pt;
   color: rgba(0,0,0,.6);
-}
-
-.quote {
-  margin: auto;
-  width:100%;
-  background-color: #00ff00;
-
-}
-
-#quote {
-  background-color: white;
-  border-width:1px;
-  border-style:solid;
-  border-radius:1em;
-  border-color: #c0c0c0;
-  opacity: 0.90;
-  filter: alpha(opacity=90); /* For IE8 and earlier */
-
-  margin-right: 1em;
-  margin-left: 1em;
-
-  padding-left: 1em;
-  padding-right: 1em;
-}
-
-.select {
-  height:400px;
-  opacity: 0.90;
-  filter: alpha(opacity=90); /* For IE8 and earlier */
-}
-
-.display {
-  height: 100%;
-  opacity: 0.90;
-  filter: alpha(opacity=90); /* For IE8 and earlier */
-  /*height:425px;*/
-}
-
-.button {
-  margin-top: 2em;
-  letter-spacing: 1px;
-  text-decoration: none;
-}
-
-/*.menuitem {
-  background-color: blue;
-  height: 50px;
-  width: 100px;
-  margin-bottom: 3em;
-  margin-top: 3em;
-}*/
-
-.right-text {
-  vertical-align: middle;
-  float: right;
-  padding: 6px 12px;
-}
-
-.left-text {
-  vertical-align: middle;
-  float: left;
-  padding: 6px 12px;
-  margin-left: -2em;
-}
-
-img.ops
-{
-  vertical-align: -15%;
-  opacity: 0.3;
-  filter: alpha(opacity=30); /* For IE8 and earlier */
 }
 
 .bgimage {
@@ -92,60 +25,40 @@ img.ops
   filter: alpha(opacity=30); /* For IE8 and earlier */
 }
 
-.nocolor:link{
-  color: #333;
+:link{
+  color: #fff;
   text-decoration: none;
 }
 
-.menuitem {
+.select {
+  height:400px;
+  opacity: 0.65 !important;
+  filter: alpha(opacity=65);
+}
+
+.button {
+  margin-top: 2em;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+.menuitem, .menuitem-style {
   background-color: #5A6668;
-  border-color: #ccc;
   color: white;
+}
+
+.menuitem:hover {
+  opacity: 0.65;
+  filter: alpha(opacity=65);
 }
 
 .bottom-btn {
   background-color: #ccc;
-  border-color: #5A6668;
-  border: 1px solid #5A6668;
   color: #5A6668;
-}
-
-.changelog {
-  vertical-align: middle;
-  float: left;
-  padding: 1em 1em 0em 1em;
-
-
-}
-
-.subtitle {
-  color: #5A6668;
-}
-
-.padsome {
-  padding-left: 2em;
-  padding-right: 2em;
-}
-
-#menu {
-  display: block;
-  margin: auto;
-}
-
-#logo {
-  padding-left: 1.3em;
-  padding-right: 1em;
-}
-
-#header {
-  background-color: #879CA3;
-}
-
-.noborder {
-  border:0px;
 }
 
 /* Alerts */
+
 .overlay {
   position: fixed;
   top: 0px;
@@ -157,4 +70,83 @@ img.ops
   margin: 10px;
   float: right;
   white-space:nowrap;
+  color: #2b3e50 !important;
+}
+
+/* Redesigned */
+
+.logo {
+  vertical-align: middle;
+  /*float: left;*/
+  margin-top: 15px;
+  margin-left: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 18px;
+  line-height: 20px;
+  height: 40px;
+  text-color: white;
+}
+
+.logo-nopad {
+  margin-top: 15px;
+  font-size: 18px;
+  line-height: 20px;
+  height: 40px;
+}
+
+.form-control {
+  padding: 8px 9px !important;
+}
+
+.rightview {
+  height: 429px;
+  width: auto;
+  opacity: 0.65 !important;
+  filter: alpha(opacity=65);
+  background-color:white;
+  overflow-y: scroll;
+  color: #2b3e50;
+  padding: 10px 10px;
+}
+
+.text-less-muted {
+  color: #6e8399;
+}
+
+.hovertoggle {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+
+}
+
+.on {
+  background-color: #a0a0a0 !important;
+  color: white !important;
+}
+
+.hoveroff {
+  color: #DF691A;
+}
+
+.hovertoggle:hover{
+  background-color: #a0a0a0 !important;
+  color: white !important;
+}
+
+#page, #menu {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+/* Roll Classes */
+
+.roll-title {
+  font-size: larger;
+  font-weight: bold;
+}
+
+.roll-suggested-use {
+  font-style: italic;
 }
