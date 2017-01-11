@@ -15,7 +15,7 @@ body
 {
   margin: 0px;
   padding: 0px;
-  font-family: Ubuntu, sans-serif !important;
+  font-family: Helvetica Neue, Helvetica, sans-serif !important;
   font-size: 12pt;
   color: rgba(0,0,0,.6);
 }
@@ -102,7 +102,7 @@ body
 }
 
 .rightview {
-  height: 429px;
+  height: 436px;
   width: auto;
   opacity: 0.65 !important;
   filter: alpha(opacity=65);
