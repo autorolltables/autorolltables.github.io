@@ -4,53 +4,60 @@
 //
 
 var current;
-var output;
 var side_obj;
+var side_obj_display;
+var mouseover_on = true;
 
 function log(obj) {
   console.log(obj);
 }
 
-function display_output(){
-  document.getElementById("output").innerHTML = document.getElementById("output").innerHTML + output;
-}
-
-function out(obj) {
-  output = output + obj + "\n";
-  return 0;
-}
-
-function outClear() {
-  document.getElementById("output").innerHTML = "";
-  output = "";
-}
-
 function display_side(){
-  separator42 = "------------------------------------------\n";
-  side_obj = display_filter(side_obj);
-  document.getElementById("rightview-current").innerHTML = document.getElementById("rightview-current").innerHTML + side_obj;
-  document.getElementById("rightview-history").innerHTML = document.getElementById("rightview-history").innerHTML + separator42 + side_obj;
+  copyseparator = "------------------------------------------\n";
+  displayseparator = "<hr>";
+
+  $("#rightview-current").html( $("#rightview-current").html() + side_obj );
+
+  if ( $("#rightview-history").html() == "" ) {
+    $("#rightview-history").html( side_obj );
+  } else {
+    $("#rightview-history").html( $("#rightview-history").html() + copyseparator + side_obj );
+  }
+
+  $("#rightview-current-display").html( $("#rightview-current-display").html() + side_obj_display );
+
+  if ( $("#rightview-history-display").html() == "" ) {
+    $("#rightview-history-display").html( side_obj_display );
+  } else {
+    $("#rightview-history-display").html( $("#rightview-history-display").html() + displayseparator + side_obj_display );
+  }
+
+  rightscrolltop();
+}
+
+function output_filter(obj) {
+  return obj;
 }
 
 function display_filter(obj) {
-  blank_sub_rolls = "Sub Rolls:\n";
-
-  if ( obj.substring(obj.length-11, obj.length) == blank_sub_rolls ) {
-    obj = obj.substring(0, obj.length-12)
-  }
+  //var obj = obj.replace(/(\n)/gm,"<br>");
   return obj;
 }
 
 function side(obj) {
-  side_obj = side_obj + obj + "\n"
-  // var side = document.getElementById("rightview-current");
-  // side.innerHTML = side.innerHTML + obj + '\n';
+  side_obj = side_obj + obj + "\n";
   return 0;
 }
 
-function sideClear() {
-  document.getElementById("rightview-current").innerHTML = "";
+function side_display(obj) {
+  side_obj_display = side_obj_display + obj + "<br>";
+}
+
+function clearright() {
+  $("#rightview-current").html('');
+  $("#rightview-current-display").html('');
   side_obj = "";
+  side_obj_display = "";
   return 0;
 }
 
@@ -62,7 +69,6 @@ function clearSelect() {
   }
 }
 
-// used in main menu select as well as select onclick
 function get_table(table){
   //log("switch:"+table);
   switch(table) {
@@ -102,6 +108,7 @@ function get_table(table){
 
 // fill select table helper function
 function loadSelect(curr_table) {
+
   clearSelect();
   var selectlist = document.getElementById("selectlist");
   var rollbutton = document.getElementById("roll");
@@ -196,8 +203,20 @@ function init() {
     selectlist.options[selectlist.options.length] = new Option(title, title);
   }
 
+
+  var menuhover;
+  try {
+    window.location.querystring["menuhover"]
+  } catch(e) {}
+
+  if ( menuhover == 'false' ){
+    togglehovermenu();
+  }
+
   //hide initially hidden
   $('#rightview-history').hide();
+  $('#rightview-current').hide();
+  $('#rightview-history-display').hide();
   $("#new-alert").hide();
 
 }
@@ -248,8 +267,9 @@ function roll_test() {
   var index = sel.selectedIndex;
   var seltext = sel.options;
 
-  sideClear();
+  clearright();
   side("Tests:");
+  side_display("Tests:");
 
   // get length of all
   var total=0;
@@ -312,24 +332,29 @@ function roll_sub_roll(id, table) {
 
         if(type=="type"){
           // execute type roll
-
           var length = table[i].roll.length;
           var amount = get_roll_value(number);
-
           amount = Math.ceil(amount * (percent_of / 100));
-          result = result + title + " : " + amount + "\n";
+
+          // result = result + title + " : " + amount + "\n";
+          side( title + " : " + amount );
+          side_display(title + " : " + amount);
+
           // roll that many times
           for(var z=0;z<amount;z++){
             // roll for each roll
             var pre_title = "(" + (z+1) + ") ";
             var pre = "     ";
+            var pre_display = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
 
             // for each roll in total amount, roll main (random * length), then roll all sub-attributes accordingly
             var rand = Math.floor(Math.random() * length);  // floor to match array counting (start at 0)
             var rolls = table[i].roll[rand].main_rolls;
 
             // show title of this result
-            result = result + pre_title + table[i].roll[rand].title + "\n";
+            //result = result + pre_title + table[i].roll[rand].title + "\n";
+            side(pre_title + table[i].roll[rand].title);
+            side_display(pre_title + table[i].roll[rand].title);
 
             for(var x=0; x<rolls.length;x++){
 
@@ -340,21 +365,33 @@ function roll_sub_roll(id, table) {
 
               if(value.match(inline_roll_match)) {value = inline_roll(value);}
 
-              result = result + pre + sub_title + " : " + value + "\n";
+              // result = result + pre + sub_title + " : " + value + "\n";
+              side(pre + sub_title + " : " + value);
+              side_display(pre_display + sub_title + " : " + value);
+
             }
           }
         } else if(type=="amount") {
           var length = table[i].rolls.length;
           var amount = get_roll_value(number);
-
           amount = Math.ceil(amount * (percent_of / 100));
-          result = result + "\n" + title + " : " + amount + "\n";
+
+          // result = result + "\n" + title + " : " + amount + "\n";
+          side(" ");
+          side(title + " : " + amount);
+          side_display(" ");
+          side_display(title + " : " + amount);
+
           // roll that many times
           for(var z=0;z<amount;z++){
             // roll for each roll
 
-            result = result + "(" + (z+1) + ") \n";
+            // result = result + "(" + (z+1) + ") \n";
+            side("(" + (z+1) + ")");
+            side_display("(" + (z+1) + ")");
+
             var pre = "     ";
+            var pre_display = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
 
             for(var x=0;x<length;x++) {
               // roll sub-roll this number of times
@@ -366,7 +403,9 @@ function roll_sub_roll(id, table) {
 
               if(value.match(inline_roll_match)) {value = inline_roll(value);}
 
-              result = result + pre + sub_title + " : " + value + "\n";
+              // result = result + pre + sub_title + " : " + value + "\n";
+              side(pre + sub_title + " : " + value);
+              side_display(pre_display + sub_title + " : " + value);
 
             }
           }
@@ -375,7 +414,7 @@ function roll_sub_roll(id, table) {
     }
   }
 
-  if(result!=""){
+  if( result != "" ){
     return result;
   } else {
     return "";
@@ -424,18 +463,29 @@ function perform_roll() {
   var seltext = sel.options[index].value;
 
   roll_table = get_roll_array(seltext, current.id);
+  if_zero_dont_show_subrolls = roll_table.sub_rolls.length;
 
-  sideClear();
+  clearright();
 
   side("Title: " + roll_table.title);
   side(" ");
   side("Suggested Use: " + roll_table.use);
   side(" ");
-  side("Main Rolls: " + roll_table.main_rolls.length);
-  side("Sub Rolls: " + roll_table.sub_rolls.length);
+  // side("Main Rolls: " + roll_table.main_rolls.length);
+  // side("Sub Rolls: " + roll_table.sub_rolls.length);
+  // side(" ");
+  side("Rolls:");
   side(" ");
-  side("Main Rolls:");
-  side(" ");
+
+  side_display("<span class='roll-title'>" + roll_table.title + "</span>");
+  side_display(" ");
+  side_display("Suggested Use: <span class='roll-suggested-use'>" + roll_table.use + "</span>");
+  side_display(" ");
+  // side_display("Main Rolls: " + roll_table.main_rolls.length);
+  // side_display("Sub Rolls: " + roll_table.sub_rolls.length);
+  // side_display(" ");
+  // side_display("Rolls");
+  // side_display(" ");
 
   // iterate the menu, displaying the values for main rolls
   for (var i = 0; i < roll_table.main_rolls.length; i++) {
@@ -448,88 +498,128 @@ function perform_roll() {
     if(value.match(inline_roll_match)) {value = inline_roll(value);}
 
     side(roll.title + " : " + value);
+    side_display(roll.title + " : " + value);
   }
 
-  side(" ");
-  side("Sub Rolls:");
+  if ( if_zero_dont_show_subrolls != 0 ) {
+    side(" ");
+    side("Sub Rolls:");
 
-  // iterate the menu, displaying the values for sub rolls
-  for (var i = 0; i < roll_table.sub_rolls.length; i++) {
-    // log("roll_table.sub_rolls[i]:"+roll_table.sub_rolls[i]);
-    id = get_roll_id(roll_table.sub_rolls[i]);
-    // log("id:"+id);
-    table = get_roll_table(roll_table.sub_rolls[i]);
-    // log("table:"+table);
-    roll = get_roll(id, table);
-    value = roll_sub_roll(id, table);
+    side_display(" ");
+    side_display("Sub Rolls:");
 
-    side(value);
+    // iterate the menu, displaying the values for sub rolls
+    for (var i = 0; i < roll_table.sub_rolls.length; i++) {
+      // log("roll_table.sub_rolls[i]:"+roll_table.sub_rolls[i]);
+      id = get_roll_id(roll_table.sub_rolls[i]);
+      // log("id:"+id);
+      table = get_roll_table(roll_table.sub_rolls[i]);
+      // log("table:"+table);
+      roll = get_roll(id, table);
+      value = roll_sub_roll(id, table);
+
+      side(value);
+      side_display(value);
+    }
   }
 
   display_side();
 
-  document.getElementById("selectlist").focus();
+  $("#selectlist").focus();
 }
 
 
 // copy to clipboard - current roll
 var copyTextareaBtn = document.querySelector('.current-copy-button');
 copyTextareaBtn.addEventListener('click', function(event) {
-  showcurrent();
+  $('#rightview-current').show();
   var copyTextarea = document.querySelector('.current-textarea');
   copyTextarea.select();
-
   try {
     var successful = document.execCommand('copy');
     var msg = successful ? 'successful' : 'unsuccessful';
     console.log('Copying command was ' + msg);
-    copyTextarea.innerHTML = "";
+    clearright();
     $("#selectlist").focus();
     showalert('copy current');
   } catch (err) {
     console.log('Oops, unable to copy');
   }
-
+  $('#rightview-current').hide();
 });
 
 // copy to clipboard - history rolls
 var copyTextareaBtn = document.querySelector('.history-copy-button');
 copyTextareaBtn.addEventListener('click', function(event) {
-  showhistory();
+  $('#rightview-history').show();
   var copyTextarea = document.querySelector('.history-textarea');
   copyTextarea.select();
-
   try {
     var successful = document.execCommand('copy');
     var msg = successful ? 'successful' : 'unsuccessful';
     console.log('Copying command was ' + msg);
-    copyTextarea.innerHTML = "";
+    clearhistory();
     $("#selectlist").focus();
     showalert('copy history');
   } catch (err) {
     console.log('Oops, unable to copy');
   }
+  $('#rightview-history').hide();
 });
 
+function togglehovermenu() {
+  if ( mouseover_on == true ) {
+    mouseover_on = false;
+    $('.hover-icon').addClass('hoveroff');
+    showalert("hover off");
+  } else {
+    mouseover_on = true;
+    $('.hover-icon').removeClass('hoveroff');
+    showalert("hover on");
+  }
+}
+
+function mouseover_loadSelect(obj) {
+  if ( mouseover_on == true ) { loadSelect(obj); }
+}
+
 function showhistory() {
-  $('#rightview-current').hide();
-  $('#rightview-history').show();
+  // $('#rightview-current').hide();
+  // $('#rightview-history').show();
+  // $('#rightview-history').focus();
+
   $('#current-roll-tab').removeClass('active');
   $('#history-roll-tab').addClass('active');
-  $('#rightview-history').focus();
+  $('#rightview-current-display').hide();
+  $('#rightview-history-display').show();
+  rightscrolltop();
+  $('#rightview-history-display').focus();
 }
 
 function showcurrent() {
-  $('#rightview-history').hide();
-  $('#rightview-current').show();
+  // $('#rightview-current').hide();
+  // $('#rightview-history').show();
+  // $('#rightview-history').focus();
   $('#history-roll-tab').removeClass('active');
   $('#current-roll-tab').addClass('active');
-  $('#rightview-current').focus();
+  $('#rightview-history-display').hide();
+  $('#rightview-current-display').show();
+  rightscrolltop();
+  $('#rightview-current-display').focus();
+}
+
+function rightscrolltop() {
+  $('#rightview-history-display').scrollTop = 0;
+  $('#rightview-current-display').scrollTop = 0;
 }
 
 function clearhistory() {
   $('#rightview-current').html("");
   $('#rightview-history').html("");
+  $('#rightview-current-display').html("");
+  $('#rightview-history-display').html("");
+  side_obj = "";
+  side_obj_display = "";
   showalert("clear history");
 }
 
@@ -547,11 +637,18 @@ function showalert(alert){
     case "clear history":
       alert_text = "Cleared History <span class='glyphicon glyphicon-ok'></span>";
       break;
+    case "hover on":
+      alert_text = "Menu Hover On <span class='glyphicon glyphicon-ok'></span>";
+      break;
+    case "hover off":
+      alert_text = "Menu Hover Off <span class='glyphicon glyphicon-remove'></span>";
+      break;
     }
 
   $('#new-alert').html(alert_text);
-  console.log("alert:"+alert_text);
+  //console.log("alert:"+alert_text);
   $('#new-alert').fadeIn("slow", function() { $(this).delay(500).fadeOut(); });
+
 }
 
 // create menu
@@ -574,32 +671,17 @@ for(i=0;i<menu.length;i++){
 
 // events
 
-document.getElementById("selectlist").onchange == function select_on_change() { perform_roll(); }
-document.getElementById("selectlist").onclick = function select_on_click() { perform_roll(); }
-document.getElementById("roll").onclick = function roll_clicked() { perform_roll(); }
-document.getElementById("test").onclick = function test_clicked() { roll_test(); }
-
-$('#selectlist').bind('onchange', function() { perform_roll(); });
+$("#selectlist").bind('click', function() { perform_roll(); });
+$("#roll").bind('click', function() { perform_roll(); });
+$("#test").bind('click', function() { roll_test(); });
 
 $('#history-roll-tab').bind('click', function() { showhistory(); });
 $('#current-roll-tab').bind('click', function() { showcurrent(); });
 $('#clear-history-roll-tab').bind('click', function() { clearhistory(); });
 
-
-
-// menu realtime
-//
-$(function() {
-  $(".menuitem").click(function() {
-    loadSelect($(this).html());
-  });
-});
-
-$(function() {
-  $(".menuitem").mouseover(function() {
-    loadSelect($(this).html());
-  });
-});
+$('.hover-icon-clickarea').bind('click', function() { togglehovermenu(); });
+$(".menuitem").bind('mouseover', function() { mouseover_loadSelect($(this).html()); });
+$(".menuitem").bind('click', function() { loadSelect($(this).html()); });
 
 $(document).ready(function() {
   init();
