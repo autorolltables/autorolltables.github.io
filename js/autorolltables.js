@@ -484,7 +484,6 @@ copyTextareaBtn.addEventListener('click', function(event) {
     var msg = successful ? 'successful' : 'unsuccessful';
     console.log('Copying command was ' + msg);
     copyTextarea.innerHTML = "";
-    //document.getElementById("selectlist").focus();
     $("#selectlist").focus();
     showalert('copy current');
   } catch (err) {
@@ -505,7 +504,7 @@ copyTextareaBtn.addEventListener('click', function(event) {
     var msg = successful ? 'successful' : 'unsuccessful';
     console.log('Copying command was ' + msg);
     copyTextarea.innerHTML = "";
-    document.getElementById("selectlist").focus();
+    $("#selectlist").focus();
     showalert('copy history');
   } catch (err) {
     console.log('Oops, unable to copy');
