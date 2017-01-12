@@ -2,37 +2,8 @@
 
 developed by dangeratio
 
-roll tables content by OrkishBlade
+roll tables content by OrkishBlade and others from <a href="https://www.reddit.com/r/behindthetables/">/r/behindthetables</a> and <a href="https://www.reddit.com/r/dndbehindthescreen/">/r/dndbehindthescreen</a>
 
 <a href="http://autorolltables.github.io/">
-<img src="https://i.imgur.com/tGEZtHv.png">
+<img src="https://i.imgur.com/JuWyYsQ.png">
 </a>
-
-# data table structure
-
-Here is the structure used in table.js if you want to make your own tables in a fork or anything:
-
-## menu - js/menu.js
-
-```
-menu_title
-item
-	main_rolls []
-		js/roll_id
-		js/roll_id
-		js/roll_id
-	sub_rolls []
-		js/roll_id
-		js/roll_id
-		js/roll_id
-```
-
-## rolls - js/rolls.js
-```
-roll_title
-roll_id
-roll []
-	roll_value
-	roll_value
-	roll_value
-```
