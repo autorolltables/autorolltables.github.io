@@ -5,10 +5,9 @@ castle_description_rolls = ["dungeons/d10thecastlesits", "dungeons/d12thecastlew
 prison_description_rolls = ["dungeons/d12theprisonislocated", "dungeons/d8theprisonwasbuiltby", "dungeons/d6theprisoncomplexis", "dungeons/d6theprisonissurroundedby", "dungeons/d10prisonersareheldwithin", "dungeons/d4thecellsorpitsconditionis", "dungeons/d4prisonersaretreated", "dungeons/d10theprisonisknownfor", "dungeons/d8accordingtorumorwithintheprisonswallslies", ];
 
 
-
 top.menu = [
 
-  { "title":"Dungeons/Locations", "id":"Dungeons",
+  { "title":"Dungeons", "id":"Dungeons",
     "items":[
 
       // {"title":"- Castle Description", "use":"Use the tables to roll randomly", "main_rolls":castle_description_rolls,"sub_rolls":[],},

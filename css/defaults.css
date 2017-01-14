@@ -49,7 +49,13 @@ body
   color: white;
 }
 
+.menu-selected {
+  color: #DF691A !important;
+  border-bottom: 1px white;
+}
+
 .menuitem:hover {
+  color: #DF691A !important;
   opacity: 0.65;
   filter: alpha(opacity=65);
 }
@@ -130,11 +136,6 @@ body
 
 .hoveroff {
   color: #DF691A;
-}
-
-.hovertoggle:hover{
-  background-color: #a0a0a0 !important;
-  color: white !important;
 }
 
 #page, #menu {
