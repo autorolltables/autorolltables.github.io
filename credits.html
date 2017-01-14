@@ -2,12 +2,9 @@
 <html lang="en">
 <head>
   <title>Auto Roll Tables</title>
-
   <script type="text/javascript">
-  if (window.location.protocol == "https:") {
-      var restOfUrl = window.location.href.substr(6);
-      window.location = "http:" + restOfUrl;
-  }
+    if (self == top) { document.documentElement.style.display = 'block'; }
+    else { top.location = self.location; }
   </script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,11 +15,12 @@
   <!--<link rel="stylesheet" href="fonts.css" type="text/css" media="all" />-->
 
   <link rel="stylesheet" href="css/defaults.css" type="text/css" media="all" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">-->
+  <link rel="stylesheet" href="https://bootswatch.com/superhero/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
 </head>
-
 <body>
 
   <div class="bgimg">
@@ -30,45 +28,39 @@
     <!-- <img src="http://uxrepo.com/static/icon-sets/windows/svg/dnd.svg" class="bgimage"> -->
   </div>
 
-  <div id="header" class="container-fluid">
-    <div id="logo" class="row">
-      <a href="http://autorolltables.github.io/" class="nocolor">
-        <h1>Auto Roll Tables</h1>
-      </a>
-    </div>
+  <div id="page" class="container-fluid">
+
     <div class="row">
+      <div class="col-md-12 logo-nopad">Auto Roll Tables &nbsp;&nbsp; <img src='img/d20.png' height="28" width="25"/></div>
+    </div>
+
+    <div id="menu-container" class="row">
       <div class="col-md-12">
-        <span class="left-text padsome">Credits</span>
+        Credits
       </div>
     </div>
-    </div>
-  </div>
 
-  <div id="page" class="container-fluid">
+
     <div class="row">
       <div class="col-md-12">&nbsp;</div>
     </div>
 
     <div class="row">
-      <div id="quote" class="col-md-11 changelog">
+      <div id="quote" class="col-md-11 changelog text-less-muted">
         <p>developed by dangeratio</p>
         <p>roll tables from:</p>
-        <p><b>OrkishBlade (most)</b> and the team from <a href='https://www.reddit.com/r/BehindTheTables/'>/r/BehindTheTables/</a>, famoushippopotamus, Joxxill, Minitaz2001, TuesdayTastic, micka190, InternetLoveMachine, Burning_Titan, _Auto_, Mimir-ion, Blk4ce, VD-Hawkin, Frank_Isaacs, charliedude, V-Num, Trinculoisdead, LinedWithEyes, rolls_for_initiative, lotrein, maladroitthief, LaserPoweredDeviltry, skywier, BornToDoStuf, captainfashion, olirant, Burgerkrieg</p>
+        <p><b>OrkishBlade</b> and the team from <a href='https://www.reddit.com/r/BehindTheTables/'>/r/BehindTheTables/</a>, famoushippopotamus, Joxxill, Minitaz2001, TuesdayTastic, micka190, InternetLoveMachine, Burning_Titan, _Auto_, Mimir-ion, Blk4ce, VD-Hawkin, Frank_Isaacs, charliedude, V-Num, Trinculoisdead, LinedWithEyes, rolls_for_initiative, lotrein, maladroitthief, LaserPoweredDeviltry, skywier, BornToDoStuf, captainfashion, olirant, Burgerkrieg</p>
 
       </div>
     </div>
-  </div>
 
-<div id="copyright" class="container-fluid">
-  <div class="row">
-    <div class="col-md-12">
-      <hr>
-      <p class="text-muted"><a href="index.html">back to roll tables</a>
-      </p>
+    <div class="row">
+      <div class="col-md-12">
+        <a href="index.html">back to roll tables</a>
+      </div>
     </div>
-  </div>
-</div>
 
+  </div>
 
 </body>
 

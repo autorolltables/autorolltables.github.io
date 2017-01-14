@@ -6,6 +6,29 @@
 
 // names = ["npcs/dxmalefirstname", "npcs/dxfemalefirstname", "npcs/dxsurname", ];
 
+
+
+tavern_names = [
+
+  {"title": "The [Noun 1] and [Noun 1B]", "main_rolls":["settlements/d100noun1a_tavernnames", "settlements/d100noun1b_tavernnames", ],"sub_rolls":[],},
+  {"title": "The [Noun 1] and the [Noun 1B]", "main_rolls":["settlements/d100noun1a_tavernnames", "settlements/d100noun1b_tavernnames", ],"sub_rolls":[],},
+  {"title": "The [Noun 1]'s [Noun 2]", "main_rolls":["settlements/d100noun1a_tavernnames", "settlements/d100noun2_tavernnames",],"sub_rolls":[],},
+  {"title": "The [Adjective] [Noun 1]'s [Noun 2]", "main_rolls":["settlements/d100adjective_tavernnames", "settlements/d100noun1a_tavernnames", "settlements/d100noun2_tavernnames",],"sub_rolls":[],},
+  {"title": "The [Noun 1] and the [Noun 2]", "main_rolls":["settlements/d100noun1a_tavernnames", "settlements/d100noun2_tavernnames",],"sub_rolls":[],},
+  {"title": "The [Verb] [Noun 1]", "main_rolls":["settlements/d100verb_tavernnames", "settlements/d100noun1a_tavernnames", ],"sub_rolls":[],},
+  {"title": "The [Adjective] [Noun 1]", "main_rolls":["settlements/d100adjective_tavernnames", "settlements/d100noun1a_tavernnames", ],"sub_rolls":[],},
+  {"title": "The [Noun 1] and the [Adjective] [Noun 1B]", "main_rolls":["settlements/d100noun1a_tavernnames", "settlements/d100adjective_tavernnames", "settlements/d100noun1b_tavernnames", ],"sub_rolls":[],},
+
+
+  //"settlements/d4namingformula_tavernnames",
+  //"settlements/d100verb_tavernnames",
+  //"settlements/d100adjective_tavernnames",
+  //"settlements/d100noun1a_tavernnames",
+  //"settlements/d100noun1b_tavernnames",
+  //"settlements/d100noun2_tavernnames",
+
+];
+
 town_npcs = [
 
   {"title":"Alchemist", "main_rolls":["npcs/dxfirstname", "npcs/dxsurname", "npcs/dxpersonality","npcs/d6thealchemistis", "npcs/d4thealchemistislookingfor", "npcs/d4thealchemistcarries", ],"sub_rolls":[],},
@@ -38,8 +61,8 @@ town_npcs = [
   {"title":"Harlot", "main_rolls":["npcs/dxfemalefirstname", "npcs/dxsurname", "npcs/dxpersonality","npcs/d10theharlotis", "npcs/d6everyoneisbeautifultheharlothas", "npcs/d8nooneisflawlesstheharlothas", "npcs/d4theharlotsflawis", "npcs/d6theharlotisparticularlyskilledat", "npcs/d6theharlotislookingto", ],"sub_rolls":[],},
   {"title":"Knight", "main_rolls":["npcs/dxmalefirstname", "npcs/dxsurname", "npcs/dxpersonality","npcs/d20theknightshousescolorsare", "npcs/d8theknightshousessymbolis", "npcs/d6theknighthassworntoanoblelordorladyto", "npcs/d8aboveallelsetheknightvalues", "npcs/d4theknightisarmoredin", "npcs/d6theknightsarmoris", "npcs/d12theknightiswielding", "npcs/d6theknightsmountis", "npcs/d12theknightis", "npcs/d12ontheknightsfaceis", "npcs/d10theknightcarries", ],"sub_rolls":[],},
   {"title":"Law Official", "main_rolls":["npcs/dxfirstname", "npcs/dxsurname", "npcs/dxpersonality","npcs/d4thelawofficialis", "npcs/d6thelawofficialseekssomeoneto", "npcs/d4thelawofficialcarries", ],"sub_rolls":[],},
-  {"title":"Noble", "main_rolls":["npcs/dxfirstname", "npcs/dxsurname", "npcs/dxpersonality","npcs/d6thenobleis", "npcs/d6thenobleseekssomeoneto", "npcs/d6thenoblecarries", ],"sub_rolls":[],},
-  {"title":"Noble", "main_rolls":["npcs/dxfirstname", "npcs/dxsurname", "npcs/dxpersonality","npcs/d6thenobleis", "npcs/d6thenobleseekssomeoneto", "npcs/d6thenoblecarries", ],"sub_rolls":[],},
+  {"title":"Noble", "main_rolls":["npcs/dxfirstname", "npcs/dxsurname", "npcs/dxpersonality","npcs/d6thenobleis", "npcs/d6thenobleseekssomeoneto", "npcs/d6thenoblecarries", "npcs/d100lineagethisnobleis_noble", "npcs/d20racethisnobleis…_noble", "npcs/d20positionthisnobleis_noble", "npcs/d50secretsandmotivationthisnobleis_noble", "npcs/d100outwardappearanceandpresentationthisnoble_noble", "npcs/d50quirksandintereststhisnoble…_noble",],"sub_rolls":[],},
+  {"title":"Noble", "main_rolls":["npcs/dxfirstname", "npcs/dxsurname", "npcs/dxpersonality","npcs/d6thenobleis", "npcs/d6thenobleseekssomeoneto", "npcs/d6thenoblecarries", "npcs/d100lineagethisnobleis_noble", "npcs/d20racethisnobleis…_noble", "npcs/d20positionthisnobleis_noble", "npcs/d50secretsandmotivationthisnobleis_noble", "npcs/d100outwardappearanceandpresentationthisnoble_noble", "npcs/d50quirksandintereststhisnoble…_noble",],"sub_rolls":[],},
   {"title":"Priest", "main_rolls":["npcs/dxfirstname", "npcs/dxsurname", "npcs/dxpersonality","npcs/d6thepriestis", "npcs/d4thepriestislookingfor", "npcs/d4thepriestcarries", ],"sub_rolls":[],},
   {"title":"Shopkeeper", "main_rolls":["npcs/dxfirstname", "npcs/dxsurname", "npcs/dxpersonality","npcs/d4theshopkeeperis", "npcs/d4theshopkeeperseekssomeoneto", ],"sub_rolls":[],},
   {"title":"Shopkeeper", "main_rolls":["npcs/dxfirstname", "npcs/dxsurname", "npcs/dxpersonality","npcs/d4theshopkeeperis", "npcs/d4theshopkeeperseekssomeoneto", ],"sub_rolls":[],},
@@ -164,7 +187,7 @@ top.subrolls = [
   {"title":"6d6 Shopkeeper", "id":"6d6shopkeeper", "roll_type":"amount", "number":"6d6", "percent_to":"100", "percent_of":"100", "rolls":["npcs/dxmalefirstname", "npcs/dxfemalefirstname", "npcs/dxsurname", "npcs/dxpersonality", "factions/d4theshopkeeperis", "factions/d4theshopkeeperseekssomeoneto", ],},
   {"title":"6d6 Merchant", "id":"6d6merchant", "roll_type":"amount", "number":"6d6", "percent_to":"100", "percent_of":"100", "rolls":["npcs/dxmalefirstname", "npcs/dxfemalefirstname", "npcs/dxsurname", "npcs/dxpersonality", "factions/d6themerchantis", "factions/d4themerchantwears", "factions/d4themerchantseekssomeoneto", "factions/d6themerchantcarries", "factions/d6currencybesidescointhemerchantwilltradein", ],},
   {"title":"6d6 Soldiers", "id":"6d6soldier", "roll_type":"amount", "number":"6d6", "percent_to":"100", "percent_of":"100", "rolls":["npcs/dxmalefirstname", "npcs/dxfemalefirstname", "npcs/dxsurname", "npcs/dxpersonality", "factions/d12thesoldieris", "factions/d12thesoldierfightsfor", "factions/d12onthesoldiersfaceis", "factions/d10thesoldiercarries", ],},
-  {"title":"6d6 Nobles", "id":"6d6nobles", "roll_type":"amount", "number":"6d6", "percent_to":"100", "percent_of":"100", "rolls":["npcs/dxmalefirstname", "npcs/dxfemalefirstname", "npcs/dxsurname", "npcs/dxpersonality", "factions/d6thenobleis", "factions/d8thenobleseekssomeoneto", "factions/d6thenoblecarries", "factions/d8thenoblewears", "factions/d8thenoblehas",  ],},
+  {"title":"6d6 Nobles", "id":"6d6nobles", "roll_type":"amount", "number":"6d6", "percent_to":"100", "percent_of":"100", "rolls":["npcs/dxmalefirstname", "npcs/dxfemalefirstname", "npcs/dxsurname", "npcs/dxpersonality", "factions/d6thenobleis", "factions/d8thenobleseekssomeoneto", "factions/d6thenoblecarries", "factions/d8thenoblewears", "factions/d8thenoblehas", "npcs/d100lineagethisnobleis_noble", "npcs/d20racethisnobleis…_noble", "npcs/d20positionthisnobleis_noble", "npcs/d50secretsandmotivationthisnobleis_noble", "npcs/d100outwardappearanceandpresentationthisnoble_noble", "npcs/d50quirksandintereststhisnoble…_noble",],},
   {"title":"6d6 Poachers", "id":"6d6poachers", "roll_type":"amount", "number":"6d6", "percent_to":"100", "percent_of":"100", "rolls":["npcs/dxmalefirstname", "npcs/dxfemalefirstname", "npcs/dxsurname", "npcs/dxpersonality", "factions/d8thepoachersfavoritepreyincludes", "factions/d6thepoachershunt", ],},
   {"title":"6d6 Robbers", "id":"6d6robbers", "roll_type":"amount", "number":"6d6", "percent_to":"100", "percent_of":"100", "rolls":["npcs/dxmalefirstname", "npcs/dxfemalefirstname", "npcs/dxsurname", "npcs/dxpersonality", "factions/d6therobberstypicallystrikewith", "factions/d8therobbersarenotoriousfor", ],},
   {"title":"6d6 Smugglers", "id":"6d6smugglers", "roll_type":"amount", "number":"6d6", "percent_to":"100", "percent_of":"100", "rolls":["npcs/dxmalefirstname", "npcs/dxfemalefirstname", "npcs/dxsurname", "npcs/dxpersonality", "factions/d6thesmugglingringsprimarymodusoperandiinvolves", "factions/d8theringissupportedby", ],},
@@ -202,6 +225,8 @@ top.subrolls = [
   {"title":"8d6 Amount of d50 Town Inhabitants", "id":"8d6amountofd50towninhabitants", "roll_type":"type", "number":"8d6", "percent_to":"100", "percent_of":"100", "roll":town_npcs,},
   {"title":"6d6 Amount of d50 Town Inhabitants", "id":"6d6amountofd50towninhabitants", "roll_type":"type", "number":"6d6", "percent_to":"100", "percent_of":"100", "roll":town_npcs,},
   {"title":"4d6 Amount of d50 Town Inhabitants", "id":"4d6amountofd50towninhabitants", "roll_type":"type", "number":"4d6", "percent_to":"100", "percent_of":"100", "roll":town_npcs,},
+
+  {"title":"Tavern Name", "id":"1d1TavernNames", "roll_type":"type", "number":"1d1", "percent_to":"100", "percent_of":"100", "roll":tavern_names,},
 
 
 
