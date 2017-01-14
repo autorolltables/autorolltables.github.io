@@ -217,7 +217,8 @@ function init() {
   $('#rightview-history').hide();
   $('#rightview-current').hide();
   $('#rightview-history-display').hide();
-  $("#new-alert").hide();
+  $("#success-alert").hide();
+  $("#fail-alert").hide();
 
 }
 
@@ -338,7 +339,7 @@ function roll_sub_roll(id, table) {
 
           // result = result + title + " : " + amount + "\n";
           side( title + " : " + amount );
-          side_display(title + " : " + amount);
+          side_display(title + " : <b>" + amount + "</b>");
 
           // roll that many times
           for(var z=0;z<amount;z++){
@@ -354,7 +355,7 @@ function roll_sub_roll(id, table) {
             // show title of this result
             //result = result + pre_title + table[i].roll[rand].title + "\n";
             side(pre_title + table[i].roll[rand].title);
-            side_display(pre_title + table[i].roll[rand].title);
+            side_display("<b>" + pre_title + table[i].roll[rand].title + "</b>");
 
             for(var x=0; x<rolls.length;x++){
 
@@ -367,7 +368,7 @@ function roll_sub_roll(id, table) {
 
               // result = result + pre + sub_title + " : " + value + "\n";
               side(pre + sub_title + " : " + value);
-              side_display(pre_display + sub_title + " : " + value);
+              side_display("<span class='indent'>" + sub_title + " : <b>" + value + "</b></span>");
 
             }
           }
@@ -380,7 +381,7 @@ function roll_sub_roll(id, table) {
           side(" ");
           side(title + " : " + amount);
           side_display(" ");
-          side_display(title + " : " + amount);
+          side_display(title + " : <b>" + amount + "</b>");
 
           // roll that many times
           for(var z=0;z<amount;z++){
@@ -388,7 +389,7 @@ function roll_sub_roll(id, table) {
 
             // result = result + "(" + (z+1) + ") \n";
             side("(" + (z+1) + ")");
-            side_display("(" + (z+1) + ")");
+            side_display("<b>(" + (z+1) + ")</b>");
 
             var pre = "     ";
             var pre_display = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
@@ -405,7 +406,7 @@ function roll_sub_roll(id, table) {
 
               // result = result + pre + sub_title + " : " + value + "\n";
               side(pre + sub_title + " : " + value);
-              side_display(pre_display + sub_title + " : " + value);
+              side_display("<span class='indent'>" + sub_title + " : <b>" + value + "</b></span>");
 
             }
           }
@@ -498,7 +499,7 @@ function perform_roll() {
     if(value.match(inline_roll_match)) {value = inline_roll(value);}
 
     side(roll.title + " : " + value);
-    side_display(roll.title + " : " + value);
+    side_display(roll.title + " : <b>" + value + "</b>");
   }
 
   if ( if_zero_dont_show_subrolls != 0 ) {
@@ -532,6 +533,10 @@ function perform_roll() {
 // copy to clipboard - current roll
 var copyTextareaBtn = document.querySelector('.current-copy-button');
 copyTextareaBtn.addEventListener('click', function(event) {
+  if ( $('#rightview-current').html() == "" ) {
+    showalert("copy current blank");
+    return;
+  }
   $('#rightview-current').show();
   var copyTextarea = document.querySelector('.current-textarea');
   copyTextarea.select();
@@ -551,6 +556,10 @@ copyTextareaBtn.addEventListener('click', function(event) {
 // copy to clipboard - history rolls
 var copyTextareaBtn = document.querySelector('.history-copy-button');
 copyTextareaBtn.addEventListener('click', function(event) {
+  if ( $('#rightview-history').html() == "" ) {
+    showalert("copy history blank");
+    return;
+  }
   $('#rightview-history').show();
   var copyTextarea = document.querySelector('.history-textarea');
   copyTextarea.select();
@@ -627,28 +636,44 @@ function clearhistory() {
 function showalert(alert){
 
   var alert_text = "";
+  var alert_type = "";
 
   switch(alert) {
     case "copy history":
+      alert_type = "success";
       alert_text = "Copied History Successfully <span class='glyphicon glyphicon-ok'></span>";
       break;
     case "copy current":
+      alert_type = "success";
       alert_text = "Copied Current Roll Successfully <span class='glyphicon glyphicon-ok'></span>";
       break;
     case "clear history":
+      alert_type = "success";
       alert_text = "Cleared History <span class='glyphicon glyphicon-ok'></span>";
       break;
     case "hover on":
+      alert_type = "success";
       alert_text = "Menu Hover On <span class='glyphicon glyphicon-ok'></span>";
       break;
     case "hover off":
+      alert_type = "success";
       alert_text = "Menu Hover Off <span class='glyphicon glyphicon-remove'></span>";
       break;
+    case "copy history blank":
+      alert_type = "fail";
+      alert_text = "History Empty <span class='glyphicon glyphicon-remove'></span>";
+    case "copy current blank":
+      alert_type = "fail";
+      alert_text = "Current Roll Empty <span class='glyphicon glyphicon-remove  '></span>";
     }
 
-  $('#new-alert').html(alert_text);
-  //console.log("alert:"+alert_text);
-  $('#new-alert').fadeIn("slow", function() { $(this).delay(500).fadeOut(); });
+  if ( alert_type == "success" ) {
+    $('#success-alert').html(alert_text);
+    $('#success-alert').fadeIn("slow", function() { $(this).delay(500).fadeOut(); });
+  } else {
+    $('#fail-alert').html(alert_text);
+    $('#fail-alert').fadeIn("slow", function() { $(this).delay(500).fadeOut(); });
+  }
 
 }
 
