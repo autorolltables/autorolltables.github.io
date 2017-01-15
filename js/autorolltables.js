@@ -79,6 +79,9 @@ function get_table(table){
     case "food":
       return top.food;
       break;
+    case "magic":
+      return top.magic;
+      break;
     case "monsters":
       return top.monsters;
       break;
@@ -251,7 +254,7 @@ function inline_roll(roll_text) {
   // find that number with a period afterwards, capture next non-whitespace character through until next decimal number detected.
   roll_text_without = roll_text_without.replace(rand,"<*>");
 
-  // regex match for indicator string <*> to the next decimal, caputring
+  // regex match for indicator string <*> to the next decimal, capturing
   roll_text_without = roll_text_without.match(indicator_match);
   result = roll_text_without[1].replace(/^\s+/, '').replace(/\s+$/, '').replace(/[;,.]$/, '');
 
@@ -352,7 +355,6 @@ function roll_sub_roll(id, table) {
             // show title of this result
             side(pre_title + table[i].roll[rand].title);
             side_display("<b>" + pre_title + table[i].roll[rand].title + "</b>");
-
             side_display("<div class='indent'>");
 
             for(var x=0; x<rolls.length;x++){
@@ -379,7 +381,6 @@ function roll_sub_roll(id, table) {
           amount = Math.ceil(amount * (percent_of / 100));
 
           side(title + " : " + amount);
-          side_display(" ");
           side_display(title + " : <b>" + amount + "</b>");
 
           // roll that many times
@@ -469,6 +470,7 @@ function perform_roll() {
   var seltext = sel.options[index].value;
 
   roll_table = get_roll_array(seltext, current.id);
+  if_zero_dont_show_mainrolls = roll_table.main_rolls.length;
   if_zero_dont_show_subrolls = roll_table.sub_rolls.length;
 
   clearright();
@@ -476,35 +478,36 @@ function perform_roll() {
   side("Title: " + roll_table.title);
   side(" ");
   side("Suggested Use: " + roll_table.use);
-  side(" ");
-  side("Rolls:");
-  side(" ");
 
   side_display("<span class='roll-title'>" + roll_table.title + "</span>");
   side_display(" ");
   side_display("Suggested Use: <span class='roll-suggested-use'>" + roll_table.use + "</span>");
-  side_display(" ");
 
-  // iterate the menu, displaying the values for main rolls
-  for (var i = 0; i < roll_table.main_rolls.length; i++) {
-    id = get_roll_id(roll_table.main_rolls[i]);
-    table = get_roll_table(roll_table.main_rolls[i]);
-    roll = get_roll(id, table);
-    value = roll_roll(id, table);
+  if ( if_zero_dont_show_mainrolls != 0 ) {
 
-    // care for sub-rolls if they exist
-    if(value.match(inline_roll_match)) {value = inline_roll(value);}
+    side(" ");
+    side_display(" ");
 
-    side(roll.title + " : " + value);
-    side_display(roll.title + " : <b>" + value + "</b>");
+    // iterate the menu, displaying the values for main rolls
+    for (var i = 0; i < roll_table.main_rolls.length; i++) {
+      id = get_roll_id(roll_table.main_rolls[i]);
+      table = get_roll_table(roll_table.main_rolls[i]);
+      roll = get_roll(id, table);
+      value = roll_roll(id, table);
+
+      // care for sub-rolls if they exist
+      if(value.match(inline_roll_match)) {value = inline_roll(value);}
+
+      side(roll.title + " : " + value);
+      side_display(roll.title + " : <b>" + value + "</b>");
+    }
+
   }
 
   if ( if_zero_dont_show_subrolls != 0 ) {
-    //side(" ");
-    //side("Sub Rolls:");
 
-    //side_display(" ");
-    //side_display("Sub Rolls:");
+    side(" ");
+    side_display(" ");
 
     // iterate the menu, displaying the values for sub rolls
     for (var i = 0; i < roll_table.sub_rolls.length; i++) {
@@ -513,13 +516,11 @@ function perform_roll() {
       roll = get_roll(id, table);
       value = roll_sub_roll(id, table);
 
-      //side(value);
-      //side_display(value);
     }
   }
 
   display_side();
-
+  rightscrolltop();
   $("#selectlist").focus();
 }
 
@@ -603,8 +604,8 @@ function showcurrent() {
 }
 
 function rightscrolltop() {
-  $('#rightview-history-display').scrollTop = 0;
-  $('#rightview-current-display').scrollTop = 0;
+  $("#rightview-history-display").animate({ scrollTop: 0 }, "fast");
+  $("#rightview-current-display").animate({ scrollTop: 0 }, "fast");
 }
 
 function clearhistory(show) {
