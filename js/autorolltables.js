@@ -5,7 +5,8 @@
 
 var current;
 var side_obj;
-var side_obj_display;
+var obj_current_display;
+var obj_history_display;
 var mouseover_on = true;
 
 function log(obj) {
@@ -14,7 +15,7 @@ function log(obj) {
 
 function display_side(){
   copyseparator = "------------------------------------------\n";
-  displayseparator = "<hr>";
+  displayseparator = ""; // <hr>
 
   $("#rightview-current").html( $("#rightview-current").html() + side_obj );
 
@@ -24,12 +25,12 @@ function display_side(){
     $("#rightview-history").html( $("#rightview-history").html() + copyseparator + side_obj );
   }
 
-  $("#rightview-current-display").html( $("#rightview-current-display").html() + side_obj_display );
+  $("#rightview-current-display").html( $("#rightview-current-display").html() + obj_current_display );
 
   if ( $("#rightview-history-display").html() == "" ) {
-    $("#rightview-history-display").html( side_obj_display );
+    $("#rightview-history-display").html( obj_history_display );
   } else {
-    $("#rightview-history-display").html( $("#rightview-history-display").html() + displayseparator + side_obj_display );
+    $("#rightview-history-display").html( $("#rightview-history-display").html() + displayseparator + obj_history_display );
   }
 
   rightscrolltop();
@@ -49,14 +50,28 @@ function side(obj) {
 }
 
 function side_display(obj) {
-  side_obj_display = side_obj_display + obj + "<br>";
+  obj_current_display = obj_current_display + obj + "<br>";
+  obj_history_display = obj_history_display + obj + "<br>";
+}
+
+function side_display_current(obj) {
+  obj_current_display = obj_current_display + obj + "<br>";
+}
+
+function side_display_history(obj, show_break) {
+  if ( show_break == true ) {
+    obj_history_display = obj_history_display + obj + "<br>";
+  } else {
+    obj_history_display = obj_history_display + obj;
+  }
 }
 
 function clearright() {
   $("#rightview-current").html('');
   $("#rightview-current-display").html('');
   side_obj = "";
-  side_obj_display = "";
+  obj_current_display = "";
+  obj_history_display = "";
   return 0;
 }
 
@@ -220,7 +235,9 @@ function init() {
   $('#rightview-history-display').hide();
   $("#success-alert").hide();
   $("#fail-alert").hide();
-  // $('.hover-icon').addClass("hoveroff");
+  $("#collapse-history-tab").hide();
+  $("#expand-history-tab").hide();
+  $("#clear-history-roll-tab").hide();
 
 }
 
@@ -373,6 +390,7 @@ function roll_sub_roll(id, table) {
 
             side_display("</div>");
 
+
           }
         } else if(type=="amount") {
           var length = table[i].rolls.length;
@@ -475,12 +493,18 @@ function perform_roll() {
 
   clearright();
 
-  side("Title: " + roll_table.title);
+  var roll_table_title = roll_table.title;
+  if ( roll_table_title.substring(0,2) == "- " ){
+    roll_table_title = roll_table_title.substring(2, roll_table_title.length);
+  }
+
+  side("Title: " + roll_table_title);
   side(" ");
   side("Suggested Use: " + roll_table.use);
-
-  side_display("<span class='roll-title'>" + roll_table.title + "</span>");
-  side_display(" ");
+  side_display_current("<span class='roll-title'>" + roll_table_title + "</span>");
+  side_display_current(" ");
+  side_display_history("<button class='accordion'><span class='roll-title-history'>" + roll_table_title + "</span></button>", false);
+  side_display_history("<div class='panel'>", false);
   side_display("Suggested Use: <span class='roll-suggested-use'>" + roll_table.use + "</span>");
 
   if ( if_zero_dont_show_mainrolls != 0 ) {
@@ -518,6 +542,8 @@ function perform_roll() {
 
     }
   }
+
+  side_display_history("</div>", false);   // closing "panel" div (used by history accordion)
 
   display_side();
   rightscrolltop();
@@ -592,6 +618,12 @@ function showhistory() {
   $('#rightview-history-display').show();
   rightscrolltop();
   $('#rightview-history-display').focus();
+
+  // functions
+  $("#collapse-history-tab").show();
+  $("#expand-history-tab").show();
+  $("#clear-history-roll-tab").show();
+
 }
 
 function showcurrent() {
@@ -601,6 +633,11 @@ function showcurrent() {
   $('#rightview-current-display').show();
   rightscrolltop();
   $('#rightview-current-display').focus();
+
+  // functions
+  $("#collapse-history-tab").hide();
+  $("#expand-history-tab").hide();
+  $("#clear-history-roll-tab").hide();
 }
 
 function rightscrolltop() {
@@ -614,7 +651,8 @@ function clearhistory(show) {
   $('#rightview-current-display').html("");
   $('#rightview-history-display').html("");
   side_obj = "";
-  side_obj_display = "";
+  obj_current_display = "";
+  obj_history_display = "";
   if (show == true) {
     showalert("clear history");
   }
@@ -708,8 +746,17 @@ $('#current-roll-tab').bind('click', function() { showcurrent(); });
 $('#clear-history-roll-tab').bind('click', function() { clearhistory(true); });
 
 $('.hover-icon-clickarea').bind('click', function() { togglehovermenu(); });
-$(".menuitem").bind('mouseover', function() { mouseover_loadSelect($(this).attr('id')); });
+$(".menuitem").on('mouseover', function() { mouseover_loadSelect($(this).attr('id')); });
 $(".menuitem").bind('click', function() { loadSelect($(this).attr('id')); });
+
+$('#collapse-history-tab').click( function() { $('.panel').removeClass('show'); $('.accordion').removeClass('active'); });
+$('#expand-history-tab').click( function() { $('.panel').addClass('show'); $('.accordion').addClass('active'); });
+
+// accordion
+$('body').on('click', '.accordion', function() {
+  $(this).toggleClass('active');
+  $(this).next().toggleClass('show');
+});
 
 $(document).ready(function() {
   init();
