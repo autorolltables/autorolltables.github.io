@@ -5,7 +5,8 @@
 
 var current;
 var side_obj;
-var side_obj_display;
+var obj_current_display;
+var obj_history_display;
 var mouseover_on = true;
 
 function log(obj) {
@@ -14,7 +15,7 @@ function log(obj) {
 
 function display_side(){
   copyseparator = "------------------------------------------\n";
-  displayseparator = "<hr>";
+  displayseparator = ""; // <hr>
 
   $("#rightview-current").html( $("#rightview-current").html() + side_obj );
 
@@ -24,12 +25,12 @@ function display_side(){
     $("#rightview-history").html( $("#rightview-history").html() + copyseparator + side_obj );
   }
 
-  $("#rightview-current-display").html( $("#rightview-current-display").html() + side_obj_display );
+  $("#rightview-current-display").html( $("#rightview-current-display").html() + obj_current_display );
 
   if ( $("#rightview-history-display").html() == "" ) {
-    $("#rightview-history-display").html( side_obj_display );
+    $("#rightview-history-display").html( obj_history_display );
   } else {
-    $("#rightview-history-display").html( $("#rightview-history-display").html() + displayseparator + side_obj_display );
+    $("#rightview-history-display").html( $("#rightview-history-display").html() + displayseparator + obj_history_display );
   }
 
   rightscrolltop();
@@ -40,7 +41,6 @@ function output_filter(obj) {
 }
 
 function display_filter(obj) {
-  //var obj = obj.replace(/(\n)/gm,"<br>");
   return obj;
 }
 
@@ -50,14 +50,28 @@ function side(obj) {
 }
 
 function side_display(obj) {
-  side_obj_display = side_obj_display + obj + "<br>";
+  obj_current_display = obj_current_display + obj + "<br>";
+  obj_history_display = obj_history_display + obj + "<br>";
+}
+
+function side_display_current(obj) {
+  obj_current_display = obj_current_display + obj + "<br>";
+}
+
+function side_display_history(obj, show_break) {
+  if ( show_break == true ) {
+    obj_history_display = obj_history_display + obj + "<br>";
+  } else {
+    obj_history_display = obj_history_display + obj;
+  }
 }
 
 function clearright() {
   $("#rightview-current").html('');
   $("#rightview-current-display").html('');
   side_obj = "";
-  side_obj_display = "";
+  obj_current_display = "";
+  obj_history_display = "";
   return 0;
 }
 
@@ -70,7 +84,6 @@ function clearSelect() {
 }
 
 function get_table(table){
-  //log("switch:"+table);
   switch(table) {
     case "dungeons":
       return top.dungeons;
@@ -80,6 +93,9 @@ function get_table(table){
       break;
     case "food":
       return top.food;
+      break;
+    case "magic":
+      return top.magic;
       break;
     case "monsters":
       return top.monsters;
@@ -121,6 +137,10 @@ function loadSelect(curr_table) {
     }
   }
 
+  menu_id = "#" + curr_table;
+  $(".menuitem").removeClass('menu-selected');
+  $(menu_id).addClass('menu-selected');
+
   // iterate that menu, and add items to select
   for (var i = 0; i < current.items.length; i++) {
     selectlist.options[selectlist.options.length] = new Option(current.items[i].title,current.items[i].title);
@@ -153,10 +173,8 @@ function get_roll_id(id_string){
 function get_roll_array(roll_name, title) {
   menu = top.menu
   for(i=0;i<menu.length;i++){
-    //log("compare:"+menu[i].id+"|"+title);
     if(menu[i].id==title){
       for(z=0;z<menu[i].items.length;z++){
-        //log("compare:"+menu[i].items[z].title+"|"+roll_name);
         if(menu[i].items[z].title==roll_name){
           return menu[i].items[z];
         }
@@ -167,7 +185,6 @@ function get_roll_array(roll_name, title) {
 
 // get title of roll from roll id and table
 function get_roll(id, table){
-  //log("get_roll_init:"+id+"|"+table);
   table = get_table(table);
   for(i=0;i<table.length;i++){
     if(table[i].id==id){
@@ -181,7 +198,6 @@ function get_roll(id, table){
 function get_roll_title(val) {
   rolls = top.rolls;
   for(i=0; i<rolls.length; i++) {
-    //console.log("compare:"+rolls[i].id+" | "+val);
     if(rolls[i].id == val) {
       return i.title;
     }
@@ -219,6 +235,9 @@ function init() {
   $('#rightview-history-display').hide();
   $("#success-alert").hide();
   $("#fail-alert").hide();
+  $("#collapse-history-tab").hide();
+  $("#expand-history-tab").hide();
+  $("#clear-history-roll-tab").hide();
 
 }
 
@@ -231,7 +250,6 @@ var d_match = /^[dD]/;
 // sub roll (for inline string rolls)
 function inline_roll(roll_text) {
 
-  //console.log("roll_text:" + roll_text);
   var result = "";
 
   // identify roll type
@@ -253,7 +271,7 @@ function inline_roll(roll_text) {
   // find that number with a period afterwards, capture next non-whitespace character through until next decimal number detected.
   roll_text_without = roll_text_without.replace(rand,"<*>");
 
-  // regex match for indicator string <*> to the next decimal, caputring
+  // regex match for indicator string <*> to the next decimal, capturing
   roll_text_without = roll_text_without.match(indicator_match);
   result = roll_text_without[1].replace(/^\s+/, '').replace(/\s+$/, '').replace(/[;,.]$/, '');
 
@@ -280,7 +298,6 @@ function roll_test() {
         var returned = roll_table[z].rolls[i].roll[a];
 
         if(returned.match(inline_roll_match)) {
-          //side(returned + ": matched");
           returned = inline_roll(returned);
         }
       }
@@ -323,6 +340,7 @@ function roll_sub_roll(id, table) {
   for(var i=0;i<table.length;i++) {
     if(table[i].id==id){
       // found correct sub-roll id
+
       var title = table[i].title;
       var type = table[i].roll_type;
       var number = table[i].number;
@@ -337,7 +355,6 @@ function roll_sub_roll(id, table) {
           var amount = get_roll_value(number);
           amount = Math.ceil(amount * (percent_of / 100));
 
-          // result = result + title + " : " + amount + "\n";
           side( title + " : " + amount );
           side_display(title + " : <b>" + amount + "</b>");
 
@@ -353,9 +370,9 @@ function roll_sub_roll(id, table) {
             var rolls = table[i].roll[rand].main_rolls;
 
             // show title of this result
-            //result = result + pre_title + table[i].roll[rand].title + "\n";
             side(pre_title + table[i].roll[rand].title);
             side_display("<b>" + pre_title + table[i].roll[rand].title + "</b>");
+            side_display("<div class='indent'>");
 
             for(var x=0; x<rolls.length;x++){
 
@@ -366,33 +383,35 @@ function roll_sub_roll(id, table) {
 
               if(value.match(inline_roll_match)) {value = inline_roll(value);}
 
-              // result = result + pre + sub_title + " : " + value + "\n";
               side(pre + sub_title + " : " + value);
-              side_display("<span class='indent'>" + sub_title + " : <b>" + value + "</b></span>");
+              side_display(sub_title + " : <b>" + value + "</b>");
 
             }
+
+            side_display("</div>");
+
+
           }
         } else if(type=="amount") {
           var length = table[i].rolls.length;
+          var singular_item = table[i].singular;
           var amount = get_roll_value(number);
           amount = Math.ceil(amount * (percent_of / 100));
 
-          // result = result + "\n" + title + " : " + amount + "\n";
-          side(" ");
           side(title + " : " + amount);
-          side_display(" ");
           side_display(title + " : <b>" + amount + "</b>");
 
           // roll that many times
           for(var z=0;z<amount;z++){
             // roll for each roll
 
-            // result = result + "(" + (z+1) + ") \n";
-            side("(" + (z+1) + ")");
-            side_display("<b>(" + (z+1) + ")</b>");
+            side("(" + (z+1) + ") " + singular_item);
+            side_display("<b>(" + (z+1) + ") " + singular_item + "</b>");
 
             var pre = "     ";
             var pre_display = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+
+            side_display("<div class='indent'>");
 
             for(var x=0;x<length;x++) {
               // roll sub-roll this number of times
@@ -404,11 +423,13 @@ function roll_sub_roll(id, table) {
 
               if(value.match(inline_roll_match)) {value = inline_roll(value);}
 
-              // result = result + pre + sub_title + " : " + value + "\n";
               side(pre + sub_title + " : " + value);
-              side_display("<span class='indent'>" + sub_title + " : <b>" + value + "</b></span>");
+              side_display( sub_title + " : <b>" + value + "</b>");
 
             }
+
+            side_display("</div>");
+
           }
         }
       }
@@ -428,7 +449,6 @@ function get_roll_value(str) {
   // interpret various rolls - d10, 1d10, 4d4, maybe even 6d6+10 someday (but not currently)
   var value=0;
 
-  // log("value:"+str);
   if(str.match(d_match)) {
     // single roll (no number before the "d")
 
@@ -441,8 +461,6 @@ function get_roll_value(str) {
   } else {
     // multiple rolls (split on the "d" and execute a random [1] [0] times)
 
-    // var tmp = id_string.split("/");
-    // return tmp[1];
     str = str.toLowerCase().split("d");
 
     var total = 0;
@@ -461,71 +479,74 @@ function perform_roll() {
 
   var sel = document.getElementById("selectlist");
   var index = sel.selectedIndex;
+
+  if ( sel.options[index] == null ) {
+    showalert("nothing selected");
+    return;
+  }
+
   var seltext = sel.options[index].value;
 
   roll_table = get_roll_array(seltext, current.id);
+  if_zero_dont_show_mainrolls = roll_table.main_rolls.length;
   if_zero_dont_show_subrolls = roll_table.sub_rolls.length;
 
   clearright();
 
-  side("Title: " + roll_table.title);
+  var roll_table_title = roll_table.title;
+  if ( roll_table_title.substring(0,2) == "- " ){
+    roll_table_title = roll_table_title.substring(2, roll_table_title.length);
+  }
+
+  side("Title: " + roll_table_title);
   side(" ");
   side("Suggested Use: " + roll_table.use);
-  side(" ");
-  // side("Main Rolls: " + roll_table.main_rolls.length);
-  // side("Sub Rolls: " + roll_table.sub_rolls.length);
-  // side(" ");
-  side("Rolls:");
-  side(" ");
-
-  side_display("<span class='roll-title'>" + roll_table.title + "</span>");
-  side_display(" ");
+  side_display_current("<span class='roll-title'>" + roll_table_title + "</span>");
+  side_display_current(" ");
+  side_display_history("<button class='accordion'><span class='roll-title-history'>" + roll_table_title + "</span></button>", false);
+  side_display_history("<div class='panel'>", false);
   side_display("Suggested Use: <span class='roll-suggested-use'>" + roll_table.use + "</span>");
-  side_display(" ");
-  // side_display("Main Rolls: " + roll_table.main_rolls.length);
-  // side_display("Sub Rolls: " + roll_table.sub_rolls.length);
-  // side_display(" ");
-  // side_display("Rolls");
-  // side_display(" ");
 
-  // iterate the menu, displaying the values for main rolls
-  for (var i = 0; i < roll_table.main_rolls.length; i++) {
-    id = get_roll_id(roll_table.main_rolls[i]);
-    table = get_roll_table(roll_table.main_rolls[i]);
-    roll = get_roll(id, table);
-    value = roll_roll(id, table);
+  if ( if_zero_dont_show_mainrolls != 0 ) {
 
-    // care for sub-rolls if they exist
-    if(value.match(inline_roll_match)) {value = inline_roll(value);}
+    side(" ");
+    side_display(" ");
 
-    side(roll.title + " : " + value);
-    side_display(roll.title + " : <b>" + value + "</b>");
+    // iterate the menu, displaying the values for main rolls
+    for (var i = 0; i < roll_table.main_rolls.length; i++) {
+      id = get_roll_id(roll_table.main_rolls[i]);
+      table = get_roll_table(roll_table.main_rolls[i]);
+      roll = get_roll(id, table);
+      value = roll_roll(id, table);
+
+      // care for sub-rolls if they exist
+      if(value.match(inline_roll_match)) {value = inline_roll(value);}
+
+      side(roll.title + " : " + value);
+      side_display(roll.title + " : <b>" + value + "</b>");
+    }
+
   }
 
   if ( if_zero_dont_show_subrolls != 0 ) {
-    side(" ");
-    side("Sub Rolls:");
 
+    side(" ");
     side_display(" ");
-    side_display("Sub Rolls:");
 
     // iterate the menu, displaying the values for sub rolls
     for (var i = 0; i < roll_table.sub_rolls.length; i++) {
-      // log("roll_table.sub_rolls[i]:"+roll_table.sub_rolls[i]);
       id = get_roll_id(roll_table.sub_rolls[i]);
-      // log("id:"+id);
       table = get_roll_table(roll_table.sub_rolls[i]);
-      // log("table:"+table);
       roll = get_roll(id, table);
       value = roll_sub_roll(id, table);
 
-      side(value);
-      side_display(value);
     }
   }
 
-  display_side();
+  side_display_history("</div>", false);   // closing "panel" div (used by history accordion)
 
+  display_side();
+  rightscrolltop();
   $("#selectlist").focus();
 }
 
@@ -543,12 +564,11 @@ copyTextareaBtn.addEventListener('click', function(event) {
   try {
     var successful = document.execCommand('copy');
     var msg = successful ? 'successful' : 'unsuccessful';
-    console.log('Copying command was ' + msg);
     clearright();
     $("#selectlist").focus();
     showalert('copy current');
   } catch (err) {
-    console.log('Oops, unable to copy');
+    showalert('unable to copy');
   }
   $('#rightview-current').hide();
 });
@@ -566,12 +586,11 @@ copyTextareaBtn.addEventListener('click', function(event) {
   try {
     var successful = document.execCommand('copy');
     var msg = successful ? 'successful' : 'unsuccessful';
-    console.log('Copying command was ' + msg);
-    clearhistory();
+    clearhistory(false);
     $("#selectlist").focus();
     showalert('copy history');
   } catch (err) {
-    console.log('Oops, unable to copy');
+    showalert('unable to copy');
   }
   $('#rightview-history').hide();
 });
@@ -593,50 +612,65 @@ function mouseover_loadSelect(obj) {
 }
 
 function showhistory() {
-  // $('#rightview-current').hide();
-  // $('#rightview-history').show();
-  // $('#rightview-history').focus();
-
   $('#current-roll-tab').removeClass('active');
   $('#history-roll-tab').addClass('active');
   $('#rightview-current-display').hide();
   $('#rightview-history-display').show();
   rightscrolltop();
   $('#rightview-history-display').focus();
+
+  // functions
+  $("#collapse-history-tab").show();
+  $("#expand-history-tab").show();
+  $("#clear-history-roll-tab").show();
+
 }
 
 function showcurrent() {
-  // $('#rightview-current').hide();
-  // $('#rightview-history').show();
-  // $('#rightview-history').focus();
   $('#history-roll-tab').removeClass('active');
   $('#current-roll-tab').addClass('active');
   $('#rightview-history-display').hide();
   $('#rightview-current-display').show();
   rightscrolltop();
   $('#rightview-current-display').focus();
+
+  // functions
+  $("#collapse-history-tab").hide();
+  $("#expand-history-tab").hide();
+  $("#clear-history-roll-tab").hide();
 }
 
 function rightscrolltop() {
-  $('#rightview-history-display').scrollTop = 0;
-  $('#rightview-current-display').scrollTop = 0;
+  $("#rightview-history-display").animate({ scrollTop: 0 }, "fast");
+  $("#rightview-current-display").animate({ scrollTop: 0 }, "fast");
 }
 
-function clearhistory() {
+function clearhistory(show) {
   $('#rightview-current').html("");
   $('#rightview-history').html("");
   $('#rightview-current-display').html("");
   $('#rightview-history-display').html("");
   side_obj = "";
-  side_obj_display = "";
-  showalert("clear history");
+  obj_current_display = "";
+  obj_history_display = "";
+  if (show == true) {
+    showalert("clear history");
+  }
   $("#selectlist").focus();
+}
+
+function create_guid() {
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+        var r = Math.random()*16|0, v = c === 'x' ? r : (r&0x3|0x8);
+        return v.toString(16);
+    });
 }
 
 function showalert(alert){
 
   var alert_text = "";
   var alert_type = "";
+  none="false";
 
   switch(alert) {
     case "copy history":
@@ -660,32 +694,38 @@ function showalert(alert){
       alert_text = "Menu Hover Off <span class='glyphicon glyphicon-remove'></span>";
       break;
     case "copy history blank":
-      alert_type = "fail";
+      alert_type = "danger";
       alert_text = "History Empty <span class='glyphicon glyphicon-remove'></span>";
+      break;
     case "copy current blank":
-      alert_type = "fail";
-      alert_text = "Current Roll Empty <span class='glyphicon glyphicon-remove  '></span>";
+      alert_type = "danger";
+      alert_text = "Current Roll Empty <span class='glyphicon glyphicon-remove'></span>";
+      break;
+    case "unable to copy":
+      alert_type = "danger";
+      alert_text = "Error: Unable to Copy <span class='glyphicon glyphicon-remove'></span>";
+      break;
+    case "nothing selected":
+      alert_type = "danger";
+      alert_text = "Nothing Selected <span class='glyphicon glyphicon-remove'></span>";
+      break;
+    case "none":
+      none = "true";
+      break;
     }
 
-  if ( alert_type == "success" ) {
-    $('#success-alert').html(alert_text);
-    $('#success-alert').fadeIn("slow", function() { $(this).delay(500).fadeOut(); });
-  } else {
-    $('#fail-alert').html(alert_text);
-    $('#fail-alert').fadeIn("slow", function() { $(this).delay(500).fadeOut(); });
+  //<div id='success-alert' class='alert alert-success' data-alert='alert'></div>
+  //<div id='fail-alert' class='alert alert-danger' data-alert='alert'></div>
+
+  if (none == "false") {
+
+    id = create_guid();
+    $('#alerts').append("<div id='" + id + "' class='alert alert-" + alert_type + "' data-alert='alert'>" + alert_text + "</div>");
+    id = "#" + id;
+    $(id).fadeIn("slow", function() { $(this).delay(500).fadeOut(); });
+
   }
-
 }
-
-// create menu
-// <a href="#dungeons" accesskey="1" class='menuitem btn'>Dungeons/Locations</a>
-// <a href="#" accesskey="2" class='menuitem btn'>Factions</a>
-// <a href="#" accesskey="3" class='menuitem btn'>Monsters</a>
-// <a href="#" accesskey="4" class='menuitem btn'>Objects</a>
-// <a href="#" accesskey="4" class='menuitem btn'>NPCs</a>
-// <a href="#" accesskey="5" class='menuitem btn'>Plots</a>
-// <a href="#" accesskey="6" class='menuitem btn'>Settlements</a>
-// <a href="#" accesskey="7" class='menuitem btn'>Wilderness</a>
 
 var menu_item_template = "<a href='#' class='menuitem btn'>DESC</a>";
 menu = top.menu;
@@ -703,11 +743,20 @@ $("#test").bind('click', function() { roll_test(); });
 
 $('#history-roll-tab').bind('click', function() { showhistory(); });
 $('#current-roll-tab').bind('click', function() { showcurrent(); });
-$('#clear-history-roll-tab').bind('click', function() { clearhistory(); });
+$('#clear-history-roll-tab').bind('click', function() { clearhistory(true); });
 
 $('.hover-icon-clickarea').bind('click', function() { togglehovermenu(); });
-$(".menuitem").bind('mouseover', function() { mouseover_loadSelect($(this).html()); });
-$(".menuitem").bind('click', function() { loadSelect($(this).html()); });
+$(".menuitem").on('mouseover', function() { mouseover_loadSelect($(this).attr('id')); });
+$(".menuitem").bind('click', function() { loadSelect($(this).attr('id')); });
+
+$('#collapse-history-tab').click( function() { $('.panel').removeClass('show'); $('.accordion').removeClass('active'); });
+$('#expand-history-tab').click( function() { $('.panel').addClass('show'); $('.accordion').addClass('active'); });
+
+// accordion
+$('body').on('click', '.accordion', function() {
+  $(this).toggleClass('active');
+  $(this).next().toggleClass('show');
+});
 
 $(document).ready(function() {
   init();

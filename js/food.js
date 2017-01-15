@@ -4,8 +4,6 @@
 
 top.food = [
 
-// start of food
-
 
 
 {"title": "D6 Size", "id":"d6size_exoticfruitsandvegetables", "roll":[
@@ -233,7 +231,7 @@ top.food = [
 "Eating it is painful",
 "It takes several years or decades to ripen",
 "It is in some supernatural way “pure”",
-"It can alter your personality",   ]}, 
+"It can alter your personality",   ]},
 
 
 

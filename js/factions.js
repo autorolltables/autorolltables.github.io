@@ -4,8 +4,6 @@
 
 top.factions = [
 
-// start of factions
-
 
 
  {"title": "d20 This mercenary is a", "id":"d20thismercenaryisa", "roll":[

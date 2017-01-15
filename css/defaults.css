@@ -49,9 +49,18 @@ body
   color: white;
 }
 
+.menu-selected {
+  color: #DF691A !important;
+}
+
 .menuitem:hover {
+  color: #DF691A !important;
   opacity: 0.65;
   filter: alpha(opacity=65);
+}
+
+.hover-icon-clickarea {
+  margin-right: 3px;
 }
 
 .bottom-btn {
@@ -109,7 +118,32 @@ body
   background-color:white;
   overflow-y: scroll;
   color: #2b3e50;
+}
+
+.rightview-current-display {
   padding: 10px 10px;
+}
+
+.rightview-history-display {
+  padding: 0px 0px;
+}
+
+/* Chrome 29+ */
+@media screen and (-webkit-min-device-pixel-ratio:0)
+  and (min-resolution:.001dpcm) {
+    .rightview {height: 426px !important;}
+}
+
+/* Chrome 22-28 */
+@media screen and(-webkit-min-device-pixel-ratio:0) {
+  .rightview {-chrome-:only(;
+    height: 426px !important;
+  );}
+}
+
+/* saf3+, chrome1+ */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    .rightview {height: 426px !important;}
 }
 
 .text-less-muted {
@@ -132,11 +166,6 @@ body
   color: #DF691A;
 }
 
-.hovertoggle:hover{
-  background-color: #a0a0a0 !important;
-  color: white !important;
-}
-
 #page, #menu {
   /*margin-left: 15px;*/
   padding-left: 15px;
@@ -151,6 +180,11 @@ body
   font-weight: bold;
 }
 
+.roll-title-history {
+  font-size: normal;
+  font-weight: bold;
+}
+
 .roll-suggested-use {
   font-style: italic;
 }
@@ -160,6 +194,51 @@ body
 .indent {
   margin-left: 20px;
 }
+
+/* History Accordion */
+
+button.accordion {
+   background-color: #eee;
+   color: #444;
+   cursor: pointer;
+   padding: 7px;
+   width: 100%;
+   text-align: left;
+   border: 0px;
+   border-collapse: collapse;
+   outline: none;
+   transition: 0.1s;
+}
+
+button.accordion.active, button.accordion:hover {
+   background-color: #ddd;
+}
+
+div.panel {
+   padding: 2px 7px;
+   background-color: white;
+   display: none;
+   margin-bottom: 0px !important;
+}
+
+div.panel.show {
+   display: block;
+}
+
+button.accordion:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
+
+button.accordion.active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+
+
 
 
 

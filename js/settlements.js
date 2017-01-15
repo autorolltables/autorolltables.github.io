@@ -3,9 +3,6 @@
 
 top.settlements = [
 
-// beginning of settlements
-
-
 
 
  {"title": "d100 Verb", "id":"d100verb_tavernnames", "roll":[
