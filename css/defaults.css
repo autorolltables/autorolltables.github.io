@@ -49,9 +49,19 @@ body
   color: white;
 }
 
+.menu-selected {
+  color: #DF691A !important;
+  border-bottom: 2px solid white !important;
+}
+
 .menuitem:hover {
+  color: #DF691A !important;
   opacity: 0.65;
   filter: alpha(opacity=65);
+}
+
+.hover-icon-clickarea {
+  margin-right: 3px;
 }
 
 .bottom-btn {
@@ -112,6 +122,24 @@ body
   padding: 10px 10px;
 }
 
+/* Chrome 29+ */
+@media screen and (-webkit-min-device-pixel-ratio:0)
+  and (min-resolution:.001dpcm) {
+    .rightview {height: 426px !important;}
+}
+
+/* Chrome 22-28 */
+@media screen and(-webkit-min-device-pixel-ratio:0) {
+  .rightview {-chrome-:only(;
+    height: 426px !important;
+  );}
+}
+
+/* saf3+, chrome1+ */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    .rightview {height: 426px !important;}
+}
+
 .text-less-muted {
   color: #6e8399;
 }
@@ -130,11 +158,6 @@ body
 
 .hoveroff {
   color: #DF691A;
-}
-
-.hovertoggle:hover{
-  background-color: #a0a0a0 !important;
-  color: white !important;
 }
 
 #page, #menu {

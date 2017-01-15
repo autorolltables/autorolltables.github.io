@@ -24,11 +24,13 @@
   <script src="js/dungeons.js"></script>
   <script src="js/factions.js"></script>
   <script src="js/food.js"></script>
+  <script src="js/magic.js"></script>
   <script src="js/monsters.js"></script>
   <script src="js/npcs.js"></script>
   <script src="js/objects.js"></script>
   <script src="js/plots.js"></script>
   <script src="js/settlements.js"></script>
+  <script src="js/vehicles.js"></script>
   <script src="js/wilderness.js"></script>
   <script src="js/subrolls.js"></script>
 
@@ -47,20 +49,18 @@
 
       <div id="menu" class="col-md-12 btn-group">
         <a href="#" class='menuitem-style btn hover-icon-clickarea'><span class="glyphicon glyphicon-hand-up hover-icon"></span></a>
-        <a href="#" class='menuitem btn'>Dungeons/Locations</a>
-        <a href="#" class='menuitem btn'>Factions</a>
-        <a href="#" class='menuitem btn'>Food</a>
-        <a href="#" class='menuitem btn'>Monsters</a>
-        <a href="#" class='menuitem btn'>Objects</a>
-        <a href="#" class='menuitem btn'>NPCs</a>
-        <a href="#" class='menuitem btn'>Plots</a>
-        <a href="#" class='menuitem btn'>Settlements</a>
-        <a href="#" class='menuitem btn'>Wilderness</a>
+        <a href="#" class='menuitem btn menu-selected' id="Dungeons">Dungeons</a>
+        <a href="#" class='menuitem btn' id="Factions">Factions</a>
+        <a href="#" class='menuitem btn' id="Food">Food</a>
+        <a href="#" class='menuitem btn' id="Magic">Magic</a>
+        <a href="#" class='menuitem btn' id="Monsters">Monsters</a>
+        <a href="#" class='menuitem btn' id="NPCs">NPCs</a>
+        <a href="#" class='menuitem btn' id="Objects">Objects</a>
+        <a href="#" class='menuitem btn' id="Plots">Plots</a>
+        <a href="#" class='menuitem btn' id="Settlements">Settlements</a>
+        <a href="#" class='menuitem btn' id="Vehicles">Vehicles</a>
+        <a href="#" class='menuitem btn' id="Wilderness">Wilderness</a>
       </div>
-
-      <!-- <ul class="nav nav-pills">
-        <li role="presentation" class="hovertoggle on" id="hovertoggle"><a href="#">Hover</a></li>
-      </ul> -->
 
     </div>
     <div id="" class="row"></div>
@@ -121,10 +121,7 @@
 
   </div>
 
-<div id='alerts' class='overlay'>
-  <div id='success-alert' class='alert alert-success' data-alert='alert'></div>
-  <div id='fail-alert' class='alert alert-danger' data-alert='alert'></div>
-</div>
+<div id='alerts' class='overlay'></div>
 
 </body>
 
