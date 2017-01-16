@@ -3,11 +3,21 @@
 //
 //
 
+
+
+//// TODO
+
+//// Need to make copy history work...currently broken.
+
+
+
+
 var current;
 var side_obj;
 var obj_current_display;
 var obj_history_display;
 var mouseover_on = true;
+var delete_enabled = false;
 
 function log(obj) {
   console.log(obj);
@@ -27,10 +37,12 @@ function display_side(){
 
   $("#rightview-current-display").html( $("#rightview-current-display").html() + obj_current_display );
 
+  copy_div = "<div class='for-copy'>" + side_obj + "</div></div>";    // inside end of displayed roll
+
   if ( $("#rightview-history-display").html() == "" ) {
-    $("#rightview-history-display").html( obj_history_display );
+    $("#rightview-history-display").html( obj_history_display + copy_div );
   } else {
-    $("#rightview-history-display").html( $("#rightview-history-display").html() + displayseparator + obj_history_display );
+    $("#rightview-history-display").html( $("#rightview-history-display").html() + displayseparator + obj_history_display + copy_div );
   }
 
   rightscrolltop();
@@ -423,7 +435,7 @@ function roll_sub_roll(id, table) {
 
               if(value.match(inline_roll_match)) {value = inline_roll(value);}
 
-              side(pre + sub_title + " : " + value);
+              side( pre + sub_title + " : " + value);
               side_display( sub_title + " : <b>" + value + "</b>");
 
             }
@@ -503,7 +515,7 @@ function perform_roll() {
   side("Suggested Use: " + roll_table.use);
   side_display_current("<span class='roll-title'>" + roll_table_title + "</span>");
   side_display_current(" ");
-  side_display_history("<button class='accordion'><span class='roll-title-history'>" + roll_table_title + "</span></button>", false);
+  side_display_history("<div class='accordion roll-title-history'>" + roll_table_title + " <div class='history-item-menu'><div class='delete-history-item glyphicon glyphicon-trash'></div> <div class='expand-collapse glyphicon glyphicon-chevron-down'></div></div></div>", false);
   side_display_history("<div class='panel'>", false);
   side_display("Suggested Use: <span class='roll-suggested-use'>" + roll_table.use + "</span>");
 
@@ -543,7 +555,8 @@ function perform_roll() {
     }
   }
 
-  side_display_history("</div>", false);   // closing "panel" div (used by history accordion)
+  // removed due to new copy function (hidden div closed within display_side function)
+  // side_display_history("</div>", false);   // closing "panel" div (used by history accordion)
 
   display_side();
   rightscrolltop();
@@ -564,7 +577,7 @@ copyTextareaBtn.addEventListener('click', function(event) {
   try {
     var successful = document.execCommand('copy');
     var msg = successful ? 'successful' : 'unsuccessful';
-    clearright();
+    // clearright();
     $("#selectlist").focus();
     showalert('copy current');
   } catch (err) {
@@ -580,13 +593,14 @@ copyTextareaBtn.addEventListener('click', function(event) {
     showalert("copy history blank");
     return;
   }
+  process_history();
   $('#rightview-history').show();
   var copyTextarea = document.querySelector('.history-textarea');
   copyTextarea.select();
   try {
     var successful = document.execCommand('copy');
     var msg = successful ? 'successful' : 'unsuccessful';
-    clearhistory(false);
+    // clearhistory(false);
     $("#selectlist").focus();
     showalert('copy history');
   } catch (err) {
@@ -594,6 +608,37 @@ copyTextareaBtn.addEventListener('click', function(event) {
   }
   $('#rightview-history').hide();
 });
+
+function process_history() {
+  var separator = "------------------------------------------\n";
+  var copy_list = document.getElementById("rightview-history-display").getElementsByClassName("for-copy"); //[0]
+  var copy_output = "";
+  for (var i = 0; i < copy_list.length; i++) {
+      if ( i != 0 ) { copy_output += separator; }
+      copy_output = copy_output + copy_list[i].innerHTML;
+  }
+  $('#rightview-history').html(copy_output);
+}
+
+//
+// function process_history() {
+//   separator = "------------------------------------------\n";
+//   $('#rightview-history-hidden').contents();
+//   $('#rightview-history-hidden').html($('#rightview-history-display').html());
+//   $('#rightview-history-hidden').children("*").replaceWith(function(){ return this.innerHTML; });
+//   $('#rightview-history-hidden').children("div.glyphicon").remove();
+//   $('#rightview-history-hidden').children("br").replaceWith(function() { return "\n"; });
+//   //$('#rightview-history-hidden').find(".panel").replaceWith(function() { return "\n" + this.innerHTML + separator + ""; });
+//   //$('#rightview-history-hidden').find(".accordion").replaceWith(function() { return "Title: " + this.innerHTML + "\n"; });
+//   //$('#rightview-history-hidden').find(".roll-suggested-use").replaceWith(function() { return this.innerHTML; });
+//   // $('#rightview-history-hidden').find(".roll-title").replaceWith(function() { return this.innerHTML; });
+//   // $('#rightview-history-hidden').find("div").replaceWith(function() { return this.innerHTML; });
+//   // $('#rightview-history-hidden').find("b").replaceWith(function() { return this.innerHTML; });
+//   // $('#rightview-history-hidden').find("span").remove();
+//
+//   $('#rightview-history').html($('#rightview-history-hidden').html());
+// }
+
 
 function togglehovermenu() {
   if ( mouseover_on == true ) {
@@ -659,6 +704,18 @@ function clearhistory(show) {
   $("#selectlist").focus();
 }
 
+function collapse_history() {
+  $('.panel').removeClass('show');
+  $('.accordion').removeClass('active');
+  $('#selectlist').focus();
+}
+
+function expand_history() {
+  $('.panel').addClass('show');
+  $('.accordion').addClass('active');
+  $('#selectlist').focus();
+}
+
 function create_guid() {
     return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
         var r = Math.random()*16|0, v = c === 'x' ? r : (r&0x3|0x8);
@@ -709,6 +766,10 @@ function showalert(alert){
       alert_type = "danger";
       alert_text = "Nothing Selected <span class='glyphicon glyphicon-remove'></span>";
       break;
+    case "history item deleted":
+      alert_type = "success";
+      alert_text = "History Item Deleted <span class='glyphicon glyphicon-remove'></span>";
+      break;
     case "none":
       none = "true";
       break;
@@ -749,13 +810,33 @@ $('.hover-icon-clickarea').bind('click', function() { togglehovermenu(); });
 $(".menuitem").on('mouseover', function() { mouseover_loadSelect($(this).attr('id')); });
 $(".menuitem").bind('click', function() { loadSelect($(this).attr('id')); });
 
-$('#collapse-history-tab').click( function() { $('.panel').removeClass('show'); $('.accordion').removeClass('active'); });
-$('#expand-history-tab').click( function() { $('.panel').addClass('show'); $('.accordion').addClass('active'); });
+$('#collapse-history-tab').click( function() { collapse_history(); });
+$('#expand-history-tab').click( function() { expand_history(); });
+
+$('body').on('click', '.delete-history-item', function() {
+  $(this).parent().parent().next().remove();
+  $(this).parent().parent().remove();
+});
+
+$('body').on('mouseenter', '.delete-history-item', function() { delete_enabled = true; });
+$('body').on('mouseleave', '.delete-history-item', function() { delete_enabled = false; });
 
 // accordion
-$('body').on('click', '.accordion', function() {
-  $(this).toggleClass('active');
-  $(this).next().toggleClass('show');
+$('body').on('click', '.accordion', function(e) {
+  if ( delete_enabled == true ) {
+    $(this).next().remove();
+    $(this).remove();
+    process_history();
+    showalert("history item deleted");
+  } else {
+    if ( $(this).children('.history-item-menu').children('.glyphicon-chevron-down').length ) {
+      $(this).children('.history-item-menu').children('.glyphicon-chevron-down').toggleClass('glyphicon-chevron-up').toggleClass('glyphicon-chevron-down');
+    } else {
+      $(this).children('.history-item-menu').children('.glyphicon-chevron-up').toggleClass('glyphicon-chevron-down').toggleClass('glyphicon-chevron-up');
+    }
+    $(this).next().toggleClass('show');
+    $('#selectlist').focus();
+  }
 });
 
 $(document).ready(function() {

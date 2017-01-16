@@ -181,6 +181,7 @@ body
 }
 
 .roll-title-history {
+  float: left;
   font-size: normal;
   font-weight: bold;
 }
@@ -197,7 +198,11 @@ body
 
 /* History Accordion */
 
-button.accordion {
+.for-copy {
+  display:none;
+}
+
+div.accordion {
    background-color: #eee;
    color: #444;
    cursor: pointer;
@@ -210,7 +215,7 @@ button.accordion {
    transition: 0.1s;
 }
 
-button.accordion.active, button.accordion:hover {
+div.accordion.active, div.accordion:hover {
    background-color: #ddd;
 }
 
@@ -225,17 +230,27 @@ div.panel.show {
    display: block;
 }
 
-button.accordion:after {
-    content: '\02795'; /* Unicode character for "plus" sign (+) */
+div.history-item-menu {
+  float: right;
+  z-index: 999;
+}
+
+div.delete-history-item, div.expand-collapse {
+  margin-left: 5px;
+  z-index: 9999;
+}
+
+/*button.accordion:after {
+    content: '\02795';
     font-size: 13px;
     color: #777;
     float: right;
     margin-left: 5px;
-}
+}*/
 
-button.accordion.active:after {
-    content: "\2796"; /* Unicode character for "minus" sign (-) */
-}
+/*button.accordion.active:after {
+    content: "\2796";
+}*/
 
 
 
