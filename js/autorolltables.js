@@ -707,13 +707,13 @@ function clearhistory(show) {
 function collapse_history() {
   $('.panel').removeClass('show');
   $('.accordion').removeClass('active');
-  $('#selectlist').focus();
+  $('body').focus();
 }
 
 function expand_history() {
   $('.panel').addClass('show');
   $('.accordion').addClass('active');
-  $('#selectlist').focus();
+  $('body').focus();
 }
 
 function create_guid() {
@@ -835,7 +835,7 @@ $('body').on('click', '.accordion', function(e) {
       $(this).children('.history-item-menu').children('.glyphicon-chevron-up').toggleClass('glyphicon-chevron-down').toggleClass('glyphicon-chevron-up');
     }
     $(this).next().toggleClass('show');
-    $('#selectlist').focus();
+    $('body').focus();
   }
 });
 
