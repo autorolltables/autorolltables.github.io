@@ -131,19 +131,19 @@ body
 /* Chrome 29+ */
 @media screen and (-webkit-min-device-pixel-ratio:0)
   and (min-resolution:.001dpcm) {
-    .rightview {height: 426px !important;}
+    .rightview {height: 436px !important;}
 }
 
 /* Chrome 22-28 */
 @media screen and(-webkit-min-device-pixel-ratio:0) {
   .rightview {-chrome-:only(;
-    height: 426px !important;
+    height: 436px !important;
   );}
 }
 
 /* saf3+, chrome1+ */
 @media screen and (-webkit-min-device-pixel-ratio:0) {
-    .rightview {height: 426px !important;}
+    .rightview {height: 436px !important;}
 }
 
 .text-less-muted {
