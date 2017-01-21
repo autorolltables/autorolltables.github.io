@@ -64,8 +64,14 @@ body
 }
 
 .bottom-btn {
-  background-color: #ccc;
-  color: #5A6668;
+  background-color: #ccc !important;
+  color: #5A6668 !important;
+  line-height: 21px !important;
+}
+
+.search-button-addon {
+  padding: 0px 0px !important;
+  border: none !important;
 }
 
 /* Alerts */
