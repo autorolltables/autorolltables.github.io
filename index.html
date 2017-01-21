@@ -89,17 +89,26 @@
       </div>
     </div>
 
+    <div class="row">&nbsp;</div>
+
     <div class="row">
       <div id="leftbuttons" class="col-md-4">
-
-        <a class="button btn bottom-btn" id="roll" value="Roll" style="width:100%;"><span class='glyphicon glyphicon-retweet'></span> Re-Roll</a>
-        <a class="button btn bottom-btn" id="test" value="Test" style="width:100%; display:none;">Test</a>
+        <div class="input-group bottom-nav">
+          <input type="text" class="form-control" placeholder="Filter..." aria-describedby="filter" id="filter">
+          <span class="input-group-addon search-button-addon">
+            <button class="btn bottom-btn" type="button" id="filter-clear"><span class='glyphicon glyphicon-remove'></span></button>
+          </span>
+          <span class="input-group-addon search-button-addon">
+            <button class="btn bottom-btn" type="button" id="filter-button"><span class='glyphicon glyphicon-search'></span></button>
+          </span>
+        </div>
+        <a class="button btn bottom-btn" id="roll" value="Roll" style="width:100%; display:none;"><span class='glyphicon glyphicon-retweet'></span> Re-Roll</a>
       </div>
       <div id="rightbuttons" class="col-md-4">
-        <a class="button current-copy-button btn bottom-btn" id="copy-current-button" value="Copy To Clipboard" style="width:100%;"><span class='glyphicon glyphicon-duplicate'></span> Copy Current Roll</a>
+        <a class="bottom-nav current-copy-button btn bottom-btn" id="copy-current-button" value="Copy To Clipboard" style="width:100%;"><span class='glyphicon glyphicon-duplicate'></span> Copy Current Roll</a>
       </div>
       <div id="rightbuttons" class="col-md-4">
-        <a class="button history-copy-button btn bottom-btn" id="copy-history-button" value="Copy To Clipboard" style="width:100%;"><span class='glyphicon glyphicon-duplicate'></span> Copy History</a>
+        <a class="bottom-nav history-copy-button btn bottom-btn" id="copy-history-button" value="Copy To Clipboard" style="width:100%;"><span class='glyphicon glyphicon-duplicate'></span> Copy History</a>
       </div>
     </div>
 
