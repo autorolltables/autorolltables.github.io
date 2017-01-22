@@ -264,7 +264,7 @@ function init() {
   loadmenu();
 
   // default to dungeons table
-  loadleftdisplay("Dungeons");
+  loadleftdisplay("All");
 
   // check querystring for menuhover
   menuhovercheck();
@@ -779,6 +779,9 @@ function filter() {
   // show only those that match the filter
   var item = 'div:regex(item,' + $('#filter').val() + ')';
   $('#left-display-list').children(item).show();
+
+  leftscrolltop();
+
 }
 
 function showalert(alert){
