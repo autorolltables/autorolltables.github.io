@@ -156,7 +156,7 @@ function loadleftdisplay(curr_table) {
       display_title = display_title.replace(/\(/gi, "<br><span class='subtext'>(");
       display_title = display_title + "</span>";
     }
-    $('#left-display-list').append("<div class='list-item' listid='" + i + "' item='" + current.items[i].title + "'>" + display_title + "</div>");
+    $('#left-display-list').append("<div class='list-item' listid='" + i + "' item=\"" + current.items[i].title + "\">" + display_title + "</div>");
   }
 
   leftscrolltop();
