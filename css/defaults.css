@@ -287,4 +287,5 @@ div.delete-history-item, div.expand-collapse {
 span.subtext {
   font-size: smaller;
   font-style: italic;
+  color: #aaa;
 }
