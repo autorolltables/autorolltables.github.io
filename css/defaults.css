@@ -61,6 +61,7 @@ body
 
 .hover-icon-clickarea {
   margin-right: 3px;
+  margin-left: -1px !important;
 }
 
 .bottom-btn {
