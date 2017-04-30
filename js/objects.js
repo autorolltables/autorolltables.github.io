@@ -6,6 +6,64 @@ top.objects = [
 
 
 
+
+ {"title": "d8 The heirloom is a...", "id":"d8theheirloomisa_herloom", "roll":[
+"Jewellery (d6): 1. Broach; 2. Necklace; 3. Ring; 4. Earring; 5. Gem; 6. Monocle",
+"Carving of (d4): 1. A family member; 2. An animal; 3. Nothing in particular; 4. A flower",
+"Art (d4): 1. Painting; 2. Vase; 3. Rug; 4. Tapestry",
+"Furniture (d6): 1. Wardrobe; 2. Couch; 3. Table; 4. Chair; 5. Mirror; 6. Clock",
+"Musical Instrument (d4): 1. Piano; 2. Lute; 3. Flute; 4. Harp",
+"A weapon (d8): 1. Sword, 2. Axe; 3. Lance; 4. Dagger; 5. Mace; 6. Bow; 7. Crossbow; 8. Morningstar",
+"A piece of armor (d4): 1. Shield; 2. Helmet; 3. Breastplate; 4. Bracers",
+"A tool (d8): 1. Rake; 2. Shovel; 3. Rolling pin; 4. Hatchet; 5. Staff; 6. Frying Pan; 7. Tea pot; 8. Silverware",   ]},
+ {"title": "d10 The heirloom once belonged to...", "id":"d10theheirloomoncebelongedto_herloom", "roll":[
+"The owner's mother",
+"The owner's father",
+"The owner's grandmother",
+"The owner's grandfather",
+"A long lost relative",
+"No one really knows. It has just be passed down",
+"A noble",
+"An foreigner",
+"A god",
+"The family's patron",   ]},
+ {"title": "d12 The heirloom is made of...", "id":"d12theheirloomismadeof_herloom", "roll":[
+"Wood",
+"Gold",
+"Silver",
+"Bronze",
+"Copper",
+"Steel",
+"Iron",
+"Mithril",
+"Tin",
+"Adamantine",
+"An unknown material",
+"Brass",   ]},
+ {"title": "d6 ...and is adorned with...", "id":"d6andisadornedwith_herloom", "roll":[
+"Rubies",
+"Diamonds",
+"Pearls",
+"Gold Filigree",
+"Silver Filigree",
+"Nothing",   ]},
+ {"title": "d6 ...The heirloom's value is...", "id":"d6theheirloomsvalueis_herloom", "roll":[
+"None. It only has value to its family",
+"None. It doesn't even have value to its family",
+"Only the value of its base components",
+"Moderately valuable",
+"Very valuable",
+"Its value is legendary",   ]},
+  {"title": "d8 The heirloom is special because...", "id":"d8theheirloomisspecialbecause_herloom", "roll":[
+ "It is magical",
+ "It was crafted by a member of the family",
+ "It is said to be lucky",
+ "It signifies a special event in the family",
+ "It signifies a special event in the region",
+ "Many rumors surrounds it, none are actually true",
+ "No reason, it is just tradition to hand it down",
+ "It was blessed by a god",   ]},
+
 {"title": "d100 Mostly useless junk The crate contains...", "id":"d100mostlyuselessjunkthecratecontains_uselessjunk", "roll":[
 "Rusty knives.",
 "Dull knives.",

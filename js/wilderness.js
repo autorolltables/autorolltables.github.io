@@ -6,6 +6,72 @@ top.wilderness = [
 
 
 
+
+  {"title": "d6 Point of interest You come upon a/an...", "id":"d6pointofinterestyoucomeuponaan_swamp(variant)", "roll":[
+ "Ring of ancient monoliths.",
+ "Entrance to a flooded tomb.",
+ "Ruined temple.",
+ "House floating on pontoons.",
+ "Dwelling built upon stilts.",
+ "Damp cave.",   ]},
+  {"title": "d6 Landmark/feature You see a/an...", "id":"d6landmarkfeatureyouseeaan_swamp(variant)", "roll":[
+ "Bubbling pool of mud.",
+ "Enormous gnarled old tree.",
+ "Hillock rising above the water.",
+ "Thorny bramble.",
+ "Patch of very tall reeds.",
+ "Large, rotting log.",   ]},
+  {"title": "d6 Minor feature You notice a/an...", "id":"d6minorfeatureyounoticeaan_swamp(variant)", "roll":[
+ "Scent of decay.",
+ "Bird call.",
+ "Flying waterfowl.",
+ "Lizard climbing a tree.",
+ "Especially mossy tree.",
+ "Patch of mushrooms.",   ]},
+  {"title": "d6 Daytime encounters You meet a/an...", "id":"d6daytimeencountersyoumeetaan_swamp(variant)", "roll":[
+ "Beast (roll on beast table).",
+ "Monster (roll on monster table).",
+ "Reclusive beastshifter (roll on beast table).",
+ "Solitary fisherman.",
+ "Eccentric herbalist.",
+ "Skilled hunter.",   ]},
+  {"title": "d6 Nighttime encounters You meet a/an...", "id":"d6nighttimeencountersyoumeetaan_swamp(variant)", "roll":[
+ "Beast (roll on beast table).",
+ "Monster (roll on monster table).",
+ "Hungry ghoul",
+ "Malevolent ghost.",
+ "Foul-mouthed witch.",
+ "Desperate fugitive.",   ]},
+  {"title": "d6 Beast You come upon a/an...", "id":"d6beastyoucomeuponaan_swamp(variant)", "roll":[
+ "Crocodile.",
+ "Snake.",
+ "Predatory fish.",
+ "Predatory bird (hawk or owl).",
+ "Giant frog.",
+ "Giant rat.",   ]},
+  {"title": "d6 Monster You come upon a/an...", "id":"d6monsteryoucomeuponaan_swamp(variant)", "roll":[
+ "Bullywug.",
+ "Lizardfolk.",
+ "Bog hag.",
+ "Displacer beast.",
+ "Manticore.",
+ "Stirge.",   ]},
+  {"title": "d6 Hazard You happen upon a/an…", "id":"d6hazardyouhappenuponaan…_swamp(variant)", "roll":[
+ "Patch of sticky mud.",
+ "Patch of quicksand.",
+ "Swarm of biting flies.",
+ "Sudden rainstorm.",
+ "Nauseating stench.",
+ "Hunter’s snare.",   ]},
+  {"title": "d6 Power center This region is ruled or menaced by a/an…", "id":"d6powercenterthisregionisruledormenacedbyaan…_swamp(variant)", "roll":[
+ "Black dragon.",
+ "Hydra.",
+ "Lich.",
+ "Council of swampfolk elders.",
+ "Tribal chieftain.",
+ "Noble family.",   ]},
+
+
 {"title": "d10 Entrance The cave mouth is...", "id":"d10entrancethecavemouthis_underdark", "roll":[
 "Wide and tall, letting much daylight into the entry chamber.",
 "A wide sinkhole.",
