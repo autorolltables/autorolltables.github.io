@@ -5,6 +5,115 @@ top.monsters = [
 
 
 
+
+  {"title": "d6 Hair The ogre’s hair is...", "id":"d6hairtheogre’shairis_ogre", "roll":[
+  "Long and stringy.",
+  "Wispy and thin.",
+  "Dark and matted.",
+  "A tangled mess.",
+  "Cut unevenly.",
+  "Gone; the ogre is bald.",   ]},
+   {"title": "d6 Eyes The ogre’s eyes are...", "id":"d6eyestheogre’seyesare_ogre", "roll":[
+  "Mismatched colors.",
+  "Mismatched sizes.",
+  "Dark and menacing.",
+  "Wide and vacant.",
+  "Scarred; one eye is missing.",
+  "Crossed.",   ]},
+   {"title": "d6 Training The ogre is a/an...", "id":"d6trainingtheogreisaan_ogre", "roll":[
+  "Berserker.",
+  "Chanter.",
+  "Hunter.",
+  "Scavenger.",
+  "Thug.",
+  "Warrior.",   ]},
+   {"title": "d6 Skill The ogre is particularly good at...", "id":"d6skilltheogreisparticularlygoodat_ogre", "roll":[
+  "Crushing skulls.",
+  "Breaking wooden doors.",
+  "Bending metal bars.",
+  "Roasting meat.",
+  "Frightening people.",
+  "Sitting very, very still.",   ]},
+   {"title": "d6 Quirk/flaw Even for an ogre, the ogre frequently...", "id":"d6quirkflawevenforanogretheogrefrequently_ogre", "roll":[
+  "Scratches itself.",
+  "Gets distracted by food.",
+  "Guffaws.",
+  "Loses its temper.",
+  "Picks its teeth.",
+  "Yawns.",   ]},
+   {"title": "d6 Possessions The ogre is carrying...", "id":"d6possessionstheogreiscarrying_ogre", "roll":[
+  "A sharp spear.",
+  "A heavy club.",
+  "A spiked club.",
+  "A sackful of trinkets.",
+  "A necklace of bones.",
+  "A string of severed ears.",   ]},
+   {"title": "d6 Immediate goal The ogre is looking for a/an...", "id":"d6immediategoaltheogreislookingforaan_ogre", "roll":[
+  "Easy meal.",
+  "Fatty meal.",
+  "Steady meal ticket.",
+  "Fight it can win.",
+  "Shiny bauble.",
+  "Object its chief asked for, but the ogre can’t remember what it was.",   ]},
+   {"title": "d6 Past misfortune The ogre was once…", "id":"d6pastmisfortunetheogrewasonce…_ogre", "roll":[
+  "Pressed into service in an orkish army.",
+  "Tricked into doing some dirty work by some goblins.",
+  "Charmed by witch.",
+  "Badly burned in a fire.",
+  "Imprisoned in a cold, dark cell.",
+  "Bested by a rival for the affections of another ogre.",   ]}, 
+
+
+{"title": "d6 Hair color The merfolk’s hair is...", "id":"d6haircolorthemerfolk’shairis_merfolk", "roll":[
+"Gold.",
+"Grey.",
+"Dark brown.",
+"Light brown.",
+"Black.",   ]},
+ {"title": "d6 Scale color The merfolk’s scales are...", "id":"d6scalecolorthemerfolk’sscalesare_merfolk", "roll":[
+"Dark green.",
+"Greenish blue.",
+"Iridescent blue.",
+"Dull silver.",
+"Shiny silver.",   ]},
+ {"title": "d6 Training The merfolk is a/an...", "id":"d6trainingthemerfolkisaan_merfolk", "roll":[
+"Forager.",
+"Musician.",
+"Seer.",
+"Servant.",
+"Warrior.",   ]},
+ {"title": "d6 Skill The merfolk is particularly good at...", "id":"d6skillthemerfolkisparticularlygoodat_merfolk", "roll":[
+"Finding places to hide.",
+"Singing.",
+"Interpreting dreams.",
+"Dodging attacks.",
+"Spear-throwing.",   ]},
+ {"title": "d6 Quirk/flaw The merfolk frequently...", "id":"d6quirkflawthemerfolkfrequently_merfolk", "roll":[
+"Hums when feeling nervous.",
+"Makes uncomfortable eye contact.",
+"Fidgets.",
+"Refuses to do business with surface-dwellers.",
+"Fears touching anything made above water.",   ]},
+ {"title": "d6 Possessions The merfolk is carrying...", "id":"d6possessionsthemerfolkiscarrying_merfolk", "roll":[
+"A simple spear.",
+"A string of pearls.",
+"A shell necklace.",
+"An unusual seashell.",
+"A stringed musical instrument.",   ]},
+ {"title": "d6 Immediate goal The merfolk is looking for...", "id":"d6immediategoalthemerfolkislookingfor_merfolk", "roll":[
+"A good laugh.",
+"Someone to listen to a song.",
+"Someone to hear a sad tale.",
+"A pretty seashell.",
+"Shark repellent.",   ]},
+ {"title": "d6 Ambition The merfolk would like to...", "id":"d6ambitionthemerfolkwouldliketo_merfolk", "roll":[
+"Chase away an aquatic demon.",
+"Explore a dangerous underwater ruin.",
+"Locate a long lost treasure.",
+"Bring calamity to the surface-dwellers.",
+"Learn about life on land.",   ]},
+
+
 {"title": "d12 Status/Rank The fiend is...", "id":"d12statusrankthefiendis_fiends", "roll":[
 "In the service of a more powerful fiend.",
 "Bound to serve a mortal spellcaster.",
