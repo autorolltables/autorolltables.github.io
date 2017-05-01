@@ -1,5 +1,6 @@
 debug.html
-/old/*
-/web/*
 changelog.html
 .DS_Store
+/old/*
+/web/*
+/offline/*

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 
-  <title>Auto Roll Tables</title>
+  <title>Auto Reference</title>
   <style> html { display: none; } </style>
   <script type="text/javascript">
     if (self == top) { document.documentElement.style.display = 'block'; } else { top.location = self.location; }
@@ -11,62 +11,48 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" href="css/defaults.css" type="text/css" media="all" />
-
 
   <!-- Online -->
-  <link rel="stylesheet" href="https://bootswatch.com/superhero/bootstrap.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="https://bootswatch.com/superhero/bootstrap.min.css"> -->
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous"> -->
 
   <!-- Offline -->
-  <!-- <link rel="stylesheet" href="offline/bootstrap.min.css"> -->
-  <!-- <link rel="stylesheet" href="offline/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="offline/bootstrap.min.css">
+  <link rel="stylesheet" href="offline/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
+
+  <link rel="stylesheet" href="css/defaults.css" type="text/css" media="all" />
 
   <!-- <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin"> -->
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">-->
   <!-- <link rel="stylesheet" href="web/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> -->
   <!-- <link rel="stylesheet" href="web/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous"> -->
 
-  <!-- <script src="js/menu.js"></script>
-  <script src="js/dungeons.js"></script>
-  <script src="js/factions.js"></script>
-  <script src="js/food.js"></script>
-  <script src="js/magic.js"></script>
-  <script src="js/monsters.js"></script>
-  <script src="js/npcs.js"></script>
-  <script src="js/objects.js"></script>
-  <script src="js/plots.js"></script>
-  <script src="js/settlements.js"></script>
-  <script src="js/vehicles.js"></script>
-  <script src="js/wilderness.js"></script>
-  <script src="js/subrolls.js"></script> -->
-  <script src="js/roll_menu.js"></script>
-  <script src="js/roll_dungeons.js"></script>
-  <script src="js/roll_factions.js"></script>
-  <script src="js/roll_food.js"></script>
-  <script src="js/roll_magic.js"></script>
-  <script src="js/roll_monsters.js"></script>
-  <script src="js/roll_npcs.js"></script>
-  <script src="js/roll_objects.js"></script>
-  <script src="js/roll_plots.js"></script>
-  <script src="js/roll_settlements.js"></script>
-  <script src="js/roll_vehicles.js"></script>
-  <script src="js/roll_wilderness.js"></script>
-  <script src="js/roll_subrolls.js"></script>
-  <script src="js/roll_accordion.js"></script>
-
+  <script src="js/srd_menu.js"></script>
+  <script src="js/srd_backgrounds.js"></script>
+  <script src="js/srd_classes.js"></script>
+  <script src="js/srd_feats.js"></script>
+  <script src="js/srd_items.js"></script>
+  <script src="js/srd_monsters.js"></script>
+  <script src="js/srd_races.js"></script>
+  <script src="js/srd_rules.js"></script>
+  <script src="js/srd_spells.js"></script>
 
 </head>
 <body>
   <div class="bgimage">
-    <img src="http://dungeonmastering.net/wp-content/uploads/2015/06/dndlogo1.png">
-    <!-- <img src="web/dndlogo1.png" class="bgimage"> -->
+
+    <!-- Online -->
+    <!-- <img src="http://dungeonmastering.net/wp-content/uploads/2015/06/dndlogo1.png"> -->
+
+    <!-- Offline -->
+    <img src="offline/dndlogo1.png" class="bgimage">
+
   </div>
 
   <div id="" class="container-fluid">
     <div class="row">
-      <div class="col-md-12 logo">Auto Roll Tables &nbsp;&nbsp; <img src='img/d20.png' height="28" width="25"/></div>
+      <div class="col-md-12 logo">Auto Reference &nbsp;&nbsp; <img src='img/d20.png' height="28" width="25"/></div>
     </div>
     <div id="menu-container" class="row">
 
@@ -75,8 +61,9 @@
       </div>
 
       <div id="menu" class="col-md-1 btn-group">
-        <a href="#" class='link-menu-style btn srd-button' aria-hidden='true'>Reference</a>
+        <a href="#" class='link-menu-style btn rolltables-button' aria-hidden='true'>Roll Tables</a>
       </div>
+
 
     </div>
     <div id="" class="row"></div>
@@ -97,19 +84,15 @@
 
       <div id="rightnav" class="col-xs-12 col-sm-8">
 
-        <ul class="nav nav-tabs">
+        <!-- <ul class="nav nav-tabs">
           <li id="current-roll-tab" role="presentation" class="active"><a href="#">Current Roll</a></li>
           <li id="history-roll-tab" role="presentation"><a href="#">History</a></li>
           <li id="expand-history-tab" class="nav-tabs-right" role="presentation"><a href="#"><span class='glyphicon glyphicon-chevron-down' aria-label="Expand All"></span></a></li>
           <li id="collapse-history-tab" class="nav-tabs-right" role="presentation"><a href="#"><span class='glyphicon glyphicon-chevron-up' aria-label="Collapse All"></span></a></li>
           <li id="clear-history-roll-tab" class="nav-tabs-right" role="presentation"><a href="#">Clear History</a></li>
-        </ul>
+        </ul> -->
 
-        <div id="rightview-current-display" class="rightview-current-display rightview"></div>
-        <div id="rightview-history-display" class="rightview-history-display rightview"></div>
-
-        <textarea id="rightview-current" rows="19" spellcheck="false" class="current-textarea display form-control"></textarea>
-        <textarea id="rightview-history" rows="19" spellcheck="false" class="history-textarea display form-control"></textarea>
+        <div id="rightview-srd-display" class="rightview-srd"></div>
 
       </div>
     </div>
@@ -129,17 +112,16 @@
         </div>
       </div>
       <div id="rightbuttons" class="col-md-4">
-        <a class="bottom-nav current-copy-button btn bottom-btn" id="copy-current-button" value="Copy To Clipboard" style="width:100%;"><span class='glyphicon glyphicon-duplicate'></span> Copy Current Roll</a>
       </div>
       <div id="rightbuttons" class="col-md-4">
-        <a class="bottom-nav history-copy-button btn bottom-btn" id="copy-history-button" value="Copy To Clipboard" style="width:100%;"><span class='glyphicon glyphicon-duplicate'></span> Copy Item</a>
+        <a class="bottom-nav history-copy-button btn bottom-btn" id="copy-history-button" value="Copy To Clipboard" style="width:100%;"><span class='glyphicon glyphicon-duplicate'></span> Copy All Items</a>
       </div>
     </div>
 
     <div class="row">&nbsp;</div>
     <div class="row">
       <div class="col-md-12">
-        <p class="text-less-muted"><a href="credits.html">credits</a> | report issues: on <a href="https://github.com/autorolltables/autorolltables.github.io/issues/new">github</a> or <a href="https://www.reddit.com/message/compose/?to=dangeratio">reddit</a>.
+        <p class="text-less-muted"><a href="credits.html">credits</a> and <a href="license.html">license</a> | report issues: on <a href="https://github.com/autorolltables/autorolltables.github.io/issues/new">github</a> or <a href="https://www.reddit.com/message/compose/?to=dangeratio">reddit</a>.
         </p>
       </div>
     </div>
@@ -160,7 +142,7 @@
 <script src="offline/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
 
-<script type="text/javascript" src="js/rolltables.js"></script>
+<script src="js/srd.js"></script>
 
 <!-- Start of StatCounter Code for Default Guide -->
 <script type="text/javascript">

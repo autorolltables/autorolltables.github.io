@@ -20,6 +20,12 @@ body
   color: rgba(0,0,0,.6);
 }
 
+#page, #menu {
+  /*margin-left: 15px;*/
+  padding-left: 15px;
+  /*margin-right: 15px;*/
+}
+
 .bgimage {
   margin: -10em;
   position: fixed;
@@ -57,6 +63,16 @@ body
   color: #DF691A !important;
   opacity: 0.65;
   filter: alpha(opacity=65);
+}
+
+.link-menu-style {
+  background-color: #5A6668;
+  float: right !important;
+  color: white;
+}
+
+.link-menu-style:hover {
+  background-color: grey;
 }
 
 .hover-icon-clickarea {
@@ -103,7 +119,7 @@ body
   font-size: 18px;
   line-height: 20px;
   height: 40px;
-  text-color: white;
+  color: white;
 }
 
 .logo-nopad {
@@ -127,6 +143,16 @@ body
   color: #2b3e50;
 }
 
+.rightview-srd {
+  height: 479px;
+  width: auto;
+  opacity: 0.65 !important;
+  filter: alpha(opacity=65);
+  background-color:white;
+  overflow-y: scroll;
+  color: #2b3e50;
+}
+
 .rightview-current-display {
   padding: 10px 10px;
 }
@@ -139,6 +165,7 @@ body
 @media screen and (-webkit-min-device-pixel-ratio:0)
   and (min-resolution:.001dpcm) {
     .rightview {height: 436px !important;}
+    .rightview-srd {height: 456px !important;}
 }
 
 /* Chrome 22-28 */
@@ -146,11 +173,15 @@ body
   .rightview {-chrome-:only(;
     height: 436px !important;
   );}
+  .rightview-srd {-chrome-:only(;
+    height: 456px !important;
+  );}
 }
 
 /* saf3+, chrome1+ */
 @media screen and (-webkit-min-device-pixel-ratio:0) {
-    .rightview {height: 436px !important;}
+  .rightview {height: 436px !important;}
+  .rightview {height: 456px !important;}
 }
 
 .text-less-muted {
@@ -172,13 +203,6 @@ body
 .hoveroff {
   color: #DF691A;
 }
-
-#page, #menu {
-  /*margin-left: 15px;*/
-  padding-left: 15px;
-  /*margin-right: 15px;*/
-}
-
 
 /* Roll Classes */
 
