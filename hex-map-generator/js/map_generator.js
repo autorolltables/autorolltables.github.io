@@ -298,7 +298,7 @@ function get_text(type) {
       return "Plains";	// plains
       break;
     case 1:
-      return "Scrub"; // scrub
+      return "Brush"; // scrub
       break;
     case 2:
       return "Forest"; // forest
@@ -322,7 +322,7 @@ function get_text(type) {
 			return "Water"; // Pond, renamed to Water
 			break;
 		case 9:
-			return "Depression"; //Depression
+			return "Valley"; //Depression
 			break;
 		case "grey":
 			return ""; // default for initial map layout
