@@ -5,12 +5,7 @@
 
 
 
-//// TODO
-
-//// Need to make copy history work...currently broken.
-
-
-
+// initial variables
 
 var current;
 var side_obj;
@@ -18,6 +13,30 @@ var obj_current_display;
 var obj_history_display;
 var mouseover_on = true;
 var delete_enabled = false;
+
+
+function init() {
+
+  // load the menu
+  loadmenu();
+
+  // default to dungeons table
+  loadleftdisplay("All");
+
+  // check querystring for menuhover
+  menuhovercheck();
+
+  //hide initially hidden
+  $('#rightview-history').hide();
+  $('#rightview-current').hide();
+  $('#rightview-history-display').hide();
+  $("#success-alert").hide();
+  $("#fail-alert").hide();
+  $("#collapse-history-tab").hide();
+  $("#expand-history-tab").hide();
+  $("#clear-history-roll-tab").hide();
+
+}
 
 function log(obj) {
   console.log(obj);
@@ -249,38 +268,10 @@ function menuhovercheck(){
 function loadmenu() {
   menu = top.menu;
   for(i=0;i<menu.length;i++){
-    addmenuitem(menu[i].title);
+    var item = menu[i].title;
+    $("#menu").append("<a href='#' class='menuitem btn' id='" + item + "'>" + item + "</a>")
   }
 }
-
-function addmenuitem(item) {
-  $("#menu").append("<a href='#' class='menuitem btn' id='" + item + "'>" + item + "</a>")
-}
-
-// initial load of select list
-function init() {
-
-  // load the menu
-  loadmenu();
-
-  // default to dungeons table
-  loadleftdisplay("All");
-
-  // check querystring for menuhover
-  menuhovercheck();
-
-  //hide initially hidden
-  $('#rightview-history').hide();
-  $('#rightview-current').hide();
-  $('#rightview-history-display').hide();
-  $("#success-alert").hide();
-  $("#fail-alert").hide();
-  $("#collapse-history-tab").hide();
-  $("#expand-history-tab").hide();
-  $("#clear-history-roll-tab").hide();
-
-}
-
 
 // regex for identifying sub-rolls
 var inline_roll_match = /\([dD][\d]{1,3}\) ?:/;
@@ -850,8 +841,23 @@ function showalert(alert){
   }
 }
 
+function toggle_menu(e) {
+  if ($('#index-menu').filter(":visible").length) {
+    $('#index-menu').hide();
+  } else {
+    $('#index-menu').css({top: e.pageY, left: e.pageX-27})
+    $('#index-menu').show();
+    $('body').one('click',function() { hide_menu(); });
+  }
+}
+
+function hide_menu() {
+  $('#index-menu').hide();
+}
+
 
 // events
+
 $('body').on('mouseenter', '.delete-history-item', function() { delete_enabled = true; });
 $('body').on('mouseleave', '.delete-history-item', function() { delete_enabled = false; });
 $('body').on('click', '.list-item', function() { selectitem($(this)); perform_roll(); });
@@ -869,6 +875,15 @@ $('body').on('keyup', '#filter', function() { filter(); });
 $('body').on('change', '#filter', function() { filter(); });
 $('body').on('click', '#filter-button', function() { filter(); });
 $('body').on('click', '#filter-clear', function() { $('#filter').val(""); filter(); });
+
+$('body').on('click', '.srd-button', function() { window.location.replace("reference.html"); } );
+
+// top menu
+$('body').on('click', '.menu-button', function(e) { toggle_menu(e); } );
+$('body').on('click', '#menu-auto-roll-tables', function() { window.location.replace("index.html"); } );
+$('body').on('click', '#menu-region-map-generator', function() { window.location.replace("hex-map-generator/hex_map_generator.html"); } );
+
+
 
 $('body').on('click', '.delete-history-item', function() {
   $(this).parent().parent().next().remove();
