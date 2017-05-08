@@ -11,6 +11,15 @@ img {
   vertical-align: middle;
 }
 
+a:link {
+  color: white;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #b8e4fa;
+}
+
 .title-row {
   padding-top: 1em;
   font-size: 1.5em;
@@ -47,7 +56,7 @@ img {
   width: 60px;
 }
 
-.plains, .scrub, .forest, .rough, .desert, .hills, .mountains, .marsh, .pond, .depression {
+.plains, .brush, .forest, .rough, .desert, .hills, .mountains, .marsh, .water, .valley {
   width: 5em !important;
   text-align:center;
   padding: 15px 10px;
@@ -56,15 +65,15 @@ img {
 }
 
 .plains {background:#ddd254;}
-.scrub {background-color:#afa642;}
+.brush {background-color:#afa642;}
 .forest {background-color:#338e29;}
 .rough {background-color:#9e6429;}
 .desert {background-color:#fcf68d;}
 .hills {background-color:#2f774d;}
 .mountains {background-color:#9e9f9e;}
 .marsh {background-color:#a5d8a0;}
-.pond {background-color:#3399ff;}
-.depression {background-color:#7e7f7e;}
+.water {background-color:#3399ff;}
+.valley {background-color:#7e7f7e;}
 
 .toolbar {
   display:block;
