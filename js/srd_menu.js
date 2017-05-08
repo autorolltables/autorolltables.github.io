@@ -32,19 +32,19 @@ top.menu = [
 
     ]},
 
-  { "title":"Magic Items", "id":"SRDMagicItems",
+  { "title":"Items", "id":"SRDMagicItems",
     "items":[
 
-      {"title": "Adamantine Armor", "id":"adamantinearmor_items" },
-      {"title": "Ammunition, +1, +2, or +3", "id":"ammunition+1+2or+3_items" },
-      {"title": "Amulet of Health", "id":"amuletofhealth_items" },
-      {"title": "Amulet of Proof against Detection and Location", "id":"amuletofproofagainstdetectionandlocation_items" },
-      {"title": "Amulet of the Planes", "id":"amuletoftheplanes_items" },
-      {"title": "Animated Shield", "id":"animatedshield_items" },
-      {"title": "Apparatus of the Crab", "id":"apparatusofthecrab_items" },
-      {"title": "Armor, +1, +2, or +3", "id":"armor+1+2or+3_items" },
-      {"title": "Armor of Invulnerability", "id":"armorofinvulnerability_items" },
-      {"title": "Armor of Resistance", "id":"armorofresistance_items" },
+      {"title": "Adamantine Armor", "id":"items/adamantinearmor_items" },
+      {"title": "Ammunition, +1, +2, or +3", "id":"items/ammunition+1+2or+3_items" },
+      {"title": "Amulet of Health", "id":"items/amuletofhealth_items" },
+      {"title": "Amulet of Proof against Detection and Location", "id":"items/amuletofproofagainstdetectionandlocation_items" },
+      {"title": "Amulet of the Planes", "id":"items/amuletoftheplanes_items" },
+      {"title": "Animated Shield", "id":"items/animatedshield_items" },
+      {"title": "Apparatus of the Crab", "id":"items/apparatusofthecrab_items" },
+      {"title": "Armor, +1, +2, or +3", "id":"items/armor+1+2or+3_items" },
+      {"title": "Armor of Invulnerability", "id":"items/armorofinvulnerability_items" },
+      {"title": "Armor of Resistance", "id":"items/armorofresistance_items" },
 
 
 

@@ -1,0 +1,129 @@
+
+#canvas {}
+
+body {
+  margin: 0px;
+  background-color: #505050;
+  color: white;
+}
+
+img {
+  vertical-align: middle;
+}
+
+.title-row {
+  padding-top: 1em;
+  font-size: 1.5em;
+}
+
+.button {
+  cursor: pointer;
+}
+
+#save_link {
+  text-decoration: none;
+}
+
+#save_link:hover, .button:hover {
+  /*color: #c0c0c0 !important;*/
+  background-color: #4E5859;
+  color: white;
+}
+
+.key {
+  margin-left: 3em;
+  display:none;
+  width:150px;
+  z-index: 999999;
+  position: absolute;
+}
+
+.key, .key table {
+  background-color: grey;
+  border: solid 1px white;
+}
+
+#iterations {
+  width: 60px;
+}
+
+.plains, .scrub, .forest, .rough, .desert, .hills, .mountains, .marsh, .pond, .depression {
+  width: 5em !important;
+  text-align:center;
+  padding: 15px 10px;
+  color: black;
+  border: solid 1px white;
+}
+
+.plains {background:#ddd254;}
+.scrub {background-color:#afa642;}
+.forest {background-color:#338e29;}
+.rough {background-color:#9e6429;}
+.desert {background-color:#fcf68d;}
+.hills {background-color:#2f774d;}
+.mountains {background-color:#9e9f9e;}
+.marsh {background-color:#a5d8a0;}
+.pond {background-color:#3399ff;}
+.depression {background-color:#7e7f7e;}
+
+.toolbar {
+  display:block;
+  margin: 10px;
+}
+
+.title {
+  font-family: Helvetica Neue, Helvetica, sans-serif !important;
+  font-size: 1em;
+  padding-right: 10px;
+
+  vertical-align: middle;
+  line-height: 20px;
+  height: 50px;
+}
+
+.button {
+  background-color: #5A6668;
+  color: white;
+  border: none;
+  padding: 1em;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.key {
+  border: none;
+}
+
+.key tr td {
+  /*color: #4CAF50;*/
+  padding: 10px;
+  font-size: 16px;
+}
+
+
+
+/* Index Menu */
+
+#index-menu {
+  display:none;
+  position:fixed;
+  top: 5em;
+  line-height: 2em;
+  background-color: black; /* #5A6668; */
+  z-index: 9999;
+  margin-left: 2em;
+  padding: 1px;
+  /*border: solid white 1px;*/
+}
+
+.index-btn {
+  background-color: #5A6668;
+  color: white;
+  padding: 0.5em 1em;
+}
+
+.index-btn:hover {
+  background-color: #4E5859;
+  color: white;
+}

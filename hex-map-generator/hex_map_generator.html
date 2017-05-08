@@ -1,0 +1,111 @@
+<html>
+<head><title></title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <!-- Online -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+  <!-- Offline -->
+  <!-- <link rel="stylesheet" href="offline/bootstrap.min.css"> -->
+  <!-- <link rel="stylesheet" href="offline/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous"> -->
+
+  <link href="css/map_generator_styles.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+<!-- onLoad="document.getElementById('overlay').style.display = 'none';" -->
+<!-- <div id="overlay"></div> -->
+
+<div class="toolbar container">
+  <div class="row title-row">
+    <div class="title col-md-12 logo">Region Map Generator&nbsp;&nbsp;&nbsp;<img src="img/d20.png" width="25" height="28"></div>
+  </div>
+  <div class="row">
+    <div class="button menu-button">&nbsp;<span class="glyphicon glyphicon-th"></span>&nbsp;</div>
+    <div class="button" id="reload">Generate&nbsp;<span class="glyphicon glyphicon-refresh"></span></div>
+    <a class="button" id="save_link">Save&nbsp;<span class="glyphicon glyphicon-cloud-download"></span></a>
+    <div class="button" id="show_key_button">&nbsp;<span class="glyphicon glyphicon-question-sign"></span>&nbsp;</div>
+  </div>
+</div>
+
+<div id="index-menu" class="index-menu">
+  <div class="index-row">
+    <div id="menu-auto-roll-tables" class='index-btn' aria-hidden='true'>Auto Roll Tables</div>
+  </div>
+  <div class="index-row">
+    <div id="menu-region-map-generator" class='index-btn' aria-hidden='true'>Region Map Generator</div>
+  </div>
+</div>
+
+<div class="key" id="key">
+  <center>
+  <table class="key_table">
+    <tr>
+      <td>Plains</td>
+      <td><div class="plains"/></td>
+      <td>Scrub</td>
+      <td><div class="scrub"/></td>
+    </tr>
+
+    <tr>
+      <td>Forest</td>
+      <td><div class="forest"/></td>
+      <td>Rough</td>
+      <td><div class="rough"/></td>
+    </tr>
+
+    <tr>
+      <td>Desert</td>
+      <td><div class="desert"/></td>
+      <td>Hills</td>
+      <td><div class="hills"/></td>
+    </tr>
+
+    <tr>
+      <td>Mountains</td>
+      <td><div class="mountains"/></td>
+      <td>Marsh</td>
+      <td><div class="marsh"/></td>
+    </tr>
+
+    <tr>
+      <td>Pond</td>
+      <td><div class="pond"/></td>
+      <td>Depression</td>
+      <td><div class="depression"/></td>
+    </tr>
+
+    <tr>
+      <td colspan=4>
+        <i>How this map is generated:</i> This generates starting with a single tile and generates across the whole map from tile to tile based on the previous tile generated.  see <a href="https://www.reddit.com/r/DnDBehindTheScreen/comments/4zqe25/stolen_tables_from_gygax/">this</a> post or the D&D 1E DMG (pg 173) for additional detail.
+      </td>
+    </tr>
+
+  </table>
+  </center>
+</div>
+
+<canvas id="canvas" width="1000" height="1000"></canvas>
+
+
+<!-- //////////////////////////////////////////////////////// -->
+<!--                        SCRIPTS                           -->
+<!-- //////////////////////////////////////////////////////// -->
+
+
+<!-- Offline -->
+<!-- <script src="js/ocanvas-2.8.7.min.js"></script> -->
+<!-- <script src="offline/jquery.min.js"></script> -->
+<!-- <script src="offline/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script> -->
+
+<!-- Online -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/ocanvas/2.8.7/ocanvas.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="js/map_generator.js"></script>
+
+
+</body>
+</html>

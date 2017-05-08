@@ -53,6 +53,7 @@ body
 .menuitem, .menuitem-style {
   background-color: #5A6668;
   color: white;
+  margin-bottom:2px !important;
 }
 
 .menu-selected {
@@ -75,9 +76,14 @@ body
   background-color: grey;
 }
 
+.menu-button {
+  margin-left: -1px !important;
+
+}
+
 .hover-icon-clickarea {
   margin-right: 3px;
-  margin-left: -1px !important;
+  margin-left: 2px !important;
 }
 
 .bottom-btn {
@@ -151,6 +157,7 @@ body
   background-color:white;
   overflow-y: scroll;
   color: #2b3e50;
+  padding: 10px 10px;
 }
 
 .rightview-current-display {
@@ -159,6 +166,10 @@ body
 
 .rightview-history-display {
   padding: 0px 0px;
+}
+
+.srdtitle {
+  font-size: larger;
 }
 
 /* Chrome 29+ */
@@ -313,4 +324,29 @@ span.subtext {
   font-size: smaller;
   font-style: italic;
   color: #aaa;
+}
+
+/* Index Menu */
+
+#index-menu {
+  display:none;
+  position:fixed;
+  top: 5em;
+  line-height: 2em;
+  background-color: black; /* #5A6668; */
+  z-index: 9999;
+  margin-left: 2em;
+  padding: 1px;
+  /*border: solid white 1px;*/
+}
+
+.index-btn {
+  background-color: #5A6668;
+  color: white;
+  padding: 0.5em 1em;
+}
+
+.index-btn:hover {
+  background-color: #4E5859;
+  color: white;
 }
