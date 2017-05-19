@@ -20,6 +20,14 @@ a:hover {
   color: #b8e4fa;
 }
 
+.glyphicon-sm {
+  font-size: 12px;
+}
+
+.glyphicon-lg {
+  font-size: 18px;
+}
+
 .title-row {
   padding-top: 1em;
   font-size: 1.5em;
@@ -27,16 +35,22 @@ a:hover {
 
 .button {
   cursor: pointer;
+  background-color: #5A6668;
+  color: white;
+  border: none;
+  padding: 1em;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
 }
 
 #save_link {
   text-decoration: none;
 }
 
-#save_link:hover, .button:hover {
-  /*color: #c0c0c0 !important;*/
-  background-color: #4E5859;
-  color: white;
+#save_link:hover, .button:hover, .selected {
+  background-color: #4E5859 !important;
+  color: white !important;
 }
 
 .key {
@@ -90,16 +104,6 @@ a:hover {
   height: 50px;
 }
 
-.button {
-  background-color: #5A6668;
-  color: white;
-  border: none;
-  padding: 1em;
-  text-align: center;
-  display: inline-block;
-  font-size: 16px;
-}
-
 .key {
   border: none;
 }
@@ -135,4 +139,13 @@ a:hover {
 .index-btn:hover {
   background-color: #4E5859;
   color: white;
+}
+
+.padding-below {
+  padding-bottom: 1em;
+}
+
+
+.separator:after {
+  content: " ";
 }
