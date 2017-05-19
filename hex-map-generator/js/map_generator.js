@@ -1,5 +1,22 @@
 
 /****************************/
+/*  Display Details
+/****************************/
+
+$('#canvas').attr('width', $(document).width());
+var canvas_width = $(document).width();
+
+var canvas_height = ($(document).height() - Math.round($("#canvas").position().top + 1));
+
+if ( canvas_height < 0 ) {
+	canvas_height = 100;
+	log("Error selecting canvas height");
+}
+
+$('#canvas').attr('height', canvas_height);
+
+
+/****************************/
 /*  Default Details
 /****************************/
 
@@ -8,12 +25,13 @@ var canvas = oCanvas.create({
 });
 
 var canvas_array=[];
-var map_type = "random";
-var iterations = 100; // this must be larger than the number of hexes, otherwise you wont get them all.  It can be less, but you will only fill out this may hexes. (+1 for the starting hex)
+var iterations = 1500; // this must be larger than the number of hexes, otherwise you wont get them all.  It can be less, but you will only fill out this may hexes. (+1 for the starting hex)
 var debug_messages = true;
 var finished = false;
 var last_type = "";
 var Hex = struct("x y type obj text_obj");
+var size, rad, font_size;
+
 
 //////////////////////////////////////////////////
 // gygax_table is from page 173 of 1e Dungeon Masters Guide, section titled Appendix B: Random Wilderness Terrain
@@ -61,7 +79,6 @@ function struct(names) {
   return constructor;
 }
 
-
 function draw_iterative_map() {
 	draw_initial_board();
 	var middle_hex = get_middle_hex(canvas.width / 2, canvas.height / 2);
@@ -86,51 +103,68 @@ function draw_iterative_map() {
 		last_hex = random_hex;
 
 	}
-	canvas.redraw();
+	// canvas.redraw();
 }
 
-function draw_random_map() {
-
-  // default start point
-  var x = 100;
-  var y = 100;
-  var height = 184; //121+60
-  var cols = 8;
-  var cols_off_row = 9;
-  var total_rows = 4;
-	map_type = "random";
-
-  for (a=0; a<=total_rows; a++) {
-    drawrow(x,y,cols);
-    draw_off_row(x,y,cols_off_row);
-    y=y+height;
-  }
-	// alert(canvas_array.length);
-}
+// function draw_random_map() {
+//
+//   // default start point
+//   var x = 100;
+//   var y = 100;
+//   // var height = 184; //121+60
+// 	var height = (rad * 3) + 1;
+//   var cols = 8;
+//   var cols_off_row = 9;
+//   var total_rows = 4;
+// 	map_type = "random";
+//
+//   for (a=0; a<=total_rows; a++) {
+//     drawrow(x,y,cols);
+//     draw_off_row(x,y,cols_off_row);
+//     y=y+height;
+//   }
+// 	// alert(canvas_array.length);
+// }
 
 function draw_initial_board() {
 	  // default start point
-	  var x = 100;
-	  var y = 70;
-	  var height = 184; //121+60
-	  var cols = 8;
-	  var cols_off_row = 9;
-	  var total_rows = 4;
+	  // var x = 100;
+		var x = 1.6 * rad;
+	  // var y = 70;
+		var y = rad * 1.1;
+
+		// var cols = 8;
+		var one_hex_width = (rad * 1.75) + 2;
+		var cols = Math.floor(canvas_width / one_hex_width)-2;
+		var cols_off_row = cols+1;
+		log("Cols: ["+cols+"|"+cols_off_row+"]");
+
+		// var total_rows = 4;
+		var one_row_height = ((rad * 3) + 4);
+		var total_rows = Math.floor(canvas_height / one_row_height)-1;
+		log("Rows:"+total_rows+"["+one_row_height+","+canvas_height+"]");
+
+	  // var height = 184; //121+60
+		var height = (rad * 3) + 1;
 		map_type="grey";
 
 	  for (a=0; a<=total_rows; a++) {
 	    drawrow(x,y,cols);
 	    draw_off_row(x,y,cols_off_row);
-	    y=y+height;
+	    y=y+height + 3;
 	  }
 }
 
 function draw_off_row(x,y,z) {
-  var off = 54;
-  var height_off = 92;
+  // var off = 54;
+	var off = rad * 0.9 + 1;
+  // var height_off = 92;
+	var height_off = (rad * 1.5) + 2;
+	// var width = 107;
+	var width = (rad * 1.75) + 2;
 
   for (i = 0; i < z; i++) {
-    z_new = (z + ((i+1) * 107)) - off;
+    z_new = (z + ((i+1) * width)) - off;
     y_new = y+ height_off
     add_hex(z_new,y_new,map_type);
   }
@@ -138,8 +172,10 @@ function draw_off_row(x,y,z) {
 
 // draw a row of hex
 function drawrow(x,y,z) {
+	// var width = 107;
+	var width = (rad * 1.75) + 2;
   for (i = 0; i < z; i++) {
-    z_new = z + ((i+1) * 107);
+    z_new = z + ((i+1) * width);
     add_hex(z_new,y,map_type);
   }
 }
@@ -150,37 +186,27 @@ function drawrow(x,y,z) {
 
 function add_hex(in_x, in_y, type) {
 
-	//log("Adding Hex: ["+in_x+", "+in_y+", "+type+"]");
-	var color="black";
-
   if(in_x == ""){in_x = canvas.width / 2;}
   if(in_y == ""){in_y = canvas.height / 2;}
 
-  if(type=="grey"){
-    // color = "image(img/grass.jpg)";
-		color = get_color(type);
-  } else if( type=="random" ){
-    type = get_random_type();
-	  color = get_color(type);
-  } else {
-		color = get_color(type);
-	}
+	var color = get_color(type);
 
   var hex_obj = canvas.display.polygon({
   	x: in_x,
   	y: in_y,
   	sides: 6,
-  	radius: 60,
+  	radius: rad,
     rotation: 30,
   	fill: color
   });
 
 	display_text = get_text(type);
+
 	var text_obj = canvas.display.text({
 		x: in_x,
 		y: in_y,
 		origin: { x: "center", y: "center" },
-		font: "15px sans-serif",
+		font: font_size + " sans-serif",
 		text: display_text,
 		fill: "#000"
 	});
@@ -226,7 +252,7 @@ function update_color(hex) {
 	//log("Updated Hex: ["+hex.x+", "+hex.y+", "+hex.type+"]")
 	hex.obj.fill = get_color(hex.type);
 	hex.text_obj.text = get_text(hex.type);
-	canvas.redraw();
+	// canvas.redraw();
 }
 
 function update_color_initial(hex) {
@@ -284,7 +310,7 @@ function get_color(type){
 		case 9:
 			return "#7e7f7e"; // depression
 		case "grey":
-			return "#c0c0c0"; // default for initial map layout
+			return "#505050"; // default for initial map layout
 			break;
     default:
       return "black";	// error of some sort
@@ -437,6 +463,20 @@ function log(msg) {
 	if (debug_messages) {console.log(msg);}
 }
 
+(function($) {
+    $.QueryString = (function(a) {
+        if (a == "") return {};
+        var b = {};
+        for (var i = 0; i < a.length; ++i)
+        {
+            var p=a[i].split('=', 2);
+            if (p.length != 2) continue;
+            b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
+        }
+        return b;
+    })(window.location.search.substr(1).split('&'))
+})(jQuery);
+
 /****************************/
 /*  Init / Runtime
 /****************************/
@@ -479,11 +519,41 @@ function toggle_menu(e) {
   }
 }
 
-var dragOptions = { changeZindex: true };
-canvas.setLoop(function () {});
+function clear_sizes() {
+	$('#small').removeClass('selected');
+	$('#medium').removeClass('selected');
+	$('#large').removeClass('selected');
+}
 
-draw_iterative_map();
-// draw_random_map();
+function select_size(size) {
+
+	// get querystring size
+	size = $.QueryString.s;
+	if (!size) { size="m"; }
+
+	clear_sizes();
+
+	switch(size) {
+	    case "s":
+	        $('#small').addClass('selected');
+					rad = 30;	// radius of the hexes
+					font_size = "10px";
+	        break;
+	    case "l":
+	        $('#large').addClass('selected');
+					rad = 120;	// radius of the hexes
+					font_size = "20px";
+	        break;
+	    default:	// covers "m"
+	        $('#medium').addClass('selected');
+					rad = 60;	// radius of the hexes
+					font_size = "15px";
+					break;
+	}
+}
+
+// var dragOptions = { changeZindex: true };
+// canvas.setLoop(function () {});
 
 /****************************/
 /*  Events
@@ -501,11 +571,24 @@ $('body').on('click', '.menu-button', function(e) { toggle_menu(e); } );
 $('body').on('click', '#menu-auto-roll-tables', function() { window.location.replace("../index.html"); } );
 $('body').on('click', '#menu-region-map-generator', function() { window.location.replace("hex_map_generator.html"); } );
 
+// sizes
+$('body').on('click', '#small', function() {
+	window.location.href = window.location.protocol + "//" + window.location.host + window.location.pathname + '?s=s'; });
+$('body').on('click', '#medium', function() {
+	window.location.href = window.location.protocol + "//" + window.location.host + window.location.pathname + '?s=m'; });
+$('body').on('click', '#large', function() {
+	window.location.href = window.location.protocol + "//" + window.location.host + window.location.pathname + '?s=l'; });
 
-// button.bind("click tap", function () {
-// 	if (canvas.timeline.running) {
-// 		canvas.timeline.stop();
-// 	} else {
-// 		canvas.timeline.start();
-// 	}
-// });
+
+
+
+// get size from querystring and build accordingly
+$(function() {
+
+	select_size();
+
+	draw_iterative_map();
+
+	// draw_initial_board();
+
+});

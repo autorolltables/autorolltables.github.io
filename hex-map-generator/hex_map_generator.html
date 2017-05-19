@@ -21,11 +21,19 @@
   <div class="row title-row">
     <div class="title col-md-12 logo">Region Map Generator&nbsp;&nbsp;&nbsp;<img src="img/d20.png" width="25" height="28"></div>
   </div>
-  <div class="row">
+  <div class="row padding-below">
     <div class="button menu-button">&nbsp;<span class="glyphicon glyphicon-th"></span>&nbsp;</div>
+    &nbsp;
+    <div class="button" id="small">Small</div>
+    <div class="button" id="medium">Medium</div>
+    <div class="button" id="large">Large  </span></div>
+    &nbsp;
     <div class="button" id="reload">Generate&nbsp;<span class="glyphicon glyphicon-refresh"></span></div>
     <a class="button" id="save_link">Save&nbsp;<span class="glyphicon glyphicon-cloud-download"></span></a>
     <div class="button" id="show_key_button">&nbsp;<span class="glyphicon glyphicon-question-sign"></span>&nbsp;</div>
+  </div>
+  <div class="row">
+    <div class="alert alert-warning right">Warning! Depending on your screen size and computer speed small hex maps may take a long time to load!</div>
   </div>
 </div>
 
@@ -87,7 +95,7 @@
   </center>
 </div>
 
-<canvas id="canvas" width="1000" height="1000"></canvas>
+<canvas id="canvas"></canvas>
 
 
 <!-- //////////////////////////////////////////////////////// -->
@@ -101,7 +109,7 @@
 <!-- <script src="offline/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script> -->
 
 <!-- Online -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ocanvas/2.8.7/ocanvas.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/ocanvas/2.8.7/ocanvas.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
