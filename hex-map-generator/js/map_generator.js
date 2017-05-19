@@ -541,7 +541,7 @@ function select_size(size) {
 	        break;
 	    case "l":
 	        $('#large').addClass('selected');
-					rad = 120;	// radius of the hexes
+					rad = 100;	// radius of the hexes
 					font_size = "20px";
 	        break;
 	    default:	// covers "m"
