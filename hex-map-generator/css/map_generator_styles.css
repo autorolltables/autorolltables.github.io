@@ -38,10 +38,11 @@ a:hover {
   background-color: #5A6668;
   color: white;
   border: none;
-  padding: 1em;
+  padding: 0.5em;
   text-align: center;
   display: inline-block;
   font-size: 16px;
+  margin-bottom: 2px !important;
 }
 
 #save_link {
@@ -114,38 +115,6 @@ a:hover {
   font-size: 16px;
 }
 
-
-
-/* Index Menu */
-
-#index-menu {
-  display:none;
-  position:fixed;
-  top: 5em;
-  line-height: 2em;
-  background-color: black; /* #5A6668; */
-  z-index: 9999;
-  margin-left: 2em;
-  padding: 1px;
-  /*border: solid white 1px;*/
-}
-
-.index-btn {
-  background-color: #5A6668;
-  color: white;
-  padding: 0.5em 1em;
-}
-
-.index-btn:hover {
-  background-color: #4E5859;
-  color: white;
-}
-
-.padding-below {
-  padding-bottom: 1em;
-}
-
-
-.separator:after {
-  content: " ";
+.alert {
+  width: 34.3em;
 }
