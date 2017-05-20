@@ -1,0 +1,34 @@
+
+/* Index Menu */
+
+#index-menu {
+  display:none;
+  position:fixed;
+  top: 5em;
+  line-height: 2em;
+  background-color: black; /* #5A6668; */
+  z-index: 9999;
+  margin-left: 2em;
+  padding: 1px;
+  /*border: solid white 1px;*/
+}
+
+.index-btn, .index-btn-bottom {
+  background-color: #5A6668;
+  color: white;
+  padding: 0.5em 1em;
+  cursor: pointer;
+}
+
+.index-btn {
+  border-bottom: solid 1px black;
+}
+
+.index-btn:hover, .index-btn-bottom:hover {
+  background-color: #4E5859;
+  color: white;
+}
+
+.padding-below {
+  padding-bottom: 1em;
+}

@@ -4,7 +4,7 @@ This tool's goal is to use the original Gary Gygax hex table generator and build
 
 
 Source:
-[Stolen Tables from Gygax](https://www.reddit.com/r/DnDBehindTheScreen/comments/4zqe25/stolen_tables_from_gygax/)
+[Tables from Gygax](https://www.reddit.com/r/DnDBehindTheScreen/comments/4zqe25/stolen_tables_from_gygax/)
 
 
 | Biomes       | Plain | Scrub | Forest | Rough | Desert | Hills | Mountains | Marsh |
@@ -21,5 +21,5 @@ Source:
 | Depression   | 20    | 20    | 20     | 20    | 20     | 20    | 20        | 20    |
 
 <a href="http://autorolltables.github.io/hex-map-generator/hex_map_generator.html">
-<img src="https://i.imgur.com/SZug4Np.png">
+<img src="https://i.imgur.com/T0Z61bp.png">
 </a>
