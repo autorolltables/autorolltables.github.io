@@ -193,6 +193,7 @@ body
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   .rightview {height: 436px !important;}
   .rightview {height: 456px !important;}
+  #left-display-list {height: 499px !important;}
 }
 
 .text-less-muted {
@@ -324,29 +325,4 @@ span.subtext {
   font-size: smaller;
   font-style: italic;
   color: #aaa;
-}
-
-/* Index Menu */
-
-#index-menu {
-  display:none;
-  position:fixed;
-  top: 5em;
-  line-height: 2em;
-  background-color: black; /* #5A6668; */
-  z-index: 9999;
-  margin-left: 2em;
-  padding: 1px;
-  /*border: solid white 1px;*/
-}
-
-.index-btn {
-  background-color: #5A6668;
-  color: white;
-  padding: 0.5em 1em;
-}
-
-.index-btn:hover {
-  background-color: #4E5859;
-  color: white;
 }
