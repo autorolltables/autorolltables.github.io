@@ -734,7 +734,7 @@ top.wilderness = [
 "Lemurs",
 "Pigs",
 "Platypi",   ]},
- {"title": "d100 Domestic Plants Plants unique tot his continent include... (Roll 2d4 Times)", "id":"d100domesticplantsplantsuniquetothiscontinentincluderoll2d4times_continent", "roll":[
+ {"title": "d100 Domestic Plants Plants unique to this continent include... (Roll 2d4 Times)", "id":"d100domesticplantsplantsuniquetothiscontinentincluderoll2d4times_continent", "roll":[
 "Roses",
 "Ferns",
 "Pine Trees",
