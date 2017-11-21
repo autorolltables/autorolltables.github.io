@@ -12,3 +12,7 @@ function init() {
 $(document).ready(function() {
   init();
 });
+
+$( window ).on( "load", function() {
+  $(".splash").hide();
+});
