@@ -20,10 +20,8 @@ body
   color: rgba(0,0,0,.6);
 }
 
-#page, #menu {
-  /*margin-left: 15px;*/
+#page {
   padding-left: 15px;
-  /*margin-right: 15px;*/
 }
 
 .bgimage {
@@ -48,37 +46,6 @@ body
   margin-top: 2em;
   letter-spacing: 1px;
   text-decoration: none;
-}
-
-.menuitem, .menuitem-style {
-  background-color: #5A6668;
-  color: white;
-  margin-bottom:2px !important;
-}
-
-.menu-selected {
-  color: #DF691A !important;
-}
-
-.menuitem:hover {
-  color: #DF691A !important;
-  opacity: 0.65;
-  filter: alpha(opacity=65);
-}
-
-.link-menu-style {
-  background-color: #5A6668;
-  float: right !important;
-  color: white;
-}
-
-.link-menu-style:hover {
-  background-color: grey;
-}
-
-.menu-button {
-  margin-left: -1px !important;
-
 }
 
 .hover-icon-clickarea {
