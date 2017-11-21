@@ -9,9 +9,3 @@ div.example {
   clear: both;
   overflow: auto;
 }
-
-div.splash {
-  text-align: center;
-  vertical-align: center;
-  font-size: 20px;
-}
