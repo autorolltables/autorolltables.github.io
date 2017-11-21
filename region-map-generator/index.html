@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- meta -->
+    <meta charset="UTF-8">
+    <meta content="text/html; charset=UTF-8" name="Content-Type">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Palatino:400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+    <!-- styles -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/menu.css" />
+    <link rel="stylesheet" href="../includes/bootstrap.min.css">
+    <link rel="stylesheet" href="../includes/bootstrap-theme.min.css">
+    <style type='text/css'>
+      path, line { fill: none;
+        stroke: black;
+        stroke-linecap: round; }
+      .field { stroke: none;
+        fill-opacity: 1.0; }
+      .slope { stroke-width: 1; }
+      .river { stroke-width: 2; }
+      .coast { stroke-width: 4; }
+      .border { stroke-width: 5;
+        stroke-dasharray: 4,4;
+        stroke-linecap: butt; }
+      text {
+          font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+          color: black;
+          stroke: white;
+          stroke-width: 5;
+          stroke-linejoin: round;
+          paint-order: stroke; }
+      text.region { stroke-width:10;
+        font-variant: small-caps; }
+      svg { background-color: white; }
+    </style>
+    <!-- javascript -->
+    <script src="js/d3.v4.js"></script>
+    <script src="../includes/jquery.min.js"></script>
+    <script src="js/priority-queue.js"></script>
+    <script src="js/language.js"></script>
+    <script src="js/terrain.js"></script>
+    <script src="js/menu.js"></script>
+    <!-- <script src="js/raphael-min.js"></script> -->
+    <!-- <script src="js/canvg.min.js"></script> -->
+    <script src="js/saveSvgAsPng.js"></script>
+    <script src="js/export.js"></script>
+  </head>
+  <body>
+    <!-- menu -->
+    <div id="" class="container-fluid">
+      <div class="row">
+        <div class="col-md-12 logo">Region Generator</div>
+      </div>
+      <div id="menu-container" class="row">
+        <div id="menu" class="col-md-11 btn-group">
+          <a href="#" class='menuitem-style btn menu-button' aria-hidden='true'><span class="glyphicon glyphicon-th"></span></a>
+          <a href="#" class='menuitem-style btn refresh' aria-hidden='true'>Regenerate Region&nbsp;&nbsp;<span class="glyphicon glyphicon-refresh"></span></a>
+          <a href="#" class='menuitem-style btn exportsvg' aria-hidden='true'>SVG</a>
+          <a href="#" class='menuitem-style btn exportpng' aria-hidden='true'>PNG</a>
+        </div>
+      </div>
+      <div id="" class="row"></div>
+    </div>
+    <div id="index-menu" class="index-menu">
+      <div class="index-row">
+        <div id="menu-auto-roll-tables" class='index-btn' aria-hidden='true'>Auto Roll Tables</div>
+      </div>
+      <div class="index-row">
+        <div id="menu-hex-map-generator" class='index-btn' aria-hidden='true'>Hex Map Generator</div>
+      </div>
+      <div class="index-row">
+        <div id="menu-region-map-generator" class='index-btn-bottom' aria-hidden='true'>Region Map Generator</div>
+      </div>
+    </div>
+
+    <!-- map -->
+    <div id="page" class="container-fluid">
+      <div class="row">
+        <div class="example" id="final"></div>
+        <script src="js/_init.js"></script>
+      </div>
+
+      <div class="row">&nbsp;</div>
+      <div class="row">
+        <div class="col-md-12">
+          <p class="text-less-muted"><a href="credits.html">credits</a> | report issues: on <a href="https://github.com/autorolltables/autorolltables.github.io/issues/new">github</a> or <a href="https://www.reddit.com/message/compose/?to=dangeratio">reddit</a>.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </body>
+</html>
