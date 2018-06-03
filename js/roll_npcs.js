@@ -3221,7 +3221,7 @@ top.npcs = [
 "A knife, some lock picks, and a lamp.",
 "A pair of magnifying glasses and a set of scales.",
 ]},
-{"title": "d6 The dark elf has...", "id":"d6thedarkelfhas", "roll":[
+{"title": "d6 The dark elf has...", "id":"d6thedarkelfhashair", "roll":[
 "Bright white hair.",
 "Silver-blonde hair.",
 "Whitish grey hair.",
@@ -3229,7 +3229,7 @@ top.npcs = [
 "Shiny platinum hair.",
 "Pale grey hair.",
 ]},
-{"title": "d6 The dark elf has...", "id":"d6thedarkelfhas", "roll":[
+{"title": "d6 The dark elf has...", "id":"d6thedarkelfhaseyes", "roll":[
 "Whitish blue eyes.",
 "Pale blue eyes.",
 "Lilac eyes.",
