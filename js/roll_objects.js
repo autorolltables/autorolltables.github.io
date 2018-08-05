@@ -7,7 +7,7 @@ top.objects = [
 
 
 
- {"title": "d8 The heirloom is a...", "id":"d8theheirloomisa_herloom", "roll":[
+ {"title": "d8 The heirloom is a...", "id":"d8theheirloomisa_heirloom", "roll":[
 "Jewellery (d6): 1. Broach; 2. Necklace; 3. Ring; 4. Earring; 5. Gem; 6. Monocle",
 "Carving of (d4): 1. A family member; 2. An animal; 3. Nothing in particular; 4. A flower",
 "Art (d4): 1. Painting; 2. Vase; 3. Rug; 4. Tapestry",
@@ -16,7 +16,7 @@ top.objects = [
 "A weapon (d8): 1. Sword, 2. Axe; 3. Lance; 4. Dagger; 5. Mace; 6. Bow; 7. Crossbow; 8. Morningstar",
 "A piece of armor (d4): 1. Shield; 2. Helmet; 3. Breastplate; 4. Bracers",
 "A tool (d8): 1. Rake; 2. Shovel; 3. Rolling pin; 4. Hatchet; 5. Staff; 6. Frying Pan; 7. Tea pot; 8. Silverware",   ]},
- {"title": "d10 The heirloom once belonged to...", "id":"d10theheirloomoncebelongedto_herloom", "roll":[
+ {"title": "d10 The heirloom once belonged to...", "id":"d10theheirloomoncebelongedto_heirloom", "roll":[
 "The owner's mother",
 "The owner's father",
 "The owner's grandmother",
@@ -27,7 +27,7 @@ top.objects = [
 "An foreigner",
 "A god",
 "The family's patron",   ]},
- {"title": "d12 The heirloom is made of...", "id":"d12theheirloomismadeof_herloom", "roll":[
+ {"title": "d12 The heirloom is made of...", "id":"d12theheirloomismadeof_heirloom", "roll":[
 "Wood",
 "Gold",
 "Silver",
@@ -40,21 +40,21 @@ top.objects = [
 "Adamantine",
 "An unknown material",
 "Brass",   ]},
- {"title": "d6 ...and is adorned with...", "id":"d6andisadornedwith_herloom", "roll":[
+ {"title": "d6 ...and is adorned with...", "id":"d6andisadornedwith_heirloom", "roll":[
 "Rubies",
 "Diamonds",
 "Pearls",
 "Gold Filigree",
 "Silver Filigree",
 "Nothing",   ]},
- {"title": "d6 ...The heirloom's value is...", "id":"d6theheirloomsvalueis_herloom", "roll":[
+ {"title": "d6 ...The heirloom's value is...", "id":"d6theheirloomsvalueis_heirloom", "roll":[
 "None. It only has value to its family",
 "None. It doesn't even have value to its family",
 "Only the value of its base components",
 "Moderately valuable",
 "Very valuable",
 "Its value is legendary",   ]},
-  {"title": "d8 The heirloom is special because...", "id":"d8theheirloomisspecialbecause_herloom", "roll":[
+  {"title": "d8 The heirloom is special because...", "id":"d8theheirloomisspecialbecause_heirloom", "roll":[
  "It is magical",
  "It was crafted by a member of the family",
  "It is said to be lucky",
