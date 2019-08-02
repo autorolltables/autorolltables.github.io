@@ -36,6 +36,12 @@ function init() {
   $("#expand-history-tab").hide();
   $("#clear-history-roll-tab").hide();
 
+  // querystring filter
+  var urlParams = new URLSearchParams(window.location.search);
+  if ( urlParams.has('filter') ) {
+      $('#filter').val(urlParams.get('filter'));
+      filter();
+  }
 }
 
 function log(obj) {
