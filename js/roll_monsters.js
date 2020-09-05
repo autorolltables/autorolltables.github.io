@@ -6,28 +6,30 @@ top.monsters = [
     title: "Races Other Planes",
     id: "races_other_planes",
     roll: [
-      "Aasimon",
-      "Angels",
-      "Animal Lords",
-      "Archons",
-      "Asuras",
-      "Eladrin",
-      "Guardinals",
-      "Lillend",
+      "Azers",
+      "Elementals",
+      "Githyanki",
+      "Genies",
+      "Grues",
+      "Mephit",
+      "Salamanders",
+      "Sylphs",
     ],
   },
   {
     title: "Races Prime",
     id: "races_prime",
     roll: [
-      "Aasimon",
-      "Angels",
-      "Animal Lords",
-      "Archons",
-      "Asuras",
-      "Eladrin",
-      "Guardinals",
-      "Lillend",
+      "1-10: Human",
+      "11-12: Dwarf",
+      "12-13: Elf",
+      "14: Halfling",
+      "15: Half-elf",
+      "16: Gnome",
+      "17: Half-orc",
+      "18: Dark Elf",
+      "19: Bugbear",
+      "20: Kobold",
     ],
   },
   {
@@ -42,7 +44,7 @@ top.monsters = [
       "Eladrin",
       "Guardinals",
       "Lillend",
-    ]
+    ],
   },
   {
     title: "Races of Middle Planes",
@@ -55,7 +57,7 @@ top.monsters = [
       "Modrons",
       "Rilmani",
       "Slaadi",
-    ]
+    ],
   },
   {
     title: "Races of Lower Planes",
@@ -75,8 +77,8 @@ top.monsters = [
       "Obyrith",
       "Succubi",
       "Tanar'ri",
-      "Yugoloth"
-    ]
+      "Yugoloth",
+    ],
   },
   {
     title: "d6 Hair The ogre’s hair is...",

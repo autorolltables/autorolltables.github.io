@@ -381,22 +381,74 @@ function get_roll_title(id, table) {
   return "";
 }
 
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function roll_table_range(rolls, choice) {
+  for (i = 0; i < rolls.length; i++) {
+    let line = rolls[i];
+    let line_split = line.split(":");
+    let nr_prefix = line_split[0];
+    let line_contents = line_split[1];
+    if (nr_prefix.indexOf("-") !== -1) {
+      let bound_lower = Number(nr_prefix.split("-")[0]);
+      let bound_upper = Number(nr_prefix.split("-")[1]);
+      if (bound_lower <= choice && choice <= bound_upper) {
+        return line_contents;
+      }
+    } else {
+      let line_nr = Number(nr_prefix.split(":")[0]);
+      if (line_nr === choice) {
+        return line_contents;
+      }
+    }
+  }
+}
+
+function table_range_get_max(roll) {
+  let last_line = roll[roll.length - 1];
+  let nr_prefix = last_line.split(":")[0];
+  if (nr_prefix.indexOf("-") !== -1) {
+    let bound_upper = Number(nr_prefix.split("-")[1]);
+    return bound_upper;
+  } else {
+    let line_nr = Number(nr_prefix.split(":")[0]);
+    return line_nr;
+  }
+}
+
+function roll_table_choice(table) {
+  if (table.hasOwnProperty("type") && table.type === "range") {
+    let max_nr = table_range_get_max(table.roll);
+    let roll = getRandomInt(1, max_nr);
+    let line_chosen = roll_table_range(table.roll, roll);
+    return line_chosen;
+  } else {
+    var length = table.roll.length;
+    var rand = Math.floor(Math.random() * length);
+    var line_chosen = table.roll[rand];
+    return line_chosen;
+  }
+}
+
 function roll_roll(id, table) {
   table = get_table(table);
   for (i = 0; i < table.length; i++) {
     if (table[i].id === id) {
       console.log("rolling on table " + id);
       console.log(table[i]);
-      var length = table[i].roll.length;
-      // log("roll length:"+length);
-      var rand = Math.floor(Math.random() * length);
-      var line_chosen = table[i].roll[rand];
+      var line_chosen = roll_table_choice(table[i]);
       if (line_chosen.indexOf(SUBTABLE_TOKEN) !== -1) {
         // split
         var line_separated = line_chosen.split(SUBTABLE_TOKEN);
         line_chosen = line_separated[0] + " " + SUBTABLE_RESULT_MERGER + " ";
         var subtable_id_and_group = line_separated[line_separated.length - 1];
-        var subtable_id_split = subtable_id_and_group.split(TABLE_CATEGORY_TOKEN);
+        var subtable_id_split = subtable_id_and_group.split(
+          TABLE_CATEGORY_TOKEN
+        );
         var high_level_table = subtable_id_split[0];
         var subtable_id = subtable_id_split[1];
         var subline = roll_roll(subtable_id, high_level_table);

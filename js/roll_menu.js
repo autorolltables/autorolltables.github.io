@@ -2395,7 +2395,7 @@ top.menu = [
         main_rolls: [
           "factions/planescape_faction",
           "wilderness/race_plane_of_origin",
-          "npcs/jobs_urban",
+          "npcs/jobs_sigil",
           "npcs/flaws",
           "npcs/dxmalefirstname",
           "npcs/dxfemalefirstname",
@@ -2406,7 +2406,7 @@ top.menu = [
       {
         title: "Random Player Character (5E)",
         use:
-            "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+          "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
         main_rolls: [
           "npcs/dxmalefirstname",
           "npcs/dxfemalefirstname",
@@ -5748,7 +5748,7 @@ top.menu = [
 
 var all_ref = null;
 
-all_items = []
+all_items = [];
 
 for (i = 0; i < top.menu.length; i++) {
   // get items at index
@@ -5763,4 +5763,4 @@ for (i = 0; i < top.menu.length; i++) {
   }
 }
 
-all_ref.items = all_items;
+all_ref.items = Array.from(new Set(all_items));
