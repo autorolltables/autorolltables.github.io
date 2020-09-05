@@ -6,20 +6,13 @@ developed by cristian mtr, based on initial work [here](https://github.com/autor
 
 ## Features
 
-Initial fork:
-
 - tons of random tables
 - search for tables
 - history of rolls
 - easily extendible (tables are in the very readable [JSON format](https://en.wikipedia.org/wiki/JSON#Example))
 - static HTML & javascript only (you can download it and it's all yours. No need for active internet connection)
-
-**NEW**, by [cristian](https://github.com/cristianmtr):
-
-- Subtable rolls
-- Custom ranges in tables
-- More tables
-- Bug fixes
+- subtable rolls
+- custom ranges in tables
 
 ## Collaboration
 
