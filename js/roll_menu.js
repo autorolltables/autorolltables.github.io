@@ -5763,12 +5763,4 @@ for (i = 0; i < top.menu.length; i++) {
     }
 }
 
-all_ref.items = Array.from(new Set(all_items)).sort(function (a, b) {
-    let a_title = a.title.charCodeAt(0);
-    let b_title = b.title.charCodeAt(0);
-    if (a_title === 45 || b_title === 45) {
-        return 0
-    } else {
-        return a_title - b_title;
-    }
-});
+all_ref.items = Array.from(new Set(all_items));
