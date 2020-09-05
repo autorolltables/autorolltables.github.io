@@ -102,7 +102,7 @@ top.npcs = [
       "10-18: Agriculture -->agriculture",
       "19: Entertainer -->entertainer",
       "20: Scoundrel/Underclass -->underclass",
-    ]
+    ],
   },
   {
     title: "d6 The treasure hunter is...",
@@ -6307,7 +6307,7 @@ top.npcs = [
   },
   {
     title:
-        "d20 Recently, the assassin has been rumored to have notched a kill in or near...",
+      "d20 Recently, the assassin has been rumored to have notched a kill in or near...",
     id: "d20recentlytheassassinhasbeenrumoredtohavenotchedakillinornear",
     roll: [
       "A residential district.",
@@ -6470,7 +6470,7 @@ top.npcs = [
   },
   {
     title:
-        "d20 Always prepared to make a melody or rhythm, the bard carries his/her...",
+      "d20 Always prepared to make a melody or rhythm, the bard carries his/her...",
     id: "d20alwayspreparedtomakeamelodyorrhythmthebardcarrieshisher",
     roll: [
       "Bagpipes.",
@@ -9487,7 +9487,7 @@ top.npcs = [
   },
   {
     title:
-        "d8 The necromancer has uncovered dark secrets. He/she cannot be killed by...",
+      "d8 The necromancer has uncovered dark secrets. He/she cannot be killed by...",
     id: "d8thenecromancerhasuncovereddarksecretsheshecannotbekilledby",
     roll: [
       "Hanging or strangulation.",
@@ -9502,7 +9502,7 @@ top.npcs = [
   },
   {
     title:
-        "d6 The necromancer has taken precautions. If killed, he/she rises as...",
+      "d6 The necromancer has taken precautions. If killed, he/she rises as...",
     id: "d6thenecromancerhastakenprecautionsifkilledhesherisesas",
     roll: [
       "A lingering, malevolent ghost.",
@@ -10924,7 +10924,7 @@ top.npcs = [
   },
   {
     title:
-        "d8 The witch has uncovered dark secrets. She cannot be killed by...",
+      "d8 The witch has uncovered dark secrets. She cannot be killed by...",
     id: "d8thewitchhasuncovereddarksecretsshecannotbekilledby",
     roll: [
       "Hanging or strangulation.",

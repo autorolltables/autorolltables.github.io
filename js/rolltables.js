@@ -9,7 +9,7 @@ var current;
 var side_obj;
 var obj_current_display;
 var obj_history_display;
-var mouseover_on = true;
+var mouseover_on = false;
 var delete_enabled = false;
 
 function init() {
@@ -54,12 +54,12 @@ function display_side() {
     $("#rightview-history").html(side_obj);
   } else {
     $("#rightview-history").html(
-        $("#rightview-history").html() + copyseparator + side_obj
+      $("#rightview-history").html() + copyseparator + side_obj
     );
   }
 
   $("#rightview-current-display").html(
-      $("#rightview-current-display").html() + obj_current_display
+    $("#rightview-current-display").html() + obj_current_display
   );
 
   copy_div = "<div class='for-copy'>" + side_obj + "</div></div>"; // inside end of displayed roll
@@ -68,7 +68,7 @@ function display_side() {
     $("#rightview-history-display").html(obj_history_display + copy_div);
   } else {
     $("#rightview-history-display").html(
-        $("#rightview-history-display").html() +
+      $("#rightview-history-display").html() +
         displayseparator +
         obj_history_display +
         copy_div
@@ -183,13 +183,13 @@ function loadleftdisplay(curr_table) {
 
     if (display_title.match(/\(/gi) != null) {
       display_title = display_title.replace(
-          /\(/gi,
-          "<br><span class='subtext'>("
+        /\(/gi,
+        "<br><span class='subtext'>("
       );
       display_title = display_title + "</span>";
     }
     $("#left-display-list").append(
-        "<div class='list-item' listid='" +
+      "<div class='list-item' listid='" +
         i +
         "' item=\"" +
         current.items[i].title +
@@ -267,7 +267,7 @@ function getquerystring(name, url) {
   }
   name = name.replace(/[\[\]]/g, "\\$&");
   var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-      results = regex.exec(url);
+    results = regex.exec(url);
   if (!results) return null;
   if (!results[2]) return "";
   return decodeURIComponent(results[2].replace(/\+/g, " "));
@@ -277,8 +277,7 @@ function menuhovercheck() {
   var menuhover = "";
   try {
     menuhover = getquerystring("menuhover");
-  } catch (e) {
-  }
+  } catch (e) {}
 
   if (menuhover == "false") {
     togglehovermenu();
@@ -290,7 +289,7 @@ function loadmenu() {
   for (i = 0; i < menu.length; i++) {
     var item = menu[i].title;
     $("#menu").append(
-        "<a href='#' class='menuitem btn' id='" + item + "'>" + item + "</a>"
+      "<a href='#' class='menuitem btn' id='" + item + "'>" + item + "</a>"
     );
   }
 }
@@ -309,12 +308,12 @@ function inline_roll(roll_text) {
   roll_description = roll_text.substring(0, roll_type.index).trim();
   roll_text_without = roll_text.replace(roll_type, "");
   roll_type = roll_type[0]
-      .replace(":", "")
-      .replace(" ", "")
-      .replace(")", "")
-      .replace("(", "")
-      .replace("d", "")
-      .replace("D", "");
+    .replace(":", "")
+    .replace(" ", "")
+    .replace(")", "")
+    .replace("(", "")
+    .replace("d", "")
+    .replace("D", "");
 
   // attempt to pull integer out of it, if not, send back source string
   try {
@@ -332,9 +331,9 @@ function inline_roll(roll_text) {
   // regex match for indicator string <*> to the next decimal, capturing
   roll_text_without = roll_text_without.match(indicator_match);
   result = roll_text_without[1]
-      .replace(/^\s+/, "")
-      .replace(/\s+$/, "")
-      .replace(/[;,.]$/, "");
+    .replace(/^\s+/, "")
+    .replace(/\s+$/, "")
+    .replace(/[;,.]$/, "");
 
   // return display in a clear format
   return "(d" + roll_type + ") " + roll_description + ": " + result;
@@ -430,7 +429,7 @@ function roll_sub_roll(id, table) {
             // show title of this result
             side(pre_title + table[i].roll[rand].title);
             side_display(
-                "<b>" + pre_title + table[i].roll[rand].title + "</b>"
+              "<b>" + pre_title + table[i].roll[rand].title + "</b>"
             );
             side_display("<div class='indent'>");
 
@@ -559,18 +558,18 @@ function perform_roll() {
   side(" ");
   side("Suggested Use: " + roll_table.use);
   side_display_current(
-      "<span class='roll-title'>" + roll_table_title + "</span>"
+    "<span class='roll-title'>" + roll_table_title + "</span>"
   );
   side_display_current(" ");
   side_display_history(
-      "<div class='accordion roll-title-history'>" +
+    "<div class='accordion roll-title-history'>" +
       roll_table_title +
       " <div class='history-item-menu'><div class='delete-history-item glyphicon glyphicon-trash'></div> <div class='expand-collapse glyphicon glyphicon-chevron-down'></div></div></div>",
-      false
+    false
   );
   side_display_history("<div class='panel'>", false);
   side_display(
-      "Suggested Use: <span class='roll-suggested-use'>" +
+    "Suggested Use: <span class='roll-suggested-use'>" +
       roll_table.use +
       "</span>"
   );
@@ -660,8 +659,8 @@ copyTextareaBtn.addEventListener("click", function (event) {
 function process_history() {
   var separator = "------------------------------------------\n";
   var copy_list = document
-      .getElementById("rightview-history-display")
-      .getElementsByClassName("for-copy"); //[0]
+    .getElementById("rightview-history-display")
+    .getElementsByClassName("for-copy"); //[0]
   var copy_output = "";
   for (var i = 0; i < copy_list.length; i++) {
     if (i != 0) {
@@ -779,7 +778,7 @@ function expand_history() {
 function create_guid() {
   return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function (c) {
     var r = (Math.random() * 16) | 0,
-        v = c === "x" ? r : (r & 0x3) | 0x8;
+      v = c === "x" ? r : (r & 0x3) | 0x8;
     return v.toString(16);
   });
 }
@@ -787,18 +786,18 @@ function create_guid() {
 // jquery regex extender.  source: http://james.padolsey.com/javascript/regex-selector-for-jquery/
 jQuery.expr[":"].regex = function (elem, index, match) {
   var matchParams = match[3].split(","),
-      validLabels = /^(data|css):/,
-      attr = {
-        method: matchParams[0].match(validLabels)
-            ? matchParams[0].split(":")[0]
-            : "attr",
-        property: matchParams.shift().replace(validLabels, ""),
-      },
-      regexFlags = "ig",
-      regex = new RegExp(
-          matchParams.join("").replace(/^\s+|\s+$/g, ""),
-          regexFlags
-      );
+    validLabels = /^(data|css):/,
+    attr = {
+      method: matchParams[0].match(validLabels)
+        ? matchParams[0].split(":")[0]
+        : "attr",
+      property: matchParams.shift().replace(validLabels, ""),
+    },
+    regexFlags = "ig",
+    regex = new RegExp(
+      matchParams.join("").replace(/^\s+|\s+$/g, ""),
+      regexFlags
+    );
   return regex.test(jQuery(elem)[attr.method](attr.property));
 };
 
@@ -822,17 +821,17 @@ function showalert(alert) {
     case "copy history":
       alert_type = "success";
       alert_text =
-          "Copied History Successfully <span class='glyphicon glyphicon-ok'></span>";
+        "Copied History Successfully <span class='glyphicon glyphicon-ok'></span>";
       break;
     case "copy current":
       alert_type = "success";
       alert_text =
-          "Copied Current Roll Successfully <span class='glyphicon glyphicon-ok'></span>";
+        "Copied Current Roll Successfully <span class='glyphicon glyphicon-ok'></span>";
       break;
     case "clear history":
       alert_type = "success";
       alert_text =
-          "Cleared History <span class='glyphicon glyphicon-ok'></span>";
+        "Cleared History <span class='glyphicon glyphicon-ok'></span>";
       break;
     case "hover on":
       alert_type = "success";
@@ -841,32 +840,32 @@ function showalert(alert) {
     case "hover off":
       alert_type = "success";
       alert_text =
-          "Menu Hover Off <span class='glyphicon glyphicon-remove'></span>";
+        "Menu Hover Off <span class='glyphicon glyphicon-remove'></span>";
       break;
     case "copy history blank":
       alert_type = "danger";
       alert_text =
-          "History Empty <span class='glyphicon glyphicon-remove'></span>";
+        "History Empty <span class='glyphicon glyphicon-remove'></span>";
       break;
     case "copy current blank":
       alert_type = "danger";
       alert_text =
-          "Current Roll Empty <span class='glyphicon glyphicon-remove'></span>";
+        "Current Roll Empty <span class='glyphicon glyphicon-remove'></span>";
       break;
     case "unable to copy":
       alert_type = "danger";
       alert_text =
-          "Error: Unable to Copy <span class='glyphicon glyphicon-remove'></span>";
+        "Error: Unable to Copy <span class='glyphicon glyphicon-remove'></span>";
       break;
     case "nothing selected":
       alert_type = "danger";
       alert_text =
-          "Nothing Selected <span class='glyphicon glyphicon-remove'></span>";
+        "Nothing Selected <span class='glyphicon glyphicon-remove'></span>";
       break;
     case "history item deleted":
       alert_type = "success";
       alert_text =
-          "History Item Deleted <span class='glyphicon glyphicon-remove'></span>";
+        "History Item Deleted <span class='glyphicon glyphicon-remove'></span>";
       break;
     case "none":
       none = "true";
@@ -879,7 +878,7 @@ function showalert(alert) {
   if (none == "false") {
     id = create_guid();
     $("#alerts").append(
-        "<div id='" +
+      "<div id='" +
         id +
         "' class='alert alert-" +
         alert_type +
@@ -899,7 +898,7 @@ function toggle_menu(e) {
   if ($("#index-menu").filter(":visible").length) {
     $("#index-menu").hide();
   } else {
-    $("#index-menu").css({top: e.pageY, left: e.pageX - 27});
+    $("#index-menu").css({ top: e.pageY, left: e.pageX - 27 });
     $("#index-menu").show();
     $("body").one("click", function () {
       hide_menu();
@@ -1000,20 +999,20 @@ $("body").on("click", ".accordion", function (e) {
     delete_enabled = false;
   } else {
     if (
-        $(this).children(".history-item-menu").children(".glyphicon-chevron-down")
-            .length
+      $(this).children(".history-item-menu").children(".glyphicon-chevron-down")
+        .length
     ) {
       $(this)
-          .children(".history-item-menu")
-          .children(".glyphicon-chevron-down")
-          .toggleClass("glyphicon-chevron-up")
-          .toggleClass("glyphicon-chevron-down");
+        .children(".history-item-menu")
+        .children(".glyphicon-chevron-down")
+        .toggleClass("glyphicon-chevron-up")
+        .toggleClass("glyphicon-chevron-down");
     } else {
       $(this)
-          .children(".history-item-menu")
-          .children(".glyphicon-chevron-up")
-          .toggleClass("glyphicon-chevron-down")
-          .toggleClass("glyphicon-chevron-up");
+        .children(".history-item-menu")
+        .children(".glyphicon-chevron-up")
+        .toggleClass("glyphicon-chevron-down")
+        .toggleClass("glyphicon-chevron-up");
     }
     $(this).next().toggleClass("show");
     blur();
