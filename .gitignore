@@ -4,3 +4,5 @@ changelog.html
 /old/*
 /web/*
 /offline/*
+/.idea/
+/node_modules/
