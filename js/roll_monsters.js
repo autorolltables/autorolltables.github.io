@@ -19,6 +19,7 @@ top.monsters = [
   {
     title: "Races Prime",
     id: "races_prime",
+    type: "range",
     roll: [
       "1-10: Human",
       "11-12: Dwarf",
