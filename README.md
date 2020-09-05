@@ -2,7 +2,7 @@
 
 Available at https://cristianmtr.github.io/rpg_tables/
 
-developed by cristian mtr, based on initial work [here](https://github.com/autorolltables/autorolltables.github.io)
+developed based on initial work [here](https://github.com/autorolltables/autorolltables.github.io)
 
 ## Features
 
