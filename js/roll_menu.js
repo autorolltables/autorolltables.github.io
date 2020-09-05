@@ -5763,4 +5763,4 @@ for (i = 0; i < top.menu.length; i++) {
   }
 }
 
-all_ref.items = all_items;
+all_ref.items = Array.from(new Set(all_items));
