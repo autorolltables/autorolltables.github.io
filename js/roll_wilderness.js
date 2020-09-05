@@ -7,11 +7,11 @@ top.wilderness = [
     id: "race_plane_of_origin",
     type: "range",
     roll: [
-      "1-7: Prime Material -->races_prime",
-      "8-11: Upper Planes -->races_upper_planes",
-      "12-15: Middle Planes -->races_middle_planes",
-      "16-19: Lower Planes -->races_lower_planes",
-      "20: Sigil, Inner & Transitive Planes -->races_other_planes",
+      "1-7: Prime Material -->monsters/races_prime",
+      "8-11: Upper Planes -->monsters/races_upper_planes",
+      "12-15: Middle Planes -->monsters/races_middle_planes",
+      "16-19: Lower Planes -->monsters/races_lower_planes",
+      "20: Sigil, Inner & Transitive Planes -->monsters/races_other_planes",
     ],
   },
 

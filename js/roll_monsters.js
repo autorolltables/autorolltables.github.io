@@ -3,6 +3,82 @@
 
 top.monsters = [
   {
+    title: "Races Other Planes",
+    id: "races_other_planes",
+    roll: [
+      "Aasimon",
+      "Angels",
+      "Animal Lords",
+      "Archons",
+      "Asuras",
+      "Eladrin",
+      "Guardinals",
+      "Lillend",
+    ],
+  },
+  {
+    title: "Races Prime",
+    id: "races_prime",
+    roll: [
+      "Aasimon",
+      "Angels",
+      "Animal Lords",
+      "Archons",
+      "Asuras",
+      "Eladrin",
+      "Guardinals",
+      "Lillend",
+    ],
+  },
+  {
+    title: "Races of Upper Planes",
+    id: "races_upper_planes",
+    roll: [
+      "Aasimon",
+      "Angels",
+      "Animal Lords",
+      "Archons",
+      "Asuras",
+      "Eladrin",
+      "Guardinals",
+      "Lillend",
+    ]
+  },
+  {
+    title: "Races of Middle Planes",
+    id: "races_middle_planes",
+    roll: [
+      "Formians",
+      "Githzerai",
+      "Inevitables",
+      "Marut",
+      "Modrons",
+      "Rilmani",
+      "Slaadi",
+    ]
+  },
+  {
+    title: "Races of Lower Planes",
+    id: "races_lower_planes",
+    roll: [
+      "Alu-Fiends",
+      "Baatezu",
+      "Bladelings",
+      "Cambions",
+      "Demodands",
+      "Erinyes",
+      "Hags",
+      "Hordlings",
+      "Imps",
+      "Kytons",
+      "Marilith",
+      "Obyrith",
+      "Succubi",
+      "Tanar'ri",
+      "Yugoloth"
+    ]
+  },
+  {
     title: "d6 Hair The ogre’s hair is...",
     id: "d6hairtheogre’shairis_ogre",
     roll: [

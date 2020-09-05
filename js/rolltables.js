@@ -11,6 +11,9 @@ var obj_current_display;
 var obj_history_display;
 var mouseover_on = false;
 var delete_enabled = false;
+var SUBTABLE_TOKEN = "-->";
+var SUBTABLE_RESULT_MERGER = ":";
+var TABLE_CATEGORY_TOKEN = "/";
 
 function init() {
   // load the menu
@@ -381,11 +384,25 @@ function get_roll_title(id, table) {
 function roll_roll(id, table) {
   table = get_table(table);
   for (i = 0; i < table.length; i++) {
-    if (table[i].id == id) {
+    if (table[i].id === id) {
+      console.log("rolling on table " + id);
+      console.log(table[i]);
       var length = table[i].roll.length;
       // log("roll length:"+length);
       var rand = Math.floor(Math.random() * length);
-      return table[i].roll[rand];
+      var line_chosen = table[i].roll[rand];
+      if (line_chosen.indexOf(SUBTABLE_TOKEN) !== -1) {
+        // split
+        var line_separated = line_chosen.split(SUBTABLE_TOKEN);
+        line_chosen = line_separated[0] + " " + SUBTABLE_RESULT_MERGER + " ";
+        var subtable_id_and_group = line_separated[line_separated.length - 1];
+        var subtable_id_split = subtable_id_and_group.split(TABLE_CATEGORY_TOKEN);
+        var high_level_table = subtable_id_split[0];
+        var subtable_id = subtable_id_split[1];
+        var subline = roll_roll(subtable_id, high_level_table);
+        line_chosen += subline;
+      }
+      return line_chosen;
     }
   }
   return "";
