@@ -125,6 +125,9 @@ function get_table(table) {
     case "dungeons":
       return top.dungeons;
       break;
+    case "encounters":
+      return top.encounters;
+      break;
     case "factions":
       return top.factions;
       break;
