@@ -5804,7 +5804,7 @@ top.menu = [
         ]
     },
     {
-        title: "Blades in the Dark",
+        title: "Blades",
         id: "blades_in_the_dark",
         items: [
             {
