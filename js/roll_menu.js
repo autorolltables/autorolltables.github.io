@@ -40,7 +40,7 @@ top.menu = [
             {
                 title: "Dungeon Details",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "dungeons/d10thisplaceisorwasa_dungeondetails",
                     "dungeons/d12builtby_dungeondetails",
@@ -55,7 +55,7 @@ top.menu = [
             {
                 title: "Dugeon Features",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "dungeons/d20aircurrents_randomdugeonfeatures",
                     "dungeons/d20odors_randomdugeonfeatures",
@@ -75,14 +75,14 @@ top.menu = [
             {
                 title: "Dungeon Encounters",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: ["plots/d20dungeon"],
                 sub_rolls: [],
             },
             {
                 title: "Elemental Air Dungeon",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "dungeons/d6thisplaceisa_elementalairdungeon",
                     "dungeons/d6ambientsoundsyouhearaan_elementalairdungeon",
@@ -100,7 +100,7 @@ top.menu = [
             {
                 title: "Elemental Earth Dungeon",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "dungeons/d6thisplaceisa_elementalearthdungeon",
                     "dungeons/d6floorterrainyoufrequentlystepon_elementalearthdungeon",
@@ -118,7 +118,7 @@ top.menu = [
             {
                 title: "Elemental Fire Dungeon",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "dungeons/d6thisplaceisa_elementalfiredungeon",
                     "dungeons/d6airqualitytheairinthechambersinhereis…_elementalfiredungeon",
@@ -136,7 +136,7 @@ top.menu = [
             {
                 title: "Elemental Water Dungeon",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "dungeons/d6thisplaceisa_elementalwaterdungeon",
                     "dungeons/d6waterlevelthechambersinthisplace_elementalwaterdungeon",
@@ -208,7 +208,7 @@ top.menu = [
             {
                 title: "- Castle Dungeons Details",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "dungeons/d6thedungeonislocated",
                     "dungeons/d4thedungeonwasbuilt",
@@ -227,7 +227,7 @@ top.menu = [
             {
                 title: "Cavern",
                 use:
-                    "These are tables for adding quick flavor and encounters to natural caves and cavern complexes. You can use these to generate a single cavern location for an encounter or to set up a map of a subterranean region.",
+                "These are tables for adding quick flavor and encounters to natural caves and cavern complexes. You can use these to generate a single cavern location for an encounter or to set up a map of a subterranean region.",
                 main_rolls: [
                     "dungeons/d10entrancethecavemouthis",
                     "dungeons/d50denizenswhatlivesinthecave",
@@ -244,7 +244,7 @@ top.menu = [
             {
                 title: "Mage's Tower",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "dungeons/d10themasterofthistoweris_magetower",
                     "dungeons/d10thetowersshapeisapproximatelythatof_magetower",
@@ -260,7 +260,7 @@ top.menu = [
             {
                 title: "Mine",
                 use:
-                    "These are tables for adding quick flavor and encounters to natural caves and cavern complexes. You can use these to generate a single cavern location for an encounter or to set up a map of a subterranean region.",
+                "These are tables for adding quick flavor and encounters to natural caves and cavern complexes. You can use these to generate a single cavern location for an encounter or to set up a map of a subterranean region.",
                 main_rolls: [
                     "dungeons/d20themineisasourceof",
                     "dungeons/d12entrancetheminesentranceis",
@@ -281,7 +281,7 @@ top.menu = [
             {
                 title: "Monastery (with 4d6 rooms)",
                 use:
-                    "Use these tables for laying out an active monastery for your PCs to visit, to infiltrate, or to seek wisdom and training.",
+                "Use these tables for laying out an active monastery for your PCs to visit, to infiltrate, or to seek wisdom and training.",
                 main_rolls: [
                     "dungeons/d12visitorstothemonasterycomeseeking",
                     "dungeons/d12themonasteryisknownforits",
@@ -367,7 +367,7 @@ top.menu = [
             {
                 title: "Temple (with 6d6 rooms)",
                 use:
-                    "Use these tables for laying out an actively used temple complex. I tend to model temples after churches. There is a primary worship chamber where most prayer ceremonies are held. This chamber's size can vary greatly—in a city, the temple might accommodate 1,000 worshipers or more at a time with room for crowds to spill out into a square in front of the temple; in a rural setting or for an obscure faith, the temple might accommodate 100 worshipers or less. Then there are adjacent rooms, wings, or other nearby buildings to support the operation of the temple. These tables are designed to work primarily with this design model in mind, but other layouts are possible.",
+                "Use these tables for laying out an actively used temple complex. I tend to model temples after churches. There is a primary worship chamber where most prayer ceremonies are held. This chamber's size can vary greatly—in a city, the temple might accommodate 1,000 worshipers or more at a time with room for crowds to spill out into a square in front of the temple; in a rural setting or for an obscure faith, the temple might accommodate 100 worshipers or less. Then there are adjacent rooms, wings, or other nearby buildings to support the operation of the temple. These tables are designed to work primarily with this design model in mind, but other layouts are possible.",
                 main_rolls: [
                     "dungeons/d6worshipersatthetempleprayto",
                     "dungeons/d12thetempleisdedicatedto",
@@ -399,7 +399,7 @@ top.menu = [
             {
                 title: "Tomb (with 6d6 rooms)",
                 use:
-                    "These tables are designed to quickly generate an interesting tomb for your PCs to explore and within which they may die.\nThere are many ways to build a tomb, but most tombs are not terribly complicated. I have tombs for important and wealthy individuals in mind with this set of tables. Each tomb will likely have an entry chamber that the PCs will find after passing through the tomb's entrance. The tomb will also have a grand crypt where the deceased individual honored by the tomb is buried—or, where it appears that the person is buried. Other functional rooms and crypts will be arranged in some manner that makes sense in relation to the entry chamber and the grand crypt, or at least makes sense in terms of the history of the tomb's building (and possible expansions).",
+                "These tables are designed to quickly generate an interesting tomb for your PCs to explore and within which they may die.\nThere are many ways to build a tomb, but most tombs are not terribly complicated. I have tombs for important and wealthy individuals in mind with this set of tables. Each tomb will likely have an entry chamber that the PCs will find after passing through the tomb's entrance. The tomb will also have a grand crypt where the deceased individual honored by the tomb is buried—or, where it appears that the person is buried. Other functional rooms and crypts will be arranged in some manner that makes sense in relation to the entry chamber and the grand crypt, or at least makes sense in terms of the history of the tomb's building (and possible expansions).",
                 main_rolls: [
                     "dungeons/d20thistombwasbuiltfor",
                     "dungeons/d12thetombsentranceis",
@@ -438,7 +438,7 @@ top.menu = [
             },
         ],
     },
-
+    
     {
         title: "Factions",
         id: "Factions",
@@ -446,7 +446,7 @@ top.menu = [
             {
                 title: "Assassins' Guild",
                 use:
-                    "Use these for inspiration or roll them up randomly, some of the tables could be rolled more than once.",
+                "Use these for inspiration or roll them up randomly, some of the tables could be rolled more than once.",
                 main_rolls: [
                     "factions/d12theguildssymbolis",
                     "factions/d20theguildspreferredmethodofexecutionis",
@@ -466,7 +466,7 @@ top.menu = [
             {
                 title: "Crafting Guild (with 6d6 artisans, 6d6 apprentice)",
                 use:
-                    "These are tables for quickly fleshing out a crafting guild and for adding some quick flavor to an artisan or apprentice craftsman NPC. You really should read /u/TheatreLife's posts to get the most out of this, which includes more information on the materials-to-manufacture pipeline and on gaining renown within a guild.",
+                "These are tables for quickly fleshing out a crafting guild and for adding some quick flavor to an artisan or apprentice craftsman NPC. You really should read /u/TheatreLife's posts to get the most out of this, which includes more information on the materials-to-manufacture pipeline and on gaining renown within a guild.",
                 main_rolls: [
                     "factions/d20thisisaguildfor",
                     "factions/d8thisguildsstatusandcontrolis",
@@ -518,7 +518,7 @@ top.menu = [
             {
                 title: "Cult (with 6d6 cultists)",
                 use:
-                    "Use these tables for inspiration or roll them randomly. Some of the tables could be rolled more than once.",
+                "Use these tables for inspiration or roll them randomly. Some of the tables could be rolled more than once.",
                 main_rolls: [
                     "factions/d12thecultistsrevere",
                     "factions/d10thecultistsmeetin",
@@ -534,7 +534,7 @@ top.menu = [
             {
                 title: "- Individual Cultist",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -550,7 +550,7 @@ top.menu = [
             {
                 title: "- Snake Cultists (variant)",
                 use:
-                    "These are tables for generating an interesting snake cultists to serve as foe or foil to your PCs, from slithering assassins to mad, venom-spitting zealots.",
+                "These are tables for generating an interesting snake cultists to serve as foe or foil to your PCs, from slithering assassins to mad, venom-spitting zealots.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -566,7 +566,7 @@ top.menu = [
             {
                 title: "Mercenary Troops",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "factions/d12themercenarytroopscolorsare",
                     "factions/d20themercenarytroopsbannerfeatures",
@@ -584,7 +584,7 @@ top.menu = [
             {
                 title: "- Individual Mercenary",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -602,7 +602,7 @@ top.menu = [
             },
             {
                 title:
-                    "Merchant Guild (with 1d4 company, 6d6 shopkeeper, 6d6 merchants)",
+                "Merchant Guild (with 1d4 company, 6d6 shopkeeper, 6d6 merchants)",
                 use: "Use the tables to roll randomly",
                 main_rolls: [
                     "factions/d8theguildiscontrolledby",
@@ -695,7 +695,7 @@ top.menu = [
             {
                 title: "Noble House (with 6d6 nobles)",
                 use:
-                    "Use these tables for inspiration or roll them up randomly, some of the tables could be rolled more than once.",
+                "Use these tables for inspiration or roll them up randomly, some of the tables could be rolled more than once.",
                 main_rolls: [
                     "factions/d6thehouseis",
                     "factions/d20thehousescolorsare",
@@ -712,7 +712,7 @@ top.menu = [
             {
                 title: "- Individual Noble",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -791,7 +791,7 @@ top.menu = [
             {
                 title: "Pirate Crew (with 6d6 pirates)",
                 use:
-                    "Use these for inspiration or roll them up randomly, some of the tables could be rolled more than once.",
+                "Use these for inspiration or roll them up randomly, some of the tables could be rolled more than once.",
                 main_rolls: [
                     "factions/d10thepiratesshipis",
                     "factions/d8presentlythepiratesshipis",
@@ -823,7 +823,7 @@ top.menu = [
             {
                 title: "Savage Horde (with 6d6 barbarians)",
                 use:
-                    "Use these for inspiration or roll them up randomly. Some of the tables could be rolled more than once.",
+                "Use these for inspiration or roll them up randomly. Some of the tables could be rolled more than once.",
                 main_rolls: [
                     "factions/d6thebarbariansare",
                     "factions/d6thebarbarianstravel",
@@ -840,7 +840,7 @@ top.menu = [
             {
                 title: "- Individual Barbarians",
                 use:
-                    "Use these for inspiration or roll them up randomly. Some of the tables could be rolled more than once.",
+                "Use these for inspiration or roll them up randomly. Some of the tables could be rolled more than once.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -858,7 +858,7 @@ top.menu = [
             {
                 title: "Secret Society",
                 use:
-                    "Use these for inspiration or roll them up randomly. Some tables could be rolled more than once.",
+                "Use these for inspiration or roll them up randomly. Some tables could be rolled more than once.",
                 main_rolls: [
                     "factions/d6thesocietysmaingoalisto",
                     "factions/d12thesocietyisledby",
@@ -876,7 +876,7 @@ top.menu = [
             {
                 title: "Urban Gangs",
                 use:
-                    "Use these for inspiration or roll them up randomly, some of the tables could be rolled more than once.",
+                "Use these for inspiration or roll them up randomly, some of the tables could be rolled more than once.",
                 main_rolls: [
                     "factions/d8thegangsmoneymakingschemesinclude",
                     "factions/d20thegangscolorsare",
@@ -896,7 +896,7 @@ top.menu = [
             {
                 title: "Watchmen (with 4d4 investigators and 6d6 guards)",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "factions/d12thewatchscolorsare",
                     "factions/d12thewatchssymbolis",
@@ -938,7 +938,7 @@ top.menu = [
             },
         ],
     },
-
+    
     {
         title: "Food",
         id: "Food",
@@ -946,7 +946,7 @@ top.menu = [
             {
                 title: "Breakfast at a City Café",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "food/d12thismorningatacitycafewebreakourfaston",
                     "food/d6withcc",
@@ -962,7 +962,7 @@ top.menu = [
             {
                 title: "Breakfast at a Traveler's Inn",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "food/d12thismorningatatravelersinnwebreakourfaston",
                     "food/d10tiwith",
@@ -976,7 +976,7 @@ top.menu = [
             {
                 title: "Dinner among Desert Nomads",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "food/d8tonightamongdesertnomadswedineon_nomads",
                     "food/d12_nomads",
@@ -990,7 +990,7 @@ top.menu = [
             {
                 title: "Dinner among Easterlings",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "food/d10tonightamongeasterlingswedineon_easterlings",
                     "food/d12_easterlings",
@@ -1005,7 +1005,7 @@ top.menu = [
             {
                 title: "Dinner among Islanders",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "food/d10tonightamongislanderswedineon_islanders",
                     "food/d20_islanders",
@@ -1019,7 +1019,7 @@ top.menu = [
             {
                 title: "Dinner among Jungle Dwellers",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "food/d12tonightamongjungledwellerswedineon_dajd",
                     "food/d12_dajd",
@@ -1033,7 +1033,7 @@ top.menu = [
             {
                 title: "Dinner among Swampfolk",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "food/d12tonightamongswampfolkwedineon_swampfolk",
                     "food/d20_swampfolk",
@@ -1047,7 +1047,7 @@ top.menu = [
             {
                 title: "Dinner around the Campfire",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "food/d10tonightaroundthecampfirewedineon",
                     "food/d10cf",
@@ -1061,7 +1061,7 @@ top.menu = [
             {
                 title: "Dinner in a Country Inn",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "food/d10tonightatacountryinnwedineon",
                     "food/d12ci",
@@ -1075,7 +1075,7 @@ top.menu = [
             {
                 title: "Dinner in a Dockside Tavern",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "food/d10tonightatadocksidetavernwedineon",
                     "food/d20dock",
@@ -1089,7 +1089,7 @@ top.menu = [
             {
                 title: "Dinner in a Dwarvish Alehouse",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "food/d12tonightinadwarvishalehousewedineon",
                     "food/d12dwarven",
@@ -1104,7 +1104,7 @@ top.menu = [
             {
                 title: "Dinner in an Elvish Dwelling",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "food/d8tonightinanelvishdwellingwedineon",
                     "food/d12el",
@@ -1119,7 +1119,7 @@ top.menu = [
             {
                 title: "Dinner in a Goblin Hideout",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "food/d10tonightinagoblinhideoutwedineon_goblinhideout",
                     "food/d10_goblinhideout",
@@ -1133,7 +1133,7 @@ top.menu = [
             {
                 title: "Dinner in a Hunters' Lodge",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "food/d10tonightatahunterslodgewedineon",
                     "food/d20hl",
@@ -1147,7 +1147,7 @@ top.menu = [
             {
                 title: "Dinner in a Mages' Academy Dining Hall",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "food/d8tonightinthemagesacademydininghallwedineon_magesacademy",
                     "food/d12_magesacademy",
@@ -1161,7 +1161,7 @@ top.menu = [
             {
                 title: "Dinner in a Mining Town Pub",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "food/d10tonightataminingtownpubwedineon",
                     "food/d10mt",
@@ -1175,7 +1175,7 @@ top.menu = [
             {
                 title: "Dinner in an Orkish Camp",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "food/d12tonightinanorkishcampwedineon_orkishcamp",
                     "food/d20_orkishcamp",
@@ -1189,7 +1189,7 @@ top.menu = [
             {
                 title: "Dinner in a Seaside Café",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "food/d10tonightataseasidecafewedineon_seasidecafe",
                     "food/d20_seasidecafe",
@@ -1204,7 +1204,7 @@ top.menu = [
             {
                 title: "Dinner in an Undead Feasthall",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "food/d12tonightinanundeadfeasthallwedineon_undeadfeast",
                     "food/d20_undeadfeast",
@@ -1218,7 +1218,7 @@ top.menu = [
             {
                 title: "Dinner in a Witch's Hovel",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "food/d12tonightinawitchshovelwedineon_witcheshovel",
                     "food/d20_witcheshovel",
@@ -1233,7 +1233,7 @@ top.menu = [
             {
                 title: "Exotic Fruits and Vegetables",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "food/d6size_exoticfruitsandvegetables",
                     "food/d8grows_exoticfruitsandvegetables",
@@ -1257,7 +1257,7 @@ top.menu = [
             {
                 title: "Fishing in a Cold Ocean",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "objects/d10nearshorecatchyouhaulin",
                     "objects/d10deepseacatchyouhaulin",
@@ -1268,7 +1268,7 @@ top.menu = [
             {
                 title: "Fishing in a Warm Ocean",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "objects/d8nearshorecatchyouhaulin",
                     "objects/d10deepseacatchyouhaulin",
@@ -1279,7 +1279,7 @@ top.menu = [
             {
                 title: "Fishing in Freshwater",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "objects/d10coldwatercatchyouhaulin",
                     "objects/d10warmwatercatchyouhaulin",
@@ -1290,14 +1290,14 @@ top.menu = [
             {
                 title: "Fishing, Seafood Harvesting",
                 use:
-                    "To harvest seafood the player must have a hunting trap, and must succeed on a skill check vs a DC 12. If he or she has proficiency in Survival then the player can make this check with advantage. The player can only harvest their traps after 24 hours have passed.",
+                "To harvest seafood the player must have a hunting trap, and must succeed on a skill check vs a DC 12. If he or she has proficiency in Survival then the player can make this check with advantage. The player can only harvest their traps after 24 hours have passed.",
                 main_rolls: ["objects/d12seafood"],
                 sub_rolls: [],
             },
             {
                 title: "Foraging, Plants",
                 use:
-                    "First check if player meets DC for the type of plant, this is the format: Plant/Spring and Summer DC/Autumn DC/Winter DC.\n\nBerries/10/14/30, Plants/10/14/25, Fruit/10/14/30, Mushroom/12/16/30, Root/11/15/22",
+                "First check if player meets DC for the type of plant, this is the format: Plant/Spring and Summer DC/Autumn DC/Winter DC.\n\nBerries/10/14/30, Plants/10/14/25, Fruit/10/14/30, Mushroom/12/16/30, Root/11/15/22",
                 main_rolls: [
                     "objects/1d10edibleberries",
                     "objects/1d10edibleplants",
@@ -1311,7 +1311,7 @@ top.menu = [
             {
                 title: "Hunting",
                 use:
-                    "The player must hunt for a minimum of 4 hours. If he has proficiency in Survival or Stealth, the player can roll with advantage on the following chart to see if any prey wanders by.",
+                "The player must hunt for a minimum of 4 hours. If he has proficiency in Survival or Stealth, the player can roll with advantage on the following chart to see if any prey wanders by.",
                 main_rolls: [
                     "objects/d10plains",
                     "objects/d10jungleswamp",
@@ -1325,7 +1325,7 @@ top.menu = [
             {
                 title: "Street Food",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "food/d6varietiesthisdishis",
                     "food/d4flavorthisdishis",
@@ -1350,7 +1350,7 @@ top.menu = [
             {
                 title: "Wines",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "food/d10thiswinewasmadein",
                     "food/d10thewineis",
@@ -1365,7 +1365,7 @@ top.menu = [
             },
         ],
     },
-
+    
     {
         title: "Magic",
         id: "Magic",
@@ -1373,14 +1373,14 @@ top.menu = [
             {
                 title: "Random Magical Items",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: ["objects/d49magicalitems"],
                 sub_rolls: [],
             },
             {
                 title: "Altar, Holy",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "objects/d10thealtarchamberislitby_altarholy",
                     "objects/d10uponapproachingthealtaryoufeel_altarholy",
@@ -1395,7 +1395,7 @@ top.menu = [
             {
                 title: "Altar, Unholy",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "objects/d10thealtarchamberislitby_altarunholy",
                     "objects/d10uponapproachingthealtaryoufeel_altarunholy",
@@ -1410,7 +1410,7 @@ top.menu = [
             {
                 title: "Bag of Holding Details",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "magic/d20theitemappearstobemadeof_bagofholding",
                     "magic/d10theitemisof___origin_bagofholding",
@@ -1433,7 +1433,7 @@ top.menu = [
             {
                 title: "Heward's Handy Haversack Details",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "magic/d20theitemappearstobemadeof_bagofholding",
                     "magic/d10theitemisof___origin_bagofholding",
@@ -1456,7 +1456,7 @@ top.menu = [
             {
                 title: "Divination/Visions",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "plots/d10rollthetarget",
                     "plots/d10rollsubject",
@@ -1469,7 +1469,7 @@ top.menu = [
             {
                 title: "Herb Lore",
                 use:
-                    "This is far from complete, and there are some awesome resources out there. I might expand it in the future, but for now, it should serve for quickly coming up with a little mechanics-free herb lore for a druid, herbalist, or healer-type NPC in your game.\nFor side effects and mishaps, I might refer to the Alchemical Mishaps table in the absence of something better.",
+                "This is far from complete, and there are some awesome resources out there. I might expand it in the future, but for now, it should serve for quickly coming up with a little mechanics-free herb lore for a druid, herbalist, or healer-type NPC in your game.\nFor side effects and mishaps, I might refer to the Alchemical Mishaps table in the absence of something better.",
                 main_rolls: [
                     "objects/d12theherbalconcoctionwillhelp",
                     "objects/d10theherbalconcoctionis",
@@ -1483,7 +1483,7 @@ top.menu = [
             {
                 title: "Legendary Weapons",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "objects/d8theweaponis",
                     "objects/d12thebladeismadeof",
@@ -1498,7 +1498,7 @@ top.menu = [
             {
                 title: "Magical Diseases",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "magic/d20themagicaldiseaseisassociatedwith_magicalmaladies",
                 ],
@@ -1507,7 +1507,7 @@ top.menu = [
             {
                 title: "Magical Mishaps",
                 use:
-                    "Stored spell mishaps may not render the device inoperable, merely discharged. But the stored spell must be replaced. If you have sufficient understanding of the device, you can spend one hour repairing it after a stored spell mishap has occurred. You must be able to cast the stored spell (or an appropriate replacement for it) and expend a spell slot of appropriate level in order to do so (DM's discretion). I would use this table for random scroll-scribing mishaps. \nAlchemical Mishaps do not render the device inoperable. However, no one can attempt to operate the device again until its alchemical component has been replaced with the appropriate alchemical item or potion. Results 13-20 on the Alchemical Mishaps table do significant damage to the device, rendering it inoperable. If you have sufficient understanding of the device, you can spend one hour (or longer) repairing it after a damaging alchemical mishap has occurred. You might need appropriate tools, need to use an appropriate alchemical item or potion, need to expend a spell slot, or replace mechanical parts.\nA mechanical mishap renders the device inoperable until it is repaired. Repairing the device takes one hour (or longer). You might need appropriate tools, need access to special materials, or need to expend a spell slot.",
+                "Stored spell mishaps may not render the device inoperable, merely discharged. But the stored spell must be replaced. If you have sufficient understanding of the device, you can spend one hour repairing it after a stored spell mishap has occurred. You must be able to cast the stored spell (or an appropriate replacement for it) and expend a spell slot of appropriate level in order to do so (DM's discretion). I would use this table for random scroll-scribing mishaps. \nAlchemical Mishaps do not render the device inoperable. However, no one can attempt to operate the device again until its alchemical component has been replaced with the appropriate alchemical item or potion. Results 13-20 on the Alchemical Mishaps table do significant damage to the device, rendering it inoperable. If you have sufficient understanding of the device, you can spend one hour (or longer) repairing it after a damaging alchemical mishap has occurred. You might need appropriate tools, need to use an appropriate alchemical item or potion, need to expend a spell slot, or replace mechanical parts.\nA mechanical mishap renders the device inoperable until it is repaired. Repairing the device takes one hour (or longer). You might need appropriate tools, need access to special materials, or need to expend a spell slot.",
                 main_rolls: [
                     "objects/d6magicaldevicemishaps",
                     "objects/d20storedspellmishaps",
@@ -1519,28 +1519,28 @@ top.menu = [
             {
                 title: "- Alchemical Mishaps",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: ["objects/d20alchemicalmishaps"],
                 sub_rolls: [],
             },
             {
                 title: "- Device Mishaps",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: ["objects/d6magicaldevicemishaps"],
                 sub_rolls: [],
             },
             {
                 title: "- Scroll Scribing Mishaps",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: ["objects/d20storedspellmishaps"],
                 sub_rolls: [],
             },
             {
                 title: "Magic Shops",
                 use:
-                    "Is there a magic shop in town? - every PC ever, entering any town ever, no matter how small the town is, the players will want to know if they can buy cool magical shit. and sometimes you just havent thought that out, so here is a quick way for you to answer\n\n... yes! ",
+                "Is there a magic shop in town? - every PC ever, entering any town ever, no matter how small the town is, the players will want to know if they can buy cool magical shit. and sometimes you just havent thought that out, so here is a quick way for you to answer\n\n... yes! ",
                 main_rolls: [
                     "settlements/d10thenameoftheshopis",
                     "settlements/d20theshopislocated",
@@ -1554,7 +1554,7 @@ top.menu = [
             {
                 title: "Magic Wands",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "objects/d8thewandstipis",
                     "objects/d8thewandsshaftis",
@@ -1567,21 +1567,21 @@ top.menu = [
             {
                 title: "Pantheon (with 1d12 gods and 6d6 relationships)",
                 use:
-                    "Suggested Method I:\n\nRoll 1d12 to determine the number of deities in the pantheon.\nRoll 1d12 for each deity to determine the deity’s type. If the same number comes up twice, keep it, but choose different aspects.\nRoll for features for each deity in the pantheon and give him/her a name.\nEstablish a few relationships among the deities: love, hatred, rivalry, friendship, parentage, etc.\n\nSuggested Method II:\n\nChoose the deities and features you like from the lists.\nAdd some deities or features of your own.\nName the deities.\nEstablish a few relationships among the deities: love, hatred, rivalry, friendship, parentage, etc.",
+                "Suggested Method I:\n\nRoll 1d12 to determine the number of deities in the pantheon.\nRoll 1d12 for each deity to determine the deity’s type. If the same number comes up twice, keep it, but choose different aspects.\nRoll for features for each deity in the pantheon and give him/her a name.\nEstablish a few relationships among the deities: love, hatred, rivalry, friendship, parentage, etc.\n\nSuggested Method II:\n\nChoose the deities and features you like from the lists.\nAdd some deities or features of your own.\nName the deities.\nEstablish a few relationships among the deities: love, hatred, rivalry, friendship, parentage, etc.",
                 main_rolls: [],
                 sub_rolls: ["subrolls/1d12gods", "subrolls/3d6relationships"],
             },
             {
                 title: "- Select Deities",
                 use:
-                    "For the number of deities in the previous step, roll this item that amount of times.",
+                "For the number of deities in the previous step, roll this item that amount of times.",
                 main_rolls: ["objects/d12yourdeityis"],
                 sub_rolls: [],
             },
             {
                 title: "- Relationships",
                 use:
-                    "Roll these tables as often as you like to build a webs of relationships among the deities and with their followers.",
+                "Roll these tables as often as you like to build a webs of relationships among the deities and with their followers.",
                 main_rolls: [
                     "objects/d10intrapantheonrelationshipsthisdeityisthe_____ofthatdeity",
                     "objects/d6thegodsare",
@@ -1592,7 +1592,7 @@ top.menu = [
             {
                 title: "Poisons",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "objects/d20thepoisonwillcauseorinduce",
                     "objects/d12thepoisonis",
@@ -1606,7 +1606,7 @@ top.menu = [
             {
                 title: "Potions",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "objects/d10titlethisisa",
                     "objects/d100effectthepotionsmaineffectis",
@@ -1624,7 +1624,7 @@ top.menu = [
             },
         ],
     },
-
+    
     {
         title: "Monsters",
         id: "Monsters",
@@ -1632,7 +1632,7 @@ top.menu = [
             {
                 title: "Animal - Bat",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "monsters/d6sizethebatis_bats",
                     "monsters/d10furcolorwitha_bats",
@@ -1649,7 +1649,7 @@ top.menu = [
             {
                 title: "Animal - Cat",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "monsters/d6sizethecatis_cats",
                     "monsters/d12coatthecatscoatis_cats",
@@ -1665,7 +1665,7 @@ top.menu = [
             {
                 title: "Animal - Horse",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "monsters/d8breedvarietythehorseis_horses",
                     "monsters/d8genderandagethehorseis_horses",
@@ -1683,7 +1683,7 @@ top.menu = [
             {
                 title: "Animal - Monkeys",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "monsters/d12themonkeysnameis_monkeys",
                     "monsters/d12mostofthemonkeysfuris_monkeys",
@@ -1696,7 +1696,7 @@ top.menu = [
             {
                 title: "Animal - Rats",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "monsters/d6sizetheratis_rats",
                     "monsters/d10colortheratsfuris_rats",
@@ -1713,7 +1713,7 @@ top.menu = [
             {
                 title: "Animal - Spiders",
                 use:
-                    "These are some tables for giving spiders some flavor. Mmmm, tasty spiders…",
+                "These are some tables for giving spiders some flavor. Mmmm, tasty spiders…",
                 main_rolls: [
                     "monsters/d8colorthespideris",
                     "monsters/d8markingsthespiderhas",
@@ -1728,7 +1728,7 @@ top.menu = [
             {
                 title: "Animal - Wolves",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "monsters/d10colorthewolfscoatis",
                     "monsters/d10markingsthewolfhas",
@@ -1744,7 +1744,7 @@ top.menu = [
             {
                 title: "Beast - Aberrant",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "monsters/d12theaberrantbeastlooksagoodbitlike_aberrantbeasts",
                     "monsters/d8thebeasthas_aberrantbeasts",
@@ -1756,7 +1756,7 @@ top.menu = [
             {
                 title: "Beast - Celestial",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "monsters/d12thecelestialbeastappearsintheformof_celestialbeast",
                     "monsters/d8thebeasthas_celestialbeast",
@@ -1768,7 +1768,7 @@ top.menu = [
             {
                 title: "Beast - Demonic",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "monsters/d12thedemonicbeastappearsintheformof_demonicbeast",
                     "monsters/d8thebeasthas_demonicbeast",
@@ -1780,7 +1780,7 @@ top.menu = [
             {
                 title: "Beast - Fey",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "monsters/d12thefeybeastis_feybeast",
                     "monsters/d6thebeasthas_feybeast",
@@ -1792,7 +1792,7 @@ top.menu = [
             {
                 title: "Beast - Fire",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "monsters/d12thefirebeastis_beast-fire",
                     "monsters/d8thebeasthas_beast-fire",
@@ -1804,7 +1804,7 @@ top.menu = [
             {
                 title: "Beast - Infernal",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "monsters/d12theinfernalbeastappearsintheformof_infernalbeast",
                     "monsters/d8thebeasthas_infernalbeast",
@@ -1816,7 +1816,7 @@ top.menu = [
             {
                 title: "Beast - Legendary",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "monsters/d20thelegendarybeastis_legendarybeast",
                     "monsters/d10thebeasthas_legendarybeast",
@@ -1827,7 +1827,7 @@ top.menu = [
             {
                 title: "Beast - Sea",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "monsters/d12theseabeastis_seabeast",
                     "monsters/d8thebeasthas_seabeast",
@@ -1839,7 +1839,7 @@ top.menu = [
             {
                 title: "Beast - Shadow",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "monsters/d12theshadowbeastis_shadowbeast",
                     "monsters/d8thebeasthas_shadowbeast",
@@ -1851,7 +1851,7 @@ top.menu = [
             {
                 title: "Beast - Storm",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "monsters/d12thestormbeastis_stormbeast",
                     "monsters/d8thebeasthas_stormbeast",
@@ -1863,7 +1863,7 @@ top.menu = [
             {
                 title: "Beast - Undead",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "monsters/d12theundeadbeastwasonce_undeadbeast",
                     "monsters/d8thebeasthas_undeadbeast",
@@ -1875,7 +1875,7 @@ top.menu = [
             {
                 title: "Beast - Winter",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "monsters/d12thewinterbeastis_winterbeast",
                     "monsters/d8thebeasthas_winterbeast",
@@ -1887,7 +1887,7 @@ top.menu = [
             {
                 title: "Cult (with 6d6 cultists)",
                 use:
-                    "Use these tables for inspiration or roll them randomly. Some of the tables could be rolled more than once.",
+                "Use these tables for inspiration or roll them randomly. Some of the tables could be rolled more than once.",
                 main_rolls: [
                     "factions/d12thecultistsrevere",
                     "factions/d10thecultistsmeetin",
@@ -1903,7 +1903,7 @@ top.menu = [
             {
                 title: "- Individual Cultist",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "factions/d6thecultist",
                     "factions/d10thecultistwears",
@@ -1916,7 +1916,7 @@ top.menu = [
             {
                 title: "- Snake Cultists (variant)",
                 use:
-                    "These are tables for generating an interesting snake cultists to serve as foe or foil to your PCs, from slithering assassins to mad, venom-spitting zealots.",
+                "These are tables for generating an interesting snake cultists to serve as foe or foil to your PCs, from slithering assassins to mad, venom-spitting zealots.",
                 main_rolls: [
                     "monsters/d10professionthecultistis",
                     "monsters/d12scalyobsessionthecultistisparticularlyfondoforfearfulof",
@@ -1929,7 +1929,7 @@ top.menu = [
             {
                 title: "Dragons",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "monsters/d4agethedragonisa",
                     "monsters/d10colourthedragoniscoloured",
@@ -1947,7 +1947,7 @@ top.menu = [
             {
                 title: "Faeriefolk",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "monsters/d12thefaerieis",
                     "monsters/d20hairthefaeriehas",
@@ -1961,7 +1961,7 @@ top.menu = [
             {
                 title: "Fiends",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "monsters/d12statusrankthefiendis_fiends",
                     "monsters/d12skinthefiendsskinis_fiends",
@@ -1982,7 +1982,7 @@ top.menu = [
             {
                 title: "Goblin Gang (with 6d6 goblins)",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "monsters/d10thegoblinsprimarybusinessinvolves",
                     "monsters/d10thegoblingangssymbolis",
@@ -2015,7 +2015,7 @@ top.menu = [
             {
                 title: "Golems",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "monsters/d12thegolemis_golems",
                     "monsters/d100andmadeof_golems",
@@ -2033,7 +2033,7 @@ top.menu = [
             {
                 title: "Kobolds",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "monsters/d20thiskoboldis_kobolds",
                     "monsters/d12thekoboldisparticularlyskilledat_kobolds",
@@ -2048,7 +2048,7 @@ top.menu = [
             {
                 title: "Lizardfolk",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "monsters/d8coloringthelizardolksscalesare",
                     "monsters/d8mannerismthelizardfolkhas",
@@ -2060,7 +2060,7 @@ top.menu = [
             },
             {
                 title:
-                    "Lycanthrope Pack (with 6d6 lycanthropes, 1d4 uncommon lycanthropes)",
+                "Lycanthrope Pack (with 6d6 lycanthropes, 1d4 uncommon lycanthropes)",
                 use: "Use the tables to roll randomly",
                 main_rolls: [
                     "monsters/d8thepackis",
@@ -2076,7 +2076,7 @@ top.menu = [
             {
                 title: "- Lycanthropes",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "monsters/d12thebeastshiftertransformsinto",
                     "monsters/d6thebeastshiftertransformsinvoluntarily",
@@ -2111,7 +2111,7 @@ top.menu = [
             {
                 title: "Merfolk",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "monsters/d6haircolorthemerfolk’shairis_merfolk",
                     "monsters/d6scalecolorthemerfolk’sscalesare_merfolk",
@@ -2127,7 +2127,7 @@ top.menu = [
             {
                 title: "Mutant Creature",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "monsters/d10themutantcreatureisa_mutantcreature",
                     "monsters/d10_mutantcreature",
@@ -2140,7 +2140,7 @@ top.menu = [
             {
                 title: "Ogre",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "monsters/d6hairtheogre’shairis_ogre",
                     "monsters/d6eyestheogre’seyesare_ogre",
@@ -2156,7 +2156,7 @@ top.menu = [
             {
                 title: "Oozes",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "monsters/d20colortheoozeis_oozes",
                     "monsters/d20consistencytheoozeis_oozes",
@@ -2169,7 +2169,7 @@ top.menu = [
             {
                 title: "Orkish Clan (with 1 warlord, 6d6 orcs)",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "monsters/d12theorcsare",
                     "monsters/d12theorcsvalue",
@@ -2191,7 +2191,7 @@ top.menu = [
             {
                 title: "- Orc Warlord",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "monsters/d4racethisorcisa",
                     "monsters/d10skintheyhaveskincoloured",
@@ -2222,7 +2222,7 @@ top.menu = [
             {
                 title: "Serial killers",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -2245,7 +2245,7 @@ top.menu = [
             {
                 title: "Treefolk",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "monsters/d8thetreepersonis",
                     "monsters/d12appearancethetreepersoncouldbedescribedas",
@@ -2259,7 +2259,7 @@ top.menu = [
             {
                 title: "Undead",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "monsters/d20thepersonwas",
                     "monsters/d20thepersondiedfrom",
@@ -2272,7 +2272,7 @@ top.menu = [
             {
                 title: "- Corporeal Undead",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "monsters/d10thepersonsspiritis",
                     "monsters/d6thecreaturemoves",
@@ -2283,7 +2283,7 @@ top.menu = [
             {
                 title: "- Incorporeal Undead",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "monsters/d10thespiritis",
                     "monsters/d6thespiritmoves",
@@ -2294,7 +2294,7 @@ top.menu = [
             {
                 title: "Vampires",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "monsters/d12inlifethevampirewas",
                     "monsters/d12oftenthevampireposesas",
@@ -2318,7 +2318,7 @@ top.menu = [
             {
                 title: "Warlock",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "monsters/d20racethewarlockis_warlock",
                     "monsters/d6pactthewarlockgainstheirpowerfrom_warlock",
@@ -2332,7 +2332,7 @@ top.menu = [
             {
                 title: "Witches",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "monsters/d20thewitchis",
                     "monsters/d10thewitchlearnedhercraftfrom",
@@ -2352,7 +2352,7 @@ top.menu = [
             {
                 title: "- Familiar",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "monsters/d12thewitchsfamiliaris",
                     "monsters/d12thewitchsfamiliarsmanneris",
@@ -2362,14 +2362,14 @@ top.menu = [
             {
                 title: "Wolf Pack (with 4d6 wolves)",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: ["monsters/d10habitatthistypeofwolfevolvedtothrive"],
                 sub_rolls: ["subrolls/4d6wolves"],
             },
             {
                 title: "- Individual Wolves",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "monsters/d10colorthewolfscoatis",
                     "monsters/d10markingsthewolfhas",
@@ -2384,7 +2384,7 @@ top.menu = [
             },
         ],
     },
-
+    
     {
         title: "NPCs",
         id: "NPCs",
@@ -2431,7 +2431,7 @@ top.menu = [
             {
                 title: "Random Player Character (5E)",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -2445,7 +2445,7 @@ top.menu = [
             {
                 title: "Random NPC Names",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -2456,7 +2456,7 @@ top.menu = [
             {
                 title: "Random NPC Traits I - Motivations",
                 use:
-                    "Use these tables for quick inspiration or roll them up randomly.  A random NPC may not have one or more of the details, pick and choose what you want.",
+                "Use these tables for quick inspiration or roll them up randomly.  A random NPC may not have one or more of the details, pick and choose what you want.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -2476,7 +2476,7 @@ top.menu = [
             {
                 title: "Random NPC Traits II - Appearance",
                 use:
-                    "Use these tables for quick inspiration or roll them up randomly.  A random NPC may not have one or more of the details, pick and choose what you want.",
+                "Use these tables for quick inspiration or roll them up randomly.  A random NPC may not have one or more of the details, pick and choose what you want.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -2504,7 +2504,7 @@ top.menu = [
             {
                 title: "Alchemists",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -2523,7 +2523,7 @@ top.menu = [
             {
                 title: "Apprentice Crafter",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -2536,7 +2536,7 @@ top.menu = [
             {
                 title: "Artisan",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -2555,7 +2555,7 @@ top.menu = [
             {
                 title: "Assassins",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -2574,7 +2574,7 @@ top.menu = [
             {
                 title: "Barbarians",
                 use:
-                    "Use these for inspiration or roll them up randomly. Some of the tables could be rolled more than once.",
+                "Use these for inspiration or roll them up randomly. Some of the tables could be rolled more than once.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -2592,7 +2592,7 @@ top.menu = [
             {
                 title: "Bards",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -2619,7 +2619,7 @@ top.menu = [
             {
                 title: "Castle - Archer",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -2633,7 +2633,7 @@ top.menu = [
             {
                 title: "Castle - Armorer/Smith",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -2647,7 +2647,7 @@ top.menu = [
             {
                 title: "Castle - Boyer/Fletcher",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -2661,7 +2661,7 @@ top.menu = [
             {
                 title: "Castle - Chaplain",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -2675,7 +2675,7 @@ top.menu = [
             {
                 title: "Castle - Cook",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -2688,7 +2688,7 @@ top.menu = [
             {
                 title: "Castle - Fool/Jester",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -2702,7 +2702,7 @@ top.menu = [
             {
                 title: "Castle - Guard Captain",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -2717,7 +2717,7 @@ top.menu = [
             {
                 title: "Castle - Guard",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -2731,7 +2731,7 @@ top.menu = [
             {
                 title: "Castle - Horsemaster",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -2745,7 +2745,7 @@ top.menu = [
             {
                 title: "Castle - Huntsman",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -2760,7 +2760,7 @@ top.menu = [
             {
                 title: "Castle - Kennelmaster",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -2774,7 +2774,7 @@ top.menu = [
             {
                 title: "Castle - Knight",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -2788,7 +2788,7 @@ top.menu = [
             {
                 title: "Castle - Nobleman",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxsurname",
@@ -2807,7 +2807,7 @@ top.menu = [
             {
                 title: "Castle - Noblewoman",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxfemalefirstname",
                     "npcs/dxsurname",
@@ -2826,7 +2826,7 @@ top.menu = [
             {
                 title: "Castle - Servant",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -2840,7 +2840,7 @@ top.menu = [
             {
                 title: "Castle - Squire/Valet",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -2854,7 +2854,7 @@ top.menu = [
             {
                 title: "Castle - Stable Hand",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -2868,7 +2868,7 @@ top.menu = [
             {
                 title: "Castle - Steward",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -2882,7 +2882,7 @@ top.menu = [
             {
                 title: "Castle - Tutor/Sage",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -2896,7 +2896,7 @@ top.menu = [
             {
                 title: "Cultist",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -2912,7 +2912,7 @@ top.menu = [
             {
                 title: "Cultists, snake",
                 use:
-                    "These are tables for generating an interesting snake cultists to serve as foe or foil to your PCs, from slithering assassins to mad, venom-spitting zealots.",
+                "These are tables for generating an interesting snake cultists to serve as foe or foil to your PCs, from slithering assassins to mad, venom-spitting zealots.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -2928,7 +2928,7 @@ top.menu = [
             {
                 title: "Druids",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -2950,7 +2950,7 @@ top.menu = [
             {
                 title: "Dwarves",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -2966,7 +2966,7 @@ top.menu = [
             {
                 title: "Elves, Dark",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -2983,7 +2983,7 @@ top.menu = [
             {
                 title: "Elves, High",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -3000,7 +3000,7 @@ top.menu = [
             {
                 title: "Elves, Wood",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -3017,7 +3017,7 @@ top.menu = [
             {
                 title: "Farmfolk",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -3031,7 +3031,7 @@ top.menu = [
             {
                 title: "Fishermen",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -3049,7 +3049,7 @@ top.menu = [
             {
                 title: "Gladiators",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -3067,7 +3067,7 @@ top.menu = [
             {
                 title: "Gnomes",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -3086,7 +3086,7 @@ top.menu = [
             {
                 title: "Graverobbers",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -3131,7 +3131,7 @@ top.menu = [
             {
                 title: "Halflings",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -3150,7 +3150,7 @@ top.menu = [
             {
                 title: "Healers",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -3166,7 +3166,7 @@ top.menu = [
             {
                 title: "Harlots",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -3183,7 +3183,7 @@ top.menu = [
             {
                 title: "Knights",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -3205,7 +3205,7 @@ top.menu = [
             {
                 title: "- Servants",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -3219,7 +3219,7 @@ top.menu = [
             {
                 title: "Merchant Caravan (with 3d6 members)",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/d6thecaravanis_merchantcaravan",
                     "npcs/d8thecaravan’spackanimalsare_merchantcaravan",
@@ -3231,7 +3231,7 @@ top.menu = [
             {
                 title: "Merchants - Animal Handler/Porter",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -3245,7 +3245,7 @@ top.menu = [
             {
                 title: "Merchants - Caravan Master",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -3260,7 +3260,7 @@ top.menu = [
             {
                 title: "Merchants - Caravan Owner/Merchant",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -3276,7 +3276,7 @@ top.menu = [
             {
                 title: "Merchants - Cook",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -3290,7 +3290,7 @@ top.menu = [
             {
                 title: "Merchants - Guard",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -3304,7 +3304,7 @@ top.menu = [
             {
                 title: "Merchants - Guide",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -3318,7 +3318,7 @@ top.menu = [
             {
                 title: "Merchants - Traveler",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -3332,7 +3332,7 @@ top.menu = [
             {
                 title: "Mercenaries",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -3371,7 +3371,7 @@ top.menu = [
             {
                 title: "Military - Armorer",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -3385,7 +3385,7 @@ top.menu = [
             {
                 title: "Military - Camp Follower",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -3399,7 +3399,7 @@ top.menu = [
             {
                 title: "Military - Cook",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -3411,7 +3411,7 @@ top.menu = [
             {
                 title: "Military - Commander",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -3426,7 +3426,7 @@ top.menu = [
             {
                 title: "Military - Quartermaster",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -3440,7 +3440,7 @@ top.menu = [
             {
                 title: "Military - Scout",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -3454,7 +3454,7 @@ top.menu = [
             {
                 title: "Military - Soldier",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -3468,7 +3468,7 @@ top.menu = [
             {
                 title: "Military - Stable Hand/Squire/Valet",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -3482,7 +3482,7 @@ top.menu = [
             {
                 title: "Miner",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -3498,7 +3498,7 @@ top.menu = [
             {
                 title: "Monk",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -3520,7 +3520,7 @@ top.menu = [
             {
                 title: "Monster Hunter",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -3541,7 +3541,7 @@ top.menu = [
             {
                 title: "Mountains",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "wilderness/d20interestinglocationyoufind_mountains",
                     "wilderness/d20distinguishinglandmarkyousee_mountains",
@@ -3566,7 +3566,7 @@ top.menu = [
             {
                 title: "Necromancer",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -3585,7 +3585,7 @@ top.menu = [
             {
                 title: "- Familiar",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -3598,7 +3598,7 @@ top.menu = [
             {
                 title: "Noble",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -3620,7 +3620,7 @@ top.menu = [
             {
                 title: "Orc Warlord",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "monsters/d4racethisorcisa",
                     "monsters/d10skintheyhaveskincoloured",
@@ -3694,7 +3694,7 @@ top.menu = [
             {
                 title: "Pirate Crew (with 6d6 pirates)",
                 use:
-                    "Use these for inspiration or roll them up randomly, some of the tables could be rolled more than once.",
+                "Use these for inspiration or roll them up randomly, some of the tables could be rolled more than once.",
                 main_rolls: [
                     "factions/d10thepiratesshipis",
                     "factions/d8presentlythepiratesshipis",
@@ -3726,7 +3726,7 @@ top.menu = [
             {
                 title: "Priest",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -3745,7 +3745,7 @@ top.menu = [
             {
                 title: "Princess",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxfemalefirstname",
                     "npcs/dxsurname",
@@ -3765,7 +3765,7 @@ top.menu = [
             {
                 title: "Prison (1d4 jailor, 1d4 torturer, 3d6 prisoner)",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [],
                 sub_rolls: [
                     "subrolls/1d4jailers",
@@ -3776,7 +3776,7 @@ top.menu = [
             {
                 title: "Prison - Jailer",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -3791,7 +3791,7 @@ top.menu = [
             {
                 title: "Prison - Prisoner",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -3805,7 +3805,7 @@ top.menu = [
             {
                 title: "Prison - Torturer",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -3819,7 +3819,7 @@ top.menu = [
             {
                 title: "Ship, Fishing Boat (with 6d6 sailors, 1d4 catch)",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "objects/d6theboatis",
                     "objects/d4theboatcan",
@@ -3831,7 +3831,7 @@ top.menu = [
             {
                 title: "Ship - Sailor",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/d12thesailoris",
                     "npcs/d20tattoothesailorhas",
@@ -3847,7 +3847,7 @@ top.menu = [
             {
                 title: "Seer",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -3866,7 +3866,7 @@ top.menu = [
             {
                 title: "Sellsword",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/d8thesellswordisarmoredin_sellswords",
                     "npcs/d6thesellsword’sarmoris_sellswords",
@@ -3883,7 +3883,7 @@ top.menu = [
             {
                 title: "Serial killer",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -3906,7 +3906,7 @@ top.menu = [
             {
                 title: "Shopkeeper",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -3919,7 +3919,7 @@ top.menu = [
             {
                 title: "Strange People",
                 use:
-                    "A few tables to generate random strange people.\nThe basic structure is supposed to be this:\nX is a AGE + SEX with HAIRTYPE + HAIRCOLOR + HAIRSTYLE and MARK, who’s living HOME + LOCATION.\nX is OCCUPATION + SUBTABLE. People in town RENOWN.\nX is BUILD. A characteristic feature of X is DESCRIPTOR PHYSICAL. X talks SPEECH.\nAll X really wants is to MOTIVE.",
+                "A few tables to generate random strange people.\nThe basic structure is supposed to be this:\nX is a AGE + SEX with HAIRTYPE + HAIRCOLOR + HAIRSTYLE and MARK, who’s living HOME + LOCATION.\nX is OCCUPATION + SUBTABLE. People in town RENOWN.\nX is BUILD. A characteristic feature of X is DESCRIPTOR PHYSICAL. X talks SPEECH.\nAll X really wants is to MOTIVE.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -3944,7 +3944,7 @@ top.menu = [
             {
                 title: "Thief",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -3967,7 +3967,7 @@ top.menu = [
             {
                 title: "Town - Alchemist",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -3981,7 +3981,7 @@ top.menu = [
             {
                 title: "Town - Barkeep/Barmaid",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -3995,7 +3995,7 @@ top.menu = [
             {
                 title: "Town - Criminal",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -4009,7 +4009,7 @@ top.menu = [
             {
                 title: "Town - Law Official",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -4023,7 +4023,7 @@ top.menu = [
             {
                 title: "Town - Noble",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -4037,7 +4037,7 @@ top.menu = [
             {
                 title: "Town - Priest",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -4051,7 +4051,7 @@ top.menu = [
             {
                 title: "Town - Seer",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -4070,7 +4070,7 @@ top.menu = [
             {
                 title: "Town - Smith",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -4084,7 +4084,7 @@ top.menu = [
             {
                 title: "Town - Traveler",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -4097,7 +4097,7 @@ top.menu = [
             {
                 title: "Treasure Hunter",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/d6thetreasurehunteris_treasurehunter",
                     "npcs/d6thetreasurehunterhas_treasurehunter",
@@ -4111,7 +4111,7 @@ top.menu = [
             {
                 title: "Vendor",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -4129,7 +4129,7 @@ top.menu = [
             {
                 title: "Villans",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -4151,7 +4151,7 @@ top.menu = [
             {
                 title: "Warlock",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -4168,7 +4168,7 @@ top.menu = [
             {
                 title: "Witches",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -4191,7 +4191,7 @@ top.menu = [
             {
                 title: "- Familiar",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -4204,7 +4204,7 @@ top.menu = [
             {
                 title: "Woodsmen",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -4220,7 +4220,7 @@ top.menu = [
             },
         ],
     },
-
+    
     {
         title: "Objects",
         id: "Objects",
@@ -4228,7 +4228,7 @@ top.menu = [
             {
                 title: "Additional Starting Equipment",
                 use:
-                    "Down on your luck? Just scrounging together your most precious personal effects to start an adventure? Absolutely desperate to give your Level One urban campaign some flavor from the get-go? Well you've come to the right place: Lined With Eyes Enterprises has the most prodigious collection of loose odds-and-ends for those who can't rely on finding fifty feet of silk rope or a pack of five sunrods.",
+                "Down on your luck? Just scrounging together your most precious personal effects to start an adventure? Absolutely desperate to give your Level One urban campaign some flavor from the get-go? Well you've come to the right place: Lined With Eyes Enterprises has the most prodigious collection of loose odds-and-ends for those who can't rely on finding fifty feet of silk rope or a pack of five sunrods.",
                 main_rolls: [
                     "objects/1d10knives",
                     "objects/1d20personaleffects",
@@ -4239,21 +4239,21 @@ top.menu = [
             {
                 title: "Ales and Wines",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: ["objects/d21ales", "objects/d34wines"],
                 sub_rolls: [],
             },
             {
                 title: "Ancient Musical Instruments",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: ["objects/dxinsturment"],
                 sub_rolls: [],
             },
             {
                 title: "Bookshelf (with 6d6 books)",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "objects/d36thebookshelfisbuiltof…",
                     "objects/d6eachshelfcontains___books",
@@ -4266,7 +4266,7 @@ top.menu = [
             {
                 title: "- Books",
                 use:
-                    "These are tables for adding some flavorful books to any library, study, or treasure hoard... I've expanded each in-line sub-table to d6, so once I get a cheat sheet made, I can throw a d20 and d6 together to generate a topic for a book in a single toss.",
+                "These are tables for adding some flavorful books to any library, study, or treasure hoard... I've expanded each in-line sub-table to d6, so once I get a cheat sheet made, I can throw a d20 and d6 together to generate a topic for a book in a single toss.",
                 main_rolls: [
                     "objects/d20thebookssubjectis",
                     "objects/d10thebooksconditionis",
@@ -4278,7 +4278,7 @@ top.menu = [
             {
                 title: "Coins",
                 use:
-                    "Use these tables to quickly generate interesting coins from pickpocket attempts or treasure hordes. Make those 200 GP interesting in their own right. ",
+                "Use these tables to quickly generate interesting coins from pickpocket attempts or treasure hordes. Make those 200 GP interesting in their own right. ",
                 main_rolls: [
                     "objects/d10material",
                     "objects/d10sizeandshape",
@@ -4293,7 +4293,7 @@ top.menu = [
             {
                 title: "Games",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "objects/d12thisgameisplayedwith_games",
                     "objects/d12inthisgame_games",
@@ -4306,7 +4306,7 @@ top.menu = [
             {
                 title: "- Card Games",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "objects/d8oneachturntheplayer_cardgames",
                     "objects/d8towinthegameaplayermust_cardgames",
@@ -4318,7 +4318,7 @@ top.menu = [
             {
                 title: "- Dice Games",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "objects/d8oneachturntheplayer_dicegames",
                     "objects/d8towinthegameaplayermust_dicegames",
@@ -4330,7 +4330,7 @@ top.menu = [
             {
                 title: "- Board Games",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "objects/d8onatypicalturntheplayer_boardgames",
                     "objects/d8towinthegameaplayermust_boardgames",
@@ -4342,7 +4342,7 @@ top.menu = [
             {
                 title: "Herbalism",
                 use:
-                    "This is far from complete, and there are some awesome resources out there. I might expand it in the future, but for now, it should serve for quickly coming up with a little mechanics-free herb lore for a druid, herbalist, or healer-type NPC in your game.\nFor side effects and mishaps, I might refer to the Alchemical Mishaps table in the absence of something better.",
+                "This is far from complete, and there are some awesome resources out there. I might expand it in the future, but for now, it should serve for quickly coming up with a little mechanics-free herb lore for a druid, herbalist, or healer-type NPC in your game.\nFor side effects and mishaps, I might refer to the Alchemical Mishaps table in the absence of something better.",
                 main_rolls: [
                     "objects/d12theherbalconcoctionwillhelp",
                     "objects/d10theherbalconcoctionis",
@@ -4356,7 +4356,7 @@ top.menu = [
             {
                 title: "Heirloom",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "objects/d8theheirloomisa_heirloom",
                     "objects/d10theheirloomoncebelongedto_heirloom",
@@ -4370,7 +4370,7 @@ top.menu = [
             {
                 title: "Legendary Weapons",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "objects/d8theweaponis",
                     "objects/d12thebladeismadeof",
@@ -4385,7 +4385,7 @@ top.menu = [
             {
                 title: "Magic Wands",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "objects/d8thewandstipis",
                     "objects/d8thewandsshaftis",
@@ -4398,7 +4398,7 @@ top.menu = [
             {
                 title: "Magical Device Mishaps",
                 use:
-                    "Stored spell mishaps may not render the device inoperable, merely discharged. But the stored spell must be replaced. If you have sufficient understanding of the device, you can spend one hour repairing it after a stored spell mishap has occurred. You must be able to cast the stored spell (or an appropriate replacement for it) and expend a spell slot of appropriate level in order to do so (DM's discretion). I would use this table for random scroll-scribing mishaps. \nAlchemical Mishaps do not render the device inoperable. However, no one can attempt to operate the device again until its alchemical component has been replaced with the appropriate alchemical item or potion. Results 13-20 on the Alchemical Mishaps table do significant damage to the device, rendering it inoperable. If you have sufficient understanding of the device, you can spend one hour (or longer) repairing it after a damaging alchemical mishap has occurred. You might need appropriate tools, need to use an appropriate alchemical item or potion, need to expend a spell slot, or replace mechanical parts.\nA mechanical mishap renders the device inoperable until it is repaired. Repairing the device takes one hour (or longer). You might need appropriate tools, need access to special materials, or need to expend a spell slot.",
+                "Stored spell mishaps may not render the device inoperable, merely discharged. But the stored spell must be replaced. If you have sufficient understanding of the device, you can spend one hour repairing it after a stored spell mishap has occurred. You must be able to cast the stored spell (or an appropriate replacement for it) and expend a spell slot of appropriate level in order to do so (DM's discretion). I would use this table for random scroll-scribing mishaps. \nAlchemical Mishaps do not render the device inoperable. However, no one can attempt to operate the device again until its alchemical component has been replaced with the appropriate alchemical item or potion. Results 13-20 on the Alchemical Mishaps table do significant damage to the device, rendering it inoperable. If you have sufficient understanding of the device, you can spend one hour (or longer) repairing it after a damaging alchemical mishap has occurred. You might need appropriate tools, need to use an appropriate alchemical item or potion, need to expend a spell slot, or replace mechanical parts.\nA mechanical mishap renders the device inoperable until it is repaired. Repairing the device takes one hour (or longer). You might need appropriate tools, need access to special materials, or need to expend a spell slot.",
                 main_rolls: [
                     "objects/d6magicaldevicemishaps",
                     "objects/d20storedspellmishaps",
@@ -4410,7 +4410,7 @@ top.menu = [
             {
                 title: "Magical Items",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: ["objects/d49magicalitems"],
                 sub_rolls: [],
             },
@@ -4428,7 +4428,7 @@ top.menu = [
             {
                 title: "Poisons",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "objects/d20thepoisonwillcauseorinduce",
                     "objects/d12thepoisonis",
@@ -4442,7 +4442,7 @@ top.menu = [
             {
                 title: "Potions",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "objects/d10titlethisisa",
                     "objects/d100effectthepotionsmaineffectis",
@@ -4461,7 +4461,7 @@ top.menu = [
             {
                 title: "Traps",
                 use:
-                    "This post should add some helpful insight on what to throw at the adventuring party that doesn’t always check for those pesky tripwires. Since arcane traps and mechanical traps are so different I made two sets of tables for each of them.",
+                "This post should add some helpful insight on what to throw at the adventuring party that doesn’t always check for those pesky tripwires. Since arcane traps and mechanical traps are so different I made two sets of tables for each of them.",
                 main_rolls: [
                     "objects/d10rollmechanicalsource",
                     "objects/d10rollmechanicaltriggered",
@@ -4477,7 +4477,7 @@ top.menu = [
             {
                 title: "Treasure",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "objects/gems",
                     "objects/art",
@@ -4491,7 +4491,7 @@ top.menu = [
             {
                 title: "Treasure Chests",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "objects/d12thechestsstyleis",
                     "objects/d12itsconstructionmaterialis",
@@ -4506,7 +4506,7 @@ top.menu = [
             {
                 title: "Useless Junk",
                 use:
-                    "This is a bunch of stuff that you might find in the basement or cellar of a castle, temple, tavern. You might find crates full of it in an abandoned warehouse or workshop. You might find some of this in boxes in your grandparents' house. You might come across some of it at a second-hand vendor in a flea market. It's pretty much useless stuff.",
+                "This is a bunch of stuff that you might find in the basement or cellar of a castle, temple, tavern. You might find crates full of it in an abandoned warehouse or workshop. You might find some of this in boxes in your grandparents' house. You might come across some of it at a second-hand vendor in a flea market. It's pretty much useless stuff.",
                 main_rolls: [
                     "objects/d100mostlyuselessjunkthecratecontains_uselessjunk",
                 ],
@@ -4514,7 +4514,7 @@ top.menu = [
             },
         ],
     },
-
+    
     {
         title: "Plots",
         id: "Plots",
@@ -4522,14 +4522,14 @@ top.menu = [
             {
                 title: "Battle Events",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: ["plots/d28event…"],
                 sub_rolls: [],
             },
             {
                 title: "Campaign Descriptions",
                 use:
-                    "Use when you start a new campaign/world. Review 1 campaign theme, and 5 off of the adjectives below to describe your campaign.  Re-roll for different theme or adjectives.",
+                "Use when you start a new campaign/world. Review 1 campaign theme, and 5 off of the adjectives below to describe your campaign.  Re-roll for different theme or adjectives.",
                 main_rolls: [
                     "plots/d30campaigntheme",
                     "plots/d100campaignadjective",
@@ -4546,7 +4546,7 @@ top.menu = [
             {
                 title: "Damsel In Distress",
                 use:
-                    "At every point in an adventurer’s lifetime, there is bound to be a classic “Damsel in Distress” quest. Daughter or son of some wealthy noble or king gets themself captured and it’s up to the latest and greatest local heroes to bring them back. In this scenario, the word ‘damsel’ is replaced by ‘noble’ since this can be either a prince or princess.",
+                "At every point in an adventurer’s lifetime, there is bound to be a classic “Damsel in Distress” quest. Daughter or son of some wealthy noble or king gets themself captured and it’s up to the latest and greatest local heroes to bring them back. In this scenario, the word ‘damsel’ is replaced by ‘noble’ since this can be either a prince or princess.",
                 main_rolls: [
                     "plots/d2thenoblesgenderis",
                     "plots/d10theparty",
@@ -4562,7 +4562,7 @@ top.menu = [
             {
                 title: "Divination/Visions",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "plots/d10rollthetarget",
                     "plots/d10rollsubject",
@@ -4575,7 +4575,7 @@ top.menu = [
             {
                 title: "Diseases",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "plots/d12thisdiseaseisspreadby_diseases",
                     "plots/d8onceexposedtothediseaseapersondevelopssymptoms_diseases",
@@ -4593,7 +4593,7 @@ top.menu = [
             {
                 title: "Games",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "plots/d10cardgames",
                     "plots/d10drinkinggames",
@@ -4608,7 +4608,7 @@ top.menu = [
             {
                 title: "Nightmares",
                 use:
-                    "Here's a handy toolkit for adding a little more flavor for making players afraid of what goes bump in the night. It's also no fun to run the whole nightmare yourself. Give the player some control during the dream and even let them \"try\" to fight back. ",
+                "Here's a handy toolkit for adding a little more flavor for making players afraid of what goes bump in the night. It's also no fun to run the whole nightmare yourself. Give the player some control during the dream and even let them \"try\" to fight back. ",
                 main_rolls: [
                     "plots/d10rollyoufindyourselfin",
                     "plots/d10rollintheplaceyousee",
@@ -4621,7 +4621,7 @@ top.menu = [
             {
                 title: "- Nightmares Variant",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "plots/d12setting",
                     "plots/d12actionyouareengagedin",
@@ -4633,7 +4633,7 @@ top.menu = [
             {
                 title: "Political Plots",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "plots/d6atthecenterofitallis_politicalplots",
                     "plots/d20relation_politicalplots",
@@ -4647,7 +4647,7 @@ top.menu = [
             {
                 title: "Reputations I (battles, cities, dragons, explorers, NPCs)",
                 use:
-                    "These tables are to help you determine what the PC's have heard when they bump into a new group, landmark, or story. The characters didn't live under a rock before they became adventurers, now they can know a bit about the world.",
+                "These tables are to help you determine what the PC's have heard when they bump into a new group, landmark, or story. The characters didn't live under a rock before they became adventurers, now they can know a bit about the world.",
                 main_rolls: [
                     "plots/d10mercenarybandpositive",
                     "plots/d10mercenarybandneutral",
@@ -4669,7 +4669,7 @@ top.menu = [
             {
                 title: "Reputations II (PCs)",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "plots/d10barbarian_reputationsii(pcs)",
                     "plots/d10bard_reputationsii(pcs)",
@@ -4689,14 +4689,14 @@ top.menu = [
             {
                 title: "Resurrection Consequences",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: ["plots/d20resurrectiondrawbacksandadvantages"],
                 sub_rolls: [],
             },
             {
                 title: "Rogue Missions",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "plots/d5alchemymissionseasy_roguemissions",
                     "plots/d5alchemymissionsmedium_roguemissions",
@@ -4749,14 +4749,14 @@ top.menu = [
             {
                 title: "Rumors and Gossip",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: ["plots/d60rumorsandgossip"],
                 sub_rolls: [],
             },
             {
                 title: "- Did you hear the news (variant)",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "plots/1d10mycousintoldmeabout_didyouhearthenews(variant)",
                     "plots/1d10andthey_didyouhearthenews(variant)",
@@ -4768,7 +4768,7 @@ top.menu = [
             {
                 title: "- Rumors and Gossip Builder (variant)",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "plots/d20iheardthat[when]",
                     "plots/d20[who]",
@@ -4783,7 +4783,7 @@ top.menu = [
             {
                 title: "- Rumors and Motivation (variant)",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "plots/d7whenthenpcoverhearsthepcorthepartytalkinghisherreactionis_rumorandmotivation(variant)",
                     "plots/d7whenquestionedabouthishermotivationthenpcrevealsorhidesthathesheis_rumorandmotivation(variant)",
@@ -4829,7 +4829,7 @@ top.menu = [
             {
                 title: "Songs",
                 use:
-                    "These are tables for generating an interesting song to add to your setting, from things a wandering minstrel might sing to things a company of soldiers might sing on the march and from things a king may request to hear in court to things laborers might sing while toiling.\n\nMy favorite part is that with the cheat sheet in front of me, I can throw two d20s and two d6s together to generate a topic for a song in a single toss. The sub-tables are up to d8s in the online version (below).",
+                "These are tables for generating an interesting song to add to your setting, from things a wandering minstrel might sing to things a company of soldiers might sing on the march and from things a king may request to hear in court to things laborers might sing while toiling.\n\nMy favorite part is that with the cheat sheet in front of me, I can throw two d20s and two d6s together to generate a topic for a song in a single toss. The sub-tables are up to d8s in the online version (below).",
                 main_rolls: [
                     "plots/d20thesongisaboutrolltwice",
                     "plots/d10thesongispopularbecause",
@@ -4843,7 +4843,7 @@ top.menu = [
             {
                 title: "Strange Crimes",
                 use:
-                    "A few tables to generate random strange crimes.\n\nThe basic structure is supposed to be this:\n\nVICTIMTYPE + ORIGIN + VICTIM is believed to have been CRIME + LOCATION + CIRCUMSTANCES. The case is handled by INVESTIGATORS who are INTEREST solving it and WILLINGNESS share details.\n\nSOURCE a connection to CLUE.",
+                "A few tables to generate random strange crimes.\n\nThe basic structure is supposed to be this:\n\nVICTIMTYPE + ORIGIN + VICTIM is believed to have been CRIME + LOCATION + CIRCUMSTANCES. The case is handled by INVESTIGATORS who are INTEREST solving it and WILLINGNESS share details.\n\nSOURCE a connection to CLUE.",
                 main_rolls: [
                     "plots/d20victimtype",
                     "plots/d4origin",
@@ -4862,14 +4862,14 @@ top.menu = [
             {
                 title: "Strange Gods",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more. The Gods all have three titles, broken down in order as follows. Mankinds pronounciation/Official Planar title/Evocation",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more. The Gods all have three titles, broken down in order as follows. Mankinds pronounciation/Official Planar title/Evocation",
                 main_rolls: ["plots/d16god"],
                 sub_rolls: [],
             },
             {
                 title: "Strange Places",
                 use:
-                    "A few tables to generate random strange locations in the form of rumors, stories, or legends.\n\nThe basic structure is supposed to be this:\n\nSOURCE + DESCRIPTOR 1 + PLACE + DESCRIPTOR 2 somewhere AREA. If asked further, people will tell you, that SITUATION + PERSON + ACTION.",
+                "A few tables to generate random strange locations in the form of rumors, stories, or legends.\n\nThe basic structure is supposed to be this:\n\nSOURCE + DESCRIPTOR 1 + PLACE + DESCRIPTOR 2 somewhere AREA. If asked further, people will tell you, that SITUATION + PERSON + ACTION.",
                 main_rolls: [
                     "plots/d10source",
                     "plots/d20descriptor1",
@@ -4899,7 +4899,7 @@ top.menu = [
             {
                 title: "Unconventional Rewards",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "plots/d4aloggingcamp",
                     "plots/d4aminingoutpost",
@@ -4936,7 +4936,7 @@ top.menu = [
             {
                 title: "Villans",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/dxmalefirstname",
                     "npcs/dxfemalefirstname",
@@ -4958,7 +4958,7 @@ top.menu = [
             {
                 title: "War Torn Encounters",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "plots/d6roads",
                     "plots/d6wilderness",
@@ -4968,7 +4968,7 @@ top.menu = [
             },
         ],
     },
-
+    
     {
         title: "Settlements",
         id: "Settlements",
@@ -4988,7 +4988,7 @@ top.menu = [
             {
                 title: "Arena Games",
                 use:
-                    "These are tables for generating a series of gladiatorial events to entertain or to challenge your PCs.",
+                "These are tables for generating a series of gladiatorial events to entertain or to challenge your PCs.",
                 main_rolls: [
                     "settlements/d8thearenais",
                     "settlements/d8thegamesarebeingheld",
@@ -5002,7 +5002,7 @@ top.menu = [
             {
                 title: "Brothels",
                 use:
-                    "These are tables for adding some flavor to a harlot NPC. From silly to sultry and from light-hearted to sad, let's see what she can do…",
+                "These are tables for adding some flavor to a harlot NPC. From silly to sultry and from light-hearted to sad, let's see what she can do…",
                 main_rolls: [
                     "settlements/d200thisplaceiscalled",
                     "settlements/d20thebrothelislocated",
@@ -5077,7 +5077,7 @@ top.menu = [
             {
                 title: "Gigantic City (with 8d4 districts, 10d4 streets, 10d6 people)",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "plots/d10geographythecitygrewuparound_city",
                     "plots/d20resourcesthecityisneararegionidealformininggrowingorgrazing_city",
@@ -5098,7 +5098,7 @@ top.menu = [
             {
                 title: "Large City (with 4d4 districts, 8d4 streets, 8d6 people)",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "plots/d10geographythecitygrewuparound_city",
                     "plots/d20resourcesthecityisneararegionidealformininggrowingorgrazing_city",
@@ -5119,7 +5119,7 @@ top.menu = [
             {
                 title: "Medium City (with 2d4 districts, 4d4 streets, 6d6 people)",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "plots/d10geographythecitygrewuparound_city",
                     "plots/d20resourcesthecityisneararegionidealformininggrowingorgrazing_city",
@@ -5140,7 +5140,7 @@ top.menu = [
             {
                 title: "Small City (with 1d4 districts, 2d4 streets, 4d6 people)",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "plots/d10geographythecitygrewuparound_city",
                     "plots/d20resourcesthecityisneararegionidealformininggrowingorgrazing_city",
@@ -5161,7 +5161,7 @@ top.menu = [
             {
                 title: "- City Landmarks and Districts",
                 use:
-                    "This is a table for rapidly generating a handful of landmarks or districts for any city or town.\n\nTo quickly generate a town or city district:\n\n[1] Choose or roll for a central landmark or district.\n[2] Then roll or choose 2-6 street names.\n[3] Sketch out these streets, leading away from the central landmark to other parts of the town or city.\n[4] Fill in some details.",
+                "This is a table for rapidly generating a handful of landmarks or districts for any city or town.\n\nTo quickly generate a town or city district:\n\n[1] Choose or roll for a central landmark or district.\n[2] Then roll or choose 2-6 street names.\n[3] Sketch out these streets, leading away from the central landmark to other parts of the town or city.\n[4] Fill in some details.",
                 main_rolls: [
                     "settlements/d20landmarkyouseeaan",
                     "settlements/d20thispartofthecityisthe",
@@ -5171,7 +5171,7 @@ top.menu = [
             {
                 title: "- Street Names",
                 use:
-                    "This is a table for rapidly generating a handful of interesting street names for any city or town. These names suggest something about the street's current or past purpose or destination.\n\nTo quickly generate a town or city district:\n\n[1] Choose a central landmark such as a market square, palace, temple, town square, university, etc.\n[2] Then roll or choose 2-6 street names.\n[3] Sketch out these streets, leading away from your central landmark to other parts of the town or city.\n[4] Fill in some details.",
+                "This is a table for rapidly generating a handful of interesting street names for any city or town. These names suggest something about the street's current or past purpose or destination.\n\nTo quickly generate a town or city district:\n\n[1] Choose a central landmark such as a market square, palace, temple, town square, university, etc.\n[2] Then roll or choose 2-6 street names.\n[3] Sketch out these streets, leading away from your central landmark to other parts of the town or city.\n[4] Fill in some details.",
                 main_rolls: ["settlements/d20thelocalscallthisstreet"],
                 sub_rolls: [],
             },
@@ -5184,7 +5184,7 @@ top.menu = [
             {
                 title: "Magic Shops",
                 use:
-                    "Is there a magic shop in town? - every PC ever, entering any town ever, no matter how small the town is, the players will want to know if they can buy cool magical shit. and sometimes you just havent thought that out, so here is a quick way for you to answer\n\n... yes! ",
+                "Is there a magic shop in town? - every PC ever, entering any town ever, no matter how small the town is, the players will want to know if they can buy cool magical shit. and sometimes you just havent thought that out, so here is a quick way for you to answer\n\n... yes! ",
                 main_rolls: [
                     "settlements/d10thenameoftheshopis",
                     "settlements/d20theshopislocated",
@@ -5198,7 +5198,7 @@ top.menu = [
             {
                 title: "Merchant Caravan (with 3d6 members)",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/d6thecaravanis_merchantcaravan",
                     "npcs/d8thecaravan’spackanimalsare_merchantcaravan",
@@ -5230,7 +5230,7 @@ top.menu = [
             {
                 title: "Monastery (with 4d6 rooms)",
                 use:
-                    "Use these tables for laying out an active monastery for your PCs to visit, to infiltrate, or to seek wisdom and training.",
+                "Use these tables for laying out an active monastery for your PCs to visit, to infiltrate, or to seek wisdom and training.",
                 main_rolls: [
                     "dungeons/d12visitorstothemonasterycomeseeking",
                     "dungeons/d12themonasteryisknownforits",
@@ -5247,7 +5247,7 @@ top.menu = [
             {
                 title: "Prison (1d4 jailor, 1d4 torturer, 3d6 prisoner)",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [],
                 sub_rolls: [
                     "subrolls/1d4jailers",
@@ -5275,7 +5275,7 @@ top.menu = [
             {
                 title: "Shops",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "settlements/d50theshopsells_shops",
                     "settlements/d10theshopstypeis_shops",
@@ -5293,7 +5293,7 @@ top.menu = [
             {
                 title: "Simple Settlements",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "settlements/d50settlementnamepart1",
                     "settlements/d50settlementnamepart2",
@@ -5308,7 +5308,7 @@ top.menu = [
             {
                 title: "Tavern Goings-on",
                 use:
-                    "These are tables for generating some interesting local color next time your adventurers visit the local tavern. Roll as little or as often as you like on each table to fill out your common room.",
+                "These are tables for generating some interesting local color next time your adventurers visit the local tavern. Roll as little or as often as you like on each table to fill out your common room.",
                 main_rolls: [
                     "settlements/d20gamescontestsandevents",
                     "settlements/d12entertainment",
@@ -5322,14 +5322,14 @@ top.menu = [
             {
                 title: "Tavern Name",
                 use:
-                    "These are tables for quickly generating a name for a pub, tavern, inn, or the like.",
+                "These are tables for quickly generating a name for a pub, tavern, inn, or the like.",
                 main_rolls: [],
                 sub_rolls: ["subrolls/1d1TavernNames"],
             },
             {
                 title: "Urban Marketplace",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "settlements/d8themarketplaceislocatedin",
                     "settlements/d10vendorstallscartsandboothsaremostlyorganizedby",
@@ -5338,7 +5338,7 @@ top.menu = [
             },
         ],
     },
-
+    
     {
         title: "Vehicles",
         id: "Vehicles",
@@ -5346,7 +5346,7 @@ top.menu = [
             {
                 title: "Fishing Boat (with 6d6 sailors, 1d4 catch)",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "objects/d6theboatis",
                     "objects/d4theboatcan",
@@ -5358,7 +5358,7 @@ top.menu = [
             {
                 title: "Merchant Caravan (with 3d6 members)",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "npcs/d6thecaravanis_merchantcaravan",
                     "npcs/d8thecaravan’spackanimalsare_merchantcaravan",
@@ -5370,7 +5370,7 @@ top.menu = [
             {
                 title: "Pirate Ship (with 6d6 pirates)",
                 use:
-                    "Use these for inspiration or roll them up randomly, some of the tables could be rolled more than once.",
+                "Use these for inspiration or roll them up randomly, some of the tables could be rolled more than once.",
                 main_rolls: [
                     "factions/d10thepiratesshipis",
                     "factions/d8presentlythepiratesshipis",
@@ -5396,7 +5396,7 @@ top.menu = [
             {
                 title: "Ship",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "objects/d6sizetheshipis",
                     "objects/d10typetheshipstypeisa",
@@ -5411,7 +5411,7 @@ top.menu = [
             },
         ],
     },
-
+    
     {
         title: "Wilderness",
         id: "Wilderness",
@@ -5419,7 +5419,7 @@ top.menu = [
             {
                 title: "World",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "wilderness/d8sizetheworldis_world",
                     "wilderness/d12climatetheworldis_world",
@@ -5437,7 +5437,7 @@ top.menu = [
             {
                 title: "Continent",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "wilderness/d6sizethecontinentis_continent",
                     "wilderness/d8locationthecontinentislocated_continent",
@@ -5455,7 +5455,7 @@ top.menu = [
             {
                 title: "Nation",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "wilderness/d6agethenationis_nation",
                     "wilderness/d10politicalsystemthenationisrunby_nation",
@@ -5478,7 +5478,7 @@ top.menu = [
             {
                 title: "Desert",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "wilderness/d20interestinglocationyoufind_desert",
                     "wilderness/d20distinguishinglandmarkyousee_desert",
@@ -5508,7 +5508,7 @@ top.menu = [
             {
                 title: "Desert, Flame-Scorched",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "wilderness/d20interestinglocationyoufind_desertflame-scorched",
                     "wilderness/d20distinguishinglandmarkyousee_desertflame-scorched",
@@ -5539,7 +5539,7 @@ top.menu = [
             {
                 title: "Desert, Shadowy",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "wilderness/d12interestinglocationyoufind_desertshadowy",
                     "wilderness/d12distinguishinglandmarkyousee_desertshadowy",
@@ -5560,7 +5560,7 @@ top.menu = [
             {
                 title: "Forest",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "wilderness/d12interestinglocationyoufind_forest",
                     "wilderness/d20distinguishinglandmarkyousee_forest",
@@ -5580,7 +5580,7 @@ top.menu = [
             {
                 title: "Forest, Enchanted",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "wilderness/d12interestinglocationyoufind_forestenchanted",
                     "wilderness/d20distinguishinglandmarkyousee_forestenchanted",
@@ -5598,7 +5598,7 @@ top.menu = [
             {
                 title: "Forest, Haunted",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "wilderness/d10interestinglocationyoufind_foresthaunted",
                     "wilderness/d20distinguishinglandmarkyousee_foresthaunted",
@@ -5619,7 +5619,7 @@ top.menu = [
             {
                 title: "Frozen Lands",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "wilderness/d6pointofinterestyoucomeuponaan_frozenlands",
                     "wilderness/d6landscapethelandscapeisdominatedbyaan…_frozenlands",
@@ -5638,7 +5638,7 @@ top.menu = [
             {
                 title: "Grasslands, Temperate",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "wilderness/d6pointofinterestyoucomeuponaan_grasslands",
                     "wilderness/d6stoneruintheruinappearstohavebeenaan…_grasslands",
@@ -5661,7 +5661,7 @@ top.menu = [
             {
                 title: "Grasslands, Tropical",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "wilderness/d6pointofinterestyoucomeuponaan_grasslandstropical",
                     "wilderness/d6stoneruintheruinappearstohavebeenaan…_grasslandstropical",
@@ -5685,7 +5685,7 @@ top.menu = [
             {
                 title: "Jungle",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "wilderness/d12interestinglocationyoufind_jungle",
                     "wilderness/d20distinguishinglandmarkyousee_jungle",
@@ -5707,7 +5707,7 @@ top.menu = [
             {
                 title: "Mountains",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "wilderness/d20interestinglocationyoufind_mountains",
                     "wilderness/d20distinguishinglandmarkyousee_mountains",
@@ -5732,7 +5732,7 @@ top.menu = [
             {
                 title: "Plains",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "wilderness/d6foliagetheplantlifeis_plains",
                     "wilderness/d20perceptionfodderyounotice_plains",
@@ -5752,7 +5752,7 @@ top.menu = [
             {
                 title: "Swamp",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "wilderness/d10rollodor_swamp",
                     "wilderness/d10rollperceptionfodder_swamp",
@@ -5765,7 +5765,7 @@ top.menu = [
             {
                 title: "Underdark",
                 use:
-                    "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+                "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
                 main_rolls: [
                     "wilderness/d10entrancethecavemouthis_underdark",
                     "wilderness/d50denizenswhatlivesinthecave?_underdark",
@@ -5803,6 +5803,36 @@ top.menu = [
             }
         ]
     },
+    {
+        title: "Blades in the Dark",
+        id: "blades_in_the_dark",
+        items: [
+            {
+                title: "Blades in the Cage",
+                use: "Score Generator for Sigil, the City of Doors in D&D’s Planescape setting.",
+                main_rolls: [
+                    "wilderness/race_plane_of_origin", //
+                    "blades/sigil_client_mark", //
+                    "blades/sigil_client_mark", //
+                    "blades/client_problem", //
+                    "blades/sigil_pressure", //
+                    "blades/mark_known", //
+                    "blades/mark_power", //
+                    "blades/mark_weakness", //
+                    "blades/mark_vulnerability",
+                    "blades/sigil_twist", // 
+                    "blades/who_else", //
+                    "blades/score_complications_minor", //
+                    "blades/score_complications_major", //
+                    "blades/location_complications_minor", //
+                    "blades/location_complications_major", //
+                    "blades/personal_complications_minor", //
+                    "blades/personal_complications_major" //
+                ],
+                sub_rolls: []
+            }
+        ],
+    }
 ];
 
 var all_ref = null;
@@ -5810,10 +5840,10 @@ var all_ref = null;
 all_items = [];
 
 for (i = 0; i < top.menu.length; i++) {
-  // get items at index
-  if (top.menu[i].id !== "All") {
-    const items = top.menu[i].items;
-
+    // get items at index
+    if (top.menu[i].id !== "All") {
+        const items = top.menu[i].items;
+        
         for (j = 0; j < items.length; j++) {
             all_items.push(items[j]);
         }
@@ -5825,5 +5855,5 @@ for (i = 0; i < top.menu.length; i++) {
 all_ref.items = Array.from(new Set(all_items));
 
 top.menu = top.menu.sort(function(a,b){
-   return a.title.charCodeAt(0) - b.title.charCodeAt(0);
+    return a.title.charCodeAt(0) - b.title.charCodeAt(0);
 });

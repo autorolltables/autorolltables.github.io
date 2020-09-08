@@ -35,5 +35,6 @@ Tables content by:
 - https://forgottenrealms.fandom.com/wiki/Waterdeep
 - https://ynasmidgard.blogspot.com/2016/07/huge-name-list.html
 - https://docs.google.com/document/d/1bnH9HP98V8j7SdkJJJiKopWGJ51tG5XN8Bf_RTnj2RQ/edit
+- https://www.reddit.com/r/bladesinthedark/comments/fdmqyp/score_generator_inspired_by_leverage_rpgs/
 
 Top image by https://unsplash.com/@armato
