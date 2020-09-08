@@ -9,7 +9,7 @@ developed based on initial work [here](https://github.com/autorolltables/autorol
 - tons of random tables
 - search for tables
 - history of rolls
-- easily extendible (tables are in the very readable [JSON format](https://en.wikipedia.org/wiki/JSON#Example))
+- easily extendable (tables are in the very readable [JSON format](https://en.wikipedia.org/wiki/JSON#Example))
 - static HTML & javascript only (you can download it and it's all yours. No need for active internet connection)
 - subtable rolls
 - custom ranges in tables
