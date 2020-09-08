@@ -5,8 +5,6 @@
 
 Available at https://cristianmtr.github.io/rpg_tables/
 
-developed based on initial work [here](https://github.com/autorolltables/autorolltables.github.io)
-
 ## Features
 
 - tons of random tables
@@ -26,6 +24,8 @@ Check issues and projects for possible ideas to start.
 If you want to add your own tables, look at this example: [Planescape NPC](https://github.com/cristianmtr/rpg_tables/blob/ad6a7ebf88f60ddd1986ad7d1b07bf42121e1cae/js/roll_menu.js#L2393)
 
 ## Credits
+
+Developed based on initial work [here](https://github.com/autorolltables/autorolltables.github.io)
 
 Tables content by:
 
