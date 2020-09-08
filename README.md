@@ -1,4 +1,5 @@
-![](https://i.imgur.com/gJRZqTq.png?1)
+<img align="right" src="https://i.imgur.com/gJRZqTq.png?1">
+
 
 # RPG Tables
 
