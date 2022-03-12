@@ -295,7 +295,7 @@ top.dungeons = [
 "Imprisoned dragon.",   ]},
 
 
- {"title": "d20 Air Currents", "id":"d20aircurrents_randomdugeonfeatures", "roll":[
+ {"title": "d20 Air Currents", "id":"d20aircurrents_randomdungeonfeatures", "roll":[
 "breeze, slight, damp.",
 "breeze, gusting.",
 "cold current.",
@@ -315,7 +315,7 @@ top.dungeons = [
 "wind, strong.",
 "wind, strong, gusting.",
 "wind, strong, moaning.",   ]},
- {"title": "d20 Odors", "id":"d20odors_randomdugeonfeatures", "roll":[
+ {"title": "d20 Odors", "id":"d20odors_randomdungeonfeatures", "roll":[
 "chlorine smell.",
 "dank, moldy smell.",
 "dank, moldy smell.",
@@ -335,7 +335,7 @@ top.dungeons = [
 "sulphurous smell.",
 "urine smell.",
 "dank, moldy smell.",   ]},
- {"title": "d10 Air", "id":"d10air_randomdugeonfeatures", "roll":[
+ {"title": "d10 Air", "id":"d10air_randomdungeonfeatures", "roll":[
 "clear.",
 "clear.",
 "clear.",
@@ -345,7 +345,7 @@ top.dungeons = [
 "foggy near floor (or steamy).",
 "hazy (dust).",
 "misted.",   ]},
- {"title": "d100 General features", "id":"d100generalfeatures_randomdugeonfeatures", "roll":[
+ {"title": "d100 General features", "id":"d100generalfeatures_randomdungeonfeatures", "roll":[
 "ashes.",
 "ashes.",
 "ashes.",
@@ -445,7 +445,7 @@ top.dungeons = [
 "wood pieces, rotting.",
 "wood pieces, rotting.",
 "wood pieces, rotting.",   ]},
- {"title": "d100 Unexplained Sounds and Strange Noises", "id":"d100unexplainedsoundsandstrangenoises_randomdugeonfeatures", "roll":[
+ {"title": "d100 Unexplained Sounds and Strange Noises", "id":"d100unexplainedsoundsandstrangenoises_randomdungeonfeatures", "roll":[
 "bang, slam.",
 "bang, slam.",
 "bang, slam.",
@@ -545,7 +545,7 @@ top.dungeons = [
 "whispering.",
 "whistling.",
 "whistling.",   ]},
- {"title": "d100 Furnishing and Appointments, General", "id":"d100furnishingandappointmentsgeneral_randomdugeonfeatures", "roll":[
+ {"title": "d100 Furnishing and Appointments, General", "id":"d100furnishingandappointmentsgeneral_randomdungeonfeatures", "roll":[
 "armchair.",
 "armoire.",
 "arrows.",
@@ -645,7 +645,7 @@ top.dungeons = [
 "wall basin and font.",
 "wood billets.",
 "workbench.",   ]},
- {"title": "d100 Religious Articles and Furnishings", "id":"d100religiousarticlesandfurnishings_randomdugeonfeatures", "roll":[
+ {"title": "d100 Religious Articles and Furnishings", "id":"d100religiousarticlesandfurnishings_randomdungeonfeatures", "roll":[
 "altar.",
 "altar.",
 "altar.",
@@ -745,7 +745,7 @@ top.dungeons = [
 "votive light.",
 "votive light.",
 "votive light.",   ]},
- {"title": "d100 Torture Chamber Furnishings", "id":"d100torturechamberfurnishings_randomdugeonfeatures", "roll":[
+ {"title": "d100 Torture Chamber Furnishings", "id":"d100torturechamberfurnishings_randomdungeonfeatures", "roll":[
 "bastinadoes.",
 "bell (huge).",
 "bench.",
@@ -845,7 +845,7 @@ top.dungeons = [
 "whips.",
 "whips.",
 "whips.",   ]},
- {"title": "d100 Magic-User Furnishings", "id":"d100magic-userfurnishings_randomdugeonfeatures", "roll":[
+ {"title": "d100 Magic-User Furnishings", "id":"d100magic-userfurnishings_randomdungeonfeatures", "roll":[
 "alembic.",
 "alembic.",
 "balance & weights.",
@@ -945,7 +945,7 @@ top.dungeons = [
 "workbench.",
 "workbench.",
 " workbench.",   ]},
- {"title": "d30 General Description of Container Contents", "id":"d30generaldescriptionofcontainercontents_randomdugeonfeatures", "roll":[
+ {"title": "d30 General Description of Container Contents", "id":"d30generaldescriptionofcontainercontents_randomdungeonfeatures", "roll":[
 "bark.",
 "bone.",
 "bone.",
@@ -975,7 +975,7 @@ top.dungeons = [
 "strands.",
 "strips.",
 "viscous.",   ]},
- {"title": "d100 Miscellaneous Utensils and Personal Items", "id":"d100miscellaneousutensilsandpersonalitems_randomdugeonfeatures", "roll":[
+ {"title": "d100 Miscellaneous Utensils and Personal Items", "id":"d100miscellaneousutensilsandpersonalitems_randomdungeonfeatures", "roll":[
 "bandages.",
 "basin.",
 "basket.",
@@ -1075,7 +1075,7 @@ top.dungeons = [
 "wig.",
 "wool.",
 " yarn.",   ]},
- {"title": "d100 Clothing and Footwear", "id":"d100clothingandfootwear_randomdugeonfeatures", "roll":[
+ {"title": "d100 Clothing and Footwear", "id":"d100clothingandfootwear_randomdungeonfeatures", "roll":[
 "apron.",
 "belt.",
 "belt.",
