@@ -11,7 +11,7 @@ var current;
 var side_obj;
 var obj_current_display;
 var obj_history_display;
-var mouseover_on = true;
+var mouseover_on = false;
 var delete_enabled = false;
 
 
@@ -266,7 +266,7 @@ function menuhovercheck(){
     menuhover = getquerystring("menuhover");
   } catch(e) {}
 
-  if ( menuhover == 'false' ){
+  if ( menuhover == 'true' ){
     togglehovermenu();
   }
 }
