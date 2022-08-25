@@ -1,7 +1,7 @@
-
 function init() {
   var finalDiv = d3.select("div#final");
-  var finalSVG = finalDiv.insert("svg", ":first-child")
+  var finalSVG = finalDiv
+    .insert("svg", ":first-child")
     .attr("id", "finalSVG")
     .attr("height", 500)
     .attr("width", 500)
