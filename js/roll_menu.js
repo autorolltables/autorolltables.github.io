@@ -5101,6 +5101,12 @@ top.menu = [
     ],
   },
   {
+    title: "Favorites",
+    display_title: "★ Favorites",
+    id: "Favorites",
+    items: [],
+  },
+  {
     title: "Dungeons",
     id: "Dungeons",
     items: [

@@ -11,8 +11,11 @@ var obj_current_display;
 var obj_history_display;
 var mouseover_on = false;
 var delete_enabled = false;
+let favorites = [];
 
 function init() {
+  loadFavorites();
+
   // load the menu
   loadmenu();
 
@@ -181,6 +184,7 @@ function loadleftdisplay(curr_table) {
   for (var i = 0; i < current.items.length; i++) {
     //selectlist.options[selectlist.options.length] = new Option(current.items[i].title,current.items[i].title);
     var display_title = current.items[i].title;
+    const isFavorite = favorites.includes(display_title);
     //var patt = /\/\(\/g/gi;
 
     if (display_title.match(/\(/gi) != null) {
@@ -197,6 +201,9 @@ function loadleftdisplay(curr_table) {
         current.items[i].title +
         '">' +
         display_title +
+        `<span class="dofavorite ${isFavorite ? "favorite" : ""}" >${
+          isFavorite ? "★" : "☆"
+        }</span>` +
         "</div>"
     );
   }
@@ -286,12 +293,52 @@ function menuhovercheck() {
   }
 }
 
+function loadLocalStorage(key) {
+  return JSON.parse(localStorage.getItem(key) || "[]");
+}
+
+function writeLocalStorage(key, obj) {
+  localStorage.setItem(key, JSON.stringify(obj));
+}
+
+function loadFavorites() {
+  favorites = loadLocalStorage("favorites").sort();
+
+  const favoritesMenu = top.menu.find((m) => m.title === "Favorites").items;
+  const allTables = top.menu.find((m) => m.title === "All").items;
+
+  favorites.forEach((favorite) => {
+    const table = allTables.find((table) => table.title === favorite);
+    if (table) {
+      favoritesMenu.push(table);
+    }
+  });
+}
+
+function editFavorites(title, isFavorite) {
+  if (!isFavorite) {
+    favorites.push(title);
+  } else {
+    favorites.filter((favorite) => favorite !== title);
+  }
+  writeLocalStorage("favorites", favorites);
+  reloadFavorites();
+}
+
+function reloadFavorites() {
+  loadFavorites();
+  loadmenu();
+}
+
 function loadmenu() {
+  // remove old entries (for reinitiation) (remove all programatically added entries (with id))
+  $("#menu > *[id]").remove();
   menu = top.menu;
   for (i = 0; i < menu.length; i++) {
-    var item = menu[i].title;
+    var id = menu[i].title;
+    var item = menu[i].display_title || id;
     $("#menu").append(
-      "<a href='#' class='menuitem btn' id='" + item + "'>" + item + "</a>"
+      "<a href='#' class='menuitem btn' id='" + id + "'>" + item + "</a>"
     );
   }
 }
@@ -930,6 +977,15 @@ $("body").on("click", ".list-item", function() {
   selectitem($(this));
   perform_roll();
 });
+
+$("body").on("click", ".dofavorite", function() {
+  const title = $(this)
+    .parent()
+    .attr("item");
+  const isFavorite = $(this).hasClass("favorite");
+  editFavorites(title, isFavorite);
+});
+
 $("body").on("mouseover", ".menuitem", function() {
   mouseover_loadleftdisplay($(this).attr("id"));
 });
