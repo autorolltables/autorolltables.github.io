@@ -256,6 +256,14 @@ div.expand-collapse {
   position: relative;
 }
 
+.dofavorite:before {
+  content: "☆";
+}
+
+.dofavorite.favorite:before {
+  content: "★";
+}
+
 .list-item .dofavorite {
   position: absolute;
   right: 0;

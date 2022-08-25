@@ -12,6 +12,7 @@ var obj_history_display;
 var mouseover_on = false;
 var delete_enabled = false;
 let favorites = [];
+let currentSelectedMenu = "";
 
 function init() {
   loadFavorites();
@@ -175,6 +176,8 @@ function loadleftdisplay(curr_table) {
     }
   }
 
+  currentSelectedMenu = curr_table;
+
   // top menu css highlight
   menu_id = "#" + curr_table;
   $(".menuitem").removeClass("menu-selected");
@@ -201,9 +204,7 @@ function loadleftdisplay(curr_table) {
         current.items[i].title +
         '">' +
         display_title +
-        `<span class="dofavorite ${isFavorite ? "favorite" : ""}" >${
-          isFavorite ? "★" : "☆"
-        }</span>` +
+        `<span class="dofavorite ${isFavorite ? "favorite" : ""}" > </span>` +
         "</div>"
     );
   }
@@ -304,25 +305,39 @@ function writeLocalStorage(key, obj) {
 function loadFavorites() {
   favorites = loadLocalStorage("favorites").sort();
 
-  const favoritesMenu = top.menu.find((m) => m.title === "Favorites").items;
+  // reset current favorites Menu
+  const menuFavorites = top.menu.find((m) => m.title === "Favorites");
+
+  const nextFavorites = [];
   const allTables = top.menu.find((m) => m.title === "All").items;
 
   favorites.forEach((favorite) => {
     const table = allTables.find((table) => table.title === favorite);
     if (table) {
-      favoritesMenu.push(table);
+      nextFavorites.push(table);
     }
   });
+
+  menuFavorites.items = nextFavorites;
 }
 
-function editFavorites(title, isFavorite) {
+function editFavorites(target) {
+  const title = target.parent().attr("item");
+  const isFavorite = target.hasClass("favorite");
+
   if (!isFavorite) {
     favorites.push(title);
   } else {
-    favorites.filter((favorite) => favorite !== title);
+    favorites = favorites.filter((favorite) => favorite !== title);
   }
+
+  target.toggleClass("favorite");
+
   writeLocalStorage("favorites", favorites);
   reloadFavorites();
+  if (currentSelectedMenu === "Favorites") {
+    loadleftdisplay("Favorites");
+  }
 }
 
 function reloadFavorites() {
@@ -979,11 +994,9 @@ $("body").on("click", ".list-item", function() {
 });
 
 $("body").on("click", ".dofavorite", function() {
-  const title = $(this)
-    .parent()
-    .attr("item");
-  const isFavorite = $(this).hasClass("favorite");
-  editFavorites(title, isFavorite);
+  editFavorites($(this));
+  /* prevent default (no rolling when adding / removing favorite) */
+  return false;
 });
 
 $("body").on("mouseover", ".menuitem", function() {
