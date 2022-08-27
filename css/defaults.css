@@ -105,7 +105,7 @@ body {
 }
 
 .rightview {
-  height: calc(max(479px, min(1000px, 90vh)) - 43px);
+  height: calc(max(479px, min(1000px, 70vh)) - 43px);
   width: auto;
   opacity: 0.65 !important;
   filter: alpha(opacity=65);
@@ -115,7 +115,7 @@ body {
 }
 
 .rightview-srd {
-  height: calc(max(479px, min(1000px, 90vh)));
+  height: calc(max(479px, min(1000px, 70vh)));
   width: auto;
   opacity: 0.65 !important;
   filter: alpha(opacity=65);
@@ -233,7 +233,7 @@ div.expand-collapse {
 }
 
 #left-display-list {
-  height: calc(max(479px, min(1000px, 90vh)));
+  height: calc(max(479px, min(1000px, 70vh)));
   opacity: 0.65 !important;
   filter: alpha(opacity=65);
   background-color: white;
