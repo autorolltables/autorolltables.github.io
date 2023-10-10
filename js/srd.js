@@ -10,7 +10,7 @@
 
 var obj_current_copy = "";
 var obj_current_display = "";
-var mouseover_on = true;
+var mouseover_on = false;
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 // initial functions
@@ -57,9 +57,10 @@ function loadleftdisplay(curr_table) {
     var display_title = current.items[i].title;
 
     if (display_title.match(/\(/gi) != null) {
-      display_title = display_title.replace(/\(/gi, "<br><span class='subtext'>(");
+      display_title = display_title.replace(/\(/gi, "<span class='subtext'>(");
       display_title = display_title + "</span>";
     }
+
     $('#left-display-list').append("<div class='list-item' listid='" + i + "' item='" + current.items[i].title + "'>" + display_title + "</div>");
   }
 

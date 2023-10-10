@@ -11,7 +11,7 @@ var current;
 var side_obj;
 var obj_current_display;
 var obj_history_display;
-var mouseover_on = true;
+var mouseover_on = false;
 var delete_enabled = false;
 
 
@@ -87,12 +87,12 @@ function side(obj) {
 }
 
 function side_display(obj) {
-  obj_current_display = obj_current_display + obj + "<br>";
-  obj_history_display = obj_history_display + obj + "<br>";
+  obj_current_display = obj_current_display + obj;
+  obj_history_display = obj_history_display + obj;
 }
 
 function side_display_current(obj) {
-  obj_current_display = obj_current_display + obj + "<br>";
+  obj_current_display = obj_current_display + obj;
 }
 
 function side_display_history(obj, show_break) {
@@ -174,13 +174,14 @@ function loadleftdisplay(curr_table) {
   // iterate that menu, and add items to select
   for (var i = 0; i < current.items.length; i++) {
     //selectlist.options[selectlist.options.length] = new Option(current.items[i].title,current.items[i].title);
-    var display_title = current.items[i].title;
+    var display_title = "<span class='title'>" + current.items[i].title + "</span>";
     //var patt = /\/\(\/g/gi;
 
     if (display_title.match(/\(/gi) != null) {
-      display_title = display_title.replace(/\(/gi, "<br><span class='subtext'>(");
-      display_title = display_title + "</span>";
+      display_title = display_title.replace(/\(/gi, "</span><span class='subtext'>(");
+      display_title = display_title + "";
     }
+
     $('#left-display-list').append("<div class='list-item' listid='" + i + "' item=\"" + current.items[i].title + "\">" + display_title + "</div>");
   }
 
@@ -393,14 +394,13 @@ function roll_sub_roll(id, table) {
           amount = Math.ceil(amount * (percent_of / 100));
 
           side( title + " : " + amount );
-          side_display(title + " : <b>" + amount + "</b>");
+          side_display("<div class='sub-title'>" + title + " : <b>" + amount + "</b></div>");
 
           // roll that many times
           for(var z=0;z<amount;z++){
             // roll for each roll
             var pre_title = "(" + (z+1) + ") ";
             var pre = "     ";
-            var pre_display = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
 
             // for each roll in total amount, roll main (random * length), then roll all sub-attributes accordingly
             var rand = Math.floor(Math.random() * length);  // floor to match array counting (start at 0)
@@ -408,7 +408,9 @@ function roll_sub_roll(id, table) {
 
             // show title of this result
             side(pre_title + table[i].roll[rand].title);
-            side_display("<b>" + pre_title + table[i].roll[rand].title + "</b>");
+
+            side_display("<div class='info-extra'>");
+            side_display("<div class='title'>" + pre_title + table[i].roll[rand].title + "</div>");
             side_display("<div class='indent'>");
 
             for(var x=0; x<rolls.length;x++){
@@ -421,10 +423,11 @@ function roll_sub_roll(id, table) {
               if(value.match(inline_roll_match)) {value = inline_roll(value);}
 
               side(pre + sub_title + " : " + value);
-              side_display(sub_title + " : <b>" + value + "</b>");
+              side_display('<div class="item">' + sub_title + " : <b>" + value + "</b></div>");
 
             }
 
+            side_display("</div>");
             side_display("</div>");
 
 
@@ -436,17 +439,17 @@ function roll_sub_roll(id, table) {
           amount = Math.ceil(amount * (percent_of / 100));
 
           side(title + " : " + amount);
-          side_display(title + " : <b>" + amount + "</b>");
+          side_display("<div class='sub-title'>" + title + " : <b>" + amount + "</b></div>");
 
           // roll that many times
           for(var z=0;z<amount;z++){
             // roll for each roll
 
             side("(" + (z+1) + ") " + singular_item);
-            side_display("<b>(" + (z+1) + ") " + singular_item + "</b>");
+            side_display("<div class='info-extra'>");
+            side_display("<div class='title'>(" + (z+1) + ") " + singular_item + "</div>");
 
             var pre = "     ";
-            var pre_display = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
 
             side_display("<div class='indent'>");
 
@@ -461,12 +464,12 @@ function roll_sub_roll(id, table) {
               if(value.match(inline_roll_match)) {value = inline_roll(value);}
 
               side( pre + sub_title + " : " + value);
-              side_display( sub_title + " : <b>" + value + "</b>");
+              side_display('<div class="item">' + sub_title + " : <b>" + value + "</b></div>");
 
             }
 
             side_display("</div>");
-
+            side_display("</div>");
           }
         }
       }
@@ -543,16 +546,16 @@ function perform_roll() {
   side("Title: " + roll_table_title);
   side(" ");
   side("Suggested Use: " + roll_table.use);
-  side_display_current("<span class='roll-title'>" + roll_table_title + "</span>");
+  side_display_current("<div class='roll-title'>" + roll_table_title + "</div>");
   side_display_current(" ");
   side_display_history("<div class='accordion roll-title-history'>" + roll_table_title + " <div class='history-item-menu'><div class='delete-history-item glyphicon glyphicon-trash'></div> <div class='expand-collapse glyphicon glyphicon-chevron-down'></div></div></div>", false);
   side_display_history("<div class='panel'>", false);
-  side_display("Suggested Use: <span class='roll-suggested-use'>" + roll_table.use + "</span>");
+  side_display("<div class='roll-suggested-display'>Suggested Use: <div class='roll-suggested-use'>" + roll_table.use + "</div></div>");
 
   if ( if_zero_dont_show_mainrolls != 0 ) {
 
-    side(" ");
-    side_display(" ");
+    side("<div class='rollings'>");
+    side_display("<div class='rollings'>");
 
     // iterate the menu, displaying the values for main rolls
     for (var i = 0; i < roll_table.main_rolls.length; i++) {
@@ -564,16 +567,19 @@ function perform_roll() {
       // care for sub-rolls if they exist
       if(value.match(inline_roll_match)) {value = inline_roll(value);}
 
-      side(roll.title + " : " + value);
-      side_display(roll.title + " : <b>" + value + "</b>");
+      side("<div class='item'>" + roll.title + " : " + value + "</div>");
+      side_display("<div class='item'>" + roll.title + " : <b>" + value + "</b>" + "</div>");
     }
 
   }
 
-  if ( if_zero_dont_show_subrolls != 0 ) {
+  side("</div>");
+  side_display("</div>");
 
-    side(" ");
-    side_display(" ");
+  side("<div class='extra'>");
+  side_display("<div class='extra'>");
+
+  if ( if_zero_dont_show_subrolls != 0 ) {
 
     // iterate the menu, displaying the values for sub rolls
     for (var i = 0; i < roll_table.sub_rolls.length; i++) {
@@ -581,9 +587,11 @@ function perform_roll() {
       table = get_roll_table(roll_table.sub_rolls[i]);
       roll = get_roll(id, table);
       value = roll_sub_roll(id, table);
-
     }
   }
+
+  side("</div>");
+  side_display("</div>");
 
   display_side();
   rightscrolltop();
@@ -593,6 +601,7 @@ function perform_roll() {
 
 // copy to clipboard - current roll
 var copyTextareaBtn = document.querySelector('.current-copy-button');
+
 copyTextareaBtn.addEventListener('click', function(event) {
   if ( $('#rightview-current').html() == "" ) {
     showalert("copy current blank");
