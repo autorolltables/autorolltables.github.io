@@ -1,0 +1,147 @@
+*{
+  margin: 0px;
+}
+
+:root{
+  font-size: 14px;
+  line-height: 1;
+}
+
+body{
+  margin: 0px;
+}
+
+#menu{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+#menu > a{
+  padding: 1rem 2rem;
+  background-color: #d6d3d1;
+  border-radius: 1rem;
+}
+#menu > a:hover{
+  background-color: #78716c;
+  color: white;
+}
+#menu > a.menu-selected{
+  background-color: #a855f7;
+  color: white;
+}
+
+#left-display-list{
+  display: flex;
+  flex-direction: column;
+}
+
+#left-display-list > .list-item{
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 1rem;
+  line-height: 1;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 1rem;
+  cursor:pointer;
+}
+
+#left-display-list > .list-item .title{
+  display: flex;
+  align-items: center;
+}
+
+#left-display-list > .list-item .subtext{
+  opacity: 0.5;
+  line-height: 1;
+  font-size: 75%;
+}
+
+#left-display-list > .list-item:hover{
+  background-color: #d6d3d135;
+}
+
+#rightview-current-display{
+  padding: 2rem;
+  line-height: 2;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+
+#rightview-current-display .roll-title{
+  font-size: larger;
+  font-weight: bold;
+}
+
+#rightview-current-display .roll-suggested-use{
+  font-style: italic;
+  line-height: 1.5;
+  opacity: 0.6;
+  display: flex;
+}
+
+#rightview-current-display .rollings{
+  display: flex;
+  flex-direction: column;
+  font-size: smaller;
+}
+
+#rightview-current-display .extra{
+  display: flex;
+  flex-direction: column;
+  gap:1rem;
+}
+#rightview-current-display .extra .sub-title{
+  color: #a855f7;
+}
+
+#rightview-current-display .info-extra{
+  font-size: smaller;
+  padding: 2rem;
+  background-color: #d6d3d135;
+  border-radius: 1rem;
+}
+#rightview-current-display .info-extra + .info-extra{
+  margin-top: 1rem;
+}
+
+#rightview-current-display .info-extra .title{
+  font-weight: bold;
+}
+
+#rightview-current-display .info-extra .item{
+  font-size: smaller;
+  line-height: 1.5;
+}
+
+/* Firefox */
+*{
+  scrollbar-width: auto;
+  scrollbar-color: #d6d3d1 transparent;
+}
+
+/* Other browsers */
+*::-webkit-scrollbar{
+  width: 18px;
+}
+
+*::-webkit-scrollbar-track{
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb{
+  background-color: #d6d3d1;
+  border-radius: 16px;
+  border: 3px solid transparent;
+}
+
+
+#rightbuttons .active{
+  background-color: rgb(109,40,217);
+  color: rgb(221,214,254);
+}

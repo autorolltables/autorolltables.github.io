@@ -1,195 +1,113 @@
 <!DOCTYPE html>
+
 <html lang="en">
-<head>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
 
-  <title>Auto Roll Tables</title>
-  <style> html { display: none; } </style>
+    <title>Auto Roll Tables</title>
+
+    <style> html { display: none; } </style>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+
+    <script type="text/javascript">
+      if (self == top) { document.documentElement.style.display = 'block'; } else { top.location = self.location; }
+    </script>
+
+    <script src="js/roll_menu.js"></script>
+    <script src="js/roll_dungeons.js"></script>
+    <script src="js/roll_factions.js"></script>
+    <script src="js/roll_food.js"></script>
+    <script src="js/roll_magic.js"></script>
+    <script src="js/roll_monsters.js"></script>
+    <script src="js/roll_npcs.js"></script>
+    <script src="js/roll_objects.js"></script>
+    <script src="js/roll_plots.js"></script>
+    <script src="js/roll_settlements.js"></script>
+    <script src="js/roll_vehicles.js"></script>
+    <script src="js/roll_wilderness.js"></script>
+    <script src="js/roll_subrolls.js"></script>
+  </head>
+  <body>
+    <div id='alerts' class='absolute top-0 right-0'></div>
+    
+    <div class="flex flex-col p-8 gap-8" style="min-height:100svh; max-height:100svh; overflow: hidden;">
+      <div class="flex flex-col gap-8">
+        <header class="flex flex-row flex-wrap gap-2">
+          <div class="bg-stone-400 flex flex-row gap-2 rounded-2xl p-4">
+            <img src='img/d20.png' height="28" width="25"/>
+            <h1 class="text-xl text-white">Auto Roll Tables</h1>
+          </div>
+          <div id="index-menu" class="flex-1 justify-end flex flex-row gap-2 flex-wrap items-center">
+            <!-- <div id="menu-auto-roll-tables" class='hover:text-white cursor-pointer hover:bg-stone-400 flex flex-row gap-2 rounded-2xl p-4' aria-hidden='true'>Auto Roll Tables</div> -->
+            <div id="menu-hex-map-generator" class='hover:text-white cursor-pointer hover:bg-stone-400 flex flex-row gap-2 rounded-2xl p-4' aria-hidden='true'>Hex Map Generator</div>
+            <div id="menu-region-map-generator" class='hover:text-white cursor-pointer hover:bg-stone-400 flex flex-row gap-2 rounded-2xl p-4' aria-hidden='true'>Region Map Generator</div>
+          </div>
+        </header>
+        <aside id="menu-container">
+          <menu id="menu"></menu>
+        </aside>      
+      </div>
+      <div class="flex flex-row gap-8 flex-1 overflow-hidden">
+        <main class="w-full max-w-md pr-3 flex flex-col">
+          <div class="overflow-auto flex-1" id="left-display-list"></div>          
+          <div id="leftbuttons" class="flex gap-1">
+            <input type="text" class="bg-stone-100 px-6 py-3 rounded-2xl flex-1 focus:outline-none" placeholder="Filter..." aria-describedby="filter" id="filter">
+            <button class="bg-violet-200 text-violet-700 p-3 rounded-2xl h-14 items-center justify-center" type="button" id="filter-clear"><span class='material-symbols-rounded'>clear</span></button>
+            <button class="bg-violet-200 text-violet-700 p-3 rounded-2xl h-14 items-center justify-center" type="button" id="filter-button"><span class='material-symbols-rounded'>search</span></button>
+          </div>
+        </main>
+        <section class="bg-stone-300/20 flex-1 p-4 rounded-2xl flex flex-col relative gap-4">
+          <ul class="flex flex-row items-center gap-1 justify-end" id="rightbuttons">
+            <li id="expand-history-tab" class="bg-stone-200 text-stone-700 hover:bg-stone-700 hover:text-stone-200 p-3 rounded-2xl h-14 items-center justify-center" role="presentation"><a href="#"><span class='material-symbols-rounded' aria-label="Expand All">expand_all</span></a></li>
+            <li id="collapse-history-tab" class="bg-stone-200 text-stone-700 hover:bg-stone-700 hover:text-stone-200 p-3 rounded-2xl h-14 items-center justify-center" role="presentation"><a href="#"><span class='material-symbols-rounded' aria-label="Collapse All">collapse_all</span></a></li>
+            <li class="flex-1"></li>
+            <li id="current-roll-tab" role="presentation" class="hover:bg-violet-700 hover:text-violet-200 bg-violet-200 text-violet-700 p-3 rounded-2xl flex h-14 items-center justify-center active"><a href="#">Current Roll</a></li>
+            <li id="copy-current-button" class="current-copy-button hover:bg-violet-700 hover:text-violet-200 bg-violet-200 text-violet-700 p-3 rounded-2xl h-14 items-center justify-center" value="Copy To Current to Clipboard"><a href="#"><span class='material-symbols-rounded' aria-label="Collapse All">copy_all</span></a></li>
+            <li id="history-roll-tab" role="presentation" class="hover:bg-violet-700 hover:text-violet-200 bg-violet-200 text-violet-700 p-3 rounded-2xl h-14 items-center justify-center"><a href="#"><span class="material-symbols-rounded">history</span></a></li>
+            <li id="copy-history-button" class="history-copy-button hover:bg-violet-700 hover:text-violet-200 bg-violet-200 text-violet-700 p-3 rounded-2xl h-14 items-center justify-center" value="Copy To History to Clipboard"><a href="#"><span class='material-symbols-rounded' aria-label="Collapse All">history_edu</span></a></li>
+            <li id="clear-history-roll-tab" class="hover:bg-rose-700 hover:text-rose-200 bg-rose-200 text-rose-700 p-3 rounded-2xl flex h-14 items-center justify-center" role="presentation"><a href="#">Clear History</a></li>
+            <li class="overflow-hidden h-0 w-0">
+              <textarea id="rightview-current" rows="19" spellcheck="false" class="current-textarea display form-control"></textarea>
+              <textarea id="rightview-history" rows="19" spellcheck="false" class="history-textarea display form-control"></textarea>
+            </li>
+          </ul>
+
+          <div class="flex-1 p-4 rounded-2xl bg-white overflow-auto" id="rightview-current-display"></div>
+          <div class="flex-1 p-4 rounded-2xl bg-white overflow-auto" id="rightview-history-display"></div>
+        </section>
+      </div>
+    </div>
+
+    <div class="p-4 bg-stone-100">
+      <p><a href="credits.html" class="text-violet-500">credits</a> | report issues: on <a href="https://github.com/autorolltables/autorolltables.github.io/issues/new" class="text-violet-500">github</a> or <a href="https://www.reddit.com/message/compose/?to=dangeratio" class="text-violet-500">reddit</a>.</p>
+    </div>
+  </body>
+
+  <script src="includes/jquery.min.js"></script>
+  <script type="text/javascript" src="js/rolltables.js"></script>
+
+  <!-- Start of StatCounter Code for Default Guide -->
   <script type="text/javascript">
-    if (self == top) { document.documentElement.style.display = 'block'; } else { top.location = self.location; }
+    var sc_project=10833414;
+    var sc_invisible=1;
+    var sc_security="aab08f2d";
+    var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "http://www.");
+    document.write("<sc"+"ript type='text/javascript' src='" + scJsHost+"statcounter.com/counter/counter.js'></"+"script>");
   </script>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" href="css/defaults.css" type="text/css" media="all" />
-  <link rel="stylesheet" href="css/menu.css" type="text/css" media="all" />
-
-  <!-- Old Online Versions -->
-  <!-- <link rel="stylesheet" href="https://bootswatch.com/superhero/bootstrap.min.css"> -->
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous"> -->
-
-  <!-- Includes -->
-  <link rel="stylesheet" href="includes/bootstrap.min.css">
-  <link rel="stylesheet" href="includes/bootstrap-theme.min.css">
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
-
-  <!-- <script src="js/menu.js"></script>
-  <script src="js/dungeons.js"></script>
-  <script src="js/factions.js"></script>
-  <script src="js/food.js"></script>
-  <script src="js/magic.js"></script>
-  <script src="js/monsters.js"></script>
-  <script src="js/npcs.js"></script>
-  <script src="js/objects.js"></script>
-  <script src="js/plots.js"></script>
-  <script src="js/settlements.js"></script>
-  <script src="js/vehicles.js"></script>
-  <script src="js/wilderness.js"></script>
-  <script src="js/subrolls.js"></script> -->
-  <script src="js/roll_menu.js"></script>
-  <script src="js/roll_dungeons.js"></script>
-  <script src="js/roll_factions.js"></script>
-  <script src="js/roll_food.js"></script>
-  <script src="js/roll_magic.js"></script>
-  <script src="js/roll_monsters.js"></script>
-  <script src="js/roll_npcs.js"></script>
-  <script src="js/roll_objects.js"></script>
-  <script src="js/roll_plots.js"></script>
-  <script src="js/roll_settlements.js"></script>
-  <script src="js/roll_vehicles.js"></script>
-  <script src="js/roll_wilderness.js"></script>
-  <script src="js/roll_subrolls.js"></script>
-
-
-
-</head>
-<body>
-  <div class="bgimage">
-    <img src="includes/dndlogo1.png">
-    <!-- <img src="web/dndlogo1.png" class="bgimage"> -->
-  </div>
-
-  <div id="" class="container-fluid">
-    <div class="row">
-      <div class="col-md-12 logo">Auto Roll Tables &nbsp;&nbsp; <img src='img/d20.png' height="28" width="25"/></div>
+  <noscript>
+    <div class="statcounter">
+      <a title="web counter" href="http://statcounter.com/" target="_blank">
+        <img class="statcounter" src="http://c.statcounter.com/10833414/0/aab08f2d/1/" alt="web counter">
+      </a>
     </div>
-    <div id="menu-container" class="row">
-      <div id="menu" class="col-md-11 btn-group">
-        <a href="#" class='menuitem-style btn menu-button' aria-hidden='true'><span class="glyphicon glyphicon-th"></span></a>
-        <a href="#" class='menuitem-style btn hover-icon-clickarea' aria-hidden='true'><span class="glyphicon glyphicon-hand-up hover-icon"></span></a>
-      </div>
-
-    </div>
-    <div id="" class="row"></div>
-  </div>
-
-  <div id="index-menu" class="index-menu">
-    <div class="index-row">
-      <div id="menu-auto-roll-tables" class='index-btn' aria-hidden='true'>Auto Roll Tables</div>
-    </div>
-    <div class="index-row">
-      <div id="menu-hex-map-generator" class='index-btn' aria-hidden='true'>Hex Map Generator</div>
-    </div>
-    <div class="index-row">
-      <div id="menu-region-map-generator" class='index-btn-bottom' aria-hidden='true'>Region Map Generator</div>
-    </div>
-  </div>
-
-  <div id="page" class="container-fluid">
-
-    <div class="row">
-      <div class="col-md-12">
-        <p class="lead"></p>
-      </div>
-    </div>
-
-    <div class="row">
-      <div id="leftnav" class="col-xs-12 col-sm-4">
-        <div id="left-display-list"></div>
-      </div>
-
-      <div class="col-xs-12 hidden-sm hidden-md hidden-lg">
-         &nbsp;
-      </div>
-
-      <div id="rightnav" class="col-xs-12 col-sm-8">
-
-        <ul class="nav nav-tabs">
-          <li id="current-roll-tab" role="presentation" class="active"><a href="#">Current Roll</a></li>
-          <li id="history-roll-tab" role="presentation"><a href="#">History</a></li>
-          <li id="expand-history-tab" class="nav-tabs-right" role="presentation"><a href="#"><span class='glyphicon glyphicon-chevron-down' aria-label="Expand All"></span></a></li>
-          <li id="collapse-history-tab" class="nav-tabs-right" role="presentation"><a href="#"><span class='glyphicon glyphicon-chevron-up' aria-label="Collapse All"></span></a></li>
-          <li id="clear-history-roll-tab" class="nav-tabs-right" role="presentation"><a href="#">Clear History</a></li>
-        </ul>
-
-        <div id="rightview-current-display" class="rightview-current-display rightview"></div>
-        <div id="rightview-history-display" class="rightview-history-display rightview"></div>
-
-        <textarea id="rightview-current" rows="19" spellcheck="false" class="current-textarea display form-control"></textarea>
-        <textarea id="rightview-history" rows="19" spellcheck="false" class="history-textarea display form-control"></textarea>
-
-      </div>
-    </div>
-
-    <div class="row">&nbsp;</div>
-
-    <div class="row">
-      <div id="leftbuttons" class="col-md-4">
-        <div class="input-group bottom-nav">
-          <input type="text" class="form-control" placeholder="Filter..." aria-describedby="filter" id="filter">
-          <span class="input-group-addon search-button-addon">
-            <button class="btn bottom-btn" type="button" id="filter-clear"><span class='glyphicon glyphicon-remove'></span></button>
-          </span>
-          <span class="input-group-addon search-button-addon">
-            <button class="btn bottom-btn" type="button" id="filter-button"><span class='glyphicon glyphicon-search'></span></button>
-          </span>
-        </div>
-      </div>
-      <div class="col-xs-12 col-sm-12 hidden-md hidden-lg">
-         &nbsp;
-      </div>
-      <div id="rightbuttons" class="col-md-4">
-        <a class="bottom-nav current-copy-button btn bottom-btn" id="copy-current-button" value="Copy To Clipboard" style="width:100%;"><span class='glyphicon glyphicon-duplicate'></span> Copy Current Roll</a>
-      </div>
-      <div class="col-xs-12 col-sm-12 hidden-md hidden-lg">
-         &nbsp;
-      </div>
-
-      <div id="rightbuttons" class="col-md-4">
-        <a class="bottom-nav history-copy-button btn bottom-btn" id="copy-history-button" value="Copy To Clipboard" style="width:100%;"><span class='glyphicon glyphicon-duplicate'></span> Copy History</a>
-      </div>
-    </div>
-
-    <div class="row">&nbsp;</div>
-    <div class="row">
-      <div class="col-md-12">
-        <p class="text-less-muted"><a href="credits.html">credits</a> | report issues: on <a href="https://github.com/autorolltables/autorolltables.github.io/issues/new">github</a> or <a href="https://www.reddit.com/message/compose/?to=dangeratio">reddit</a>.
-        </p>
-      </div>
-    </div>
-
-  </div>
-
-<div id='alerts' class='overlay'></div>
-
-</body>
-
-
-
-<!-- Old Online Version -->
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
-<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script> -->
-
-<!-- Includes -->
-<script src="includes/jquery.min.js"></script>
-<script type="text/javascript" src="js/rolltables.js"></script>
-
-<!-- Start of StatCounter Code for Default Guide -->
-<script type="text/javascript">
-var sc_project=10833414;
-var sc_invisible=1;
-var sc_security="aab08f2d";
-var scJsHost = (("https:" == document.location.protocol) ?
-"https://secure." : "http://www.");
-document.write("<sc"+"ript type='text/javascript' src='" +
-scJsHost+
-"statcounter.com/counter/counter.js'></"+"script>");
-</script>
-<noscript><div class="statcounter"><a title="web counter"
-href="http://statcounter.com/" target="_blank"><img
-class="statcounter"
-src="http://c.statcounter.com/10833414/0/aab08f2d/1/"
-alt="web counter"></a></div></noscript>
-<!-- End of StatCounter Code for Default Guide -->
-
+  </noscript>
 </html>
