@@ -3,7 +3,7 @@
 
 top.settlements = [
   {
-    title: "d100 Verb",
+    title: "d99 Verb",
     id: "d100verb_tavernnames",
     roll: [
       "Drowning",
@@ -108,7 +108,7 @@ top.settlements = [
     ],
   },
   {
-    title: "d100 Adjective",
+    title: "d99 Adjective",
     id: "d100adjective_tavernnames",
     roll: [
       "Quiet",
@@ -213,7 +213,7 @@ top.settlements = [
     ],
   },
   {
-    title: "d100 Noun 1",
+    title: "d99 Noun 1",
     id: "d100noun1a_tavernnames",
     roll: [
       "Horseman",
@@ -318,7 +318,7 @@ top.settlements = [
     ],
   },
   {
-    title: "d100 Noun 1B",
+    title: "d99 Noun 1B",
     id: "d100noun1b_tavernnames",
     roll: [
       "Horseman",
@@ -423,7 +423,7 @@ top.settlements = [
     ],
   },
   {
-    title: "d100 Noun 2",
+    title: "d99 Noun 2",
     id: "d100noun2_tavernnames",
     roll: [
       "Saddle",

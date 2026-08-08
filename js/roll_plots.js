@@ -116,8 +116,7 @@ top.plots = [
   {
     title:
       "d12 Threats The people of the city are fearful of (leaders and commonfolk may fear different things)...",
-    id:
-      "d12threatsthepeopleofthecityarefearfulofleadersandcommonfolkmayfeardifferentthings_city",
+    id: "d12threatsthepeopleofthecityarefearfulofleadersandcommonfolkmayfeardifferentthings_city",
     roll: [
       "Bandits and outlaws.",
       "Barbarian invasions.",
@@ -263,8 +262,7 @@ top.plots = [
   {
     title:
       "d7 When the NPC overhears the PC or the party talking, his/her reaction is...",
-    id:
-      "d7whenthenpcoverhearsthepcorthepartytalkinghisherreactionis_rumorandmotivation(variant)",
+    id: "d7whenthenpcoverhearsthepcorthepartytalkinghisherreactionis_rumorandmotivation(variant)",
     roll: [
       "Hostile. Now the NPC is a nemesis. He/she gives a Major Bane (F) and will pursue one or more of the PCs until dead.",
       "Unhappy. The NPC gives a Minor Bane (E). There is an 80% chance his/her attitude will shift to hostile on next encounter.",
@@ -278,8 +276,7 @@ top.plots = [
   {
     title:
       "d7 When questioned about his/her motivation, the NPC reveals (or hides) that he/she is...",
-    id:
-      "d7whenquestionedabouthishermotivationthenpcrevealsorhidesthathesheis_rumorandmotivation(variant)",
+    id: "d7whenquestionedabouthishermotivationthenpcrevealsorhidesthathesheis_rumorandmotivation(variant)",
     roll: [
       "On The Run (J) from a Minor Enemy (Q) or a Major Enemy (R) for Good Deeds(O) or Evil Deeds (P).",
       "On a Vendetta (I) against an Minor Enemy (Q) or a Major Enemy (R).",
@@ -410,8 +407,7 @@ top.plots = [
   },
   {
     title: "d7 [I] Vendetta The NPC is seeking vengeance against...",
-    id:
-      "d7[i]vendettathenpcisseekingvengeanceagainst_rumorandmotivation(variant)",
+    id: "d7[i]vendettathenpcisseekingvengeanceagainst_rumorandmotivation(variant)",
     roll: [
       "Accusers. The NPC was wrongfully jailed or persecuted.",
       "Members of a specif crace. The NPC is on a racial crusade.",
@@ -437,13 +433,12 @@ top.plots = [
   },
   {
     title: "d7 [K] Buying or Selling The NPC is buying or selling...",
-    id:
-      "d7[k]buyingorsellingthenpcisbuyingorselling_rumorandmotivation(variant)",
+    id: "d7[k]buyingorsellingthenpcisbuyingorselling_rumorandmotivation(variant)",
     roll: [
       "Cloth (d10): 1. raw cotton; 2. raw linen; 3. raw silk; 4. raw wool; 5. finished cotton; 6. finished linen; 7. finished silk; 8. finished wool; 9. soft leather; 10. unusual animal hair.",
       "Wood (d6): 1. rough cut; 2. finished; 3. furniture; 4. containers; 5. paper; 6. carved.",
       "Food (d10): 1. fresh fruits and vegetables; 2. cured meats; 3. cheeses; 4. grain; 5. preserved fruits; 6. nuts; 7. preserved vegetables; 8. oils; 9. live animals; 10. foreign delicacies.",
-      "Beverages (d6): 1. ale; 2. mead; 3 distilled spirits; 4. raw juice; 5. water; 6. wine.",
+      "Beverages (d6): 1. ale; 2. mead; 3. distilled spirits; 4. raw juice; 5. water; 6. wine.",
       "Spices (d10): 1. salt; 2. sugar; 3. variety of pepper; 4. savory spice; 5. unusual spice; 6. legal drug; 7. illegal drug; 8. healing herb; 9. magical herb; 10. exotic herb.",
       "Minerals (d6): 1. raw stone; 2. refined stone; 3. raw ore; 4. refined ore; 5. rough-cut gemstones; 6. finely-cut gemstones.",
       "Luxury goods (d10): 1. painting; 2. sculpture; 3. work of art; 4. rare commodity; 5. masterwork armor; 6. masterwork weapon; 7. fine textiles; 8. perfumes; 9. exotic foods; 10. expensive potions.",
@@ -2802,7 +2797,7 @@ top.plots = [
   },
   {
     title: "d10 The [Figure]",
-    id: "d10rollthefigure",
+    id: "d10rollthefigure_2",
     roll: [
       "sprints at you",
       "begins walking slowly toward you",
@@ -3227,7 +3222,7 @@ top.plots = [
       "A diminutive beast (d8): 1. badger; 2. cat; 3. dog; 4. fox; 5. hedgehog; 6. rat; 7. snake; 8. spider.",
       "An aquatic creature (d8): 1. crocodile; 2. frog; 3. fish; 4. mermaid; 5. octopus; 6. shark; 7. swan; 8. whale.",
       "A bird (d8): 1. dove; 2. eagle; 3. mockingbird; 4. owl; 5. raven; 6. rooster; 7. sparrow; 8. vulture.",
-      "A monster (d8): 1. devil; 2. demon; 3; giant; 4. ghost; 5. goblin; 6. griffon; 7. hag; 8. ogre.",
+      "A monster (d8): 1. devil; 2. demon; 3. giant; 4. ghost; 5. goblin; 6. griffon; 7. hag; 8. ogre.",
       "An event (d8): 1. battle; 2. captivity; 3. death; 4. feast or fair; 5. illness; 6. storm; 7. tournament; 8. wedding.",
       "A wilderness location (d8): 1. cave; 2. desert; 3. forest; 4. lake; 5. mountain; 6. river; 7. sea; 8. swamp.",
       "A settlement location (d8): 1. castle; 2. garden; 3. fountain; 4. inn; 5. market; 6. tavern; 7. temple; 8. tomb.",
@@ -3541,7 +3536,7 @@ top.plots = [
   },
   {
     title: "d10 - SOURCE",
-    id: "d10source",
+    id: "d10source_2",
     roll: [
       "Rumors speak of a",
       "When wanting to scare the children, locals tell an old tale of a",
@@ -3860,22 +3855,8 @@ top.plots = [
     ],
   },
   {
-    title: "d8 Then...",
-    id: "d8then",
-    roll: [
-      "Go North for 1-4 miles.",
-      "Go South for 1-4 miles.",
-      "Go East for 1-4 miles.",
-      "Go West for 1-4 miles.",
-      "Go Northeast for 1-4 miles.",
-      "Go Northwest for 1-4 miles.",
-      "Go Southeast for 1-4 miles.",
-      "Go Southwest for 1-4 miles.",
-    ],
-  },
-  {
     title: "d20 Until you find the...",
-    id: "d20untilyoufindthe",
+    id: "d20untilyoufindthe_2",
     roll: [
       "Rock shaped like a heart.",
       "Mountain shaped like a bird's head.",
@@ -3897,20 +3878,6 @@ top.plots = [
       "Quicksand.",
       "Hills honeycombed with caves.",
       "Old King's Forest.",
-    ],
-  },
-  {
-    title: "d8 Then...",
-    id: "d8then",
-    roll: [
-      "Go North for 1-4 miles.",
-      "Go South for 1-4 miles.",
-      "Go East for 1-4 miles.",
-      "Go West for 1-4 miles.",
-      "Go Northeast for 1-4 miles.",
-      "Go Northwest for 1-4 miles.",
-      "Go Southeast for 1-4 miles.",
-      "Go Southwest for 1-4 miles.",
     ],
   },
   {

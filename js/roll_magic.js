@@ -15,8 +15,7 @@ top.magic = [
   {
     title:
       "d6 The large central pouch can hold up to ___ pounds of material...",
-    id:
-      "d6thelargecentralpouchcanholdupto___poundsofmaterial_dimensonshaversack",
+    id: "d6thelargecentralpouchcanholdupto___poundsofmaterial_dimensonshaversack",
     roll: ["50", "60", "70", "80", "90", "100"],
   },
   {
@@ -27,8 +26,7 @@ top.magic = [
   {
     title:
       "d4 The haversack always weighs ___ pound regardless of its contents...",
-    id:
-      "d4thehaversackalwaysweighs___poundregardlessofitscontents_dimensonshaversack",
+    id: "d4thehaversackalwaysweighs___poundregardlessofitscontents_dimensonshaversack",
     roll: ["2 1/2", "5", "7 1/2", "10"],
   },
 
@@ -162,8 +160,7 @@ top.magic = [
   {
     title:
       "d20 Adventure Seed: Congratulations! You found an [insert extradimensional item here]! It contains...",
-    id:
-      "d20adventureseedcongratulations!youfoundan[insertextradimensionalitemhere]!itcontains_bagofholding",
+    id: "d20adventureseedcongratulations!youfoundan[insertextradimensionalitemhere]!itcontains_bagofholding",
     roll: [
       "nothing",
       "60ft of rope",
@@ -190,8 +187,7 @@ top.magic = [
   {
     title:
       "d20 Adventure Seed: You love your [generic extradimensional doodad]! It's great! But suddenly...",
-    id:
-      "d20adventureseedyouloveyour[genericextradimensionaldoodad]!itsgreat!butsuddenly_bagofholding",
+    id: "d20adventureseedyouloveyour[genericextradimensionaldoodad]!itsgreat!butsuddenly_bagofholding",
     roll: [
       "the item begins to emit smoke when open",
       "you have a 25% chance to pull a living fish out of the item instead of whatever you were looking for",
@@ -218,8 +214,7 @@ top.magic = [
   {
     title:
       "d20 Adventure Seed: You're walking down a forest/desert/city road when out of nowhere!...",
-    id:
-      "d20yourewalkingdownaforestdesertcityroadwhenoutofnowhere!_bagofholding",
+    id: "d20yourewalkingdownaforestdesertcityroadwhenoutofnowhere!_bagofholding",
     roll: [
       "a bag of holding appears in your hand",
       "a heward's handy haversack appears on your back",
@@ -246,8 +241,7 @@ top.magic = [
   {
     title:
       "d6 Adventure Seed: You come across a bag of holding the size of a house. The opening is...",
-    id:
-      "d6adventureseedyoucomeacrossabagofholdingthesizeofahousetheopeningis_bagofholding",
+    id: "d6adventureseedyoucomeacrossabagofholdingthesizeofahousetheopeningis_bagofholding",
     roll: [
       "open, and you can see inside",
       "open, but dark",

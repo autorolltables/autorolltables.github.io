@@ -525,8 +525,7 @@ top.objects = [
   {
     title:
       "d6 You find a prisoner tied to the altar. If you sacrifice a prisoner on the altar, ...",
-    id:
-      "d6youfindaprisonertiedtothealtarifyousacrificeaprisoneronthealtar_altarunholy",
+    id: "d6youfindaprisonertiedtothealtarifyousacrificeaprisoneronthealtar_altarunholy",
     roll: [
       "A fiend appears before you and begins savaging you with its claws.",
       "A fiend appears before you, demanding to know why you've summoned it to this dreary place.",
@@ -539,8 +538,7 @@ top.objects = [
   {
     title:
       "d6 You find a prisoner tied to the altar. If you leave the prisoner there, ...",
-    id:
-      "d6youfindaprisonertiedtothealtarifyouleavetheprisonerthere_altarunholy",
+    id: "d6youfindaprisonertiedtothealtarifyouleavetheprisonerthere_altarunholy",
     roll: [
       "Someone else kills the prisoner before you come back.",
       "The prisoner dies of shock, fear, or injuries previously sustained; you discover the corpse when you come back.",
@@ -2674,7 +2672,7 @@ top.objects = [
   },
   {
     title: "d10 Deep-sea catch: You haul in...",
-    id: "d10deepseacatchyouhaulin",
+    id: "d10deepseacatchyouhaulin_2",
     roll: [
       "A cuttlefish.",
       "A flounder.",
@@ -2781,7 +2779,7 @@ top.objects = [
     ],
   },
   {
-    title: "d10 The herbal concoction’s color could be described as...",
+    title: "d20 The herbal concoction’s color could be described as...",
     id: "d10theherbalconcoctionscolorcouldbedescribedas",
     roll: [
       "Pale green.",
@@ -3231,7 +3229,7 @@ top.objects = [
   },
   {
     title: "d6 He holds dominion over...",
-    id: "d6heholdsdominionover",
+    id: "d6heholdsdominionover_2",
     roll: [
       "Forges and fire.",
       "Artisans and craftsmen.",
@@ -3243,7 +3241,7 @@ top.objects = [
   },
   {
     title: "d6 His followers must...",
-    id: "d6hisfollowersmust",
+    id: "d6hisfollowersmust_2",
     roll: [
       "Build or craft something with their hands.",
       "Ritualistically burn their dead.",
@@ -3267,7 +3265,7 @@ top.objects = [
   },
   {
     title: "d6 He holds dominion over...",
-    id: "d6heholdsdominionover",
+    id: "d6heholdsdominionover_3",
     roll: [
       "Darkness and poison.",
       "Shadows and spies.",
@@ -3279,7 +3277,7 @@ top.objects = [
   },
   {
     title: "d6 His followers must...",
-    id: "d6hisfollowersmust",
+    id: "d6hisfollowersmust_3",
     roll: [
       "Never speak of their true devotion to nonbelievers.",
       "Ritualistically cut out their tongues if they betray a secret.",
@@ -3303,7 +3301,7 @@ top.objects = [
   },
   {
     title: "d6 He holds dominion over...",
-    id: "d6heholdsdominionover",
+    id: "d6heholdsdominionover_4",
     roll: [
       "Necromancers and assassins.",
       "Death and pain.",
@@ -3315,7 +3313,7 @@ top.objects = [
   },
   {
     title: "d6 His followers must...",
-    id: "d6hisfollowersmust",
+    id: "d6hisfollowersmust_4",
     roll: [
       "Commit murder at least once in their lives.",
       "Ritualistically eat their dead.",
@@ -3339,7 +3337,7 @@ top.objects = [
   },
   {
     title: "d6 She holds dominion over...",
-    id: "d6sheholdsdominionover",
+    id: "d6sheholdsdominionover_2",
     roll: [
       "Marriage and children.",
       "Love and music.",
@@ -3351,7 +3349,7 @@ top.objects = [
   },
   {
     title: "d6 Her followers must...",
-    id: "d6herfollowersmust",
+    id: "d6herfollowersmust_2",
     roll: [
       "Participate in ritualistic sexual orgies.",
       "Procreate to the fullest extent they can.",
@@ -3375,7 +3373,7 @@ top.objects = [
   },
   {
     title: "d6 She holds dominion over...",
-    id: "d6sheholdsdominionover",
+    id: "d6sheholdsdominionover_3",
     roll: [
       "The moon and the stars.",
       "The moon and the night.",
@@ -3387,7 +3385,7 @@ top.objects = [
   },
   {
     title: "d6 Her followers must...",
-    id: "d6herfollowersmust",
+    id: "d6herfollowersmust_3",
     roll: [
       "Hold an all-night prayer vigil when the moon is full.",
       "Read her sacred texts by moonlight once a month.",
@@ -3411,7 +3409,7 @@ top.objects = [
   },
   {
     title: "d6 She holds dominion over...",
-    id: "d6sheholdsdominionover",
+    id: "d6sheholdsdominionover_4",
     roll: [
       "Hunters and woodsmen.",
       "Beasts and the wilderness.",
@@ -3423,7 +3421,7 @@ top.objects = [
   },
   {
     title: "d6 Her followers must...",
-    id: "d6herfollowersmust",
+    id: "d6herfollowersmust_4",
     roll: [
       "Pray beneath a tree every day.",
       "Read her sacred texts in a grove of trees once a week.",
@@ -3447,7 +3445,7 @@ top.objects = [
   },
   {
     title: "d6 He holds dominion over...",
-    id: "d6heholdsdominionover",
+    id: "d6heholdsdominionover_5",
     roll: [
       "The sea and storms.",
       "The sea and ships.",
@@ -3459,7 +3457,7 @@ top.objects = [
   },
   {
     title: "d6 His followers must...",
-    id: "d6hisfollowersmust",
+    id: "d6hisfollowersmust_5",
     roll: [
       "Splash saltwater on themselves when praying daily.",
       "Give their dead a burial at sea.",
@@ -3485,7 +3483,7 @@ top.objects = [
   },
   {
     title: "d6 He holds dominion over...",
-    id: "d6heholdsdominionover",
+    id: "d6heholdsdominionover_6",
     roll: [
       "Mischief and pranks.",
       "Trickery and cruel jokes.",
@@ -3497,7 +3495,7 @@ top.objects = [
   },
   {
     title: "d6 His followers must...",
-    id: "d6hisfollowersmust",
+    id: "d6hisfollowersmust_6",
     roll: [
       "Drink enormous amounts of wine at festivals.",
       "Participate in pranks and subversive activities.",
@@ -3521,7 +3519,7 @@ top.objects = [
   },
   {
     title: "d6 He holds dominion over...",
-    id: "d6heholdsdominionover",
+    id: "d6heholdsdominionover_7",
     roll: [
       "Soldiers and gladiators.",
       "Violence and slaughter.",
@@ -3533,7 +3531,7 @@ top.objects = [
   },
   {
     title: "d6 His followers must...",
-    id: "d6hisfollowersmust",
+    id: "d6hisfollowersmust_7",
     roll: [
       "Ritualistically scar themselves.",
       "Fight with a military company or war clan at least once.",

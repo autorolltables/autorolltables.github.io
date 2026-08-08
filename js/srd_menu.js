@@ -28,7 +28,7 @@ top.menu = [
       },
       { title: "Amulet of the Planes", id: "items/amuletoftheplanes_items" },
       { title: "Animated Shield", id: "items/animatedshield_items" },
-      { title: "Apparatus of the Crab", id: "items/apparatusofthecrab_items" },
+      { title: "Apparatus of Kwalish", id: "items/apparatusofkwalish_items" },
       { title: "Armor, +1, +2, or +3", id: "items/armor+1+2or+3_items" },
       {
         title: "Armor of Invulnerability",

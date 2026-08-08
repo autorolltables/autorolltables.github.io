@@ -100,12 +100,12 @@ top.monsters = [
   },
 
   {
-    title: "d6 Hair color The merfolk’s hair is...",
+    title: "d5 Hair color The merfolk’s hair is...",
     id: "d6haircolorthemerfolk’shairis_merfolk",
     roll: ["Gold.", "Grey.", "Dark brown.", "Light brown.", "Black."],
   },
   {
-    title: "d6 Scale color The merfolk’s scales are...",
+    title: "d5 Scale color The merfolk’s scales are...",
     id: "d6scalecolorthemerfolk’sscalesare_merfolk",
     roll: [
       "Dark green.",
@@ -116,12 +116,12 @@ top.monsters = [
     ],
   },
   {
-    title: "d6 Training The merfolk is a/an...",
+    title: "d5 Training The merfolk is a/an...",
     id: "d6trainingthemerfolkisaan_merfolk",
     roll: ["Forager.", "Musician.", "Seer.", "Servant.", "Warrior."],
   },
   {
-    title: "d6 Skill The merfolk is particularly good at...",
+    title: "d5 Skill The merfolk is particularly good at...",
     id: "d6skillthemerfolkisparticularlygoodat_merfolk",
     roll: [
       "Finding places to hide.",
@@ -132,7 +132,7 @@ top.monsters = [
     ],
   },
   {
-    title: "d6 Quirk/flaw The merfolk frequently...",
+    title: "d5 Quirk/flaw The merfolk frequently...",
     id: "d6quirkflawthemerfolkfrequently_merfolk",
     roll: [
       "Hums when feeling nervous.",
@@ -143,7 +143,7 @@ top.monsters = [
     ],
   },
   {
-    title: "d6 Possessions The merfolk is carrying...",
+    title: "d5 Possessions The merfolk is carrying...",
     id: "d6possessionsthemerfolkiscarrying_merfolk",
     roll: [
       "A simple spear.",
@@ -154,7 +154,7 @@ top.monsters = [
     ],
   },
   {
-    title: "d6 Immediate goal The merfolk is looking for...",
+    title: "d5 Immediate goal The merfolk is looking for...",
     id: "d6immediategoalthemerfolkislookingfor_merfolk",
     roll: [
       "A good laugh.",
@@ -165,7 +165,7 @@ top.monsters = [
     ],
   },
   {
-    title: "d6 Ambition The merfolk would like to...",
+    title: "d5 Ambition The merfolk would like to...",
     id: "d6ambitionthemerfolkwouldliketo_merfolk",
     roll: [
       "Chase away an aquatic demon.",
@@ -399,8 +399,7 @@ top.monsters = [
   {
     title:
       "d12 Vulnerability To bind, to summon, or to control the fiend or to drive it back to the shadow, one must...",
-    id:
-      "d12vulnerabilitytobindtosummonortocontrolthefiendortodriveitbacktotheshadowonemust_fiends",
+    id: "d12vulnerabilitytobindtosummonortocontrolthefiendortodriveitbacktotheshadowonemust_fiends",
     roll: [
       "Speak its true name.",
       "Write its true name in one’s own blood.",
@@ -1596,7 +1595,7 @@ top.monsters = [
   },
 
   {
-    title: "d12 The golem is...",
+    title: "d11 The golem is...",
     id: "d12thegolemis_golems",
     roll: [
       "Compact.",
@@ -1613,7 +1612,7 @@ top.monsters = [
     ],
   },
   {
-    title: "d100 ...and made of...",
+    title: "d99 ...and made of...",
     id: "d100andmadeof_golems",
     roll: [
       "Clay.",
@@ -1718,7 +1717,7 @@ top.monsters = [
     ],
   },
   {
-    title: "d20 The golem is powered by...",
+    title: "d19 The golem is powered by...",
     id: "d20thegolemispoweredby_golems",
     roll: [
       "Steam.",
@@ -1743,7 +1742,7 @@ top.monsters = [
     ],
   },
   {
-    title: "d6 The golem...",
+    title: "d5 The golem...",
     id: "d6thegolem_golems",
     roll: [
       "Is recent.",
@@ -1754,7 +1753,7 @@ top.monsters = [
     ],
   },
   {
-    title: "d100 The golem was built for...",
+    title: "d99 The golem was built for...",
     id: "d100thegolemwasbuiltfor_golems",
     roll: [
       "Mining.",
@@ -1859,7 +1858,7 @@ top.monsters = [
     ],
   },
   {
-    title: "d20 The golem was created by...",
+    title: "d19 The golem was created by...",
     id: "d20thegolemwascreatedby_golems",
     roll: [
       "A lich.",
@@ -1884,7 +1883,7 @@ top.monsters = [
     ],
   },
   {
-    title: "d8 Who imbued or equipped it with...",
+    title: "d7 Who imbued or equipped it with...",
     id: "d8whoimbuedorequippeditwith_golems",
     roll: [
       "Social skills (d6): 1. human-level speech; 2. true empathy; 3. an ability to manipulate; 4. language translation; 5. group psychology; 6. body language.",
@@ -1897,7 +1896,7 @@ top.monsters = [
     ],
   },
   {
-    title: "d33 Distinguishing Feature The golem has or is...",
+    title: "d39 Distinguishing Feature The golem has or is...",
     id: "d33distinguishingfeaturethegolemhasoris_golems",
     roll: [
       "A vibrant and unusual colour.",
@@ -1942,7 +1941,7 @@ top.monsters = [
     ],
   },
   {
-    title: "d4 The golem defends itself with...",
+    title: "d3 The golem defends itself with...",
     id: "d4thegolemdefendsitselfwith_golems",
     roll: [
       "Ranged attacks (d6): 1. a fixed repeater crossbow; 2. a mounted grenade launcher; 3. a blade or shuriken thrower in the wrist; 4. a flamethrower; 5. a directed force coil; 6. a liquid spray.",
@@ -1951,7 +1950,7 @@ top.monsters = [
     ],
   },
   {
-    title: "d6 The golem's condition might be described as...",
+    title: "d5 The golem's condition might be described as...",
     id: "d6thegolemsconditionmightbedescribedas_golems",
     roll: [
       "Well-maintained.",
@@ -2946,7 +2945,7 @@ top.monsters = [
   },
 
   {
-    title: "d4 Age The Dragon is a...",
+    title: "d3 Age The Dragon is a...",
     id: "d4agethedragonisa",
     roll: ["Youngling.", "Adult.", "Ancient One."],
   },
@@ -2967,7 +2966,7 @@ top.monsters = [
     ],
   },
   {
-    title: "d70 Appearance The dragon has a unique appearance",
+    title: "d69 Appearance The dragon has a unique appearance",
     id: "d70appearancethedragonhasauniqueappearance",
     roll: [
       "Is relatively normal for its colour.",
@@ -3042,7 +3041,7 @@ top.monsters = [
     ],
   },
   {
-    title: "d40 Appearance, it also has",
+    title: "d39 Appearance, it also has",
     id: "d40appearance2italsohas",
     roll: [
       "Light scaring around the eyes.",
@@ -3087,7 +3086,7 @@ top.monsters = [
     ],
   },
   {
-    title: "d70 Traits The dragon is",
+    title: "d69 Traits The dragon is",
     id: "d70traitsthedragonis",
     roll: [
       "The runt of the litter. It’s smaller than average and weaker, yet more intelligent and stealthy.",
@@ -3162,7 +3161,7 @@ top.monsters = [
     ],
   },
   {
-    title: "d20 Speech, When it comes to conversation",
+    title: "d19 Speech, When it comes to conversation",
     id: "d20speechwhenitcomestoconversation",
     roll: [
       "It knows many languages and loves to talk.",
@@ -3188,9 +3187,8 @@ top.monsters = [
   },
   {
     title:
-      "d30 Hoard, Each dragon is compelled to hoard, but many hoard in different ways. This dragons hoard is...",
-    id:
-      "d30hoardeachdragoniscompelledtohoardbutmanyhoardindifferentwaysthisdragonshoardis",
+      "d29 Hoard, Each dragon is compelled to hoard, but many hoard in different ways. This dragons hoard is...",
+    id: "d30hoardeachdragoniscompelledtohoardbutmanyhoardindifferentwaysthisdragonshoardis",
     roll: [
       "Gold but only the currency of one race, oddly not the race in the nearby areas.",
       "Carefully organised money in stacks and every treasure is organised using a complex system.",
@@ -3225,7 +3223,7 @@ top.monsters = [
   },
   {
     title:
-      "d30 Lair, Dragons have a home, a lair. Often a large dungeon. This dragons lair is...",
+      "d29 Lair, Dragons have a home, a lair. Often a large dungeon. This dragons lair is...",
     id: "d30lairdragonshaveahomealairoftenalargedungeonthisdragonslairis",
     roll: [
       "The peak of the tallest mountain, with few paths up to the lair.",
@@ -3260,7 +3258,7 @@ top.monsters = [
     ],
   },
   {
-    title: "d30 Lair The lair also has...",
+    title: "d29 Lair The lair also has...",
     id: "d30lair2thelairalsohas",
     roll: [
       "A place of elemental power.",
@@ -3295,7 +3293,7 @@ top.monsters = [
     ],
   },
   {
-    title: "d20 Henchmen, Their lair is defended by...",
+    title: "d19 Henchmen, Their lair is defended by...",
     id: "d20henchmentheirlairisdefendedby",
     roll: [
       "Mercenaries hired by the dragon to keep it safe. The races and skills do not matter to the dragon, so would be varied.",
@@ -3673,7 +3671,7 @@ top.monsters = [
       "Harassing anyone who passes through their territory.",
       "Robbing caravans carrying gems, precious metals, and exotic goods.",
       "Holding up traders’ ships or wagons.",
-      "Smuggling drugs (d4): 1. smokeleaf; 2. a hallucinogenic mushroom; (3) sleepysalt (a downer); 4. sharpsugar (an upper).",
+      "Smuggling drugs (d4): 1. smokeleaf; 2. a hallucinogenic mushroom; 3. sleepysalt (a downer); 4. sharpsugar (an upper).",
       "Smuggling living things (d4): 1. exotic beasts; 2. foreign harlots; 3. fugitives; 4. slaves.",
       "Serving as muscle for evildoers.",
       "Mining and crafting.",
@@ -3781,8 +3779,7 @@ top.monsters = [
   {
     title:
       "d6 The goblins’ goals include (boss and rank-and-file members could have different goals)...",
-    id:
-      "d6thegoblinsgoalsincludebossandrankandfilememberscouldhavedifferentgoals",
+    id: "d6thegoblinsgoalsincludebossandrankandfilememberscouldhavedifferentgoals",
     roll: [
       "Disruption of the region’s politics.",
       "Disruption of the region’s trade.",
@@ -4385,8 +4382,7 @@ top.monsters = [
   {
     title:
       "d6 The orcs’ goals include (chief and lower-ranking members could have different goals)...",
-    id:
-      "d6theorcsgoalsincludechiefandlowerrankingmemberscouldhavedifferentgoals",
+    id: "d6theorcsgoalsincludechiefandlowerrankingmemberscouldhavedifferentgoals",
     roll: [
       "Upheaval of the region’s politics.",
       "Disruption of the region’s trade.",
@@ -4818,7 +4814,7 @@ top.monsters = [
   },
   {
     title:
-      "d6 The spirit’s initial reaction when it encounters living creatures is...",
+      "d8 The spirit’s initial reaction when it encounters living creatures is...",
     id: "d6thespiritsinitialreactionwhenitencounterslivingcreaturesis",
     roll: [
       "Hostile and aggressive.",
