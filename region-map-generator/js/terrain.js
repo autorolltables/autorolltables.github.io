@@ -314,6 +314,7 @@ function findSinks(h) {
       node = dh[node];
     }
   }
+  return sinks;
 }
 
 function fillSinks(h, epsilon) {
@@ -748,9 +749,9 @@ function visualizeVoronoi(svg, field, lo, hi) {
     });
 }
 
-function visualizeDownhill(h) {
+function visualizeDownhill(svg, h) {
   var links = getRivers(h, 0.01);
-  drawPaths("river", links);
+  drawPaths(svg, "river", links);
 }
 
 function drawPaths(svg, cls, paths) {
@@ -823,15 +824,15 @@ function visualizeSlopes(svg, render) {
     });
 }
 
-function visualizeContour(h, level) {
+function visualizeContour(svg, h, level) {
   level = level || 0;
   var links = contour(h, level);
-  drawPaths("coast", links);
+  drawPaths(svg, "coast", links);
 }
 
-function visualizeBorders(h, cities, n) {
-  var links = getBorders(h, getTerritories(h, cities, n));
-  drawPaths("border", links);
+function visualizeBorders(svg, render) {
+  var links = getBorders(render);
+  drawPaths(svg, "border", links);
 }
 
 function visualizeCities(svg, render) {
@@ -1165,7 +1166,9 @@ function doMap(svg, params) {
       " " +
       1000 * params.extent.height
   );
-  svg.selectAll().remove();
+  // selectAll() with no selector matches nothing, so the previous map has to be
+  // selected explicitly for a re-render to actually clear it
+  svg.selectAll("*").remove();
   render.h = params.generator(params);
   placeCities(render);
   drawMap(svg, render);
