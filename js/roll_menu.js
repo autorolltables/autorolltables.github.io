@@ -4989,6 +4989,20 @@ top.menu = [
         sub_rolls: ["subrolls/4d4investigators", "subrolls/6d6guards"],
       },
       {
+        title: "Weather",
+        use:
+          "Roll up a day's weather for any leg of the journey. Roll temperature, wind, and sky once each; add a touch of flavor when the day deserves it.",
+        main_rolls: [
+          "wilderness/d12temperaturetodaytheairis_weather",
+          "wilderness/d10windstrengththewindis_weather",
+          "wilderness/d8windbehaviorthewind_weather",
+          "wilderness/d12precipitationfallingfromtheskyis_weather",
+          "wilderness/d10skyoverheadyousee_weather",
+          "wilderness/d12atouchofweatherflavor_weather",
+        ],
+        sub_rolls: [],
+      },
+      {
         title: "Wines",
         use:
           "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
@@ -10798,6 +10812,20 @@ top.menu = [
           "wilderness/d6thecaveceilingis_underdark",
           "wilderness/d6hazardsobstaclesyoufind_underdark",
           "wilderness/d12travelersvisitorsyoucomeupon_underdark",
+        ],
+        sub_rolls: [],
+      },
+      {
+        title: "Weather",
+        use:
+          "Roll up a day's weather for any leg of the journey. Roll temperature, wind, and sky once each; add a touch of flavor when the day deserves it.",
+        main_rolls: [
+          "wilderness/d12temperaturetodaytheairis_weather",
+          "wilderness/d10windstrengththewindis_weather",
+          "wilderness/d8windbehaviorthewind_weather",
+          "wilderness/d12precipitationfallingfromtheskyis_weather",
+          "wilderness/d10skyoverheadyousee_weather",
+          "wilderness/d12atouchofweatherflavor_weather",
         ],
         sub_rolls: [],
       },
