@@ -14,7 +14,7 @@
   <link rel="icon" type="image/png" sizes="192x192" href="img/d20-icon-192.png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/app.css?v=3">
 
   <script>
     // apply the saved theme before first paint so there is no flash
@@ -162,19 +162,21 @@
           <h2>Favorites &amp; custom tables</h2>
           <p class="small muted">Star any table to pin it to the Favorites category. You can also write your own: open <a href="#/Favorites">Favorites</a> and choose <b>New custom table</b> to add a title and a list of results.</p>
           <p class="small muted" id="set-fav-count">No tables starred.</p>
-          <button type="button" class="btn small primary new-custom-table" style="margin-top:10px">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 5 v14 M5 12 h14"/></svg>
-            New custom table
-          </button>
-          <button type="button" class="btn small" id="set-clear-favorites" style="margin-top:10px">Clear all favorites</button>
-          <p class="small faint" style="margin-top:8px">Clearing favorites leaves custom tables alone; delete those from their edit dialog.</p>
+          <div class="btn-row">
+            <button type="button" class="btn small primary new-custom-table">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 5 v14 M5 12 h14"/></svg>
+              New custom table
+            </button>
+            <button type="button" class="btn small" id="set-clear-favorites">Clear all favorites</button>
+          </div>
+          <p class="small faint" style="margin-top:10px">Clearing favorites leaves custom tables alone; delete those from their edit dialog.</p>
         </div>
 
         <div class="card">
           <h2>Backup &amp; transfer</h2>
           <p class="small muted">Everything lives in this browser, so it is worth exporting a copy now and then, or to move to another device. The file holds your starred favorites, your custom tables and the current roll history.</p>
           <p class="small muted">Importing <b>merges</b> a file into what is already here, so nothing you have now is removed. Favorites and custom tables you already have are not duplicated; history entries are always added to the end of the list.</p>
-          <div class="row" style="margin-top:12px">
+          <div class="btn-row">
             <button type="button" class="btn primary" id="set-export">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 v12 M8 11 l4 4 4-4 M4 17 v2 a2 2 0 0 0 2 2 h12 a2 2 0 0 0 2-2 v-2"/></svg>
               Export
@@ -254,10 +256,10 @@
 </dialog>
 
 <script src="includes/jquery.min.js"></script>
-<script src="js/custom-tables.js"></script>
-<script src="js/backup.js"></script>
-<script src="js/app-shell.js"></script>
-<script src="js/rolltables.js"></script>
+<script src="js/custom-tables.js?v=3"></script>
+<script src="js/backup.js?v=3"></script>
+<script src="js/app-shell.js?v=3"></script>
+<script src="js/rolltables.js?v=3"></script>
 
 </body>
 </html>
