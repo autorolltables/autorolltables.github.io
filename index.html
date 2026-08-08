@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="description" content="Auto Roll Tables: hundreds of random tables for tabletop RPGs. Roll up NPCs, locations, items, monsters and plots in a click.">
-  <meta name="theme-color" content="#131a22">
+  <meta name="theme-color" content="#131d25">
   <title>Auto Roll Tables</title>
 
   <link rel="icon" href="favicon.ico" sizes="any">
@@ -24,7 +24,7 @@
         document.documentElement.dataset.theme = t === 'light' ? 'light' : 'dark';
         if (t === 'light') {
           var m = document.querySelector('meta[name="theme-color"]');
-          if (m) m.content = '#eaeff4';
+          if (m) m.content = '#e1e9ef';
         }
       } catch (e) {}
     })();
@@ -126,21 +126,36 @@
 
         <div class="card">
           <h2>Appearance</h2>
-          <label class="field">
+
+          <div class="field">
             <span>Theme</span>
-            <select id="set-theme">
-              <option value="dark">Dark (default)</option>
-              <option value="light">Light</option>
-            </select>
-          </label>
-          <label class="field">
+            <div class="segmented" id="set-theme" role="group" aria-label="Theme">
+              <button type="button" class="seg" data-value="dark" aria-pressed="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5 A8.5 8.5 0 0 1 9.5 4 a8.5 8.5 0 1 0 10.5 10.5 Z"/></svg>
+                Dark
+              </button>
+              <button type="button" class="seg" data-value="light" aria-pressed="false">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5 v2.2 M12 19.3 v2.2 M2.5 12 h2.2 M19.3 12 h2.2 M5.2 5.2 l1.6 1.6 M17.2 17.2 l1.6 1.6 M18.8 5.2 l-1.6 1.6 M6.8 17.2 l-1.6 1.6"/></svg>
+                Light
+              </button>
+            </div>
+          </div>
+
+          <div class="field">
             <span>Category switching</span>
-            <select id="set-navmode">
-              <option value="hover">Hover</option>
-              <option value="click">Click (default)</option>
-            </select>
-          </label>
-          <p class="small faint" style="margin-top:6px">With hover, resting the pointer on a category in the left nav opens it without clicking.</p>
+            <div class="segmented" id="set-navmode" role="group" aria-label="Category switching">
+              <button type="button" class="seg" data-value="hover" aria-pressed="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11 V5.5 a1.5 1.5 0 0 1 3 0 V11 m0-1.5 a1.5 1.5 0 0 1 3 0 V11 m0-1 a1.5 1.5 0 0 1 3 0 v4.5 a6 6 0 0 1-6 6 h-1 a6 6 0 0 1-5-2.7 l-2-3 a1.6 1.6 0 0 1 2.5-2 L9 14.5"/></svg>
+                Hover
+              </button>
+              <button type="button" class="seg" data-value="click" aria-pressed="false">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3.5 L18.5 10 l-5.6 1.9 L10.6 17.5 Z M13.5 13.5 L19 19"/></svg>
+                Click
+              </button>
+            </div>
+          </div>
+
+          <p class="small faint" style="margin-top:10px">With hover, resting the pointer on a category in the left nav opens it without clicking. Hover is the default.</p>
         </div>
 
         <div class="card">

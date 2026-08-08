@@ -3,7 +3,7 @@
 
 body {
   margin: 0px;
-  background-color: #505050;
+  background-color: #18232d;
   color: white;
 }
 
@@ -35,7 +35,7 @@ a:hover {
 
 .button {
   cursor: pointer;
-  background-color: #5A6668;
+  background-color: #20303d;
   color: white;
   border: none;
   padding: 0.5em;
@@ -50,7 +50,7 @@ a:hover {
 }
 
 #save_link:hover, .button:hover, .selected {
-  background-color: #4E5859 !important;
+  background-color: #294050 !important;
   color: white !important;
 }
 

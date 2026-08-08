@@ -1,0 +1,100 @@
+/*
+ *  Auto Roll Tables - legacy page theme bridge
+ *
+ *  reference.html, credits.html, changelog.html and license.html still sit on
+ *  Bootstrap (the Superhero build, partly from a CDN), which brings its own
+ *  dark blue surfaces and orange accent. This sheet loads last on those pages
+ *  and pulls them onto the same palette as the redesigned app so the site
+ *  looks like one thing. It is a bridge, not a rewrite: those pages are still
+ *  Bootstrap underneath.
+ */
+
+:root {
+  --bg: #131d25;
+  --bg-panel: #18232d;
+  --bg-raised: #20303d;
+  --bg-hover: #294050;
+  --border: #2e475c;
+  --text: #e1e9ef;
+  --text-dim: #a8bccb;
+  --text-faint: #74899a;
+  --accent: #7fb0d8;
+}
+
+html,
+body {
+  background-color: var(--bg) !important;
+  color: var(--text);
+}
+
+a,
+:link,
+:visited {
+  color: var(--accent);
+}
+a:hover,
+:link:hover {
+  color: var(--text-dim);
+}
+
+h1, h2, h3, h4 { color: var(--text); }
+
+.logo,
+.logo-nopad {
+  color: var(--text) !important;
+}
+
+/* buttons and the bottom bar */
+.btn,
+.bottom-btn,
+.menuitem,
+.menuitem-style,
+.link-menu-style {
+  background-color: var(--bg-raised) !important;
+  color: var(--text) !important;
+  border-color: var(--border) !important;
+}
+.btn:hover,
+.bottom-btn:hover,
+.menuitem:hover,
+.menuitem-style:hover,
+.link-menu-style:hover {
+  background-color: var(--bg-hover) !important;
+  color: var(--accent) !important;
+}
+.menu-selected { color: var(--accent) !important; }
+
+.form-control {
+  background-color: var(--bg) !important;
+  color: var(--text) !important;
+  border-color: var(--border) !important;
+}
+.form-control::placeholder { color: var(--text-faint) !important; }
+.input-group-addon { background: none !important; border: none !important; }
+
+.text-less-muted { color: var(--text-dim) !important; }
+.changelog { color: var(--text-dim); }
+.changelog b,
+.changelog strong { color: var(--text); }
+
+/* panels that render on white keep dark text for readability */
+.rightview,
+.rightview-srd,
+#left-display-list {
+  background-color: var(--bg-panel) !important;
+  color: var(--text) !important;
+  opacity: 1 !important;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+.list-item { color: var(--text-dim) !important; }
+.list-item:hover { background-color: var(--bg-hover) !important; color: var(--text) !important; }
+.list-selected { background-color: rgba(127, 176, 216, 0.15) !important; color: var(--accent) !important; }
+.subtext { color: var(--text-faint) !important; }
+.srdtitle { color: var(--accent) !important; }
+
+.alert { color: var(--text) !important; }
+
+/* the watermark reads as noise against the darker background */
+.bgimage,
+.bgimg { opacity: 0.14 !important; }

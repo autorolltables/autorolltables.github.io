@@ -53,7 +53,7 @@ body {
 
 .bottom-btn {
   background-color: #ccc !important;
-  color: #5a6668 !important;
+  color: #20303d !important;
   line-height: 21px !important;
 }
 
@@ -75,7 +75,7 @@ body {
   margin: 10px;
   float: right;
   white-space: nowrap;
-  color: #2b3e50 !important;
+  color: #131d25 !important;
 }
 
 /* Redesigned */
@@ -111,7 +111,7 @@ body {
   filter: alpha(opacity=65);
   background-color: white;
   overflow-y: scroll;
-  color: #2b3e50;
+  color: #131d25;
 }
 
 .rightview-srd {
@@ -121,7 +121,7 @@ body {
   filter: alpha(opacity=65);
   background-color: white;
   overflow-y: scroll;
-  color: #2b3e50;
+  color: #131d25;
   padding: 10px 10px;
 }
 
@@ -153,7 +153,7 @@ body {
 }
 
 .hoveroff {
-  color: #df691a;
+  color: #7fb0d8;
 }
 
 /* Roll Classes */
@@ -238,7 +238,7 @@ div.expand-collapse {
   filter: alpha(opacity=65);
   background-color: white;
   overflow-y: scroll;
-  color: #2b3e50;
+  color: #131d25;
   padding: 5px;
 }
 
@@ -273,7 +273,7 @@ div.expand-collapse {
 }
 
 .list-item .dofavorite:hover {
-  color: #df691a;
+  color: #7fb0d8;
 }
 
 .list-item:hover {
