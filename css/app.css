@@ -584,9 +584,8 @@ input:focus, select:focus, textarea:focus, .btn:focus-visible, .nav-item:focus-v
 /* ---------- Page footer ---------- */
 .page-foot {
   flex: none;
-  margin-top: 12px;
-  padding-top: 10px;
-  border-top: 1px solid var(--border);
+  margin-top: 10px;
+  padding-top: 8px;
   text-align: center;
   font-size: 0.78rem;
   color: var(--text-faint);

@@ -55,6 +55,8 @@
     gear:
       "M12 15 a3 3 0 1 0 0-6 a3 3 0 0 0 0 6 M19.4 15 a1.65 1.65 0 0 0 .33 1.82 l.06.06 a2 2 0 1 1-2.83 2.83 l-.06-.06 a1.65 1.65 0 0 0-1.82-.33 a1.65 1.65 0 0 0-1 1.51 V21 a2 2 0 1 1-4 0 v-.09 A1.65 1.65 0 0 0 9 19.4 a1.65 1.65 0 0 0-1.82.33 l-.06.06 a2 2 0 1 1-2.83-2.83 l.06-.06 a1.65 1.65 0 0 0 .33-1.82 a1.65 1.65 0 0 0-1.51-1 H3 a2 2 0 1 1 0-4 h.09 A1.65 1.65 0 0 0 4.6 9 a1.65 1.65 0 0 0-.33-1.82 l-.06-.06 a2 2 0 1 1 2.83-2.83 l.06.06 a1.65 1.65 0 0 0 1.82.33 H9 a1.65 1.65 0 0 0 1-1.51 V3 a2 2 0 1 1 4 0 v.09 a1.65 1.65 0 0 0 1 1.51 a1.65 1.65 0 0 0 1.82-.33 l.06-.06 a2 2 0 1 1 2.83 2.83 l-.06.06 a1.65 1.65 0 0 0-.33 1.82 V9 a1.65 1.65 0 0 0 1.51 1 H21 a2 2 0 1 1 0 4 h-.09 a1.65 1.65 0 0 0-1.51 1 Z",
     grid: "M4 4 h7 v7 h-7 Z M13 4 h7 v7 h-7 Z M4 13 h7 v7 h-7 Z M13 13 h7 v7 h-7 Z",
+    screen: "M3 5 h5.5 v14 H3 Z M8.5 7 h7 v10 h-7 Z M15.5 5 H21 v14 h-5.5 Z",
+    person: "M12 12.5 a4 4 0 1 0 0-8 a4 4 0 0 0 0 8 M4.5 20.5 c0-4 3.4-6.5 7.5-6.5 s7.5 2.5 7.5 6.5",
     ext: "M14 4 h6 v6 M20 4 L11 13 M18 14 v5 a1 1 0 0 1-1 1 H5 a1 1 0 0 1-1-1 V7 a1 1 0 0 1 1-1 h5",
   };
 
@@ -88,9 +90,12 @@
     { id: "Plots", title: "Plots", icon: "plots", sources: ["Plots"], tab: true },
   ];
 
+  // the two generators live in this repo; the last two are companion sites
   var LINKS = [
     { href: "hex-map-generator/hex_map_generator.html", title: "Hex Map Generator", icon: "hex" },
     { href: "region-map-generator/index.html", title: "Region Map Generator", icon: "globe" },
+    { href: "https://dmscreen.github.io", title: "DM Screen", icon: "screen", external: true },
+    { href: "https://charactergenerator.github.io", title: "Character Generator", icon: "person", external: true },
   ];
 
   /* ------------------------------------------------------------------
@@ -219,11 +224,14 @@
         "</a>";
     }
 
-    html += '<div class="nav-group-label">Tools</div>';
+    // "More" in the sidebar; the mobile sheet keeps calling this group Tools,
+    // since the sheet itself is already the More destination there
+    html += '<div class="nav-group-label">More</div>';
     for (var k = 0; k < LINKS.length; k++) {
       var l = LINKS[k];
+      var target = l.external ? ' target="_blank" rel="noopener"' : "";
       html +=
-        '<a class="nav-item" href="' + l.href + '">' + icon(l.icon) +
+        '<a class="nav-item" href="' + l.href + '"' + target + ">" + icon(l.icon) +
         "<span>" + esc(l.title) + "</span>" + icon("ext", "ext") + "</a>";
     }
 
@@ -255,7 +263,8 @@
 
     sheet += '<div class="nav-group-label">Tools</div><div class="more-grid">';
     for (var m = 0; m < LINKS.length; m++) {
-      sheet += '<a class="more-tile" href="' + LINKS[m].href + '">' + icon(LINKS[m].icon, "") + "<span>" + esc(LINKS[m].title) + "</span></a>";
+      var ext = LINKS[m].external ? ' target="_blank" rel="noopener"' : "";
+      sheet += '<a class="more-tile" href="' + LINKS[m].href + '"' + ext + ">" + icon(LINKS[m].icon, "") + "<span>" + esc(LINKS[m].title) + "</span></a>";
     }
     sheet += '<a class="more-tile" href="#/settings" data-cat="settings">' + icon("gear", "") + "<span>Settings</span></a>";
     sheet += "</div>";
