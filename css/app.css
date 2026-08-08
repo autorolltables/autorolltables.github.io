@@ -574,7 +574,11 @@ input:focus, select:focus, textarea:focus, .btn:focus-visible, .nav-item:focus-v
    Responsive
    ============================================================ */
 @media (max-width: 899px) {
-  #app { grid-template-columns: 1fr; }
+  /* the collapsed selector has to be repeated here: #app.sidebar-collapsed is
+     more specific than #app, so without it a sidebar collapsed on desktop
+     would keep its narrow column after the viewport drops to mobile and
+     squeeze the whole page into it */
+  #app, #app.sidebar-collapsed { grid-template-columns: 1fr; }
   #sidebar { display: none; }
   #tabbar { display: flex; }
   #main {
