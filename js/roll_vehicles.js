@@ -1,7 +1,4 @@
 // vehicles.js
 //
 
-
-top.vehicles = [
-
-];
+top.vehicles = [];
