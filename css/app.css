@@ -581,6 +581,20 @@ input:focus, select:focus, textarea:focus, .btn:focus-visible, .nav-item:focus-v
 .small { font-size: 0.83rem; }
 .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 14px; align-items: start; }
 
+/* ---------- Page footer ---------- */
+.page-foot {
+  flex: none;
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  font-size: 0.78rem;
+  color: var(--text-faint);
+}
+.page-foot a { color: var(--text-dim); }
+.page-foot a:hover { color: var(--accent); }
+.page-foot .sep { margin: 0 6px; opacity: 0.6; }
+
 /* ---------- Alerts ---------- */
 #alerts {
   position: fixed;
