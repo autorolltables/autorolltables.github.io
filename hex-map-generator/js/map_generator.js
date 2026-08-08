@@ -804,6 +804,13 @@ function select_size() {
 
   var button;
   switch (size) {
+    case "xs":
+      // smallest hexes, so the most of them: the extra large map
+      button = "#map-xlarge";
+      rad = 19; // radius of the hexes
+      // 7px would make "Mountains" as wide as the tile itself, so drop a step
+      font_size = "6px";
+      break;
     case "s":
       button = "#map-large";
       rad = 30; // radius of the hexes
@@ -866,6 +873,9 @@ $("body").on("click", "#map-medium", function() {
 });
 $("body").on("click", "#map-small", function() {
   go_to_size("l");
+});
+$("body").on("click", "#map-xlarge", function() {
+  go_to_size("xs");
 });
 
 // tile labels: terrain name or symbol
