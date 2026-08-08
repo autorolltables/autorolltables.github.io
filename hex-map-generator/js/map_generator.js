@@ -24,12 +24,19 @@ var canvas = oCanvas.create({
 });
 
 var canvas_array = [];
-var iterations = 1500; // this must be larger than the number of hexes, otherwise you wont get them all.  It can be less, but you will only fill out this may hexes. (+1 for the starting hex)
+// hexes still awaiting a terrain type. the fill loop only ever scans these, so
+// its cost shrinks as the map fills instead of rescanning the whole board.
+var grey_hexes = [];
+// "x,y" -> hex, so replacing a hex at a known position is a lookup, not a scan
+var hex_index = {};
+// reused between passes so the fill loop does not allocate an array per hex
+var squared_scratch = [];
+var map_type = "grey";
 var debug_messages = true;
 var finished = false;
 var last_type = "";
 var Hex = struct("x y type obj text_obj");
-var size, rad, font_size;
+var rad, font_size;
 
 //////////////////////////////////////////////////
 // gygax_table is from page 173 of 1e Dungeon Masters Guide, section titled Appendix B: Random Wilderness Terrain
@@ -76,51 +83,75 @@ function struct(names) {
 }
 
 function draw_iterative_map() {
+  reset_board();
   draw_initial_board();
   var middle_hex = get_middle_hex(canvas.width / 2, canvas.height / 2);
 
   // generate random type for middle hex
-  last_type = middle_hex.type = get_random_type_first();
-  update_color_initial(middle_hex);
+  last_type = get_random_type_first();
+  assign_type(middle_hex, last_type);
+
+  // exactly one hex is filled per pass, so this covers the whole board no
+  // matter how many hexes the screen fits. a fixed cap used to leave large
+  // displays half unfilled.
+  var iterations = canvas_array.length;
 
   var last_hex = middle_hex;
   for (var i = 0; i < iterations; i++) {
     // pick random hex
-    random_hex = pick_random_border_hex(last_hex);
-    if (finished) {
+    var random_hex = pick_random_border_hex(last_hex);
+    if (random_hex === null) {
       break;
     }
 
-    // identify new type (based on last and this)
-    random_hex.type = identify_new_type();
-
-    // udpate hex
-    update_color_initial(random_hex);
-    //add_hex(random_hex.x, random_hex.y, random_hex.type);
+    // identify new type (based on last and this), then update the hex
+    assign_type(random_hex, identify_new_type());
     last_hex = random_hex;
   }
-  // canvas.redraw();
+
+  // every hex was added and recoloured with drawing suppressed, so paint the
+  // finished board in a single pass
+  canvas.redraw();
 }
 
-// function draw_random_map() {
-//
-//   // default start point
-//   var x = 100;
-//   var y = 100;
-//   // var height = 184; //121+60
-// 	var height = (rad * 3) + 1;
-//   var cols = 8;
-//   var cols_off_row = 9;
-//   var total_rows = 4;
-// 	map_type = "random";
-//
-//   for (a=0; a<=total_rows; a++) {
-//     drawrow(x,y,cols);
-//     draw_off_row(x,y,cols_off_row);
-//     y=y+height;
-//   }
-// 	// alert(canvas_array.length);
-// }
+// clear all state so the map can be generated more than once per page load
+function reset_board() {
+  for (var i = 0; i < canvas_array.length; i++) {
+    canvas.removeChild(canvas_array[i].obj, false);
+    canvas.removeChild(canvas_array[i].text_obj, false);
+  }
+  canvas_array = [];
+  grey_hexes = [];
+  hex_index = {};
+  finished = false;
+  last_type = "";
+}
+
+// give a hex its terrain type and take it out of the pool of unfilled hexes
+function assign_type(hex, type) {
+  hex.type = type;
+  pool_remove(hex);
+  update_hex_display(hex);
+}
+
+// the unfilled pool is an unordered array; each hex remembers its own slot so
+// removing one is a swap with the last entry rather than a search
+function pool_add(hex) {
+  hex.pool_index = grey_hexes.length;
+  grey_hexes.push(hex);
+}
+
+function pool_remove(hex) {
+  var pos = hex.pool_index;
+  if (pos === undefined || pos < 0) {
+    return;
+  }
+  var last = grey_hexes[grey_hexes.length - 1];
+  grey_hexes[pos] = last;
+  last.pool_index = pos;
+  grey_hexes.pop();
+  hex.pool_index = -1;
+}
 
 function draw_initial_board() {
   // default start point
@@ -144,7 +175,7 @@ function draw_initial_board() {
   var height = rad * 3 + 1;
   map_type = "grey";
 
-  for (a = 0; a <= total_rows; a++) {
+  for (var a = 0; a <= total_rows; a++) {
     drawrow(x, y, cols);
     draw_off_row(x, y, cols_off_row);
     y = y + height + 3;
@@ -159,10 +190,9 @@ function draw_off_row(x, y, z) {
   // var width = 107;
   var width = rad * 1.75 + 2;
 
-  for (i = 0; i < z; i++) {
-    z_new = z + (i + 1) * width - off;
-    y_new = y + height_off;
-    add_hex(z_new, y_new, map_type);
+  var y_new = y + height_off;
+  for (var i = 0; i < z; i++) {
+    add_hex(x + (i + 1) * width - off, y_new, map_type);
   }
 }
 
@@ -170,9 +200,8 @@ function draw_off_row(x, y, z) {
 function drawrow(x, y, z) {
   // var width = 107;
   var width = rad * 1.75 + 2;
-  for (i = 0; i < z; i++) {
-    z_new = z + (i + 1) * width;
-    add_hex(z_new, y, map_type);
+  for (var i = 0; i < z; i++) {
+    add_hex(x + (i + 1) * width, y, map_type);
   }
 }
 
@@ -181,14 +210,12 @@ function drawrow(x, y, z) {
 /********************************************************/
 
 function add_hex(in_x, in_y, type) {
-  if (in_x == "") {
+  if (in_x === "" || in_x === undefined || in_x === null) {
     in_x = canvas.width / 2;
   }
-  if (in_y == "") {
+  if (in_y === "" || in_y === undefined || in_y === null) {
     in_y = canvas.height / 2;
   }
-
-  var color = get_color(type);
 
   var hex_obj = canvas.display.polygon({
     x: in_x,
@@ -196,17 +223,15 @@ function add_hex(in_x, in_y, type) {
     sides: 6,
     radius: rad,
     rotation: 30,
-    fill: color,
+    fill: get_color(type),
   });
-
-  display_text = get_text(type);
 
   var text_obj = canvas.display.text({
     x: in_x,
     y: in_y,
     origin: { x: "center", y: "center" },
     font: font_size + " sans-serif",
-    text: display_text,
+    text: get_text(type),
     fill: "#000",
   });
 
@@ -215,30 +240,35 @@ function add_hex(in_x, in_y, type) {
 
   add_to_array(hex);
 
-  canvas.addChild(hex_obj);
-  canvas.addChild(text_obj);
+  // pass false so oCanvas does not repaint the whole board for every single
+  // hex; the caller repaints once when the map is complete
+  canvas.addChild(hex_obj, false);
+  canvas.addChild(text_obj, false);
+}
+
+function position_key(x, y) {
+  return x + "," + y;
 }
 
 function add_to_array(hex) {
-  // iterate array to identify if it exists
-  var i;
-  var replaced = false;
-  for (var i = 0; i < canvas_array.length; i++) {
-    if (canvas_array[i].x == hex.x && canvas_array[i].y == hex.y) {
-      canvas.removeChild(canvas_array[i].obj);
-      canvas_array.splice(i, 1);
-      replaced = true;
-    }
-    if (replaced) break;
+  // replace any hex already at this position
+  var key = position_key(hex.x, hex.y);
+  var existing = hex_index[key];
+  if (existing !== undefined) {
+    remove_hex(existing);
   }
-  // add new item
+
   canvas_array.push(hex);
+  hex_index[key] = hex;
+  if (hex.type === "grey") {
+    pool_add(hex);
+  }
 }
 
 function identify_new_type() {
   //log("Old Type:" + last_type);
-  d20 = random_int(1, 20); // roll d20 for next land type
-  new_type = roll_table[last_type][d20 - 1];
+  var d20 = random_int(1, 20); // roll d20 for next land type
+  var new_type = roll_table[last_type][d20 - 1];
   //log("New Type: [New:"+new_type+", Last:"+last_type+", d20:"+d20+"]");
   if (new_type != 8 && new_type != 9) {
     // ignore last type for pools and depressions
@@ -247,34 +277,15 @@ function identify_new_type() {
   return new_type;
 }
 
-function update_color(hex) {
+// repaint is deferred until the whole map is built, so this only updates state
+function update_hex_display(hex) {
   //log("Updated Hex: ["+hex.x+", "+hex.y+", "+hex.type+"]")
   hex.obj.fill = get_color(hex.type);
   hex.text_obj.text = get_text(hex.type);
-  // canvas.redraw();
-}
-
-function update_color_initial(hex) {
-  //log("Updated Hex: ["+hex.x+", "+hex.y+", "+hex.type+"]")
-  hex.obj.fill = get_color(hex.type);
-  hex.text_obj.text = get_text(hex.type);
-}
-
-function get_random_type() {
-  biome = Math.floor(Math.random() * 10);
-  //log("New Type:" + biome);
-  return biome;
 }
 
 function get_random_type_first() {
-  biome = Math.floor(Math.random() * 8);
-  //log("New Type:" + biome);
-  return biome;
-}
-
-function get_random_color() {
-  type = get_random_type();
-  return get_color(type);
+  return Math.floor(Math.random() * 8);
 }
 
 function get_color(type) {
@@ -308,6 +319,7 @@ function get_color(type) {
       break;
     case 9:
       return "#7e7f7e"; // depression
+      break;
     case "grey":
       return "#505050"; // default for initial map layout
       break;
@@ -359,17 +371,24 @@ function get_text(type) {
 }
 
 function remove_hex(hex) {
-  // iterate array to identify if it exists
   //log("Removing Hex: ["+hex.x+", "+hex.y+"]");
-  var i;
-  var replaced = false;
-  for (i = 0; i < canvas_array.length; i++) {
-    if (canvas_array[i].x == hex.x && canvas_array[i].y == hex.y) {
-      canvas.removeChild(canvas_array[i].obj);
-      canvas_array.splice(i, 1);
-      replaced = true;
-    }
-    if (replaced) break;
+  var key = position_key(hex.x, hex.y);
+  var existing = hex_index[key];
+  if (existing === undefined) {
+    return;
+  }
+
+  // remove the label as well as the hex itself, otherwise the old text is
+  // orphaned on the canvas
+  canvas.removeChild(existing.obj, false);
+  canvas.removeChild(existing.text_obj, false);
+
+  pool_remove(existing);
+  delete hex_index[key];
+
+  var pos = canvas_array.indexOf(existing);
+  if (pos !== -1) {
+    canvas_array.splice(pos, 1);
   }
 }
 
@@ -379,87 +398,79 @@ function random_int(min, max) {
   return random_int;
 }
 
+// returns the next hex to fill, or null once the board is complete
 function pick_random_border_hex(hex) {
   var near_hexes = get_near_grey_hexes(hex);
   var number_of_hexes = near_hexes.length;
   //log("Near Hexes Identified: " + number_of_hexes);
 
   if (number_of_hexes > 0) {
-    rand_int = random_int(0, number_of_hexes - 1);
-    var random_hex = near_hexes[rand_int];
+    var random_hex = near_hexes[random_int(0, number_of_hexes - 1)];
     //log("Picked Random Hex: ["+random_hex.x+", "+random_hex.y+", "+random_hex.type+"]")
     return random_hex;
-  } else {
-    if (finished) {
-      return 0;
-    }
-    log("Error Picking Random Hex.");
-    return 0;
   }
+
+  if (!finished) {
+    log("Error Picking Random Hex.");
+  }
+  return null;
 }
 
+// all unfilled hexes that tie for closest to the given hex. only the pool of
+// unfilled hexes is scanned, so this gets cheaper as the map fills in.
 function get_near_grey_hexes(hex) {
-  //get closest hex and distance to it
-  var closest_other = get_closest_other_grey_hex(hex.x, hex.y);
-  var distance = get_distance(hex.x, hex.y, closest_other.x, closest_other.y);
-  // add a little distance to range for slight differences between nearest hexes
-  distance = distance + distance * 0.05;
-  // iterate all hexes and find all those within the "distance" to nearest, return array of hexes
+  if (grey_hexes.length === 0) {
+    log("All hexes have been filled.");
+    finished = true;
+    return [];
+  }
+
+  // squared distances are compared throughout: ordering is the same as for
+  // real distances, and it keeps a square root out of this inner loop
+  var i;
+  var dx;
+  var dy;
+  var curr_sq;
+  var closest_sq = Infinity;
+  var squared = squared_scratch;
+  squared.length = grey_hexes.length;
+
+  for (i = 0; i < grey_hexes.length; i++) {
+    dx = hex.x - grey_hexes[i].x;
+    dy = hex.y - grey_hexes[i].y;
+    curr_sq = dx * dx + dy * dy;
+    squared[i] = curr_sq;
+    if (curr_sq !== 0 && curr_sq < closest_sq) {
+      //log("--- Closer Hex identified ["+curr_sq+"]")
+      closest_sq = curr_sq;
+    }
+  }
+
+  if (closest_sq === Infinity) {
+    log("All hexes have been filled.");
+    finished = true;
+    return [];
+  }
+
+  // add a little distance to range for slight differences between nearest
+  // hexes. 1.05 on the distance is 1.05 * 1.05 on the squared distance.
+  var limit_sq = closest_sq * 1.05 * 1.05;
   var near_hexes = [];
-  for (var i = 0; i < canvas_array.length; i++) {
-    curr_distance = get_distance(
-      hex.x,
-      hex.y,
-      canvas_array[i].x,
-      canvas_array[i].y
-    );
-    if (
-      curr_distance < distance &&
-      curr_distance != 0 &&
-      canvas_array[i].type == "grey"
-    ) {
-      //log("* Near Hex Identified: [dist:"+curr_distance+"|x:"+canvas_array[i].x+"|y:"+canvas_array[i].y+"]");
-      near_hexes.push(canvas_array[i]);
+  for (i = 0; i < grey_hexes.length; i++) {
+    if (squared[i] < limit_sq && squared[i] !== 0) {
+      //log("* Near Hex Identified: [dist:"+squared[i]+"]");
+      near_hexes.push(grey_hexes[i]);
     }
   }
 
   return near_hexes;
 }
 
-function get_closest_other_grey_hex(screen_mid_x, screen_mid_y) {
-  var closest_hex = canvas_array[0];
-  var distance = 9999;
-  var updates = 0;
-  for (var i = 0; i < canvas_array.length; i++) {
-    curr_distance = get_distance(
-      screen_mid_x,
-      screen_mid_y,
-      canvas_array[i].x,
-      canvas_array[i].y
-    );
-    if (
-      curr_distance < distance &&
-      curr_distance != 0 &&
-      canvas_array[i].type == "grey"
-    ) {
-      //log("--- Closer Hex identified ["+curr_distance+"]")
-      distance = curr_distance;
-      closest_hex = canvas_array[i];
-      updates++;
-    }
-  }
-  if (updates == 0) {
-    log("All hexes have been filled.");
-    finished = true;
-  }
-  return closest_hex;
-}
-
 function get_middle_hex(screen_mid_x, screen_mid_y) {
   var closest_hex = canvas_array[0];
-  var distance = 9999;
+  var distance = Infinity;
   for (var i = 0; i < canvas_array.length; i++) {
-    curr_distance = get_distance(
+    var curr_distance = get_distance(
       screen_mid_x,
       screen_mid_y,
       canvas_array[i].x,
@@ -509,7 +520,7 @@ function save_as_image(link) {
   // window.location.href = image; // it will save locally
 
   link.href = document.getElementById("canvas").toDataURL();
-  link.download = "region-map.png";
+  link.download = "hex-map.png";
   link.blur();
 }
 
@@ -546,14 +557,18 @@ function toggle_menu(e) {
 }
 
 function clear_sizes() {
-  $("#small").removeClass("selected");
-  $("#medium").removeClass("selected");
-  $("#large").removeClass("selected");
+  $("#map-small").removeClass("selected");
+  $("#map-medium").removeClass("selected");
+  $("#map-large").removeClass("selected");
 }
 
-function select_size(size) {
+// the "s" / "m" / "l" querystring value is the HEX radius, which runs opposite
+// to the map size the buttons offer: small hexes mean more of them, so ?s=s
+// produces the "Large" map. the ids below are named for the map size the user
+// picked, so they read the same way as the button labels.
+function select_size() {
   // get querystring size
-  size = $.QueryString.s;
+  var size = $.QueryString.s;
   if (!size) {
     size = "m";
   }
@@ -562,18 +577,18 @@ function select_size(size) {
 
   switch (size) {
     case "s":
-      $("#small").addClass("selected");
+      $("#map-large").addClass("selected");
       rad = 30; // radius of the hexes
       font_size = "10px";
       break;
     case "l":
-      $("#large").addClass("selected");
+      $("#map-small").addClass("selected");
       rad = 100; // radius of the hexes
       font_size = "20px";
       break;
     default:
       // covers "m"
-      $("#medium").addClass("selected");
+      $("#map-medium").addClass("selected");
       rad = 60; // radius of the hexes
       font_size = "15px";
       break;
@@ -587,14 +602,6 @@ function select_size(size) {
 /*  Events
 /****************************/
 
-$("body").on("click", "#random_map_button", function() {
-  canvas.clear();
-  draw_random_map();
-});
-$("body").on("click", "#iterative_map_button", function() {
-  canvas.clear();
-  draw_iterative_map();
-});
 $("body").on("click", "#save_link", function() {
   save_as_image(this);
 });
@@ -622,30 +629,26 @@ $("body").on("click", "#menu-region-map-generator", function() {
   window.location.replace("../region-map-generator/index.html");
 });
 
-// sizes
-$("body").on("click", "#small", function() {
+// sizes (querystring value is the hex radius, so it reads inverted - see
+// select_size). existing ?s= links keep working unchanged.
+function go_to_size(hex_size) {
   window.location.href =
     window.location.protocol +
     "//" +
     window.location.host +
     window.location.pathname +
-    "?s=s";
+    "?s=" +
+    hex_size;
+}
+
+$("body").on("click", "#map-large", function() {
+  go_to_size("s");
 });
-$("body").on("click", "#medium", function() {
-  window.location.href =
-    window.location.protocol +
-    "//" +
-    window.location.host +
-    window.location.pathname +
-    "?s=m";
+$("body").on("click", "#map-medium", function() {
+  go_to_size("m");
 });
-$("body").on("click", "#large", function() {
-  window.location.href =
-    window.location.protocol +
-    "//" +
-    window.location.host +
-    window.location.pathname +
-    "?s=l";
+$("body").on("click", "#map-small", function() {
+  go_to_size("l");
 });
 
 // get size from querystring and build accordingly
