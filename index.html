@@ -1,28 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-
-  <title>Auto Roll Tables</title>
-  <style> html { display: none; } </style>
-  <script type="text/javascript">
-    if (self == top) { document.documentElement.style.display = 'block'; } else { top.location = self.location; }
-  </script>
-
-  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
-
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Auto Roll Tables: hundreds of random tables for tabletop RPGs. Roll up NPCs, locations, items, monsters and plots in a click.">
+  <meta name="theme-color" content="#131a22">
+  <title>Auto Roll Tables</title>
 
-  <link rel="stylesheet" href="css/defaults.css" type="text/css" media="all" />
-  <link rel="stylesheet" href="css/menu.css" type="text/css" media="all" />
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="img/d20-icon-192.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-  <!-- Includes -->
-  <link rel="stylesheet" href="includes/bootstrap.min.css">
-  <link rel="stylesheet" href="includes/bootstrap-theme.min.css">
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+  <link rel="stylesheet" href="css/app.css">
+
+  <script>
+    // apply the saved theme before first paint so there is no flash
+    (function () {
+      try {
+        var t = localStorage.getItem('art:theme');
+        document.documentElement.dataset.theme = t === 'light' ? 'light' : 'dark';
+        if (t === 'light') {
+          var m = document.querySelector('meta[name="theme-color"]');
+          if (m) m.content = '#eaeff4';
+        }
+      } catch (e) {}
+    })();
+  </script>
 
   <script src="js/roll_menu.js"></script>
   <script src="js/roll_dungeons.js"></script>
@@ -36,126 +42,207 @@
   <script src="js/roll_settlements.js"></script>
   <script src="js/roll_wilderness.js"></script>
   <script src="js/roll_subrolls.js"></script>
-
 </head>
 <body>
-  <div class="bgimage">
-    <img src="includes/dndlogo1.png">
-  </div>
 
-  <div id="" class="container-fluid">
-    <div class="row">
-      <div class="col-md-12 logo">Auto Roll Tables &nbsp;&nbsp; <img src='img/d20.png' height="28" width="25"/></div>
-    </div>
-    <div id="menu-container" class="row">
-      <div id="menu" class="col-md-11 btn-group">
-        <a href="#" class='menuitem-style btn menu-button' aria-hidden='true'><span class="glyphicon glyphicon-th"></span></a>
-        <a href="#" class='menuitem-style btn hover-icon-clickarea' aria-hidden='true'><span class="glyphicon glyphicon-hand-up hover-icon"></span></a>
-      </div>
+<div id="app">
 
+  <aside id="sidebar">
+    <div class="sidebar-head">
+      <img class="logo" src="img/d20.png" alt="" width="30" height="30">
+      <span class="title">Auto Roll Tables</span>
+      <button class="btn icon-btn ghost collapse-btn" id="collapse-btn" title="Collapse sidebar" aria-label="Collapse sidebar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6 L9 12 L15 18"/></svg>
+      </button>
     </div>
-    <div id="" class="row"></div>
-  </div>
+    <nav id="nav" aria-label="Table categories"></nav>
+    <div class="sidebar-foot" id="sidebar-foot"></div>
+  </aside>
 
-  <div id="index-menu" class="index-menu">
-    <div class="index-row">
-      <div id="menu-auto-roll-tables" class='index-btn' aria-hidden='true'>Auto Roll Tables</div>
-    </div>
-    <div class="index-row">
-      <div id="menu-hex-map-generator" class='index-btn' aria-hidden='true'>Hex Map Generator</div>
-    </div>
-    <div class="index-row">
-      <div id="menu-region-map-generator" class='index-btn-bottom' aria-hidden='true'>Region Map Generator</div>
-    </div>
-  </div>
+  <main id="main" tabindex="-1">
 
-  <div id="page" class="container-fluid">
-
-    <div class="row">
-      <div class="col-md-12">
-        <p class="lead"></p>
+    <div class="tool-header">
+      <h1 id="view-title">All</h1>
+      <span class="sub" id="view-sub"></span>
+      <div class="header-actions" id="view-actions">
+        <button type="button" class="btn small primary new-custom-table" id="new-custom-table" hidden>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 5 v14 M5 12 h14"/></svg>
+          New custom table
+        </button>
       </div>
     </div>
 
-    <div class="row">
-      <div id="leftnav" class="col-xs-12 col-sm-4">
-        <div id="left-display-list"></div>
-      </div>
+    <!-- ============ Tables ============ -->
+    <section class="view" id="view-tables">
+      <div class="roll-layout">
 
-      <div class="col-xs-12 hidden-sm hidden-md hidden-lg">
-         &nbsp;
-      </div>
-
-      <div id="rightnav" class="col-xs-12 col-sm-8">
-
-        <ul class="nav nav-tabs">
-          <li id="current-roll-tab" role="presentation" class="active"><a href="#">Current Roll</a></li>
-          <li id="history-roll-tab" role="presentation"><a href="#">History</a></li>
-          <li id="expand-history-tab" class="nav-tabs-right" role="presentation"><a href="#"><span class='glyphicon glyphicon-chevron-down' aria-label="Expand All"></span></a></li>
-          <li id="collapse-history-tab" class="nav-tabs-right" role="presentation"><a href="#"><span class='glyphicon glyphicon-chevron-up' aria-label="Collapse All"></span></a></li>
-          <li id="clear-history-roll-tab" class="nav-tabs-right" role="presentation"><a href="#">Clear History</a></li>
-        </ul>
-
-        <div id="rightview-current-display" class="rightview-current-display rightview"></div>
-        <div id="rightview-history-display" class="rightview-history-display rightview"></div>
-
-        <textarea id="rightview-current" rows="19" spellcheck="false" class="current-textarea display form-control"></textarea>
-        <textarea id="rightview-history" rows="19" spellcheck="false" class="history-textarea display form-control"></textarea>
-
-      </div>
-    </div>
-
-    <div class="row">&nbsp;</div>
-
-    <div class="row">
-      <div id="leftbuttons" class="col-md-4">
-        <div class="input-group bottom-nav">
-          <input type="text" class="form-control" placeholder="Filter..." aria-describedby="filter" id="filter">
-          <span class="input-group-addon search-button-addon">
-            <button class="btn bottom-btn" type="button" id="filter-clear"><span class='glyphicon glyphicon-remove'></span></button>
-          </span>
-          <span class="input-group-addon search-button-addon">
-            <button class="btn bottom-btn" type="button" id="filter-button"><span class='glyphicon glyphicon-search'></span></button>
-          </span>
+        <div class="pane">
+          <div class="pane-head">
+            <div class="filter-wrap">
+              <svg class="ic-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20 L16.2 16.2"/></svg>
+              <input type="text" id="filter" placeholder="Filter tables..." aria-label="Filter tables" autocomplete="off" spellcheck="false">
+              <button type="button" id="filter-clear" title="Clear filter" aria-label="Clear filter">&times;</button>
+            </div>
+          </div>
+          <div class="pane-body">
+            <div id="left-display-list"></div>
+          </div>
         </div>
-      </div>
-      <div class="col-xs-12 col-sm-12 hidden-md hidden-lg">
-         &nbsp;
-      </div>
-      <div id="rightbuttons" class="col-md-4">
-        <a class="bottom-nav current-copy-button btn bottom-btn" id="copy-current-button" value="Copy To Clipboard" style="width:100%;"><span class='glyphicon glyphicon-duplicate'></span> Copy Current Roll</a>
-      </div>
-      <div class="col-xs-12 col-sm-12 hidden-md hidden-lg">
-         &nbsp;
+
+        <div class="pane">
+          <div class="pane-head">
+            <div class="result-tabs">
+              <button type="button" class="result-tab active" id="current-roll-tab">Current Roll</button>
+              <button type="button" class="result-tab" id="history-roll-tab">History</button>
+            </div>
+            <button type="button" class="btn small ghost" id="expand-history-tab" title="Expand all">Expand</button>
+            <button type="button" class="btn small ghost" id="collapse-history-tab" title="Collapse all">Collapse</button>
+            <button type="button" class="btn small ghost" id="clear-history-roll-tab" title="Clear history">Clear</button>
+            <button type="button" class="btn small current-copy-button" title="Copy the current roll">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15 H4 a1 1 0 0 1-1-1 V4 a1 1 0 0 1 1-1 h10 a1 1 0 0 1 1 1 v1"/></svg>
+              Copy
+            </button>
+            <button type="button" class="btn small history-copy-button" title="Copy the whole history">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15 H4 a1 1 0 0 1-1-1 V4 a1 1 0 0 1 1-1 h10 a1 1 0 0 1 1 1 v1"/></svg>
+              Copy all
+            </button>
+          </div>
+          <div class="pane-body">
+            <div id="rightview-current-display" class="rightview"></div>
+            <div id="rightview-history-display" class="rightview"></div>
+          </div>
+        </div>
+
       </div>
 
-      <div id="rightbuttons" class="col-md-4">
-        <a class="bottom-nav history-copy-button btn bottom-btn" id="copy-history-button" value="Copy To Clipboard" style="width:100%;"><span class='glyphicon glyphicon-duplicate'></span> Copy History</a>
+      <!-- plain-text mirrors used as the clipboard source -->
+      <textarea id="rightview-current" class="current-textarea display" rows="19" spellcheck="false" tabindex="-1" aria-hidden="true"></textarea>
+      <textarea id="rightview-history" class="history-textarea display" rows="19" spellcheck="false" tabindex="-1" aria-hidden="true"></textarea>
+    </section>
+
+    <!-- ============ Settings ============ -->
+    <section class="view settings-view" id="view-settings" hidden>
+      <div class="grid-2">
+
+        <div class="card">
+          <h2>Appearance</h2>
+          <label class="field">
+            <span>Theme</span>
+            <select id="set-theme">
+              <option value="dark">Dark (default)</option>
+              <option value="light">Light</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>Category switching</span>
+            <select id="set-navmode">
+              <option value="hover">Hover</option>
+              <option value="click">Click (default)</option>
+            </select>
+          </label>
+          <p class="small faint" style="margin-top:6px">With hover, resting the pointer on a category in the left nav opens it without clicking.</p>
+        </div>
+
+        <div class="card">
+          <h2>Favorites &amp; custom tables</h2>
+          <p class="small muted">Star any table to pin it to the Favorites category. You can also write your own: open <a href="#/Favorites">Favorites</a> and choose <b>New custom table</b> to add a title and a list of results.</p>
+          <p class="small muted" id="set-fav-count">No tables starred.</p>
+          <button type="button" class="btn small primary new-custom-table" style="margin-top:10px">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 5 v14 M5 12 h14"/></svg>
+            New custom table
+          </button>
+          <button type="button" class="btn small" id="set-clear-favorites" style="margin-top:10px">Clear all favorites</button>
+          <p class="small faint" style="margin-top:8px">Clearing favorites leaves custom tables alone; delete those from their edit dialog.</p>
+        </div>
+
+        <div class="card">
+          <h2>Backup &amp; transfer</h2>
+          <p class="small muted">Everything lives in this browser, so it is worth exporting a copy now and then, or to move to another device. The file holds your starred favorites, your custom tables and the current roll history.</p>
+          <p class="small muted">Importing <b>merges</b> a file into what is already here, so nothing you have now is removed. Favorites and custom tables you already have are not duplicated; history entries are always added to the end of the list.</p>
+          <div class="row" style="margin-top:12px">
+            <button type="button" class="btn primary" id="set-export">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 v12 M8 11 l4 4 4-4 M4 17 v2 a2 2 0 0 0 2 2 h12 a2 2 0 0 0 2-2 v-2"/></svg>
+              Export
+            </button>
+            <button type="button" class="btn" id="set-import">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15 V3 M8 7 l4-4 4 4 M4 17 v2 a2 2 0 0 0 2 2 h12 a2 2 0 0 0 2-2 v-2"/></svg>
+              Import...
+            </button>
+            <input type="file" id="set-import-file" accept=".json,application/json" hidden>
+          </div>
+          <p class="small muted" id="set-backup-status" role="status" style="margin-top:10px"></p>
+        </div>
+
+        <div class="card">
+          <h2>More tools</h2>
+          <p class="small muted">Other generators that live alongside the roll tables.</p>
+          <p class="small"><a href="hex-map-generator/hex_map_generator.html">Hex Map Generator</a> &middot; <a href="region-map-generator/index.html">Region Map Generator</a></p>
+        </div>
+
+        <div class="card">
+          <h2>About</h2>
+          <p class="small muted">Auto Roll Tables is a free collection of random tables for tabletop RPGs. Everything runs in your browser: there is no account, no server and no tracking, and your favorites and settings never leave this device.</p>
+          <p class="small muted">Developed by <a href="https://github.com/dangeratio" target="_blank" rel="noopener">dangeratio</a>. Report an issue on <a href="https://github.com/autorolltables/autorolltables.github.io/issues/new" target="_blank" rel="noopener">GitHub</a> or <a href="https://www.reddit.com/message/compose/?to=dangeratio" target="_blank" rel="noopener">Reddit</a>.</p>
+        </div>
+
+        <div class="card" style="grid-column: 1 / -1">
+          <h2>Attribution</h2>
+          <p class="small muted">The roll tables collected here were written and shared by the tabletop community. Enormous thanks to <b>OrkishBlade</b> and everyone at <a href="https://www.reddit.com/r/BehindTheTables/" target="_blank" rel="noopener">/r/BehindTheTables</a>, whose tables make up the bulk of this site.</p>
+          <h3>Table authors</h3>
+          <p class="attrib-names">OrkishBlade &middot; famoushippopotamus &middot; Joxxill &middot; Minitaz2001 &middot; TuesdayTastic &middot; micka190 &middot; InternetLoveMachine &middot; Burning_Titan &middot; _Auto_ &middot; Mimir-ion &middot; Blk4ce &middot; VD-Hawkin &middot; Frank_Isaacs &middot; charliedude &middot; V-Num &middot; Trinculoisdead &middot; LinedWithEyes &middot; rolls_for_initiative &middot; lotrein &middot; maladroitthief &middot; LaserPoweredDeviltry &middot; skywier &middot; BornToDoStuf &middot; captainfashion &middot; olirant &middot; Burgerkrieg</p>
+          <h3>Dungeon terrain tables</h3>
+          <p class="small muted">The hex map generator's terrain progression comes from Appendix B of the 1st edition <i>Dungeon Masters Guide</i> by Gary Gygax, via <a href="https://www.reddit.com/r/DnDBehindTheScreen/comments/4zqe25/stolen_tables_from_gygax/" target="_blank" rel="noopener">this write-up</a>.</p>
+          <h3>Region map generator</h3>
+          <p class="small muted">Built on the fantasy map generator by Martin O'Leary (<a href="https://mewo2.com/notes/terrain/" target="_blank" rel="noopener">mewo2</a>), used under the MIT license.</p>
+          <h3>Reference data</h3>
+          <p class="small muted">Reference material is drawn from the System Reference Document 5.1 by Wizards of the Coast LLC, available under the <a href="license.html">Open Gaming License</a>. Auto Roll Tables is unofficial fan content and is not affiliated with or endorsed by Wizards of the Coast.</p>
+          <h3>Software</h3>
+          <p class="small muted">Application code is open source on <a href="https://github.com/autorolltables/autorolltables.github.io" target="_blank" rel="noopener">GitHub</a>. Built with <a href="https://jquery.com" target="_blank" rel="noopener">jQuery</a>; the hex map generator uses <a href="https://ocanvas.org" target="_blank" rel="noopener">oCanvas</a>.</p>
+          <p class="small faint" style="margin-top:12px">See also the <a href="credits.html">credits</a> and <a href="changelog.html">changelog</a> pages.</p>
+        </div>
+
       </div>
+    </section>
+
+  </main>
+</div>
+
+<nav id="tabbar" aria-label="Table categories"></nav>
+<div id="more-sheet" aria-label="More categories"></div>
+<div id="alerts" aria-live="polite"></div>
+
+<!-- custom table editor -->
+<dialog id="custom-dialog" class="modal" aria-labelledby="custom-dialog-title">
+  <form method="dialog" onsubmit="return false">
+    <div class="modal-head">
+      <h2 id="custom-dialog-title">New custom table</h2>
     </div>
-
-    <div class="row">&nbsp;</div>
-    <div class="row">
-      <div class="col-md-12">
-        <p class="text-less-muted"><a href="credits.html">credits</a> | report issues: on <a href="https://github.com/autorolltables/autorolltables.github.io/issues/new">github</a> or <a href="https://www.reddit.com/message/compose/?to=dangeratio">reddit</a>.
-        </p>
-      </div>
+    <div class="modal-body">
+      <label class="field">
+        <span>Title</span>
+        <input type="text" id="custom-title" placeholder="Tavern rumours" autocomplete="off" spellcheck="false">
+      </label>
+      <label class="field wide">
+        <span>Results &mdash; one per line</span>
+        <textarea id="custom-entries" rows="10" spellcheck="false" placeholder="A cloaked figure asks about the old mine&#10;The miller's daughter has gone missing&#10;Someone is buying up every silver weapon in town"></textarea>
+      </label>
+      <p class="small faint">Rolling picks one line at random. Lines may use the same inline sub-roll syntax as the built-in tables, for example <code>A guard (d4): 1. bored; 2. drunk; 3. alert; 4. corrupt</code>.</p>
+      <p class="small danger-text" id="custom-error" role="alert"></p>
     </div>
+    <div class="modal-foot">
+      <button type="button" class="btn" id="custom-delete">Delete</button>
+      <span class="spacer"></span>
+      <button type="button" class="btn" id="custom-cancel">Cancel</button>
+      <button type="button" class="btn primary" id="custom-save">Save table</button>
+    </div>
+  </form>
+</dialog>
 
-  </div>
-
-<div id='alerts' class='overlay'></div>
+<script src="includes/jquery.min.js"></script>
+<script src="js/custom-tables.js"></script>
+<script src="js/backup.js"></script>
+<script src="js/app-shell.js"></script>
+<script src="js/rolltables.js"></script>
 
 </body>
-
-
-
-<!-- Old Online Version -->
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
-<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script> -->
-
-<!-- Includes -->
-<script src="includes/jquery.min.js"></script>
-<script type="text/javascript" src="js/rolltables.js"></script>
-
 </html>

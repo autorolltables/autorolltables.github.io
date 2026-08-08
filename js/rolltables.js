@@ -17,24 +17,24 @@ let currentSelectedMenu = "";
 function init() {
   loadFavorites();
 
-  // load the menu
-  loadmenu();
-
-  // default to dungeons table
-  loadleftdisplay("All");
-
-  // check querystring for menuhover
-  menuhovercheck();
-
   //hide initially hidden
-  $("#rightview-history").hide();
-  $("#rightview-current").hide();
   $("#rightview-history-display").hide();
-  $("#success-alert").hide();
-  $("#fail-alert").hide();
   $("#collapse-history-tab").hide();
   $("#expand-history-tab").hide();
   $("#clear-history-roll-tab").hide();
+  $(".history-copy-button").hide();
+
+  show_empty_current();
+
+  CustomTables.init();
+  Backup.init();
+
+  // the shell renders the nav and opens whichever category the URL asks for,
+  // which is what fills the table list
+  AppShell.boot();
+
+  // check querystring for menuhover
+  menuhovercheck();
 
   // querystring filter
   var urlParams = new URLSearchParams(window.location.search);
@@ -42,6 +42,14 @@ function init() {
     $("#filter").val(urlParams.get("filter"));
     filter();
   }
+}
+
+// placeholder shown in the result pane before anything has been rolled
+function show_empty_current() {
+  $("#rightview-current-display").html(
+    '<div class="result-empty"><div class="big">&#9860;</div>' +
+      "Pick a table on the left to roll it.</div>"
+  );
 }
 
 function log(obj) {
@@ -178,39 +186,69 @@ function loadleftdisplay(curr_table) {
 
   currentSelectedMenu = curr_table;
 
-  // top menu css highlight
-  menu_id = "#" + curr_table;
-  $(".menuitem").removeClass("menu-selected");
-  $(menu_id).addClass("menu-selected");
-
-  // iterate that menu, and add items to select
-  for (var i = 0; i < current.items.length; i++) {
-    //selectlist.options[selectlist.options.length] = new Option(current.items[i].title,current.items[i].title);
-    var display_title = current.items[i].title;
-    const isFavorite = favorites.includes(display_title);
-    //var patt = /\/\(\/g/gi;
-
-    if (display_title.match(/\(/gi) != null) {
-      display_title = display_title.replace(
-        /\(/gi,
-        "<br><span class='subtext'>("
-      );
-      display_title = display_title + "</span>";
-    }
-    $("#left-display-list").append(
-      "<div class='list-item' listid='" +
-        i +
-        "' item=\"" +
-        current.items[i].title +
-        '">' +
-        display_title +
-        `<span class="dofavorite ${isFavorite ? "favorite" : ""}" > </span>` +
+  if (!current || current.items.length === 0) {
+    $("#left-display-list").html(
+      '<div class="list-empty">' +
+        (curr_table === "Favorites"
+          ? "Nothing here yet. Star a table in any category to pin it, or use " +
+            "<b>New custom table</b> to write your own."
+          : "No tables in this category.") +
         "</div>"
     );
+    leftscrolltop();
+    return;
+  }
+
+  // build the list in one pass, then insert it once
+  var html = "";
+  var custom_heading_written = false;
+  for (var i = 0; i < current.items.length; i++) {
+    var item = current.items[i];
+    var title = item.title;
+    var is_sub = AppShell.isSubItem(item);
+
+    // custom tables are grouped under their own heading at the end of the list
+    if (item.custom && !custom_heading_written) {
+      html += '<div class="list-group-label">Custom tables</div>';
+      custom_heading_written = true;
+    }
+    // "- " marks a sub-table of the entry above; show that with indentation
+    // rather than punctuation
+    var display_title = is_sub ? title.replace(/^-\s*/, "") : title;
+    var is_favorite = favorites.indexOf(title) !== -1;
+
+    // the trailing "(...)" part of a title is detail, so it goes on its own line
+    if (display_title.indexOf("(") !== -1) {
+      display_title =
+        display_title.replace(/\(/g, "<span class='subtext'>(") + "</span>";
+    }
+
+    // a custom table is always in Favorites, so it gets an edit control where
+    // a built-in table gets its star
+    var trailing = item.custom
+      ? '<button type="button" class="edit-custom" data-custom-id="' + item.customId +
+        '" title="Edit this table" aria-label="Edit this table">' +
+        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" ' +
+        'stroke-linecap="round" stroke-linejoin="round"><path d="M4 20 h4 L19 9 a2 2 0 0 0-3-3 L5 17 Z"/></svg>' +
+        "</button>"
+      : '<span class="dofavorite' + (is_favorite ? " favorite" : "") + '" title="Toggle favorite"></span>';
+
+    html +=
+      '<div class="list-item' + (is_sub ? " sub-item" : "") + '" listid="' + i +
+      '" item="' + title.replace(/"/g, "&quot;") + '">' +
+      display_title +
+      (item.custom ? '<span class="badge-custom">Custom</span>' : "") +
+      trailing +
+      "</div>";
+  }
+  $("#left-display-list").html(html);
+
+  // re-apply any active filter so switching category keeps the search
+  if ($("#filter").val()) {
+    filter();
   }
 
   leftscrolltop();
-  blur();
 }
 
 // return menu variable from table name
@@ -273,6 +311,8 @@ function getquerystring(name, url) {
   return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
+// ?menuhover=true / =false on the URL overrides the Settings preference for
+// this visit, so old links keep working
 function menuhovercheck() {
   var menuhover = "";
   try {
@@ -280,7 +320,9 @@ function menuhovercheck() {
   } catch (e) {}
 
   if (menuhover == "true") {
-    togglehovermenu();
+    mouseover_on = true;
+  } else if (menuhover == "false") {
+    mouseover_on = false;
   }
 }
 
@@ -308,7 +350,8 @@ function loadFavorites() {
     }
   });
 
-  menuFavorites.items = nextFavorites;
+  // user-written tables always live in Favorites, after the starred ones
+  menuFavorites.items = nextFavorites.concat(CustomTables.asMenuItems());
 }
 
 function editFavorites(target) {
@@ -332,19 +375,20 @@ function editFavorites(target) {
 
 function reloadFavorites() {
   loadFavorites();
-  loadmenu();
+  AppShell.refreshCounts();
+  AppShell.updateSub(currentSelectedMenu);
+  AppShell.syncSettings();
 }
 
-function loadmenu() {
-  // remove old entries (for reinitiation) (remove all programatically added entries (with id))
-  $("#menu > *[id]").remove();
-  menu = top.menu;
-  for (i = 0; i < menu.length; i++) {
-    var id = menu[i].title;
-    var item = menu[i].display_title || id;
-    $("#menu").append(
-      "<a href='#' class='menuitem btn' id='" + id + "'>" + item + "</a>"
-    );
+// rebuild Favorites and, if it is the category on screen, redraw the list.
+// custom-tables.js calls this after adding, editing or deleting a table
+// (currentSelectedMenu is a `let`, so it is not reachable as a window property
+// from another script).
+function refresh_favorites_view() {
+  reloadFavorites();
+  if (currentSelectedMenu === "Favorites") {
+    loadleftdisplay("Favorites");
+    AppShell.updateSub("Favorites");
   }
 }
 
@@ -561,9 +605,23 @@ function perform_roll() {
     return;
   }
 
-  var seltext = $(".list-selected").attr("item");
+  // look the entry up by its position in the list rather than by title: a few
+  // categories contain more than one table with the same name, and a title
+  // lookup always returns the first of them
+  roll_table = current.items[parseInt(selected_id, 10)];
+  if (!roll_table) {
+    roll_table = get_roll_array($(".list-selected").attr("item"), current.id);
+  }
+  if (!roll_table) {
+    showalert("nothing selected");
+    return;
+  }
 
-  roll_table = get_roll_array(seltext, current.id);
+  if (roll_table.custom) {
+    perform_custom_roll(roll_table);
+    return;
+  }
+
   if_zero_dont_show_mainrolls = roll_table.main_rolls.length;
   if_zero_dont_show_subrolls = roll_table.sub_rolls.length;
 
@@ -627,6 +685,48 @@ function perform_roll() {
       value = roll_sub_roll(id, table);
     }
   }
+
+  display_side();
+  rightscrolltop();
+  blur();
+}
+
+// a custom table is a plain list, so a roll is one line picked from it. the
+// output is built the same way as a built-in roll so history and copy work
+// without any special cases.
+function perform_custom_roll(roll_table) {
+  clearright();
+
+  var title = roll_table.title;
+  var count = roll_table.entries.length;
+  var note = "Custom table, " + count + (count === 1 ? " result" : " results");
+
+  side("Title: " + title);
+  side(" ");
+  side(note);
+  side_display_current("<span class='roll-title'>" + title + "</span>");
+  side_display_current(" ");
+  side_display_history(
+    "<div class='accordion roll-title-history'>" +
+      title +
+      " <span class='badge-custom'>Custom</span>" +
+      " <div class='history-item-menu'><div class='delete-history-item glyphicon glyphicon-trash'></div> <div class='expand-collapse glyphicon glyphicon-chevron-down'></div></div></div>",
+    false
+  );
+  side_display_history("<div class='panel'>", false);
+  side_display("<span class='roll-suggested-use'>" + note + "</span>");
+
+  side(" ");
+  side_display(" ");
+
+  var value = CustomTables.pick(roll_table);
+  // custom entries may use the same inline "(d6): 1. a; 2. b" syntax
+  if (value.match(inline_roll_match)) {
+    value = inline_roll(value);
+  }
+
+  side("Result : " + value);
+  side_display("<b>" + value + "</b>");
 
   display_side();
   rightscrolltop();
@@ -710,24 +810,6 @@ function process_history() {
 //   $('#rightview-history').html($('#rightview-history-hidden').html());
 // }
 
-function togglehovermenu() {
-  if (mouseover_on == true) {
-    mouseover_on = false;
-    $(".hover-icon").addClass("hoveroff");
-    showalert("hover off");
-  } else {
-    mouseover_on = true;
-    $(".hover-icon").removeClass("hoveroff");
-    showalert("hover on");
-  }
-}
-
-function mouseover_loadleftdisplay(obj) {
-  if (mouseover_on == true) {
-    loadleftdisplay(obj);
-  }
-}
-
 function showhistory() {
   $("#current-roll-tab").removeClass("active");
   $("#history-roll-tab").addClass("active");
@@ -739,6 +821,8 @@ function showhistory() {
   $("#collapse-history-tab").show();
   $("#expand-history-tab").show();
   $("#clear-history-roll-tab").show();
+  $(".history-copy-button").show();
+  $(".current-copy-button").hide();
   blur();
 }
 
@@ -753,6 +837,8 @@ function showcurrent() {
   $("#collapse-history-tab").hide();
   $("#expand-history-tab").hide();
   $("#clear-history-roll-tab").hide();
+  $(".history-copy-button").hide();
+  $(".current-copy-button").show();
   blur();
 }
 
@@ -773,8 +859,8 @@ function blur() {
 function clearhistory(show) {
   $("#rightview-current").html("");
   $("#rightview-history").html("");
-  $("#rightview-current-display").html("");
   $("#rightview-history-display").html("");
+  show_empty_current();
   side_obj = "";
   obj_current_display = "";
   obj_history_display = "";
@@ -870,6 +956,45 @@ function showalert(alert) {
       alert_text =
         "Menu Hover Off <span class='glyphicon glyphicon-remove'></span>";
       break;
+    case "settings saved":
+      alert_type = "success";
+      alert_text = "Settings Saved <span class='glyphicon glyphicon-ok'></span>";
+      break;
+    case "favorites cleared":
+      alert_type = "success";
+      alert_text =
+        "Favorites Cleared <span class='glyphicon glyphicon-ok'></span>";
+      break;
+    case "custom added":
+      alert_type = "success";
+      alert_text =
+        "Custom Table Added <span class='glyphicon glyphicon-ok'></span>";
+      break;
+    case "custom saved":
+      alert_type = "success";
+      alert_text =
+        "Custom Table Saved <span class='glyphicon glyphicon-ok'></span>";
+      break;
+    case "custom deleted":
+      alert_type = "success";
+      alert_text =
+        "Custom Table Deleted <span class='glyphicon glyphicon-ok'></span>";
+      break;
+    case "custom save failed":
+      alert_type = "danger";
+      alert_text =
+        "Could Not Save <span class='glyphicon glyphicon-remove'></span>";
+      break;
+    case "backup exported":
+      alert_type = "success";
+      alert_text =
+        "Backup Exported <span class='glyphicon glyphicon-ok'></span>";
+      break;
+    case "backup imported":
+      alert_type = "success";
+      alert_text =
+        "Backup Imported <span class='glyphicon glyphicon-ok'></span>";
+      break;
     case "copy history blank":
       alert_type = "danger";
       alert_text =
@@ -924,22 +1049,6 @@ function showalert(alert) {
   }
 }
 
-function toggle_menu(e) {
-  if ($("#index-menu").filter(":visible").length) {
-    $("#index-menu").hide();
-  } else {
-    $("#index-menu").css({ top: e.pageY, left: e.pageX - 27 });
-    $("#index-menu").show();
-    $("body").one("click", function() {
-      hide_menu();
-    });
-  }
-}
-
-function hide_menu() {
-  $("#index-menu").hide();
-}
-
 // events
 
 $("body").on("mouseenter", ".delete-history-item", function() {
@@ -959,12 +1068,6 @@ $("body").on("click", ".dofavorite", function() {
   return false;
 });
 
-$("body").on("mouseover", ".menuitem", function() {
-  mouseover_loadleftdisplay($(this).attr("id"));
-});
-$("body").on("click", ".menuitem", function() {
-  loadleftdisplay($(this).attr("id"));
-});
 $("body").on("click", "#roll", function() {
   perform_roll();
 });
@@ -976,9 +1079,6 @@ $("body").on("click", "#current-roll-tab", function() {
 });
 $("body").on("click", "#clear-history-roll-tab", function() {
   clearhistory(true);
-});
-$("body").on("click", ".hover-icon-clickarea", function() {
-  togglehovermenu();
 });
 $("body").on("click", "#collapse-history-tab", function() {
   collapse_history();
@@ -998,24 +1098,6 @@ $("body").on("click", "#filter-button", function() {
 $("body").on("click", "#filter-clear", function() {
   $("#filter").val("");
   filter();
-});
-
-$("body").on("click", ".srd-button", function() {
-  window.location.replace("reference.html");
-});
-
-// top menu
-$("body").on("click", ".menu-button", function(e) {
-  toggle_menu(e);
-});
-$("body").on("click", "#menu-auto-roll-tables", function() {
-  window.location.replace("./index.html");
-});
-$("body").on("click", "#menu-hex-map-generator", function() {
-  window.location.replace("./hex-map-generator/hex_map_generator.html");
-});
-$("body").on("click", "#menu-region-map-generator", function() {
-  window.location.replace("./region-map-generator/index.html");
 });
 
 $("body").on("click", ".delete-history-item", function() {
