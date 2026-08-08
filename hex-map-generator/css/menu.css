@@ -6,7 +6,7 @@
   position:fixed;
   top: 5em;
   line-height: 2em;
-  background-color: black; /* #5A6668; */
+  background-color: black; /* #20303d; */
   z-index: 9999;
   margin-left: 2em;
   padding: 1px;
@@ -14,7 +14,7 @@
 }
 
 .index-btn, .index-btn-bottom {
-  background-color: #5A6668;
+  background-color: #20303d;
   color: white;
   padding: 0.5em 1em;
   cursor: pointer;
@@ -25,7 +25,7 @@
 }
 
 .index-btn:hover, .index-btn-bottom:hover {
-  background-color: #4E5859;
+  background-color: #294050;
   color: white;
 }
 

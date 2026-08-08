@@ -9,7 +9,7 @@ var current;
 var side_obj;
 var obj_current_display;
 var obj_history_display;
-var mouseover_on = false;
+var mouseover_on = true; // AppShell.boot() overrides this from the saved setting
 var delete_enabled = false;
 let favorites = [];
 let currentSelectedMenu = "";

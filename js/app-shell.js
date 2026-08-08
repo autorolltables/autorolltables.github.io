@@ -353,7 +353,7 @@
   function applyTheme(theme) {
     document.documentElement.dataset.theme = theme === "light" ? "light" : "dark";
     var meta = document.querySelector('meta[name="theme-color"]');
-    if (meta) meta.content = theme === "light" ? "#eaeff4" : "#131a22";
+    if (meta) meta.content = theme === "light" ? "#e1e9ef" : "#131d25";
   }
 
   function favoriteCount() {
@@ -364,12 +364,33 @@
     }
   }
 
-  function syncSettings() {
-    var theme = document.getElementById("set-theme");
-    if (theme) theme.value = getPref(PREFS.theme, "dark") === "light" ? "light" : "dark";
+  // segmented toggles: one button per value, the selected one highlighted
+  function setSegmented(groupId, value) {
+    var group = document.getElementById(groupId);
+    if (!group) return;
+    var buttons = group.querySelectorAll(".seg");
+    for (var i = 0; i < buttons.length; i++) {
+      var selected = buttons[i].getAttribute("data-value") === value;
+      buttons[i].classList.toggle("active", selected);
+      buttons[i].setAttribute("aria-pressed", selected ? "true" : "false");
+    }
+  }
 
-    var nav = document.getElementById("set-navmode");
-    if (nav) nav.value = getPref(PREFS.navmode, "click") === "hover" ? "hover" : "click";
+  function bindSegmented(groupId, onChange) {
+    var group = document.getElementById(groupId);
+    if (!group) return;
+    group.addEventListener("click", function (e) {
+      var button = e.target.closest ? e.target.closest(".seg") : null;
+      if (!button) return;
+      var value = button.getAttribute("data-value");
+      setSegmented(groupId, value);
+      onChange(value);
+    });
+  }
+
+  function syncSettings() {
+    setSegmented("set-theme", getPref(PREFS.theme, "dark") === "light" ? "light" : "dark");
+    setSegmented("set-navmode", getPref(PREFS.navmode, "hover") === "click" ? "click" : "hover");
 
     var count = document.getElementById("set-fav-count");
     if (count) {
@@ -383,25 +404,19 @@
   }
 
   function initSettings() {
-    var theme = document.getElementById("set-theme");
-    if (theme) {
-      theme.addEventListener("change", function () {
-        setPref(PREFS.theme, theme.value);
-        applyTheme(theme.value);
-        if (typeof window.showalert === "function") window.showalert("settings saved");
-      });
-    }
+    bindSegmented("set-theme", function (value) {
+      setPref(PREFS.theme, value);
+      applyTheme(value);
+      if (typeof window.showalert === "function") window.showalert("settings saved");
+    });
 
-    var nav = document.getElementById("set-navmode");
-    if (nav) {
-      nav.addEventListener("change", function () {
-        setPref(PREFS.navmode, nav.value);
-        window.mouseover_on = nav.value === "hover";
-        if (typeof window.showalert === "function") {
-          window.showalert(nav.value === "hover" ? "hover on" : "hover off");
-        }
-      });
-    }
+    bindSegmented("set-navmode", function (value) {
+      setPref(PREFS.navmode, value);
+      window.mouseover_on = value === "hover";
+      if (typeof window.showalert === "function") {
+        window.showalert(value === "hover" ? "hover on" : "hover off");
+      }
+    });
 
     var clear = document.getElementById("set-clear-favorites");
     if (clear) {
@@ -422,7 +437,8 @@
    * ---------------------------------------------------------------- */
   function boot() {
     applyTheme(getPref(PREFS.theme, "dark"));
-    window.mouseover_on = getPref(PREFS.navmode, "click") === "hover";
+    // hover switching is the default; Settings can turn it off
+    window.mouseover_on = getPref(PREFS.navmode, "hover") === "hover";
 
     renderNav();
     renderTabbar();
