@@ -32,6 +32,17 @@
     tables: "M4 5 h16 M4 12 h16 M4 19 h16",
     hex: "M12 2 L21 7 L21 17 L12 22 L3 17 L3 7 Z",
     globe: "M12 22 a10 10 0 1 1 0-20 a10 10 0 0 1 0 20 M2 12 h20 M12 2 c3 3 3 17 0 20 c-3-3-3-17 0-20",
+    all: "M4 5 h16 M4 12 h16 M4 19 h16",
+    star: "M12 3 L14.6 8.7 L21 9.5 L16.3 13.8 L17.6 20 L12 16.9 L6.4 20 L7.7 13.8 L3 9.5 L9.4 8.7 Z",
+    characters:
+      "M9 11 a3 3 0 1 0 0-6 a3 3 0 0 0 0 6 M3 20 c0-3.5 2.5-5.5 6-5.5 s6 2 6 5.5 M16 10.5 a2.7 2.7 0 1 0-2-4.8 M17 14.7 c2.5 0.4 4 2.2 4 5.3",
+    locations: "M9 4 L3 6 L3 20 L9 18 L15 20 L21 18 L21 4 L15 6 Z M9 4 V18 M15 6 V20",
+    items: "M6 8 h12 l1 12 a1 1 0 0 1-1 1 H6 a1 1 0 0 1-1-1 Z M9 8 V6 a3 3 0 0 1 6 0 v2",
+    monsters:
+      "M4 4 c5-1 11-1 16 0 v7 c0 5-3.5 8.5-8 10 c-4.5-1.5-8-5-8-10 Z M8.5 10 v1.5 M15.5 10 v1.5 M9 15 c2 1.5 4 1.5 6 0",
+    plots:
+      "M6 3 h13 a2 2 0 0 1 2 2 v2 h-4 M6 3 a2 2 0 0 0-2 2 v13 a3 3 0 0 0 3 3 h11 a2 2 0 0 0 2-2 v-12 M9 9 h7 M9 13 h7",
+    grid: "M4 4 h7 v7 h-7 Z M13 4 h7 v7 h-7 Z M4 13 h7 v7 h-7 Z M13 13 h7 v7 h-7 Z",
     screen: "M3 5 h5.5 v14 H3 Z M8.5 7 h7 v10 h-7 Z M15.5 5 H21 v14 h-5.5 Z",
     person: "M12 12.5 a4 4 0 1 0 0-8 a4 4 0 0 0 0 8 M4.5 20.5 c0-4 3.4-6.5 7.5-6.5 s7.5 2.5 7.5 6.5",
     ext: "M14 4 h6 v6 M20 4 L11 13 M18 14 v5 a1 1 0 0 1-1 1 H5 a1 1 0 0 1-1-1 V7 a1 1 0 0 1 1-1 h5",
@@ -51,12 +62,28 @@
   // the mobile tab bar shows, where the full names do not fit.
   var TABLES = { id: "tables", title: "Roll Tables", short: "Tables", href: "../index.html", icon: "tables" };
   var TOOLS = [
-    { id: "hex", title: "Hex Map Generator", short: "Hex Map", href: "../hex-map-generator/hex_map_generator.html", icon: "hex" },
-    { id: "region", title: "Region Map Generator", short: "Region Map", href: "../region-map-generator/index.html", icon: "globe" },
     { id: "dmscreen", title: "DM Screen", short: "DM Screen", href: "https://dmscreen.github.io", icon: "screen", external: true },
     { id: "chargen", title: "Character Generator", short: "Characters", href: "https://charactergenerator.github.io", icon: "person", external: true },
+    { id: "hex", title: "Hex Map Generator", short: "Hex Map", href: "../hex-map-generator/hex_map_generator.html", icon: "hex" },
+    { id: "region", title: "Region Map Generator", short: "Region Map", href: "../region-map-generator/index.html", icon: "globe" },
   ];
   var SETTINGS = { id: "settings", title: "Settings", short: "Settings", href: "../index.html#/settings", icon: "gear" };
+
+  // The mobile shell is the same on every page of the site: one row of roll
+  // table categories with More last, and a More sheet holding everything else.
+  // These mirror the "tab" entries in app-shell.js CATEGORIES.
+  var TABS = [
+    { id: "Characters", title: "Characters", href: "../index.html#/Characters", icon: "characters" },
+    { id: "Locations", title: "Locations", href: "../index.html#/Locations", icon: "locations" },
+    { id: "Items", title: "Items", href: "../index.html#/Items", icon: "items" },
+    { id: "Monsters", title: "Monsters", href: "../index.html#/Monsters", icon: "monsters" },
+    { id: "Plots", title: "Plots", href: "../index.html#/Plots", icon: "plots" },
+  ];
+  // the categories that did not earn a tab, so they live in the sheet instead
+  var SHEET_TABLES = [
+    { id: "All", title: "All", href: "../index.html#/All", icon: "all" },
+    { id: "Favorites", title: "Favorites", href: "../index.html#/Favorites", icon: "star" },
+  ];
 
   function navLink(entry, activeId, extraClass) {
     var active = entry.id === activeId ? " active" : "";
@@ -68,6 +95,15 @@
       "<span>" + (isTab ? entry.short || entry.title : entry.title) + "</span>" +
       (entry.external && !isTab ? icon("ext", "ext") : "") +
       "</a>"
+    );
+  }
+
+  function tile(entry) {
+    var target = entry.external ? ' target="_blank" rel="noopener"' : "";
+    return (
+      '<a class="more-tile" href="' + entry.href + '"' + target + ">" +
+      icon(entry.icon, "") +
+      "<span>" + entry.title + "</span></a>"
     );
   }
 
@@ -94,10 +130,31 @@
 
     var tabbar = document.getElementById("tabbar");
     if (tabbar) {
-      var tabs = [TABLES].concat(TOOLS, [SETTINGS]);
       var t = "";
-      for (var k = 0; k < tabs.length; k++) t += navLink(tabs[k], page.id, "tab-item");
+      for (var k = 0; k < TABS.length; k++) t += navLink(TABS[k], page.id, "tab-item");
+      t += '<button type="button" class="tab-item" id="more-tab">' + icon("grid", "") + "<span>More</span></button>";
       tabbar.innerHTML = t;
+    }
+
+    var moreSheet = document.getElementById("more-sheet");
+    if (moreSheet) {
+      var sheet = '<div class="nav-group-label">Tables</div><div class="more-grid">';
+      sheet += tile(TABLES);
+      for (var s = 0; s < SHEET_TABLES.length; s++) sheet += tile(SHEET_TABLES[s]);
+      sheet += "</div>";
+
+      sheet += '<div class="nav-group-label">Tools</div><div class="more-grid">';
+      for (var u = 0; u < TOOLS.length; u++) sheet += tile(TOOLS[u]);
+      sheet += tile(SETTINGS) + "</div>";
+      moreSheet.innerHTML = sheet;
+
+      var moreTab = document.getElementById("more-tab");
+      if (moreTab) {
+        moreTab.addEventListener("click", function () {
+          moreSheet.classList.toggle("open");
+          moreTab.classList.toggle("active", moreSheet.classList.contains("open"));
+        });
+      }
     }
 
     var title = document.getElementById("view-title");
