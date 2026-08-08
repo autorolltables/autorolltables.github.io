@@ -1,96 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
-    <!-- meta -->
     <meta charset="UTF-8">
-    <meta content="text/html; charset=UTF-8" name="Content-Type">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="description" content="Region Map Generator: procedurally generated fantasy coastlines, rivers, cities and borders, ready to export as SVG or PNG.">
+    <meta name="theme-color" content="#131d25">
+    <title>Region Map Generator</title>
+
+    <link rel="icon" href="../favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+
     <!-- fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Palatino:400' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
-    <!-- styles: the page's own sheets load after Bootstrap so they win -->
-    <link rel="stylesheet" href="../includes/bootstrap.min.css">
-    <link rel="stylesheet" href="../includes/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/menu.css" />
-    <style type='text/css'>
-      path, line { fill: none;
-        stroke: black;
-        stroke-linecap: round; }
-      .field { stroke: none;
-        fill-opacity: 1.0; }
-      .slope { stroke-width: 1; }
-      .river { stroke-width: 2; }
-      .coast { stroke-width: 4; }
-      .border { stroke-width: 5;
-        stroke-dasharray: 4,4;
-        stroke-linecap: butt; }
-      text {
-          font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-          color: black;
-          stroke: white;
-          stroke-width: 5;
-          stroke-linejoin: round;
-          paint-order: stroke; }
-      text.region { stroke-width:10;
-        font-variant: small-caps; }
-      svg { background-color: white; }
-    </style>
+
+    <link rel="stylesheet" href="../css/app.css?v=3">
+    <link rel="stylesheet" href="css/style.css?v=3">
+
+    <script>
+      // apply the saved theme before first paint so there is no flash
+      (function () {
+        try {
+          var t = localStorage.getItem('art:theme');
+          document.documentElement.dataset.theme = t === 'light' ? 'light' : 'dark';
+          if (t === 'light') {
+            var m = document.querySelector('meta[name="theme-color"]');
+            if (m) m.content = '#e1e9ef';
+          }
+        } catch (e) {}
+      })();
+      window.TOOL_PAGE = { id: 'region', title: 'Region Map Generator', sub: 'Coastlines, rivers, cities and borders' };
+    </script>
+
     <!-- javascript -->
     <script src="js/d3.v4.js"></script>
     <script src="../includes/jquery.min.js"></script>
     <script src="js/priority-queue.js"></script>
     <script src="js/language.js"></script>
-    <script src="js/terrain.js"></script>
-    <script src="js/menu.js"></script>
+    <script src="js/terrain.js?v=3"></script>
     <script src="js/saveSvgAsPng.js"></script>
-    <script src="js/export.js"></script>
+    <script src="js/export.js?v=3"></script>
+    <script src="../js/tool-shell.js?v=3"></script>
   </head>
   <body>
-    <!-- menu -->
-    <div id="" class="container-fluid">
-      <div class="row">
-        <div class="col-md-12 logo">Region Map Generator</div>
-      </div>
-      <div id="menu-container" class="row">
-        <div id="menu" class="col-md-11 btn-group">
-          <a href="#" class='menuitem-style btn menu-button' aria-hidden='true'><span class="glyphicon glyphicon-th"></span></a>
-          <a href="#" class='menuitem-style btn refresh' aria-hidden='true'>Regenerate Region&nbsp;&nbsp;<span class="glyphicon glyphicon-refresh"></span></a>
-          <a href="#" class='menuitem-style btn exportsvg' aria-hidden='true'>SVG&nbsp;&nbsp;<span class="glyphicon glyphicon-cloud-download"></span></a>
-          <a href="#" class='menuitem-style btn exportpng' aria-hidden='true'>PNG&nbsp;&nbsp;<span class="glyphicon glyphicon-cloud-download"></span></a>
+
+    <div id="app">
+
+      <aside id="sidebar">
+        <div class="sidebar-head">
+          <img class="logo" src="../img/d20.png" alt="" width="30" height="30">
+          <span class="title">Auto Roll Tables</span>
+          <button class="btn icon-btn ghost collapse-btn" id="collapse-btn" title="Collapse sidebar" aria-label="Collapse sidebar">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6 L9 12 L15 18"/></svg>
+          </button>
         </div>
-      </div>
-      <div id="" class="row"></div>
-    </div>
-    <div id="index-menu" class="index-menu">
-      <div class="index-row">
-        <div id="menu-auto-roll-tables" class='index-btn' aria-hidden='true'>Auto Roll Tables</div>
-      </div>
-      <div class="index-row">
-        <div id="menu-hex-map-generator" class='index-btn' aria-hidden='true'>Hex Map Generator</div>
-      </div>
-      <div class="index-row">
-        <div id="menu-region-map-generator" class='index-btn-bottom' aria-hidden='true'>Region Map Generator</div>
-      </div>
-    </div>
+        <nav id="nav" aria-label="Sections"></nav>
+        <div class="sidebar-foot" id="sidebar-foot"></div>
+      </aside>
 
-    <!-- map -->
-    <div id="page" class="container-fluid">
-      <div class="row">
-        <div class="example" id="final"></div>
-        <script src="js/init.js"></script>
-      </div>
+      <main id="main" tabindex="-1">
 
-      <div class="row">&nbsp;</div>
-      <div class="row">
-        <div class="col-md-12">
-          <p class="text-less-muted"><a href="credits.html">credits</a> | report issues: on <a href="https://github.com/autorolltables/autorolltables.github.io/issues/new">github</a> or <a href="https://www.reddit.com/message/compose/?to=dangeratio">reddit</a>.
+        <div class="tool-header">
+          <h1 id="view-title">Region Map Generator</h1>
+          <span class="sub" id="view-sub"></span>
+
+          <div class="header-actions">
+            <button type="button" class="btn small primary refresh" title="Generate a new region">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11 A8 8 0 1 0 18.5 16 M20 5 v6 h-6"/></svg>
+              Generate
+            </button>
+            <button type="button" class="btn small exportsvg" title="Download as SVG">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 v12 M8 11 l4 4 4-4 M4 17 v2 a2 2 0 0 0 2 2 h12 a2 2 0 0 0 2-2 v-2"/></svg>
+              SVG
+            </button>
+            <button type="button" class="btn small exportpng" title="Download as PNG">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 v12 M8 11 l4 4 4-4 M4 17 v2 a2 2 0 0 0 2 2 h12 a2 2 0 0 0 2-2 v-2"/></svg>
+              PNG
+            </button>
+          </div>
+        </div>
+
+        <section class="view">
+          <div class="map-holder" id="final">
+            <div class="map-loading" id="map-loading">Generating region...</div>
+          </div>
+          <p class="page-foot">
+            Region generator by <a href="https://mewo2.com/notes/terrain/" target="_blank" rel="noopener">Martin O'Leary</a>, used under the MIT license.
+            <a href="credits.html">Credits</a>.
           </p>
-        </div>
-      </div>
+        </section>
+
+      </main>
     </div>
 
+    <nav id="tabbar" aria-label="Sections"></nav>
+
+    <script src="js/init.js?v=3"></script>
   </body>
 </html>
