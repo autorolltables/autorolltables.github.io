@@ -2,18 +2,19 @@
 /*  Display Details
 /****************************/
 
-$("#canvas").attr("width", $(document).width());
-var canvas_width = $(document).width();
+// the canvas fills whatever space the shell gives it
+var canvas_holder = document.getElementById("canvas-holder");
+var canvas_width = 800;
+var canvas_height = 600;
 
-var canvas_height =
-  $(document).height() - Math.round($("#canvas").position().top + 1);
-
-if (canvas_height < 0) {
-  canvas_height = 100;
-  log("Error selecting canvas height");
+function measure_canvas() {
+  if (!canvas_holder) return;
+  canvas_width = Math.max(240, Math.floor(canvas_holder.clientWidth));
+  canvas_height = Math.max(240, Math.floor(canvas_holder.clientHeight));
 }
 
-$("#canvas").attr("height", canvas_height);
+measure_canvas();
+$("#canvas").attr("width", canvas_width).attr("height", canvas_height);
 
 /****************************/
 /*  Default Details
@@ -83,6 +84,12 @@ function struct(names) {
 }
 
 function draw_iterative_map() {
+  // re-measure first, so Generate always fits the current layout even after
+  // the window was resized or the sidebar collapsed
+  measure_canvas();
+  canvas.width = canvas_width;
+  canvas.height = canvas_height;
+
   reset_board();
   draw_initial_board();
   var middle_hex = get_middle_hex(canvas.width / 2, canvas.height / 2);
@@ -524,42 +531,22 @@ function save_as_image(link) {
   link.blur();
 }
 
-function toggle_key(e) {
-  if ($("#key").filter(":visible").length) {
-    $("#key").hide();
-  } else {
-    $("#key").css({ top: e.pageY, left: e.pageX - 27 });
-    $("#key").show();
-    $("body").one("click", function() {
-      hide_key();
-    });
-  }
+function open_key() {
+  var dialog = document.getElementById("key");
+  if (!dialog) return;
+  if (typeof dialog.showModal === "function") dialog.showModal();
+  else dialog.setAttribute("open", "");
 }
 
-function hide_key() {
-  $("#key").hide();
-}
-
-function hide_menu() {
-  $("#index-menu").hide();
-}
-
-function toggle_menu(e) {
-  if ($("#index-menu").filter(":visible").length) {
-    $("#index-menu").hide();
-  } else {
-    $("#index-menu").css({ top: e.pageY, left: e.pageX - 27 });
-    $("#index-menu").show();
-    $("body").one("click", function() {
-      hide_menu();
-    });
-  }
+function close_key() {
+  var dialog = document.getElementById("key");
+  if (!dialog) return;
+  if (typeof dialog.close === "function") dialog.close();
+  else dialog.removeAttribute("open");
 }
 
 function clear_sizes() {
-  $("#map-small").removeClass("selected");
-  $("#map-medium").removeClass("selected");
-  $("#map-large").removeClass("selected");
+  $("#map-size .seg").removeClass("active").attr("aria-pressed", "false");
 }
 
 // the "s" / "m" / "l" querystring value is the HEX radius, which runs opposite
@@ -575,24 +562,26 @@ function select_size() {
 
   clear_sizes();
 
+  var button;
   switch (size) {
     case "s":
-      $("#map-large").addClass("selected");
+      button = "#map-large";
       rad = 30; // radius of the hexes
       font_size = "10px";
       break;
     case "l":
-      $("#map-small").addClass("selected");
+      button = "#map-small";
       rad = 100; // radius of the hexes
       font_size = "20px";
       break;
     default:
       // covers "m"
-      $("#map-medium").addClass("selected");
+      button = "#map-medium";
       rad = 60; // radius of the hexes
       font_size = "15px";
       break;
   }
+  $(button).addClass("active").attr("aria-pressed", "true");
 }
 
 // var dragOptions = { changeZindex: true };
@@ -605,28 +594,16 @@ function select_size() {
 $("body").on("click", "#save_link", function() {
   save_as_image(this);
 });
-$("body").on("click", "#show_key_button", function(e) {
-  toggle_key(e);
+$("body").on("click", "#show_key_button", function() {
+  open_key();
 });
-$("body").on("click", "#key", function(e) {
-  toggle_key(e);
+$("body").on("click", "#key-close", function() {
+  close_key();
 });
+// generate in place rather than reloading the page
 $("body").on("click", "#reload", function() {
-  window.location.reload();
-});
-
-// top menu
-$("body").on("click", ".menu-button", function(e) {
-  toggle_menu(e);
-});
-$("body").on("click", "#menu-auto-roll-tables", function() {
-  window.location.replace("../index.html");
-});
-$("body").on("click", "#menu-hex-map-generator", function() {
-  window.location.replace("../hex-map-generator/hex_map_generator.html");
-});
-$("body").on("click", "#menu-region-map-generator", function() {
-  window.location.replace("../region-map-generator/index.html");
+  draw_iterative_map();
+  $(this).blur();
 });
 
 // sizes (querystring value is the hex radius, so it reads inverted - see

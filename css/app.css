@@ -528,6 +528,18 @@ input:focus, select:focus, textarea:focus, .btn:focus-visible, .nav-item:focus-v
 .field { display: flex; flex-direction: column; gap: 5px; font-size: 0.82rem; color: var(--text-dim); max-width: 320px; }
 .field + .field { margin-top: 14px; }
 
+/* Buttons sitting next to each other need a flex row: as inline-flex siblings
+   they align on their text baselines, which differ once one of them has an
+   icon, leaving them a few pixels out. */
+.row,
+.btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+.btn-row { margin-top: 12px; }
+
 /* ---------- Segmented toggle ---------- */
 .segmented {
   display: inline-flex;

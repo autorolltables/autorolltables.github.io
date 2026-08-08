@@ -1,117 +1,122 @@
 <!DOCTYPE html>
-<html lang="en">
-<head><title>Hex Map Generator</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Hex Map Generator: builds a wilderness hex map by simulating the terrain tables from the 1st edition Dungeon Masters Guide.">
+  <meta name="theme-color" content="#131d25">
+  <title>Hex Map Generator</title>
 
-  <!-- Online -->
-  <link rel="stylesheet" href="../includes/bootstrap.min.css">
-  <link rel="stylesheet" href="../includes/bootstrap-theme.min.css">
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 
-  <!-- Offline -->
-  <!-- <link rel="stylesheet" href="offline/bootstrap.min.css"> -->
-  <!-- <link rel="stylesheet" href="offline/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="../css/app.css?v=3">
+  <link rel="stylesheet" href="css/map_generator_styles.css?v=3">
 
-  <link href="css/menu.css" rel="stylesheet" type="text/css" />
-  <link href="css/map_generator_styles.css" rel="stylesheet" type="text/css" />
-
+  <script>
+    // apply the saved theme before first paint so there is no flash
+    (function () {
+      try {
+        var t = localStorage.getItem('art:theme');
+        document.documentElement.dataset.theme = t === 'light' ? 'light' : 'dark';
+        if (t === 'light') {
+          var m = document.querySelector('meta[name="theme-color"]');
+          if (m) m.content = '#e1e9ef';
+        }
+      } catch (e) {}
+    })();
+    window.TOOL_PAGE = { id: 'hex', title: 'Hex Map Generator', sub: 'Wilderness terrain, rolled tile by tile' };
+  </script>
 </head>
 <body>
-<!-- onLoad="document.getElementById('overlay').style.display = 'none';" -->
-<!-- <div id="overlay"></div> -->
 
-<div class="toolbar container">
-  <div class="row title-row">
-    <div class="title col-md-12 logo">Hex Map Generator&nbsp;&nbsp;&nbsp;<img src="img/d20.png" width="25" height="28"></div>
-  </div>
-  <div class="row padding-below">
-    <div class="button menu-button">&nbsp;<span class="glyphicon glyphicon-th"></span>&nbsp;</div>
-    &nbsp;
-    <div class="button" id="map-small">Small</div>
-    <div class="button" id="map-medium">Medium</div>
-    <div class="button" id="map-large">Large</div>
-    &nbsp;
-    <div class="button" id="reload">Generate&nbsp;<span class="glyphicon glyphicon-refresh"></span></div>
-    <a class="button" id="save_link">Save&nbsp;<span class="glyphicon glyphicon-cloud-download"></span></a>
-    <div class="button" id="show_key_button">&nbsp;<span class="glyphicon glyphicon-question-sign"></span>&nbsp;</div>
-  </div>
+<div id="app">
+
+  <aside id="sidebar">
+    <div class="sidebar-head">
+      <img class="logo" src="../img/d20.png" alt="" width="30" height="30">
+      <span class="title">Auto Roll Tables</span>
+      <button class="btn icon-btn ghost collapse-btn" id="collapse-btn" title="Collapse sidebar" aria-label="Collapse sidebar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6 L9 12 L15 18"/></svg>
+      </button>
+    </div>
+    <nav id="nav" aria-label="Sections"></nav>
+    <div class="sidebar-foot" id="sidebar-foot"></div>
+  </aside>
+
+  <main id="main" tabindex="-1">
+
+    <div class="tool-header">
+      <h1 id="view-title">Hex Map Generator</h1>
+      <span class="sub" id="view-sub"></span>
+
+      <div class="header-actions">
+        <div class="segmented" id="map-size" role="group" aria-label="Map size">
+          <button type="button" class="seg" data-value="l" id="map-small">Small</button>
+          <button type="button" class="seg" data-value="m" id="map-medium">Medium</button>
+          <button type="button" class="seg" data-value="s" id="map-large">Large</button>
+        </div>
+        <button type="button" class="btn small primary" id="reload" title="Generate a new map">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11 A8 8 0 1 0 18.5 16 M20 5 v6 h-6"/></svg>
+          Generate
+        </button>
+        <a class="btn small" id="save_link" title="Save the map as a PNG">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 v12 M8 11 l4 4 4-4 M4 17 v2 a2 2 0 0 0 2 2 h12 a2 2 0 0 0 2-2 v-2"/></svg>
+          Save
+        </a>
+        <button type="button" class="btn small ghost icon-btn" id="show_key_button" title="Show the terrain key" aria-label="Show the terrain key">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M9.6 9.2 a2.5 2.5 0 1 1 3.4 2.4 c-.8.4-1 .9-1 1.7 M12 16.6 v.1"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <section class="view">
+      <div class="canvas-holder" id="canvas-holder">
+        <canvas id="canvas"></canvas>
+      </div>
+    </section>
+
+  </main>
 </div>
 
-<div id="index-menu" class="index-menu">
-  <div class="index-row">
-    <div id="menu-auto-roll-tables" class='index-btn' aria-hidden='true'>Auto Roll Tables</div>
+<nav id="tabbar" aria-label="Sections"></nav>
+
+<!-- terrain key -->
+<dialog id="key" class="modal" aria-labelledby="key-title">
+  <div class="modal-head">
+    <h2 id="key-title">Terrain key</h2>
   </div>
-  <div class="index-row">
-    <div id="menu-hex-map-generator" class='index-btn' aria-hidden='true'>Hex Map Generator</div>
+  <div class="modal-body">
+    <div class="key-grid">
+      <div class="key-item"><span class="swatch plains"></span>Plains</div>
+      <div class="key-item"><span class="swatch brush"></span>Brush</div>
+      <div class="key-item"><span class="swatch forest"></span>Forest</div>
+      <div class="key-item"><span class="swatch rough"></span>Rough</div>
+      <div class="key-item"><span class="swatch desert"></span>Desert</div>
+      <div class="key-item"><span class="swatch hills"></span>Hills</div>
+      <div class="key-item"><span class="swatch mountains"></span>Mountains</div>
+      <div class="key-item"><span class="swatch marsh"></span>Marsh</div>
+      <div class="key-item"><span class="swatch water"></span>Water</div>
+      <div class="key-item"><span class="swatch valley"></span>Valley</div>
+    </div>
+    <h3>How this map is generated</h3>
+    <p class="small muted">It starts from a single tile and works outwards, each new tile rolled from the terrain of the one before it. See <a href="https://www.reddit.com/r/DnDBehindTheScreen/comments/4zqe25/stolen_tables_from_gygax/" target="_blank" rel="noopener">this write-up</a> or the 1st edition <i>Dungeon Masters Guide</i> (p.173) for the tables.</p>
+    <h3>Changes from the original tables</h3>
+    <p class="small muted">Scrub is called Brush, Pond is Water and Depression is Valley.</p>
   </div>
-  <div class="index-row">
-    <div id="menu-region-map-generator" class='index-btn-bottom' aria-hidden='true'>Region Map Generator</div>
+  <div class="modal-foot">
+    <span class="spacer"></span>
+    <button type="button" class="btn" id="key-close">Close</button>
   </div>
-</div>
-
-<div class="key" id="key">
-  <center>
-  <table class="key_table">
-    <tr>
-      <td>Plains</td>
-      <td><div class="plains"></div></td>
-      <td>Brush</td>
-      <td><div class="brush"></div></td>
-    </tr>
-
-    <tr>
-      <td>Forest</td>
-      <td><div class="forest"></div></td>
-      <td>Rough</td>
-      <td><div class="rough"></div></td>
-    </tr>
-
-    <tr>
-      <td>Desert</td>
-      <td><div class="desert"></div></td>
-      <td>Hills</td>
-      <td><div class="hills"></div></td>
-    </tr>
-
-    <tr>
-      <td>Mountains</td>
-      <td><div class="mountains"></div></td>
-      <td>Marsh</td>
-      <td><div class="marsh"></div></td>
-    </tr>
-
-    <tr>
-      <td>Water</td>
-      <td><div class="water"></div></td>
-      <td>Valley</td>
-      <td><div class="valley"></div></td>
-    </tr>
-
-    <tr>
-      <td colspan=4>
-        <p><i>How this map is generated:</i> This generates starting with a single tile and generates across the whole map from tile to tile based on the previous tile generated.  see <a href="https://www.reddit.com/r/DnDBehindTheScreen/comments/4zqe25/stolen_tables_from_gygax/">this</a> post or the D&D 1E DMG (pg 173) for additional detail.</p>
-        <p><i>Changes from original table:</i> Scrub to Brush, Pond to Water, Depression to Valley. If you really prefer the other text, <a href="https://github.com/dangeratio/hex-map-generator">fork me on github</a> and change it.  :)</p>
-      </td>
-    </tr>
-
-  </table>
-  </center>
-</div>
-
-<canvas id="canvas"></canvas>
-
-
-<!-- //////////////////////////////////////////////////////// -->
-<!--                        SCRIPTS                           -->
-<!-- //////////////////////////////////////////////////////// -->
-
+</dialog>
 
 <script src="js/ocanvas-2.8.7.min.js"></script>
 <script src="../includes/jquery.min.js"></script>
-<script src="../includes/bootstrap.min.js"></script>
-<script src="js/map_generator.js"></script>
-
-
-
+<script src="../js/tool-shell.js?v=3"></script>
+<script src="js/map_generator.js?v=3"></script>
 
 </body>
 </html>

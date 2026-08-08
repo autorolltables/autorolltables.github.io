@@ -1,11 +1,78 @@
-body {
-    font-family: Raleway;
-    background-color: #131d25;
+/*
+ *  Region Map Generator
+ *
+ *  The page chrome comes from ../css/app.css; this file covers the map itself.
+ *  Everything that styles the generated map is scoped to #finalSVG, because
+ *  the generator uses class names like .field and .border that the app
+ *  stylesheet also defines.
+ */
+
+.map-holder {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-panel);
+  overflow: auto;
 }
 
-div.example {
-  margin-top:15px;
-  margin-left:15px;
-  clear: both;
-  overflow: auto;
+.map-loading {
+  padding: 80px 20px;
+  text-align: center;
+  color: var(--text-dim);
+  font-size: 0.9rem;
+}
+.map-loading[hidden] { display: none; }
+
+#finalSVG {
+  background-color: #fff;
+  border-radius: 6px;
+  max-width: 100%;
+  height: auto;
+}
+
+/* ---------- The generated map ---------- */
+#finalSVG path,
+#finalSVG line {
+  fill: none;
+  stroke: black;
+  stroke-linecap: round;
+}
+#finalSVG .field {
+  stroke: none;
+  fill-opacity: 1;
+}
+#finalSVG .slope { stroke-width: 1; }
+#finalSVG .river { stroke-width: 2; }
+#finalSVG .coast { stroke-width: 4; }
+#finalSVG .border {
+  stroke-width: 5;
+  stroke-dasharray: 4, 4;
+  stroke-linecap: butt;
+}
+#finalSVG text {
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  fill: black;
+  color: black;
+  stroke: white;
+  stroke-width: 5;
+  stroke-linejoin: round;
+  paint-order: stroke;
+}
+#finalSVG text.region {
+  stroke-width: 10;
+  font-variant: small-caps;
+}
+
+@media (max-width: 899px) {
+  /* the shell stops being a flex column on phones, so give the holder a
+     height to size the square map against */
+  .map-holder {
+    padding: 8px;
+    height: 70vh;
+  }
 }
