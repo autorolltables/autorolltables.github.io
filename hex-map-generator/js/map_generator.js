@@ -126,6 +126,7 @@ function reset_board() {
   for (var i = 0; i < canvas_array.length; i++) {
     canvas.removeChild(canvas_array[i].obj, false);
     canvas.removeChild(canvas_array[i].text_obj, false);
+    clear_icons(canvas_array[i]);
   }
   canvas_array = [];
   grey_hexes = [];
@@ -160,55 +161,73 @@ function pool_remove(hex) {
   hex.pool_index = -1;
 }
 
+/*
+ * Layout
+ *
+ * The hexes are pointy-top with circumradius `rad`, so they measure
+ * sqrt(3)*rad across and 2*rad tall, and every one of a hex's six neighbours
+ * sits exactly sqrt(3)*rad away. Spacing every step off that one distance is
+ * what keeps the gutters even; the previous rounded-off values (1.75*rad+2
+ * across but only +2 down) left the horizontal gaps noticeably wider than the
+ * vertical ones and pushed the offset rows out of true.
+ */
+
+// centre-to-centre distance between any two neighbouring hexes
+function hex_pitch() {
+  return Math.sqrt(3) * rad;
+}
+
+// gutter between two tiles, edge to edge
+function hex_gap() {
+  return Math.max(1.5, rad * 0.035);
+}
+
+// Tiles are laid out on the full-size grid but drawn slightly smaller, which
+// turns the overlap into an even gutter. Because all six neighbours are the
+// same distance away, shrinking the radius opens the same gap on every side.
+function hex_draw_radius() {
+  return rad - hex_gap() / Math.sqrt(3);
+}
+
 function draw_initial_board() {
-  // default start point
-  // var x = 100;
-  var x = 1.6 * rad;
-  // var y = 70;
-  var y = rad * 1.1;
+  var pitch_x = hex_pitch(); // horizontal step within a row
+  var pitch_y = 1.5 * rad; // vertical step to the interleaved row
+  var row_pitch = pitch_y * 2; // one full row pair
 
-  // var cols = 8;
-  var one_hex_width = rad * 1.75 + 2;
-  var cols = Math.floor(canvas_width / one_hex_width) - 2;
-  var cols_off_row = cols + 1;
-  log("Cols: [" + cols + "|" + cols_off_row + "]");
+  // one extra of each so the right and bottom edges are covered rather than
+  // stopping short
+  var cols = Math.ceil(canvas_width / pitch_x) + 1;
+  var rows = Math.ceil(canvas_height / row_pitch) + 1;
 
-  // var total_rows = 4;
-  var one_row_height = rad * 3 + 4;
-  var total_rows = Math.floor(canvas_height / one_row_height) - 1;
-  log("Rows:" + total_rows + "[" + one_row_height + "," + canvas_height + "]");
+  // first hex sits half a step in, so its left point lands on the canvas edge
+  var x = pitch_x / 2;
+  var y = rad;
 
-  // var height = 184; //121+60
-  var height = rad * 3 + 1;
+  log("Cols: " + cols + " | Rows: " + rows + " | pitch " + pitch_x.toFixed(2));
+
   map_type = "grey";
 
-  for (var a = 0; a <= total_rows; a++) {
-    drawrow(x, y, cols);
-    draw_off_row(x, y, cols_off_row);
-    y = y + height + 3;
+  for (var a = 0; a < rows; a++) {
+    drawrow(x, y + a * row_pitch, cols);
+    draw_off_row(x, y + a * row_pitch + pitch_y, cols);
   }
 }
 
-function draw_off_row(x, y, z) {
-  // var off = 54;
-  var off = rad * 0.9 + 1;
-  // var height_off = 92;
-  var height_off = rad * 1.5 + 2;
-  // var width = 107;
-  var width = rad * 1.75 + 2;
-
-  var y_new = y + height_off;
-  for (var i = 0; i < z; i++) {
-    add_hex(x + (i + 1) * width - off, y_new, map_type);
+// the interleaved row, half a step to the left of the one above it
+function draw_off_row(x, y, count) {
+  var pitch_x = hex_pitch();
+  var start = x - pitch_x / 2;
+  // <= because shifting left opens a gap on the right that needs one more tile
+  for (var i = 0; i <= count; i++) {
+    add_hex(start + i * pitch_x, y, map_type);
   }
 }
 
 // draw a row of hex
-function drawrow(x, y, z) {
-  // var width = 107;
-  var width = rad * 1.75 + 2;
-  for (var i = 0; i < z; i++) {
-    add_hex(x + (i + 1) * width, y, map_type);
+function drawrow(x, y, count) {
+  var pitch_x = hex_pitch();
+  for (var i = 0; i < count; i++) {
+    add_hex(x + i * pitch_x, y, map_type);
   }
 }
 
@@ -228,7 +247,7 @@ function add_hex(in_x, in_y, type) {
     x: in_x,
     y: in_y,
     sides: 6,
-    radius: rad,
+    radius: hex_draw_radius(),
     rotation: 30,
     fill: get_color(type),
   });
@@ -288,7 +307,17 @@ function identify_new_type() {
 function update_hex_display(hex) {
   //log("Updated Hex: ["+hex.x+", "+hex.y+", "+hex.type+"]")
   hex.obj.fill = get_color(hex.type);
-  hex.text_obj.text = get_text(hex.type);
+  clear_icons(hex);
+
+  if (label_mode === "image") {
+    hex.text_obj.text = "";
+    hex.icons = build_icon(hex.type, hex.x, hex.y);
+    for (var i = 0; i < hex.icons.length; i++) {
+      canvas.addChild(hex.icons[i], false);
+    }
+  } else {
+    hex.text_obj.text = get_text(hex.type);
+  }
 }
 
 function get_random_type_first() {
@@ -377,6 +406,177 @@ function get_text(type) {
   return ""; // error of some sort
 }
 
+/********************************************************/
+/*  TILE LABELS
+/*
+/*  A tile is labelled either with the terrain name or with a small symbol.
+/*  The symbols are drawn from canvas primitives rather than loaded as images,
+/*  so they stay sharp at any hex size and need nothing fetched.
+/********************************************************/
+
+var LABEL_KEY = "art:hexlabel";
+var label_mode = "text"; // "text" or "image"
+
+function load_label_mode() {
+  try {
+    return localStorage.getItem(LABEL_KEY) === "image" ? "image" : "text";
+  } catch (e) {
+    return "text";
+  }
+}
+
+function save_label_mode(mode) {
+  try {
+    localStorage.setItem(LABEL_KEY, mode);
+  } catch (e) {}
+}
+
+// Symbols are drawn on a grid sized for rad 60 and scaled from there, so every
+// hex size gets the same artwork.
+function build_icon(type, cx, cy) {
+  if (typeof type !== "number") return [];
+
+  var u = rad / 60;
+  var ink = "rgba(26, 34, 30, 0.82)";
+  var weight = Math.max(1.6, 3.4 * u);
+  var objs = [];
+
+  function line(x1, y1, x2, y2) {
+    objs.push(
+      canvas.display.line({
+        start: { x: cx + x1 * u, y: cy + y1 * u },
+        end: { x: cx + x2 * u, y: cy + y2 * u },
+        stroke: weight + "px " + ink,
+        cap: "round",
+      })
+    );
+  }
+
+  function peak(x, y, size) {
+    objs.push(
+      canvas.display.polygon({
+        x: cx + x * u,
+        y: cy + y * u,
+        sides: 3,
+        radius: size * u,
+        rotation: -90, // point upwards
+        fill: ink,
+      })
+    );
+  }
+
+  function blob(x, y, rx, ry) {
+    objs.push(
+      canvas.display.ellipse({
+        x: cx + x * u,
+        y: cy + y * u,
+        radius_x: rx * u,
+        radius_y: ry * u,
+        fill: ink,
+      })
+    );
+  }
+
+  function hump(x, y, size) {
+    objs.push(
+      canvas.display.arc({
+        x: cx + x * u,
+        y: cy + y * u,
+        radius: size * u,
+        start: 180,
+        end: 360,
+        stroke: weight + "px " + ink,
+        cap: "round",
+      })
+    );
+  }
+
+  function trunk(x, y, w, h) {
+    objs.push(
+      canvas.display.rectangle({
+        x: cx + x * u,
+        y: cy + y * u,
+        width: w * u,
+        height: h * u,
+        origin: { x: "center", y: "center" },
+        fill: ink,
+      })
+    );
+  }
+
+  switch (type) {
+    case 0: // plains: blades of grass
+      line(-15, 9, -15, -7);
+      line(0, 11, 0, -11);
+      line(15, 9, 15, -7);
+      break;
+    case 1: // brush: low scrub
+      blob(-9, 1, 12, 9);
+      blob(10, 4, 10, 7);
+      break;
+    case 2: // forest: conifers
+      peak(-11, -3, 15);
+      trunk(-11, 12, 4, 9);
+      peak(11, 3, 12);
+      trunk(11, 15, 4, 7);
+      break;
+    case 3: // rough: broken rock
+      peak(-11, 7, 11);
+      peak(5, 1, 15);
+      peak(15, 12, 8);
+      break;
+    case 4: // desert: dunes
+      hump(-9, 9, 14);
+      hump(11, 11, 11);
+      break;
+    case 5: // hills: rounded hills
+      hump(-9, 8, 16);
+      hump(11, 9, 12);
+      break;
+    case 6: // mountains: a central peak flanked by two smaller ones
+      peak(-14, 9, 11);
+      peak(14, 9, 11);
+      peak(0, 1, 17);
+      break;
+    case 7: // marsh: reeds standing in water
+      line(-11, 8, -13, -9);
+      line(0, 10, 0, -11);
+      line(11, 8, 13, -7);
+      line(-17, 15, 17, 15);
+      break;
+    case 8: // water: waves
+      hump(-9, -1, 9);
+      hump(9, -1, 9);
+      hump(-9, 12, 9);
+      hump(9, 12, 9);
+      break;
+    case 9: // valley: a cleft between two slopes
+      line(-17, -9, 0, 10);
+      line(17, -9, 0, 10);
+      break;
+    default:
+      return [];
+  }
+
+  return objs;
+}
+
+function clear_icons(hex) {
+  if (!hex.icons) return;
+  for (var i = 0; i < hex.icons.length; i++) {
+    canvas.removeChild(hex.icons[i], false);
+  }
+  hex.icons = null;
+}
+
+// swap every tile between names and symbols without re-rolling the map
+function apply_label_mode() {
+  for (var i = 0; i < canvas_array.length; i++) {
+    update_hex_display(canvas_array[i]);
+  }
+  canvas.redraw();
+}
+
 function remove_hex(hex) {
   //log("Removing Hex: ["+hex.x+", "+hex.y+"]");
   var key = position_key(hex.x, hex.y);
@@ -389,6 +589,7 @@ function remove_hex(hex) {
   // orphaned on the canvas
   canvas.removeChild(existing.obj, false);
   canvas.removeChild(existing.text_obj, false);
+  clear_icons(existing);
 
   pool_remove(existing);
   delete hex_index[key];
@@ -628,11 +829,39 @@ $("body").on("click", "#map-small", function() {
   go_to_size("l");
 });
 
+// tile labels: terrain name or symbol
+function select_label_mode() {
+  label_mode = load_label_mode();
+  $("#tile-label .seg")
+    .removeClass("active")
+    .attr("aria-pressed", "false");
+  $('#tile-label .seg[data-value="' + label_mode + '"]')
+    .addClass("active")
+    .attr("aria-pressed", "true");
+}
+
+$("body").on("click", "#tile-label .seg", function() {
+  var mode = $(this).attr("data-value");
+  if (mode === label_mode) return;
+
+  label_mode = mode;
+  save_label_mode(mode);
+  $("#tile-label .seg")
+    .removeClass("active")
+    .attr("aria-pressed", "false");
+  $(this)
+    .addClass("active")
+    .attr("aria-pressed", "true")
+    .blur();
+
+  // relabel the map that is already on screen rather than rolling a new one
+  apply_label_mode();
+});
+
 // get size from querystring and build accordingly
 $(function() {
   select_size();
+  select_label_mode();
 
   draw_iterative_map();
-
-  // draw_initial_board();
 });
