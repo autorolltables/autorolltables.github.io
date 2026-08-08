@@ -87,7 +87,6 @@
   ];
 
   var LINKS = [
-    { href: "reference.html", title: "SRD Reference", icon: "book" },
     { href: "hex-map-generator/hex_map_generator.html", title: "Hex Map Generator", icon: "hex" },
     { href: "region-map-generator/index.html", title: "Region Map Generator", icon: "globe" },
   ];
