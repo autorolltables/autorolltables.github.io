@@ -189,19 +189,39 @@ function hex_draw_radius() {
   return rad - hex_gap() / Math.sqrt(3);
 }
 
+// breathing room between the map and the edge of the canvas
+function hex_margin() {
+  return Math.max(8, rad * 0.16);
+}
+
+/*
+ * Whole tiles only, centred in the canvas.
+ *
+ * A pointy-top hex is sqrt(3)*rad wide and 2*rad tall. Laying out `cols` tiles
+ * with the interleaved rows nudged half a step to the RIGHT keeps those rows
+ * inside the span of the rows above, so the whole grid occupies exactly
+ * cols * pitch across and 3*rad*rows + 0.5*rad down. Fitting that inside the
+ * canvas, rather than running a tile past each edge, is what keeps the map off
+ * the sides and bottom.
+ */
 function draw_initial_board() {
   var pitch_x = hex_pitch(); // horizontal step within a row
   var pitch_y = 1.5 * rad; // vertical step to the interleaved row
   var row_pitch = pitch_y * 2; // one full row pair
+  var margin = hex_margin();
 
-  // one extra of each so the right and bottom edges are covered rather than
-  // stopping short
-  var cols = Math.ceil(canvas_width / pitch_x) + 1;
-  var rows = Math.ceil(canvas_height / row_pitch) + 1;
+  var usable_w = canvas_width - margin * 2;
+  var usable_h = canvas_height - margin * 2;
 
-  // first hex sits half a step in, so its left point lands on the canvas edge
-  var x = pitch_x / 2;
-  var y = rad;
+  var cols = Math.max(1, Math.floor(usable_w / pitch_x));
+  var rows = Math.max(1, Math.floor((usable_h - 0.5 * rad) / row_pitch));
+
+  var grid_w = cols * pitch_x;
+  var grid_h = rows * row_pitch + 0.5 * rad;
+
+  // centre whatever whole tiles fit in the space left over
+  var x = margin + (usable_w - grid_w) / 2 + pitch_x / 2;
+  var y = margin + (usable_h - grid_h) / 2 + rad;
 
   log("Cols: " + cols + " | Rows: " + rows + " | pitch " + pitch_x.toFixed(2));
 
@@ -209,16 +229,17 @@ function draw_initial_board() {
 
   for (var a = 0; a < rows; a++) {
     drawrow(x, y + a * row_pitch, cols);
+    // the last row pair has no interleaved row below it if it would not fit
     draw_off_row(x, y + a * row_pitch + pitch_y, cols);
   }
 }
 
-// the interleaved row, half a step to the left of the one above it
+// the interleaved row, half a step to the right so it stays within the span of
+// the row above rather than poking out on the left
 function draw_off_row(x, y, count) {
   var pitch_x = hex_pitch();
-  var start = x - pitch_x / 2;
-  // <= because shifting left opens a gap on the right that needs one more tile
-  for (var i = 0; i <= count; i++) {
+  var start = x + pitch_x / 2;
+  for (var i = 0; i < count - 1; i++) {
     add_hex(start + i * pitch_x, y, map_type);
   }
 }
@@ -728,8 +749,26 @@ function save_as_image(link) {
   // window.location.href = image; // it will save locally
 
   link.href = document.getElementById("canvas").toDataURL();
-  link.download = "hex-map.png";
+  // stamp the name so saving several maps in a row does not collide, and the
+  // browser does not quietly turn them into "hex-map (1).png"
+  link.download = "hex-map-" + file_timestamp() + ".png";
   link.blur();
+}
+
+function file_timestamp() {
+  var d = new Date();
+  function pad(n) {
+    return (n < 10 ? "0" : "") + n;
+  }
+  return (
+    d.getFullYear() +
+    pad(d.getMonth() + 1) +
+    pad(d.getDate()) +
+    "-" +
+    pad(d.getHours()) +
+    pad(d.getMinutes()) +
+    pad(d.getSeconds())
+  );
 }
 
 function open_key() {
