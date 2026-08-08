@@ -90,12 +90,12 @@
     { id: "Plots", title: "Plots", icon: "plots", sources: ["Plots"], tab: true },
   ];
 
-  // the two generators live in this repo; the last two are companion sites
+  // the companion sites lead; the last two generators live in this repo
   var LINKS = [
-    { href: "hex-map-generator/hex_map_generator.html", title: "Hex Map Generator", icon: "hex" },
-    { href: "region-map-generator/index.html", title: "Region Map Generator", icon: "globe" },
     { href: "https://dmscreen.github.io", title: "DM Screen", icon: "screen", external: true },
     { href: "https://charactergenerator.github.io", title: "Character Generator", icon: "person", external: true },
+    { href: "hex-map-generator/hex_map_generator.html", title: "Hex Map Generator", icon: "hex" },
+    { href: "region-map-generator/index.html", title: "Region Map Generator", icon: "globe" },
   ];
 
   /* ------------------------------------------------------------------
