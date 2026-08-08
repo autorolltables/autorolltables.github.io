@@ -487,7 +487,7 @@ top.dungeons = [
   },
 
   {
-    title: "d20 Air Currents",
+    title: "d19 Air Currents",
     id: "d20aircurrents_randomdungeonfeatures",
     roll: [
       "breeze, slight, damp.",
@@ -512,7 +512,7 @@ top.dungeons = [
     ],
   },
   {
-    title: "d20 Odors",
+    title: "d19 Odors",
     id: "d20odors_randomdungeonfeatures",
     roll: [
       "chlorine smell.",
@@ -537,7 +537,7 @@ top.dungeons = [
     ],
   },
   {
-    title: "d10 Air",
+    title: "d9 Air",
     id: "d10air_randomdungeonfeatures",
     roll: [
       "clear.",
@@ -552,7 +552,7 @@ top.dungeons = [
     ],
   },
   {
-    title: "d100 General features",
+    title: "d99 General features",
     id: "d100generalfeatures_randomdungeonfeatures",
     roll: [
       "ashes.",
@@ -657,7 +657,7 @@ top.dungeons = [
     ],
   },
   {
-    title: "d100 Unexplained Sounds and Strange Noises",
+    title: "d99 Unexplained Sounds and Strange Noises",
     id: "d100unexplainedsoundsandstrangenoises_randomdungeonfeatures",
     roll: [
       "bang, slam.",
@@ -762,7 +762,7 @@ top.dungeons = [
     ],
   },
   {
-    title: "d100 Furnishing and Appointments, General",
+    title: "d99 Furnishing and Appointments, General",
     id: "d100furnishingandappointmentsgeneral_randomdungeonfeatures",
     roll: [
       "armchair.",
@@ -867,7 +867,7 @@ top.dungeons = [
     ],
   },
   {
-    title: "d100 Religious Articles and Furnishings",
+    title: "d99 Religious Articles and Furnishings",
     id: "d100religiousarticlesandfurnishings_randomdungeonfeatures",
     roll: [
       "altar.",
@@ -972,7 +972,7 @@ top.dungeons = [
     ],
   },
   {
-    title: "d100 Torture Chamber Furnishings",
+    title: "d99 Torture Chamber Furnishings",
     id: "d100torturechamberfurnishings_randomdungeonfeatures",
     roll: [
       "bastinadoes.",
@@ -1077,7 +1077,7 @@ top.dungeons = [
     ],
   },
   {
-    title: "d100 Magic-User Furnishings",
+    title: "d99 Magic-User Furnishings",
     id: "d100magic-userfurnishings_randomdungeonfeatures",
     roll: [
       "alembic.",
@@ -1182,7 +1182,7 @@ top.dungeons = [
     ],
   },
   {
-    title: "d30 General Description of Container Contents",
+    title: "d29 General Description of Container Contents",
     id: "d30generaldescriptionofcontainercontents_randomdungeonfeatures",
     roll: [
       "bark.",
@@ -1217,7 +1217,7 @@ top.dungeons = [
     ],
   },
   {
-    title: "d100 Miscellaneous Utensils and Personal Items",
+    title: "d99 Miscellaneous Utensils and Personal Items",
     id: "d100miscellaneousutensilsandpersonalitems_randomdungeonfeatures",
     roll: [
       "bandages.",
@@ -1322,7 +1322,7 @@ top.dungeons = [
     ],
   },
   {
-    title: "d100 Clothing and Footwear",
+    title: "d99 Clothing and Footwear",
     id: "d100clothingandfootwear_randomdungeonfeatures",
     roll: [
       "apron.",
@@ -1757,7 +1757,7 @@ top.dungeons = [
     ],
   },
   {
-    title: "d12 The position or territory is worth defending because...",
+    title: "d11 The position or territory is worth defending because...",
     id: "d12thepositionorterritoryisworthdefendingbecause",
     roll: [
       "The surrounding land is excellent for growing crops.",
@@ -1818,8 +1818,7 @@ top.dungeons = [
   {
     title:
       "d6 In addition to its garrison, the castle can hold foodstores to withstand a three-month siege for up to...",
-    id:
-      "d6inadditiontoitsgarrisonthecastlecanholdfoodstorestowithstandathreemonthsiegeforupto",
+    id: "d6inadditiontoitsgarrisonthecastlecanholdfoodstorestowithstandathreemonthsiegeforupto",
     roll: [
       "50 people.",
       "100 people.",
@@ -2758,42 +2757,6 @@ top.dungeons = [
       "A moat filled with putrescent water.",
       "A moat filled with thick, boot-sucking mud.",
       "A moat filled with sharp spikes.",
-    ],
-  },
-  {
-    title: "d10 Prisoners are held within...",
-    id: "d10prisonersareheldwithin",
-    roll: [
-      "Individual cells, in complete isolation.",
-      "Individual cells, but they can see and hear other prisoners.",
-      "Individual cells, but they can hear other prisoners.",
-      "Cells that accommodate up to two prisoners.",
-      "Cells that accommodate up to two prisoners, each shackled to the wall.",
-      "Cells that accommodate up to four prisoners.",
-      "Cells that accommodate up to four prisoners, each shackled to the wall.",
-      "A large chamber with many other prisoners, each shackled to the wall.",
-      "Individual pits or wells, open at the top.",
-      "One or more huge pit with many other prisoners.",
-    ],
-  },
-  {
-    title: "d4 The cells’ (or pits’) condition is...",
-    id: "d4thecellsorpitsconditionis",
-    roll: [
-      "Well-maintained; the walls are solid.",
-      "Aging, but sturdy; the walls have some cracks.",
-      "Decrepit; the walls are crumbling.",
-      "So dark it’s difficult to say.",
-    ],
-  },
-  {
-    title: "d4 Prisoners are treated...",
-    id: "d4prisonersaretreated",
-    roll: [
-      "Humanely; they receive reasonable meals, some exercise, and healing when needed.",
-      "Like dogs; they receive poor quality meals and enough healing to keep them alive.",
-      "Like rats; they receive terrible meals and are plagued by sickness.",
-      "Like they don’t exist; occasionally they receive food.",
     ],
   },
   {

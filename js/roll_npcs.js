@@ -506,7 +506,7 @@ top.npcs = [
   },
   {
     title: "d10 ...and...",
-    id: "d10and_gnomes",
+    id: "d10and_gnomes_2",
     roll: [
       "A stoppered glass bottle and a pair of tweezers.",
       "A set of jeweler's tools.",
@@ -554,7 +554,7 @@ top.npcs = [
   },
 
   {
-    title: "d100 Lineage. This noble is...",
+    title: "d99 Lineage. This noble is...",
     id: "d100lineagethisnobleis_noble",
     roll: [
       "Descended from an ancient noble house famous for its great hunts.",
@@ -659,7 +659,7 @@ top.npcs = [
     ],
   },
   {
-    title: "d20 Race. This noble is…",
+    title: "d19 Race. This noble is…",
     id: "d20racethisnobleis…_noble",
     roll: [
       "Human",
@@ -684,7 +684,7 @@ top.npcs = [
     ],
   },
   {
-    title: "d20 Position. This noble is...",
+    title: "d19 Position. This noble is...",
     id: "d20positionthisnobleis_noble",
     roll: [
       "Next in line to the title",
@@ -709,7 +709,7 @@ top.npcs = [
     ],
   },
   {
-    title: "d50 Secrets and motivation. This noble is...",
+    title: "d49 Secrets and motivation. This noble is...",
     id: "d50secretsandmotivationthisnobleis_noble",
     roll: [
       "Seeking riches for their own sake",
@@ -764,7 +764,7 @@ top.npcs = [
     ],
   },
   {
-    title: "d100  Outward appearance and presentation. This noble...",
+    title: "d99  Outward appearance and presentation. This noble...",
     id: "d100outwardappearanceandpresentationthisnoble_noble",
     roll: [
       "Has long, flowing hair",
@@ -812,8 +812,8 @@ top.npcs = [
       "Wears a cloak of fine weave that (d4): 1. shimmers in the light; 2. enfolds the noble in darkness; 3. is covered in many pockets; 4. trails on the ground several feet behind the noble.",
       "Wears the vestments of a holy order",
       "Is accompanied by (d8): 1. their court minstrel; 2. their court wizard; 3. a bodyguard; 4. several bodyguards; 5. their court priest; 6. their court apothecary; 7. a squire of an unusual race; 8. an elderly advisor.",
-      "Their shield displays (d4): 1. a holy symbol; 2. a dragon; 5. a wild beast; 4. several expensive gems and intricate inlay.",
-      "Swings a censer that gives off a (d4): 1. pleasant-smelling smoke; 2. an acrid, bitter smoke; 3. a sweet, candied smoke; 5. a cold, chilling smoke.",
+      "Their shield displays (d4): 1. a holy symbol; 2. a dragon; 3. a wild beast; 4. several expensive gems and intricate inlay.",
+      "Swings a censer that gives off a (d4): 1. pleasant-smelling smoke; 2. an acrid, bitter smoke; 3. a sweet, candied smoke; 4. a cold, chilling smoke.",
       "Chants holy mantras under their breath as an act of devotion",
       "Is missing (d8): 1. one eye; 2. most of their teeth; 3. a hand; 4. several fingers; 5. their nose; 6. their leg below the knee; 7. their tongue; 8. an arm.",
       "Walks with a limp",
@@ -869,7 +869,7 @@ top.npcs = [
     ],
   },
   {
-    title: "d50 Quirks and interests. This noble…",
+    title: "d49 Quirks and interests. This noble…",
     id: "d50quirksandintereststhisnoble…_noble",
     roll: [
       "Is afraid of (d8): 1. spiders; 2. rodents; 3. heights; 4. snakes; 5. wide open spaces; 6. crowded or tight spaces; 7. dogs; 8. death and disease.",
@@ -1795,7 +1795,7 @@ top.npcs = [
   },
   {
     title: "d4 The prisoner has...",
-    id: "d4theprisonerhas",
+    id: "d4theprisonerhas_2",
     roll: [
       "No hope of escape.",
       "A foolish optimism of his escape prospects.",
@@ -5987,7 +5987,7 @@ top.npcs = [
   },
   {
     title: "d8 The artisan has...",
-    id: "d8theartisanhas",
+    id: "d8theartisanhas_2",
     roll: [
       "A limp.",
       "A hunchback.",
@@ -6026,7 +6026,7 @@ top.npcs = [
     ],
   },
   {
-    title: "d6 The artisan is carrying...",
+    title: "d8 The artisan is carrying...",
     id: "d6theartisaniscarrying",
     roll: [
       "The tools of his or her trade.",
@@ -6041,7 +6041,7 @@ top.npcs = [
   },
   {
     title: "d6 The artisan is...",
-    id: "d6theartisanis",
+    id: "d6theartisanis_2",
     roll: [
       "A well-known member of the guild.",
       "An established or up-and-coming leader in the guild.",
@@ -7225,7 +7225,7 @@ top.npcs = [
   },
   {
     title: "d10 The druid has...",
-    id: "d10thedruidhas",
+    id: "d10thedruidhas_2",
     roll: [
       "An earthy scent.",
       "Bits of green under the fingernails.",
@@ -8018,7 +8018,7 @@ top.npcs = [
     ],
   },
   {
-    title: "d6 The graverobber...",
+    title: "d8 The graverobber...",
     id: "d6thegraverobber",
     roll: [
       "Hums or sings while digging.",
@@ -8497,7 +8497,7 @@ top.npcs = [
   },
   {
     title: "d4 The cook greets you with...",
-    id: "d4thecookgreetsyouwith",
+    id: "d4thecookgreetsyouwith_2",
     roll: [
       "A goblet of warm wine.",
       "A glass of water.",
@@ -8507,7 +8507,7 @@ top.npcs = [
   },
   {
     title: "d4 The cook is looking for...",
-    id: "d4thecookislookingfor",
+    id: "d4thecookislookingfor_2",
     roll: [
       "Someone more important to talk to.",
       "Some better ingredients.",
@@ -8597,7 +8597,7 @@ top.npcs = [
   },
   {
     title: "d6 The merchant is...",
-    id: "d6themerchantis",
+    id: "d6themerchantis_2",
     roll: [
       "A member of a trading clan.",
       "A minor lord or lady.",
@@ -8851,7 +8851,7 @@ top.npcs = [
   },
   {
     title: "d4 The servant has...",
-    id: "d4theservanthas",
+    id: "d4theservanthas_2",
     roll: [
       "An awkward gait.",
       "Incredibly large hands.",
@@ -8885,7 +8885,7 @@ top.npcs = [
   },
   {
     title: "d6 The traveler is...",
-    id: "d6thetraveleris",
+    id: "d6thetraveleris_2",
     roll: [
       "A harlot.",
       "A healer.",
@@ -8907,7 +8907,7 @@ top.npcs = [
   },
   {
     title: "d4 Tonight, the traveler is looking for...",
-    id: "d4tonightthetravelerislookingfor",
+    id: "d4tonightthetravelerislookingfor_2",
     roll: [
       "A little company.",
       "An opportunity to earn a little coin.",
@@ -10161,7 +10161,7 @@ top.npcs = [
     ],
   },
   {
-    title: "D10 RENOWN people in town",
+    title: "D8 RENOWN people in town",
     id: "d10renownpeopleintown",
     roll: [
       "love X",
@@ -10352,18 +10352,6 @@ top.npcs = [
     ],
   },
   {
-    title: "d6 The noble is...",
-    id: "d6thenobleis",
-    roll: [
-      "A knight.",
-      "An old lord.",
-      "A young lord.",
-      "An old lady.",
-      "A young lady.",
-      "A wealthy merchant.",
-    ],
-  },
-  {
     title: "d6 The noble seeks someone to...",
     id: "d6thenobleseekssomeoneto",
     roll: [
@@ -10373,18 +10361,6 @@ top.npcs = [
       "Sabotage a rival.",
       "Secure a marriage.",
       "Have a good time with.",
-    ],
-  },
-  {
-    title: "d6 The noble carries...",
-    id: "d6thenoblecarries",
-    roll: [
-      "Several deeds and titles.",
-      "A family heirloom.",
-      "Several inventories and invoices.",
-      "Some very valuable jewels.",
-      "A compromising love letter.",
-      "A letter from a powerful lord or lady.",
     ],
   },
   {
@@ -10421,12 +10397,12 @@ top.npcs = [
   },
   {
     title: "d4 The smith is...",
-    id: "d4thesmithis",
+    id: "d4thesmithis_2",
     roll: ["An armorer.", "A blacksmith.", "A farrier.", "A weaponsmith."],
   },
   {
     title: "d4 The smith is looking for...",
-    id: "d4thesmithislookingfor",
+    id: "d4thesmithislookingfor_2",
     roll: [
       "A new apprentice.",
       "A journeyman craftsman.",
@@ -10436,7 +10412,7 @@ top.npcs = [
   },
   {
     title: "d4 The smith carries...",
-    id: "d4thesmithcarries",
+    id: "d4thesmithcarries_2",
     roll: [
       "A hammer.",
       "A metal trinket made by the smith.",

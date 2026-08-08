@@ -3,7 +3,7 @@
 
 top.factions = [
   {
-    title: "d20 This mercenary is a",
+    title: "d19 This mercenary is a",
     id: "d20thismercenaryisa",
     roll: [
       "lifelong wanderer ",
@@ -28,7 +28,7 @@ top.factions = [
     ],
   },
   {
-    title: "d8 their skillset is that of a (optional add a coin flip)",
+    title: "d7 their skillset is that of a (optional add a coin flip)",
     id: "d8theirskillsetisthatofaoptionaladdacoinflip",
     roll: [
       "Hunter or Trapper",
@@ -41,7 +41,7 @@ top.factions = [
     ],
   },
   {
-    title: "d10 their primary weapon is a",
+    title: "d9 their primary weapon is a",
     id: "d10theirprimaryweaponisa",
     roll: [
       "Battleaxe",
@@ -56,7 +56,7 @@ top.factions = [
     ],
   },
   {
-    title: "d8 which stands out for being",
+    title: "d7 which stands out for being",
     id: "d8whichstandsoutforbeing",
     roll: [
       "made of an unusual material",
@@ -69,18 +69,18 @@ top.factions = [
     ],
   },
   {
-    title: "d6 they are also good at ",
+    title: "d5 they are also good at ",
     id: "d6theyarealsogoodat",
     roll: [
       "Game (d6): 1. Cards; 2. Dice; 3. Arm Wrestling; 4. Board Strategy; 5. Slap Jack; 6. Horseshoe Throwing",
       "Secondary weapon (d6): 1. Throwing Knives; 2. Javelin; 3. Flail; 4. Unarmed Combat; 5. Darts; 6. Whip",
-      "Performing art (d6): 1. Singing; 2. Dancing; 3. Storytelling; 4. Acting; 5. Juggling; 6: Playing an Instrument",
+      "Performing art (d6): 1. Singing; 2. Dancing; 3. Storytelling; 4. Acting; 5. Juggling; 6. Playing an Instrument",
       "Craftsmanship (d6): 1. Smithing; 2. Construction; 3. Tailoring; 4. Brewing; 5. Carpenting; 6. Cooking",
       "Adventuring skill (d6): 1. Geography or Navigation; 2. Lockpicking; 3. Equipment Maintenance; 4. Shadowing; 5. Riding; 6. Trade",
     ],
   },
   {
-    title: "d40 their main distinguishing feature is",
+    title: "d39 their main distinguishing feature is",
     id: "d40theirmaindistinguishingfeatureis",
     roll: [
       "colourful clothing",
@@ -125,12 +125,12 @@ top.factions = [
     ],
   },
   {
-    title: "d4 their level of competence is",
+    title: "d3 their level of competence is",
     id: "d4theirlevelofcompetenceis",
     roll: ["Average", "Good", "Excellent"],
   },
   {
-    title: "d6 their pricing is",
+    title: "d5 their pricing is",
     id: "d6theirpricingis",
     roll: ["Low", "Affordable", "Above average", "High", "Exorbitant"],
   },
@@ -242,8 +242,7 @@ top.factions = [
   {
     title:
       "d6 The guild’s goals include (leadership and rank-and-file members could have different goals)...",
-    id:
-      "d6theguildsgoalsincludeleadershipandrankandfilememberscouldhavedifferentgoals",
+    id: "d6theguildsgoalsincludeleadershipandrankandfilememberscouldhavedifferentgoals",
     roll: [
       "Expanding the client base.",
       "Corrupting and influencing the politics of the city or region.",
@@ -414,8 +413,7 @@ top.factions = [
   {
     title:
       "d6 Standard Quest: Recently the guild has lost access to raw materials or manufacturing because of...",
-    id:
-      "d6standardquestrecentlytheguildhaslostaccesstorawmaterialsormanufacturingbecauseof",
+    id: "d6standardquestrecentlytheguildhaslostaccesstorawmaterialsormanufacturingbecauseof",
     roll: [
       "A recent venture with a supplier, rival, or local official that has turned out bad.",
       "A trade blockade that has to be resolved.",
@@ -525,7 +523,7 @@ top.factions = [
     ],
   },
   {
-    title: "d6 The artisan is carrying...",
+    title: "d8 The artisan is carrying...",
     id: "d6theartisaniscarrying",
     roll: [
       "The tools of his or her trade.",
@@ -637,8 +635,7 @@ top.factions = [
   {
     title:
       "d8 The cult's practices involve (leadership and believers could adhere to different practices)...",
-    id:
-      "d8thecultspracticesinvolveleadershipandbelieverscouldadheretodifferentpractices",
+    id: "d8thecultspracticesinvolveleadershipandbelieverscouldadheretodifferentpractices",
     roll: [
       "Animal sacrifice (d10): 1. bulls; 2. calves; 3. cats; 4. chickens; 5. dogs; 6. goats; 7. pigeons; 8. rabbits; 9. rams; 10. songbirds.",
       "Human sacrifice (d6): 1. children; 2. elderly; 3. harlots; 4. nonbelievers; 5. priests and priestesses; 6. virgins.",
@@ -950,34 +947,6 @@ top.factions = [
       "A longstanding and ancient charter that applies to all merchants, and the militia acting as the charter's executors.",
       "The most wealthy merchant in the city.",
       "A city-appointed monk, who has sworn away worldly wealth.",
-    ],
-  },
-  {
-    title: "d8 This guild's illicit affairs comprise...",
-    id: "d8thisguildsillicitaffairscomprise",
-    roll: [
-      "Literally nothing, they are paragons of upright morality.",
-      "Staying well within the law, if slipping on a few taxes due to ignorance, of course.",
-      "Knowing how to play the political game, they garner a few indirect favors from officials.",
-      "Guild leaders having dollar signs for eyes, and setting advantageous prices in the city.",
-      "Price floors becoming commonplace, and officials are often bribed in order to overlook some minor illicit activities.",
-      "A variety of upper-level bribes, some minor scams, and the dismay of local priests.",
-      "Rampant corruption, with large-scale bribery of various city officials and contracts with thieves’ guild and occasionally an assassin.",
-      "Pacts with devils, large-scale counterfeiting, and treasonous activities are a normal Tuesday morning for this guild.",
-    ],
-  },
-  {
-    title: "d8 This guild's status and control is...",
-    id: "d8thisguildsstatusandcontrolis",
-    roll: [
-      "Poor; though once great, this guild has fallen on hard times and is struggling to maintain its power.",
-      "Brand new, and frantically recruiting members in order to snatch power.",
-      "Exponentially rising, a recent boon has granted them great profits.",
-      "Slowing, a rising competitor is slowly cutting into profits.",
-      "Absolute, they have complete dominance in their field.",
-      "Spotty, depending on the will of the coin and the market this guild may be drinking Elven wine or rotten grog.",
-      "Unquestioned, they exert complete dominance over all other guilds in the area.",
-      "Questionable, though they claim to have control, some operators have undermined it.",
     ],
   },
   {
@@ -1477,8 +1446,7 @@ top.factions = [
   {
     title:
       "d8 One or more house members keep secret (the secret may involve past or present events)...",
-    id:
-      "d8oneormorehousememberskeepsecretthesecretmayinvolvepastorpresentevents",
+    id: "d8oneormorehousememberskeepsecretthesecretmayinvolvepastorpresentevents",
     roll: [
       "A long-time scandalous romance.",
       "The existence of a bastard child.",
@@ -1655,8 +1623,7 @@ top.factions = [
   {
     title:
       "d8 The outlaw band’s goals include (leadership and rank-and-file members could have different goals)...",
-    id:
-      "d8theoutlawbandsgoalsincludeleadershipandrankandfilememberscouldhavedifferentgoals",
+    id: "d8theoutlawbandsgoalsincludeleadershipandrankandfilememberscouldhavedifferentgoals",
     roll: [
       "Domination of the region’s trade.",
       "Sabotage of the region’s trade.",
@@ -1735,7 +1702,7 @@ top.factions = [
     ],
   },
   {
-    title: "d8. The poachers’ favorite prey includes...",
+    title: "d10. The poachers’ favorite prey includes...",
     id: "d8thepoachersfavoritepreyincludes",
     roll: [
       "Bears.",
@@ -1897,7 +1864,7 @@ top.factions = [
     ],
   },
   {
-    title: "d10 The ship's captain is...",
+    title: "d12 The ship's captain is...",
     id: "d10theshipscaptainis",
     roll: [
       "A dangerous megalomaniac.",
@@ -2086,7 +2053,7 @@ top.factions = [
     ],
   },
   {
-    title: "d8 The barbarians value...",
+    title: "d6 The barbarians value...",
     id: "d8thebarbariansvalue",
     roll: [
       "Bravery.",
@@ -2156,7 +2123,7 @@ top.factions = [
     ],
   },
   {
-    title: "d10 The barbarians are known for...",
+    title: "d12 The barbarians are known for...",
     id: "d10thebarbariansareknownfor",
     roll: [
       "Screaming and shouting during battle.",
@@ -2472,8 +2439,7 @@ top.factions = [
   {
     title:
       "d6 The gang's goals include (leadership and rank-and-file members could have different goals)...",
-    id:
-      "d6thegangsgoalsincludeleadershipandrankandfilememberscouldhavedifferentgoals",
+    id: "d6thegangsgoalsincludeleadershipandrankandfilememberscouldhavedifferentgoals",
     roll: [
       "Domination of the city's politics.",
       "Domination of the city's trade.",

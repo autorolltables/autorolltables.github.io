@@ -260,16 +260,6 @@ function get_roll(id, table) {
   return "";
 }
 
-//find a roll title
-function get_roll_title(val) {
-  rolls = top.rolls;
-  for (i = 0; i < rolls.length; i++) {
-    if (rolls[i].id == val) {
-      return i.title;
-    }
-  }
-}
-
 // used by menuhover querystring: ?menuhover=false on URL turns off menu hover function
 function getquerystring(name, url) {
   if (!url) {
@@ -360,76 +350,40 @@ function loadmenu() {
 
 // regex for identifying sub-rolls
 var inline_roll_match = /\([dD][\d]{1,3}\) ?:/;
-var indicator_match = /\<\*>.? ? ?([^\d]*)/;
 var d_match = /^[dD]/;
 
 // sub roll (for inline string rolls)
 function inline_roll(roll_text) {
-  var result = "";
-
   // identify roll type
-  roll_type = roll_text.match(inline_roll_match);
-  roll_description = roll_text.substring(0, roll_type.index).trim();
-  roll_text_without = roll_text.replace(roll_type, "");
-  roll_type = roll_type[0]
-    .replace(":", "")
-    .replace(" ", "")
-    .replace(")", "")
-    .replace("(", "")
-    .replace("d", "")
-    .replace("D", "");
-
-  // attempt to pull integer out of it, if not, send back source string
-  try {
-    roll_type = parseInt(roll_type);
-  } catch (e) {
+  var roll_type = roll_text.match(inline_roll_match);
+  if (roll_type == null) {
+    return roll_text;
+  }
+  var roll_description = roll_text.substring(0, roll_type.index).trim();
+  var roll_text_without = roll_text.replace(roll_type[0], "");
+  var die = parseInt(roll_type[0].replace(/[^0-9]/g, ""), 10);
+  if (isNaN(die) || die < 1) {
     return roll_text;
   }
 
-  // roll a random 1 - roll_type
-  var rand = Math.ceil(Math.random() * roll_type);
+  // roll a random 1 - die
+  var rand = Math.ceil(Math.random() * die);
 
-  // find that number with a period afterwards, capture next non-whitespace character through until next decimal number detected.
-  roll_text_without = roll_text_without.replace(rand, "<*>");
-
-  // regex match for indicator string <*> to the next decimal, capturing
-  roll_text_without = roll_text_without.match(indicator_match);
-  result = roll_text_without[1]
-    .replace(/^\s+/, "")
-    .replace(/\s+$/, "")
-    .replace(/[;,.]$/, "");
+  // find "<rand>." at an option boundary (start of string or after
+  // whitespace/separator, never inside another number or dice notation like
+  // "2d6") and capture through to the next numbered option or end of string,
+  // so results containing digits are kept intact
+  var option_match = new RegExp(
+    "(?:^|[\\s;,])" + rand + "\\.\\s*([\\s\\S]*?)(?=[;,]?\\s+\\d{1,3}\\.\\s|$)"
+  );
+  var found = roll_text_without.match(option_match);
+  if (found == null) {
+    return roll_text;
+  }
+  var result = found[1].trim().replace(/[;,.]$/, "");
 
   // return display in a clear format
-  return "(d" + roll_type + ") " + roll_description + ": " + result;
-}
-
-// test button
-function roll_test() {
-  var sel = document.getElementById("selectlist");
-  var index = sel.selectedIndex;
-  var seltext = sel.options;
-
-  clearright();
-  side("Tests:");
-  side_display("Tests:");
-
-  // get length of all
-  var total = 0;
-  for (var z = 0; z < roll_table.length; z++) {
-    for (var i = 0; i < roll_table[z].rolls.length; i++) {
-      for (var a = 0; a < roll_table[z].rolls[i].roll.length; a++) {
-        var returned = roll_table[z].rolls[i].roll[a];
-
-        if (returned.match(inline_roll_match)) {
-          returned = inline_roll(returned);
-        }
-      }
-    }
-  }
-
-  display_side();
-
-  blur();
+  return "(d" + die + ") " + roll_description + ": " + result;
 }
 
 function get_roll_title(id, table) {
@@ -566,29 +520,31 @@ function roll_sub_roll(id, table) {
 
 function get_roll_value(str) {
   // interpret various rolls - d10, 1d10, 4d4, maybe even 6d6+10 someday (but not currently)
-  var value = 0;
 
   if (str.match(d_match)) {
     // single roll (no number before the "d")
 
-    // remove the d
-    str = str.toLowerCase().replace("d", "");
-    // roll randomly
-    var rand = Math.ceil(Math.random() * parseInt(str));
-    return rand;
+    var sides = parseInt(str.toLowerCase().replace("d", ""), 10);
+    if (isNaN(sides) || sides < 1) {
+      return 0;
+    }
+    return Math.ceil(Math.random() * sides);
   } else {
     // multiple rolls (split on the "d" and execute a random [1] [0] times)
 
-    str = str.toLowerCase().split("d");
+    var parts = str.toLowerCase().split("d");
+    var count = parseInt(parts[0], 10);
+    var sides = parseInt(parts[1], 10);
+    if (isNaN(count) || isNaN(sides) || count < 1 || sides < 1) {
+      return 0;
+    }
 
     var total = 0;
-    for (var a = 0; a < str[0]; a++) {
-      var rand = Math.ceil(Math.random() * parseInt(str[1]));
-      total = total + rand;
+    for (var a = 0; a < count; a++) {
+      total = total + Math.ceil(Math.random() * sides);
     }
     return total;
   }
-  return "";
 }
 
 // select function
@@ -871,8 +827,12 @@ function filter() {
     .children(".list-item")
     .hide();
 
-  // show only those that match the filter
-  var item = "div:regex(item," + $("#filter").val() + ")";
+  // show only those that match the filter (escape regex metacharacters so
+  // input like "(" is treated as literal text instead of throwing)
+  var filter_text = $("#filter")
+    .val()
+    .replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  var item = "div:regex(item," + filter_text + ")";
   $("#left-display-list")
     .children(item)
     .show();
@@ -1007,9 +967,6 @@ $("body").on("click", ".menuitem", function() {
 });
 $("body").on("click", "#roll", function() {
   perform_roll();
-});
-$("body").on("click", "#test", function() {
-  roll_test();
 });
 $("body").on("click", "#history-roll-tab", function() {
   showhistory();

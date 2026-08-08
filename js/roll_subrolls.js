@@ -83,8 +83,7 @@ tavern_names = [
 military_npcs = [
   {
     title: "Armorer",
-    use:
-      "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+    use: "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
     main_rolls: [
       "npcs/dxmalefirstname",
       "npcs/dxfemalefirstname",
@@ -97,22 +96,20 @@ military_npcs = [
   },
   {
     title: "Camp Follower",
-    use:
-      "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+    use: "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
     main_rolls: [
       "npcs/dxmalefirstname",
       "npcs/dxfemalefirstname",
       "npcs/dxsurname",
-      "npcs/d6thetraveleris",
+      "npcs/d6thetraveleris_2",
       "npcs/d4thetravelerisseeking",
-      "npcs/d4tonightthetravelerislookingfor",
+      "npcs/d4tonightthetravelerislookingfor_2",
     ],
     sub_rolls: [],
   },
   {
     title: "Cook",
-    use:
-      "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+    use: "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
     main_rolls: [
       "npcs/dxmalefirstname",
       "npcs/dxfemalefirstname",
@@ -123,8 +120,7 @@ military_npcs = [
   },
   {
     title: "Quartermaster",
-    use:
-      "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+    use: "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
     main_rolls: [
       "npcs/dxmalefirstname",
       "npcs/dxfemalefirstname",
@@ -137,8 +133,7 @@ military_npcs = [
   },
   {
     title: "Scout",
-    use:
-      "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+    use: "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
     main_rolls: [
       "npcs/dxmalefirstname",
       "npcs/dxfemalefirstname",
@@ -151,14 +146,13 @@ military_npcs = [
   },
   {
     title: "Stable Hand/Squire/Valet",
-    use:
-      "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+    use: "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
     main_rolls: [
       "npcs/dxmalefirstname",
       "npcs/dxfemalefirstname",
       "npcs/dxsurname",
       "npcs/d7theservantis",
-      "npcs/d4theservanthas",
+      "npcs/d4theservanthas_2",
       "npcs/d6theservantwantsto",
     ],
     sub_rolls: [],
@@ -168,8 +162,7 @@ military_npcs = [
 merchant_npcs = [
   {
     title: "Animal Handler/Porter",
-    use:
-      "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+    use: "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
     main_rolls: [
       "npcs/dxmalefirstname",
       "npcs/dxfemalefirstname",
@@ -182,22 +175,20 @@ merchant_npcs = [
   },
   {
     title: "Cook",
-    use:
-      "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+    use: "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
     main_rolls: [
       "npcs/dxmalefirstname",
       "npcs/dxfemalefirstname",
       "npcs/dxsurname",
-      "npcs/d4thecookgreetsyouwith",
-      "npcs/d4thecookislookingfor",
+      "npcs/d4thecookgreetsyouwith_2",
+      "npcs/d4thecookislookingfor_2",
       "npcs/d6thecookcarries",
     ],
     sub_rolls: [],
   },
   {
     title: "Guard",
-    use:
-      "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+    use: "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
     main_rolls: [
       "npcs/dxmalefirstname",
       "npcs/dxfemalefirstname",
@@ -210,8 +201,7 @@ merchant_npcs = [
   },
   {
     title: "Guide",
-    use:
-      "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+    use: "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
     main_rolls: [
       "npcs/dxmalefirstname",
       "npcs/dxfemalefirstname",
@@ -224,8 +214,7 @@ merchant_npcs = [
   },
   {
     title: "Traveler",
-    use:
-      "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+    use: "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
     main_rolls: [
       "npcs/dxmalefirstname",
       "npcs/dxfemalefirstname",
@@ -238,8 +227,7 @@ merchant_npcs = [
   },
   {
     title: "Caravan Master",
-    use:
-      "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+    use: "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
     main_rolls: [
       "npcs/dxmalefirstname",
       "npcs/dxfemalefirstname",
@@ -253,8 +241,7 @@ merchant_npcs = [
   },
   {
     title: "Caravan Merchant",
-    use:
-      "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
+    use: "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
     main_rolls: [
       "npcs/dxmalefirstname",
       "npcs/dxfemalefirstname",
@@ -323,11 +310,11 @@ town_npcs = [
       "npcs/dxpersonality",
       "npcs/d6theartisanis",
       "npcs/d8theartisanhas",
-      "npcs/d8theartisanhas",
+      "npcs/d8theartisanhas_2",
       "npcs/d6theartisanisparticularlyskilledat",
       "npcs/d8theartisanislookingfor",
       "npcs/d6theartisaniscarrying",
-      "npcs/d6theartisanis",
+      "npcs/d6theartisanis_2",
       "npcs/d6theartisandreamsof",
     ],
     sub_rolls: [],
@@ -797,9 +784,9 @@ town_npcs = [
       "npcs/dxfirstname",
       "npcs/dxsurname",
       "npcs/dxpersonality",
-      "npcs/d4thesmithis",
-      "npcs/d4thesmithislookingfor",
-      "npcs/d4thesmithcarries",
+      "npcs/d4thesmithis_2",
+      "npcs/d4thesmithislookingfor_2",
+      "npcs/d4thesmithcarries_2",
     ],
     sub_rolls: [],
   },
@@ -1594,8 +1581,8 @@ pantheon = [
     title: "God of Craft/Knowledge",
     main_rolls: [
       "objects/d6thisgodofcraftingandorknowledgeisoftencalled",
-      "objects/d6heholdsdominionover",
-      "objects/d6hisfollowersmust",
+      "objects/d6heholdsdominionover_2",
+      "objects/d6hisfollowersmust_2",
     ],
     sub_rolls: [],
   },
@@ -1603,8 +1590,8 @@ pantheon = [
     title: "God of Darkness/Secrets",
     main_rolls: [
       "objects/d6thisgodofdarknessandorsecretsisoftencalled",
-      "objects/d6heholdsdominionover",
-      "objects/d6hisfollowersmust",
+      "objects/d6heholdsdominionover_3",
+      "objects/d6hisfollowersmust_2",
     ],
     sub_rolls: [],
   },
@@ -1612,8 +1599,8 @@ pantheon = [
     title: "God of Death/Evil",
     main_rolls: [
       "objects/d6thisgodofdeathandorevilisoftencalled",
-      "objects/d6heholdsdominionover",
-      "objects/d6hisfollowersmust",
+      "objects/d6heholdsdominionover_4",
+      "objects/d6hisfollowersmust_3",
     ],
     sub_rolls: [],
   },
@@ -1621,8 +1608,8 @@ pantheon = [
     title: "Goddess of Love/Fertility",
     main_rolls: [
       "objects/d6thisgoddessofloveandorfertilityisoftencalled",
-      "objects/d6sheholdsdominionover",
-      "objects/d6herfollowersmust",
+      "objects/d6sheholdsdominionover_2",
+      "objects/d6herfollowersmust_2",
     ],
     sub_rolls: [],
   },
@@ -1630,8 +1617,8 @@ pantheon = [
     title: "Goddess of Moon/Magic",
     main_rolls: [
       "objects/d6thisgoddessofthemoonandormagicisoftencalled",
-      "objects/d6sheholdsdominionover",
-      "objects/d6herfollowersmust",
+      "objects/d6sheholdsdominionover_3",
+      "objects/d6herfollowersmust_2",
     ],
     sub_rolls: [],
   },
@@ -1639,8 +1626,8 @@ pantheon = [
     title: "Goddess of the Hunt/Woodlands",
     main_rolls: [
       "objects/d6thisgoddessthehuntandorwoodlandsisoftencalled",
-      "objects/d6sheholdsdominionover",
-      "objects/d6herfollowersmust",
+      "objects/d6sheholdsdominionover_4",
+      "objects/d6herfollowersmust_3",
     ],
     sub_rolls: [],
   },
@@ -1648,8 +1635,8 @@ pantheon = [
     title: "God of the Storm/Seas",
     main_rolls: [
       "objects/d6thisgodisofstormsandorseasoftencalled",
-      "objects/d6heholdsdominionover",
-      "objects/d6hisfollowersmust",
+      "objects/d6heholdsdominionover_5",
+      "objects/d6hisfollowersmust_5",
     ],
     sub_rolls: [],
   },
@@ -1657,8 +1644,8 @@ pantheon = [
     title: "The Trickster Messenger God",
     main_rolls: [
       "objects/d8thistricksterandormessengergodisoftencalled",
-      "objects/d6heholdsdominionover",
-      "objects/d6hisfollowersmust",
+      "objects/d6heholdsdominionover_6",
+      "objects/d6hisfollowersmust_5",
     ],
     sub_rolls: [],
   },
@@ -1666,8 +1653,8 @@ pantheon = [
     title: "The War/Tyrant God",
     main_rolls: [
       "objects/d6thiswartyrantgodisoftencalled",
-      "objects/d6heholdsdominionover",
-      "objects/d6hisfollowersmust",
+      "objects/d6heholdsdominionover_7",
+      "objects/d6hisfollowersmust_6",
     ],
     sub_rolls: [],
   },
@@ -1687,7 +1674,7 @@ fishing_catch = [
     title: "- Warm Ocean Fishing",
     main_rolls: [
       "objects/d8nearshorecatchyouhaulin",
-      "objects/d10deepseacatchyouhaulin",
+      "objects/d10deepseacatchyouhaulin_2",
       "objects/d8rarecatchyouhaulin",
     ],
     sub_rolls: [],
@@ -1703,8 +1690,7 @@ fishing_catch = [
   },
   {
     title: "- Seafood Harvesting",
-    use:
-      "To harvest seafood the player must have a hunting trap, and must succeed on a skill check vs a DC 12. If he or she has proficiency in Survival then the player can make this check with advantage. The player can only harvest their traps after 24 hours have passed.",
+    use: "To harvest seafood the player must have a hunting trap, and must succeed on a skill check vs a DC 12. If he or she has proficiency in Survival then the player can make this check with advantage. The player can only harvest their traps after 24 hours have passed.",
     main_rolls: ["objects/d12seafood"],
     sub_rolls: [],
   },
@@ -1826,7 +1812,7 @@ top.subrolls = [
     percent_to: "100",
     percent_of: "100",
     rolls: [
-      "subrolls/prisond10roomsthischamberis",
+      "dungeons/prisond10roomsthischamberis",
       "dungeons/prisond20featuresyounotice",
     ],
   },
@@ -2452,7 +2438,7 @@ top.subrolls = [
       "npcs/dxsurname",
       "npcs/d4theprisonerhas",
       "npcs/d6theprisonerisherebecause",
-      "npcs/d4theprisonerhas",
+      "npcs/d4theprisonerhas_2",
     ],
   },
 
