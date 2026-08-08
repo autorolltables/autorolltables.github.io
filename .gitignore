@@ -4,3 +4,6 @@ changelog.html
 /old/*
 /web/*
 /offline/*
+
+# local Claude Code config, not part of the site
+.claude/
