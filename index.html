@@ -64,6 +64,12 @@
     <div class="tool-header">
       <h1 id="view-title">All</h1>
       <span class="sub" id="view-sub"></span>
+      <div class="header-actions" id="view-actions">
+        <button type="button" class="btn small primary new-custom-table" id="new-custom-table" hidden>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 5 v14 M5 12 h14"/></svg>
+          New custom table
+        </button>
+      </div>
     </div>
 
     <!-- ============ Tables ============ -->
@@ -138,10 +144,33 @@
         </div>
 
         <div class="card">
-          <h2>Favorites</h2>
-          <p class="small muted">Star any table in the list to pin it to the Favorites category. Favorites are stored in this browser only.</p>
-          <p class="small muted" id="set-fav-count">No favorites yet.</p>
+          <h2>Favorites &amp; custom tables</h2>
+          <p class="small muted">Star any table to pin it to the Favorites category. You can also write your own: open <a href="#/Favorites">Favorites</a> and choose <b>New custom table</b> to add a title and a list of results.</p>
+          <p class="small muted" id="set-fav-count">No tables starred.</p>
+          <button type="button" class="btn small primary new-custom-table" style="margin-top:10px">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 5 v14 M5 12 h14"/></svg>
+            New custom table
+          </button>
           <button type="button" class="btn small" id="set-clear-favorites" style="margin-top:10px">Clear all favorites</button>
+          <p class="small faint" style="margin-top:8px">Clearing favorites leaves custom tables alone; delete those from their edit dialog.</p>
+        </div>
+
+        <div class="card">
+          <h2>Backup &amp; transfer</h2>
+          <p class="small muted">Everything lives in this browser, so it is worth exporting a copy now and then, or to move to another device. The file holds your starred favorites, your custom tables and the current roll history.</p>
+          <p class="small muted">Importing <b>merges</b> a file into what is already here, so nothing you have now is removed. Favorites and custom tables you already have are not duplicated; history entries are always added to the end of the list.</p>
+          <div class="row" style="margin-top:12px">
+            <button type="button" class="btn primary" id="set-export">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 v12 M8 11 l4 4 4-4 M4 17 v2 a2 2 0 0 0 2 2 h12 a2 2 0 0 0 2-2 v-2"/></svg>
+              Export
+            </button>
+            <button type="button" class="btn" id="set-import">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15 V3 M8 7 l4-4 4 4 M4 17 v2 a2 2 0 0 0 2 2 h12 a2 2 0 0 0 2-2 v-2"/></svg>
+              Import...
+            </button>
+            <input type="file" id="set-import-file" accept=".json,application/json" hidden>
+          </div>
+          <p class="small muted" id="set-backup-status" role="status" style="margin-top:10px"></p>
         </div>
 
         <div class="card">
@@ -182,7 +211,36 @@
 <div id="more-sheet" aria-label="More categories"></div>
 <div id="alerts" aria-live="polite"></div>
 
+<!-- custom table editor -->
+<dialog id="custom-dialog" class="modal" aria-labelledby="custom-dialog-title">
+  <form method="dialog" onsubmit="return false">
+    <div class="modal-head">
+      <h2 id="custom-dialog-title">New custom table</h2>
+    </div>
+    <div class="modal-body">
+      <label class="field">
+        <span>Title</span>
+        <input type="text" id="custom-title" placeholder="Tavern rumours" autocomplete="off" spellcheck="false">
+      </label>
+      <label class="field wide">
+        <span>Results &mdash; one per line</span>
+        <textarea id="custom-entries" rows="10" spellcheck="false" placeholder="A cloaked figure asks about the old mine&#10;The miller's daughter has gone missing&#10;Someone is buying up every silver weapon in town"></textarea>
+      </label>
+      <p class="small faint">Rolling picks one line at random. Lines may use the same inline sub-roll syntax as the built-in tables, for example <code>A guard (d4): 1. bored; 2. drunk; 3. alert; 4. corrupt</code>.</p>
+      <p class="small danger-text" id="custom-error" role="alert"></p>
+    </div>
+    <div class="modal-foot">
+      <button type="button" class="btn" id="custom-delete">Delete</button>
+      <span class="spacer"></span>
+      <button type="button" class="btn" id="custom-cancel">Cancel</button>
+      <button type="button" class="btn primary" id="custom-save">Save table</button>
+    </div>
+  </form>
+</dialog>
+
 <script src="includes/jquery.min.js"></script>
+<script src="js/custom-tables.js"></script>
+<script src="js/backup.js"></script>
 <script src="js/app-shell.js"></script>
 <script src="js/rolltables.js"></script>
 

@@ -76,14 +76,16 @@
    * "sources" are section titles as they appear in roll_menu.js. Several of
    * them are combined into one browsing category.
    * ---------------------------------------------------------------- */
+  // "tab" entries make up the single row of the mobile tab bar; everything
+  // else is reached through More
   var CATEGORIES = [
-    { id: "All", title: "All", icon: "all", sources: ["All"], tab: true },
+    { id: "All", title: "All", icon: "all", sources: ["All"], tab: false },
     { id: "Favorites", title: "Favorites", icon: "star", sources: [], tab: false },
     { id: "Characters", title: "Characters", icon: "characters", sources: ["Factions", "NPCs"], tab: true },
     { id: "Locations", title: "Locations", icon: "locations", sources: ["Dungeons", "Settlements", "Wilderness"], tab: true },
     { id: "Items", title: "Items", icon: "items", sources: ["Food", "Magic", "Objects", "Vehicles"], tab: true },
-    { id: "Monsters", title: "Monsters", icon: "monsters", sources: ["Monsters"], tab: false },
-    { id: "Plots", title: "Plots", icon: "plots", sources: ["Plots"], tab: false },
+    { id: "Monsters", title: "Monsters", icon: "monsters", sources: ["Monsters"], tab: true },
+    { id: "Plots", title: "Plots", icon: "plots", sources: ["Plots"], tab: true },
   ];
 
   var LINKS = [
@@ -289,11 +291,17 @@
     return "All";
   }
 
+  function setHeaderActions(id) {
+    var addBtn = document.getElementById("new-custom-table");
+    if (addBtn) addBtn.hidden = id !== "Favorites";
+  }
+
   function showSettings() {
     document.getElementById("view-tables").hidden = true;
     document.getElementById("view-settings").hidden = false;
     document.getElementById("view-title").textContent = "Settings";
     document.getElementById("view-sub").textContent = "Appearance, favorites and attribution";
+    setHeaderActions("settings");
     setActive("settings");
     syncSettings();
   }
@@ -302,6 +310,7 @@
     document.getElementById("view-settings").hidden = true;
     document.getElementById("view-tables").hidden = false;
     document.getElementById("view-title").textContent = id;
+    setHeaderActions(id);
     setActive(id);
     // loadleftdisplay lives in rolltables.js and fills the table list
     if (typeof window.loadleftdisplay === "function") window.loadleftdisplay(id);
@@ -311,8 +320,22 @@
   function updateSub(id) {
     var n = countFor(id);
     var sub = document.getElementById("view-sub");
-    if (id === "Favorites" && n === 0) sub.textContent = "Star a table to pin it here";
-    else sub.textContent = n + (n === 1 ? " table" : " tables");
+    if (!sub) return;
+
+    if (id === "Favorites") {
+      var customs = window.CustomTables ? CustomTables.count() : 0;
+      var starred = n - customs;
+      if (n === 0) {
+        sub.textContent = "Star a table, or write your own";
+        return;
+      }
+      var parts = [];
+      if (starred > 0) parts.push(starred + (starred === 1 ? " starred" : " starred"));
+      if (customs > 0) parts.push(customs + (customs === 1 ? " custom table" : " custom tables"));
+      sub.textContent = parts.join(" · ");
+      return;
+    }
+    sub.textContent = n + (n === 1 ? " table" : " tables");
   }
 
   function applyRoute() {
@@ -351,7 +374,11 @@
     var count = document.getElementById("set-fav-count");
     if (count) {
       var n = favoriteCount();
-      count.textContent = n === 0 ? "No favorites yet." : n + (n === 1 ? " table starred." : " tables starred.");
+      var customs = window.CustomTables ? CustomTables.count() : 0;
+      var bits = [];
+      bits.push(n === 0 ? "No tables starred" : n + (n === 1 ? " table starred" : " tables starred"));
+      if (customs > 0) bits.push(customs + (customs === 1 ? " custom table" : " custom tables"));
+      count.textContent = bits.join(", ") + ".";
     }
   }
 
@@ -444,8 +471,30 @@
   /* ------------------------------------------------------------------
    * Public surface
    * ---------------------------------------------------------------- */
+  // navigate to a category from elsewhere in the app, calling done() once the
+  // new view is on screen. setting location.hash only fires hashchange on a
+  // later task, so callers that need the rendered list have to wait for it.
+  function goTo(id, done) {
+    if (location.hash === "#/" + id) {
+      applyRoute();
+      if (done) done();
+      return;
+    }
+    if (done) {
+      var once = function () {
+        window.removeEventListener("hashchange", once);
+        done();
+      };
+      // boot() registered applyRoute first, so the route is already applied
+      // by the time this runs
+      window.addEventListener("hashchange", once);
+    }
+    location.hash = "#/" + id;
+  }
+
   window.AppShell = {
     boot: boot,
+    goTo: goTo,
     applyRoute: applyRoute,
     setActive: setActive,
     refreshCounts: refreshCounts,

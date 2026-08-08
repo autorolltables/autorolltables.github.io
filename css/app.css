@@ -288,22 +288,91 @@ b, strong { color: var(--text); font-weight: 600; }
 
 .list-item .dofavorite {
   position: absolute;
-  right: 6px;
-  top: 5px;
-  font-size: 1.05em;
+  right: 3px;
+  /* centred on the row rather than pinned to the top, so it still sits in the
+     middle of entries that wrap onto a second line */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  font-size: 1.3rem;
   line-height: 1;
   color: var(--text-faint);
   opacity: 0;
-  transition: opacity 0.1s, color 0.1s;
+  transition: opacity 0.1s, color 0.1s, background 0.1s;
 }
 .list-item:hover .dofavorite,
 .list-item .dofavorite.favorite { opacity: 1; }
 .list-item .dofavorite.favorite { color: var(--accent); }
-.list-item .dofavorite:hover { color: var(--accent); }
+.list-item .dofavorite:hover { color: var(--accent); background: var(--bg-hover); }
 .dofavorite:before { content: "\2606"; }
 .dofavorite.favorite:before { content: "\2605"; }
 
 .list-empty { padding: 26px 14px; text-align: center; color: var(--text-faint); font-size: 0.86rem; }
+
+/* ---------- Custom tables ---------- */
+.list-group-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--text-faint);
+  padding: 14px 10px 5px;
+}
+.list-group-label::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+#left-display-list > .list-group-label:first-child { padding-top: 6px; }
+
+.badge-custom {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 0 6px;
+  border: 1px solid var(--accent);
+  border-radius: 99px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  vertical-align: 1px;
+  white-space: nowrap;
+}
+
+.list-item .edit-custom {
+  position: absolute;
+  right: 3px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: none;
+  color: var(--text-faint);
+  cursor: pointer;
+  opacity: 0;
+  padding: 0;
+}
+.list-item:hover .edit-custom,
+.list-item.list-selected .edit-custom { opacity: 1; }
+.list-item .edit-custom:hover { background: var(--bg-hover); color: var(--accent); }
+.list-item .edit-custom svg { width: 14px; height: 14px; }
+
+.header-actions { margin-left: auto; display: flex; gap: 8px; align-items: center; }
 
 /* ---------- Result tabs ---------- */
 .result-tabs { display: flex; gap: 2px; flex: 1; }
@@ -496,6 +565,52 @@ input:focus, select:focus, textarea:focus, .btn:focus-visible, .nav-item:focus-v
 .alert-danger .glyphicon { color: var(--danger); }
 
 /* ============================================================
+   Modal (custom table editor)
+   ============================================================ */
+dialog.modal {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-panel);
+  color: var(--text);
+  padding: 0;
+  width: min(560px, calc(100vw - 24px));
+  max-height: min(86dvh, 760px);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+dialog.modal::backdrop { background: rgba(0, 0, 0, 0.55); }
+dialog.modal form { display: flex; flex-direction: column; max-height: inherit; }
+.modal-head {
+  padding: 13px 16px;
+  border-bottom: 1px solid var(--border);
+  flex: none;
+}
+.modal-head h2 { font-size: 1.08rem; color: var(--accent); }
+.modal-body { padding: 16px; overflow-y: auto; }
+.modal-body .field { max-width: none; }
+.modal-body .field.wide textarea { width: 100%; resize: vertical; font-family: var(--font-mono); font-size: 0.85rem; line-height: 1.5; }
+.modal-body code {
+  font-family: var(--font-mono);
+  font-size: 0.82em;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1px 4px;
+}
+.modal-foot {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border-top: 1px solid var(--border);
+  flex: none;
+}
+.modal-foot .spacer { flex: 1; }
+.btn.danger { color: var(--danger); border-color: var(--danger); background: none; font-weight: 600; }
+.danger-text { color: var(--danger); }
+.danger-text:empty { display: none; }
+
+/* ============================================================
    Settings view
    ============================================================ */
 .settings-view { overflow-y: auto; padding-right: 4px; }
@@ -517,6 +632,7 @@ input:focus, select:focus, textarea:focus, .btn:focus-visible, .nav-item:focus-v
 }
 .tab-item {
   flex: 1;
+  min-width: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -526,11 +642,19 @@ input:focus, select:focus, textarea:focus, .btn:focus-visible, .nav-item:focus-v
   background: none;
   color: var(--text-faint);
   cursor: pointer;
-  font-size: 0.63rem;
+  /* six tabs share one row, so the labels have to stay narrow */
+  font-size: 0.58rem;
+  letter-spacing: -0.01em;
   text-decoration: none;
-  padding: 0;
+  padding: 0 2px;
 }
-.tab-item svg { width: 21px; height: 21px; }
+.tab-item span {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.tab-item svg { width: 20px; height: 20px; }
 .tab-item.active { color: var(--accent); }
 .tab-item:hover { text-decoration: none; }
 
