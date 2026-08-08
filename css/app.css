@@ -372,7 +372,15 @@ b, strong { color: var(--text); font-weight: 600; }
 .list-item .edit-custom:hover { background: var(--bg-hover); color: var(--accent); }
 .list-item .edit-custom svg { width: 14px; height: 14px; }
 
-.header-actions { margin-left: auto; display: flex; gap: 8px; align-items: center; }
+.header-actions {
+  margin-left: auto;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  /* the map generators put several controls here, which will not fit on one
+     line on a phone */
+  flex-wrap: wrap;
+}
 
 /* ---------- Result tabs ---------- */
 .result-tabs { display: flex; gap: 2px; flex: 1; }
@@ -757,6 +765,9 @@ dialog.modal form { display: flex; flex-direction: column; max-height: inherit; 
   #left-display-list { max-height: 46vh; }
   #rightview-current-display, #rightview-history-display { max-height: 62vh; }
   .tool-header h1 { font-size: 1.25rem; }
+  /* let the controls use the full width and wrap instead of running off the
+     side of the screen */
+  .header-actions { margin-left: 0; width: 100%; }
   #alerts { bottom: calc(var(--tabbar-h) + env(safe-area-inset-bottom) + 12px); }
 }
 
