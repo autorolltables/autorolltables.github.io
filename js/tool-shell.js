@@ -81,7 +81,7 @@
     { id: "Characters", title: "Characters", href: "../index.html#/Characters", icon: "characters" },
     { id: "Locations", title: "Locations", href: "../index.html#/Locations", icon: "locations" },
     { id: "Items", title: "Items", href: "../index.html#/Items", icon: "items" },
-    { id: "Monsters", title: "Monsters", href: "../index.html#/Monsters", icon: "monsters" },
+    { id: "Creatures", title: "Creatures", href: "../index.html#/Creatures", icon: "monsters" },
     { id: "Plots", title: "Plots", href: "../index.html#/Plots", icon: "plots" },
   ];
   // the categories that did not earn a tab, so they live in the sheet instead

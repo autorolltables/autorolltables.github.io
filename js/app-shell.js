@@ -91,7 +91,9 @@
     { id: "Characters", title: "Characters", icon: "characters", sources: ["Factions", "NPCs"], tab: true },
     { id: "Locations", title: "Locations", icon: "locations", sources: ["Dungeons", "Settlements", "Wilderness"], tab: true },
     { id: "Items", title: "Items", icon: "items", sources: ["Food", "Magic", "Objects", "Vehicles"], tab: true },
-    { id: "Monsters", title: "Monsters", icon: "monsters", sources: ["Monsters"], tab: true },
+    // "Monsters" in sources is the section title in roll_menu.js, which the
+    // table data still uses; only what the reader sees changed
+    { id: "Creatures", title: "Creatures", icon: "monsters", sources: ["Monsters"], tab: true },
     { id: "Plots", title: "Plots", icon: "plots", sources: ["Plots"], tab: true },
   ];
 
@@ -298,8 +300,12 @@
   /* ------------------------------------------------------------------
    * Routing
    * ---------------------------------------------------------------- */
+  // routes that have been renamed, so older bookmarks still land somewhere
+  var ROUTE_ALIASES = { Monsters: "Creatures" };
+
   function currentRoute() {
     var h = String(location.hash || "").replace(/^#\/?/, "");
+    if (ROUTE_ALIASES[h]) h = ROUTE_ALIASES[h];
     if (h === "settings") return "settings";
     for (var i = 0; i < CATEGORIES.length; i++) if (CATEGORIES[i].id === h) return h;
     return "All";
