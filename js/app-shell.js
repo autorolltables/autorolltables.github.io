@@ -50,13 +50,18 @@
     plots:
       "M6 3 h13 a2 2 0 0 1 2 2 v2 h-4 M6 3 a2 2 0 0 0-2 2 v13 a3 3 0 0 0 3 3 h11 a2 2 0 0 0 2-2 v-12 M9 9 h7 M9 13 h7",
     book: "M5 3 h11 a3 3 0 0 1 3 3 v15 H8 a3 3 0 0 1-3-3 Z M5 15 a3 3 0 0 1 3 3 h11 M9 7 h6",
-    hex: "M12 2 L21 7 L21 17 L12 22 L3 17 L3 7 Z",
+    // three interlocking tiles, so the hex map does not share a glyph with the
+    // plain hexagon the Character Generator uses as its mark
+    hex: "M7.5 2.2 L12 4.8 L12 10 L7.5 12.6 L3 10 L3 4.8 Z M16.5 2.2 L21 4.8 L21 10 L16.5 12.6 L12 10 L12 4.8 Z M12 10 L16.5 12.6 L16.5 17.8 L12 20.4 L7.5 17.8 L7.5 12.6 Z",
     globe: "M12 22 a10 10 0 1 1 0-20 a10 10 0 0 1 0 20 M2 12 h20 M12 2 c3 3 3 17 0 20 c-3-3-3-17 0-20",
     gear:
       "M12 15 a3 3 0 1 0 0-6 a3 3 0 0 0 0 6 M19.4 15 a1.65 1.65 0 0 0 .33 1.82 l.06.06 a2 2 0 1 1-2.83 2.83 l-.06-.06 a1.65 1.65 0 0 0-1.82-.33 a1.65 1.65 0 0 0-1 1.51 V21 a2 2 0 1 1-4 0 v-.09 A1.65 1.65 0 0 0 9 19.4 a1.65 1.65 0 0 0-1.82.33 l-.06.06 a2 2 0 1 1-2.83-2.83 l.06-.06 a1.65 1.65 0 0 0 .33-1.82 a1.65 1.65 0 0 0-1.51-1 H3 a2 2 0 1 1 0-4 h.09 A1.65 1.65 0 0 0 4.6 9 a1.65 1.65 0 0 0-.33-1.82 l-.06-.06 a2 2 0 1 1 2.83-2.83 l.06.06 a1.65 1.65 0 0 0 1.82.33 H9 a1.65 1.65 0 0 0 1-1.51 V3 a2 2 0 1 1 4 0 v.09 a1.65 1.65 0 0 0 1 1.51 a1.65 1.65 0 0 0 1.82-.33 l.06-.06 a2 2 0 1 1 2.83 2.83 l-.06.06 a1.65 1.65 0 0 0-.33 1.82 V9 a1.65 1.65 0 0 0 1.51 1 H21 a2 2 0 1 1 0 4 h-.09 a1.65 1.65 0 0 0-1.51 1 Z",
     grid: "M4 4 h7 v7 h-7 Z M13 4 h7 v7 h-7 Z M4 13 h7 v7 h-7 Z M13 13 h7 v7 h-7 Z",
-    screen: "M3 5 h5.5 v14 H3 Z M8.5 7 h7 v10 h-7 Z M15.5 5 H21 v14 h-5.5 Z",
-    person: "M12 12.5 a4 4 0 1 0 0-8 a4 4 0 0 0 0 8 M4.5 20.5 c0-4 3.4-6.5 7.5-6.5 s7.5 2.5 7.5 6.5",
+    // both marks come from the sites themselves: dmscreen.github.io draws this
+    // one in its sidebar and its favicon.svg, and charactergenerator.github.io
+    // uses the bare d20 silhouette, redrawn here at the same scale as the rest
+    dmscreen: "M12 2 L21 7 L21 17 L12 22 L3 17 L3 7 Z M12 2 L12 22 M3 7 L21 17 M21 7 L3 17",
+    chargen: "M12 2 L21 7 L21 17 L12 22 L3 17 L3 7 Z",
     ext: "M14 4 h6 v6 M20 4 L11 13 M18 14 v5 a1 1 0 0 1-1 1 H5 a1 1 0 0 1-1-1 V7 a1 1 0 0 1 1-1 h5",
   };
 
@@ -92,8 +97,8 @@
 
   // the companion sites lead; the last two generators live in this repo
   var LINKS = [
-    { href: "https://dmscreen.github.io", title: "DM Screen", icon: "screen", external: true },
-    { href: "https://charactergenerator.github.io", title: "Character Generator", icon: "person", external: true },
+    { href: "https://dmscreen.github.io", title: "DM Screen", icon: "dmscreen", external: true },
+    { href: "https://charactergenerator.github.io", title: "Character Generator", icon: "chargen", external: true },
     { href: "hex-map-generator/hex_map_generator.html", title: "Hex Map Generator", icon: "hex" },
     { href: "region-map-generator/index.html", title: "Region Map Generator", icon: "globe" },
   ];
