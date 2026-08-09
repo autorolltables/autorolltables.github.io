@@ -794,8 +794,14 @@ dialog.modal form { display: flex; flex-direction: column; max-height: inherit; 
     overflow-y: auto;
     padding: 12px 12px calc(var(--tabbar-h) + env(safe-area-inset-bottom) + 20px);
   }
-  .view { display: block; }
+  /* #main scrolls here rather than the panes, so the view has to be as tall as
+     its content. Left at flex:1 it is squashed to the leftover height, the
+     panes spill out of the bottom of it, and the footer is laid out over the
+     spill instead of below it. */
+  .view { display: block; flex: none; }
   .roll-layout { display: block; }
+  /* the mark is drawn at natural size, which swamps a phone screen */
+  .bgimage img { width: 500px; }
   .roll-layout .pane + .pane { margin-top: 12px; }
   .pane { max-height: none; }
   #left-display-list { max-height: 46vh; }
