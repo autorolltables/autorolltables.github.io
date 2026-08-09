@@ -22,6 +22,8 @@
   --text-faint: #74899a;
   --accent: #7fb0d8;
   --accent-soft: rgba(127, 176, 216, 0.15);
+  /* the panel fill at 75%, so the background mark reads through the chrome */
+  --bg-panel-75: rgba(24, 35, 45, 0.75);
   --accent-text: #0f1922;
   --danger: #e08a7d;
   --success: #86b98a;
@@ -45,6 +47,7 @@
   --text-faint: #7b93a6;
   --accent: #2a6291;
   --accent-soft: rgba(42, 98, 145, 0.12);
+  --bg-panel-75: rgba(241, 246, 249, 0.75);
   --accent-text: #ffffff;
   --danger: #a8402f;
   --success: #4f7238;
@@ -83,7 +86,27 @@ b, strong { color: var(--text); font-weight: 600; }
 /* ============================================================
    App shell
    ============================================================ */
+/* ---------- Background mark ---------- */
+/* The ampersand sits between the body fill and the app, so every panel above
+   it can be translucent and let it through. The artwork is near-black ink on
+   transparent, which would vanish against the dark theme, so it is inverted
+   there rather than being given a second colour. */
+.bgimage {
+  margin: -10em;
+  position: fixed;
+  z-index: 0;
+  opacity: 0.3;
+  pointer-events: none;
+}
+.bgimage img {
+  max-width: none;
+  filter: invert(1);
+}
+:root[data-theme="light"] .bgimage img { filter: none; }
+
 #app {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: var(--sidebar-w) 1fr;
   height: 100dvh;
@@ -93,7 +116,7 @@ b, strong { color: var(--text); font-weight: 600; }
 
 /* ---------- Sidebar ---------- */
 #sidebar {
-  background: var(--bg-panel);
+  background: var(--bg-panel-75);
   border-right: 1px solid var(--border);
   display: flex;
   flex-direction: column;
@@ -209,7 +232,7 @@ b, strong { color: var(--text); font-weight: 600; }
   display: flex;
   flex-direction: column;
   min-height: 0;
-  background: var(--bg-panel);
+  background: var(--bg-panel-75);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   overflow: hidden;
@@ -523,7 +546,7 @@ input:focus, select:focus, textarea:focus, .btn:focus-visible, .nav-item:focus-v
 }
 
 .card {
-  background: var(--bg-panel);
+  background: var(--bg-panel-75);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 16px;
@@ -688,7 +711,7 @@ dialog.modal form { display: flex; flex-direction: column; max-height: inherit; 
   left: 0; right: 0; bottom: 0;
   height: calc(var(--tabbar-h) + env(safe-area-inset-bottom));
   padding-bottom: env(safe-area-inset-bottom);
-  background: var(--bg-panel);
+  background: var(--bg-panel-75);
   border-top: 1px solid var(--border);
   z-index: 40;
 }
