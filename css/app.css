@@ -95,7 +95,7 @@ b, strong { color: var(--text); font-weight: 600; }
   margin: -10em;
   position: fixed;
   z-index: 0;
-  opacity: 0.15;
+  opacity: 0.075;
   pointer-events: none;
 }
 .bgimage img {
