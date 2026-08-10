@@ -218,6 +218,14 @@
     if (typeof window.showalert === "function") window.showalert("custom deleted");
   }
 
+  // wipe every custom table. the caller is responsible for confirming first:
+  // these are hand written, so unlike a starred favorite there is nothing to
+  // restore them from.
+  function clearAll() {
+    save([]);
+    refreshApp();
+  }
+
   // rebuild the Favorites list and the counts around the app
   function refreshApp() {
     if (typeof window.refresh_favorites_view === "function") {
@@ -271,6 +279,7 @@
 
   window.CustomTables = {
     asMenuItems: asMenuItems,
+    clearAll: clearAll,
     count: count,
     pick: pick,
     open: open,
