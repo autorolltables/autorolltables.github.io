@@ -4,6 +4,9 @@ changelog.html
 /old/*
 /web/*
 /offline/*
+Trash/
+Thumbs.db
 
 # local Claude Code config, not part of the site
 .claude/
+claude.md
