@@ -295,6 +295,9 @@
 
   function closeMoreSheet() {
     document.getElementById("more-sheet").classList.remove("open");
+    // the More tab is highlighted while the sheet is up, so clear it here too
+    var moreTab = document.getElementById("more-tab");
+    if (moreTab) moreTab.classList.remove("active");
   }
 
   /* ------------------------------------------------------------------
@@ -521,6 +524,25 @@
         var sheet = document.getElementById("more-sheet");
         sheet.classList.toggle("open");
         moreTab.classList.toggle("active", sheet.classList.contains("open"));
+      });
+    }
+
+    // The sheet is a menu, so picking anything from it has to dismiss it, and
+    // applyRoute cannot be relied on to do that. Choosing the destination that
+    // is already showing sets the hash to what it already is, no hashchange
+    // fires, applyRoute never runs, and the sheet would sit there looking
+    // like the tap missed. Same for a tab that is already the current one.
+    var sheetEl = document.getElementById("more-sheet");
+    if (sheetEl) {
+      sheetEl.addEventListener("click", function (e) {
+        if (e.target.closest && e.target.closest(".more-tile")) closeMoreSheet();
+      });
+    }
+    var tabbarEl = document.getElementById("tabbar");
+    if (tabbarEl) {
+      tabbarEl.addEventListener("click", function (e) {
+        var tab = e.target.closest ? e.target.closest(".tab-item") : null;
+        if (tab && tab.id !== "more-tab") closeMoreSheet();
       });
     }
 
