@@ -673,6 +673,32 @@ function perform_roll() {
     }
   }
 
+  // A pick roll chooses one of several tables and then rolls the one it landed
+  // on, rather than rolling all of them the way main_rolls does. "Random Plot
+  // Hook" uses it: pick an environment first, then draw a hook from that
+  // environment's list. The table it picked is named in the output, so the
+  // result can be traced back to it.
+  if (roll_table.pick_rolls && roll_table.pick_rolls.length) {
+    side(" ");
+    side_display(" ");
+
+    var pick =
+      roll_table.pick_rolls[
+        Math.floor(Math.random() * roll_table.pick_rolls.length)
+      ];
+    var pick_id = get_roll_id(pick);
+    var pick_table = get_roll_table(pick);
+    var picked = get_roll(pick_id, pick_table);
+    var picked_value = roll_roll(pick_id, pick_table);
+
+    if (picked_value.match(inline_roll_match)) {
+      picked_value = inline_roll(picked_value);
+    }
+
+    side(picked.title + " : " + picked_value);
+    side_display(picked.title + " : <b>" + picked_value + "</b>");
+  }
+
   if (if_zero_dont_show_subrolls != 0) {
     side(" ");
     side_display(" ");

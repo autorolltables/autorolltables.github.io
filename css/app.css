@@ -204,6 +204,10 @@ b, strong { color: var(--text); font-weight: 600; }
   padding: 16px clamp(12px, 2vw, 24px) 16px;
   min-width: 0;
 }
+/* the sidebar carries the brand on desktop; on mobile it is hidden, so the
+   brand moves into the main column and shows above every tab */
+.mobile-brand { display: none; }
+
 .tool-header {
   flex: none;
   display: flex;
@@ -507,6 +511,9 @@ div.expand-collapse:hover { background: var(--bg-hover); color: var(--text); }
 /* ============================================================
    Components
    ============================================================ */
+/* .btn sets display, which beats the browser's [hidden] rule, so a button
+   hidden from script stays on screen without this */
+.btn[hidden] { display: none; }
 .btn {
   display: inline-flex;
   align-items: center;
@@ -799,6 +806,20 @@ dialog.modal form { display: flex; flex-direction: column; max-height: inherit; 
      its content. Left at flex:1 it is squashed to the leftover height, the
      panes spill out of the bottom of it, and the footer is laid out over the
      spill instead of below it. */
+  .mobile-brand {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    flex: none;
+    margin-bottom: 10px;
+  }
+  .mobile-brand img { width: 26px; height: 26px; flex: none; object-fit: contain; }
+  .mobile-brand .title {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+  }
   .view { display: block; flex: none; }
   .roll-layout { display: block; }
   /* the mark is drawn at natural size, which swamps a phone screen */
