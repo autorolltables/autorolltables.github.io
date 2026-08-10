@@ -412,10 +412,20 @@
     setSegmented("set-theme", getPref(PREFS.theme, "dark") === "light" ? "light" : "dark");
     setSegmented("set-navmode", getPref(PREFS.navmode, "hover") === "click" ? "click" : "hover");
 
+    var customs = window.CustomTables ? CustomTables.count() : 0;
+
+    // nothing to clear, and leaving it armed across a visit would be a trap
+    var clearCustoms = document.getElementById("set-clear-customs");
+    if (clearCustoms) {
+      armClearCustoms(false);
+      clearCustoms.disabled = customs === 0;
+    }
+    var clearFavs = document.getElementById("set-clear-favorites");
+    if (clearFavs) clearFavs.disabled = favoriteCount() === 0;
+
     var count = document.getElementById("set-fav-count");
     if (count) {
       var n = favoriteCount();
-      var customs = window.CustomTables ? CustomTables.count() : 0;
       var bits = [];
       bits.push(n === 0 ? "No tables starred" : n + (n === 1 ? " table starred" : " tables starred"));
       if (customs > 0) bits.push(customs + (customs === 1 ? " custom table" : " custom tables"));
@@ -450,6 +460,37 @@
         if (typeof window.showalert === "function") window.showalert("favorites cleared");
       });
     }
+
+    // Custom tables are written by hand and there is no undo, so this arms on
+    // the first click the same way the delete button in the edit dialog does.
+    // Clearing favorites needs no such guard: a star can just be set again.
+    var clearCustoms = document.getElementById("set-clear-customs");
+    if (clearCustoms) {
+      clearCustoms.addEventListener("click", function () {
+        if (!customsArmed) {
+          armClearCustoms(true);
+          return;
+        }
+        armClearCustoms(false);
+        if (window.CustomTables) CustomTables.clearAll();
+        refreshCounts();
+        syncSettings();
+        if (typeof window.showalert === "function") {
+          window.showalert("custom tables cleared");
+        }
+      });
+    }
+  }
+
+  // the confirm state for "Clear all custom tables"
+  var customsArmed = false;
+
+  function armClearCustoms(on) {
+    var btn = document.getElementById("set-clear-customs");
+    if (!btn) return;
+    customsArmed = !!on;
+    btn.textContent = on ? "Really clear all?" : "Clear all custom tables";
+    btn.classList.toggle("danger", !!on);
   }
 
   /* ------------------------------------------------------------------
