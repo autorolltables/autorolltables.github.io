@@ -143,8 +143,10 @@
 
     var moreSheet = document.getElementById("more-sheet");
     if (moreSheet) {
+      // no Roll Tables tile here: it points at index.html, which opens on All,
+      // so it and the All tile below were two routes to the same page. The
+      // sidebar still carries Roll Tables, where nothing duplicates it.
       var sheet = '<div class="nav-group-label">Tables</div><div class="more-grid">';
-      sheet += tile(TABLES);
       for (var s = 0; s < SHEET_TABLES.length; s++) sheet += tile(SHEET_TABLES[s]);
       sheet += "</div>";
 
