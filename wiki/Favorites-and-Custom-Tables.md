@@ -6,7 +6,7 @@ Every table in the list has a star. Click it to pin that table to the
 **Favorites** category. Click it again to unpin.
 
 Favorites are stored in your browser only. They are not synced anywhere, so to
-move them to another device use [Backup and Transfer](Backup-and-Transfer).
+move them to another device use [[Backup and Transfer]].
 
 Clear them all from **Settings > Favorites & custom tables > Clear all
 favorites**. That leaves custom tables alone.

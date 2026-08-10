@@ -14,26 +14,27 @@ it.
 
 | Page | What it covers |
 |---|---|
-| [Rolling Tables](Rolling-Tables) | Categories, rolling, history, filtering, copying results |
-| [Favorites and Custom Tables](Favorites-and-Custom-Tables) | Starring tables, writing your own, the inline roll syntax |
-| [Backup and Transfer](Backup-and-Transfer) | Export and import, what is stored and where |
-| [Hex Map Generator](Hex-Map-Generator) | Sizes, tile labels, saving, how the terrain is generated |
-| [Region Map Generator](Region-Map-Generator) | Generating and exporting region maps |
-| [Settings](Settings) | Theme, category switching, clearing data |
+| [[Rolling Tables]] | Categories, rolling, history, filtering, copying results |
+| [[Favorites and Custom Tables]] | Starring tables, writing your own, the inline roll syntax |
+| [[Backup and Transfer]] | Export and import, what is stored and where |
+| [[Hex Map Generator]] | Sizes, tile labels, saving, how the terrain is generated |
+| [[Region Map Generator]] | Generating and exporting region maps |
+| [[Settings]] | Theme, category switching, clearing data |
 
 ## Working on it
 
 | Page | What it covers |
 |---|---|
-| [Adding Tables](Adding-Tables) | The data format, step by step, with a worked example |
-| [Development](Development) | Repository layout, running locally, conventions |
+| [[Adding Tables]] | The data format, step by step, with a worked example |
+| [[Development]] | Repository layout, running locally, conventions |
+| [[Maintaining the Wiki]] | Editing these pages and pushing them from the command line |
 
 ## Quick answers
 
 **Do I need an account?** No. There is no server and no sign-in.
 
 **Where is my data kept?** In your browser's `localStorage`, on that device
-only. See [Backup and Transfer](Backup-and-Transfer) to move it elsewhere.
+only. See [[Backup and Transfer]] to move it elsewhere.
 
 **Will an update wipe what I saved?** No. Updates never clear storage. The one
 thing to know is that favorites are stored by table name, so if a table is ever

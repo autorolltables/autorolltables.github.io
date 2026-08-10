@@ -23,7 +23,7 @@ Shows how many tables you have starred and how many custom tables you have
 written.
 
 - **New custom table** opens the editor. See
-  [Favorites and Custom Tables](Favorites-and-Custom-Tables).
+  [[Favorites and Custom Tables]].
 - **Clear all favorites** unstars everything. Custom tables are untouched.
 - **Clear all custom tables** deletes every table you have written. It asks
   twice, because nothing restores them. Export first if you are unsure.
@@ -33,7 +33,7 @@ Both buttons are greyed out when there is nothing to clear.
 ## Backup & transfer
 
 **Export** and **Import** for favorites, custom tables and roll history. See
-[Backup and Transfer](Backup-and-Transfer).
+[[Backup and Transfer]].
 
 ## Sources & attribution
 

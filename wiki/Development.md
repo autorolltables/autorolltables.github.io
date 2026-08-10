@@ -72,7 +72,7 @@ node --check js/roll_plots.js
 Nothing clears these except the two Settings buttons. When changing anything
 that touches stored data, check that existing data still resolves: favorites in
 particular are keyed by table name, so a rename orphans them. See
-[Adding Tables](Adding-Tables).
+[[Adding Tables]].
 
 ## Layout notes worth knowing
 

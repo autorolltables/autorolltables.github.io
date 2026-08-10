@@ -3,40 +3,18 @@
 These files are the source of the project's
 [GitHub wiki](https://github.com/autorolltables/autorolltables.github.io/wiki).
 
-They are kept here so wiki changes are reviewed alongside code changes, since
-several pages document things that break if the code changes without them: the
+They live here so wiki changes are reviewed alongside code changes. Several
+pages document things that break silently if the code moves without them: the
 table data format, the `?v=` cache-busting rule, and how browser storage is
 keyed.
 
-## Publishing
+**Editing and publishing is documented in `Maintaining-the-Wiki.md`**, which is
+itself a wiki page. In short: a GitHub wiki is a separate git repository that has
+to be initialized once through the web UI, after which it is clone, copy, commit,
+push.
 
-A GitHub wiki is a separate git repository. It does not exist until the first
-page is created through the web UI, and it cannot be created through the API.
+This README is the only file here that is not published to the wiki.
 
-**One-time setup.** Open the repository's
-[Wiki tab](https://github.com/autorolltables/autorolltables.github.io/wiki),
-click **Create the first page**, and save anything. That brings the wiki
-repository into existence.
-
-**Then, from the repository root:**
-
-```bash
-git clone https://github.com/autorolltables/autorolltables.github.io.wiki.git ../art-wiki
-cp wiki/*.md ../art-wiki/
-cd ../art-wiki
-git add .
-git commit -m "Sync wiki from the main repository"
-git push
-```
-
-Re-run the copy, commit and push whenever these files change.
-
-## Conventions
-
-- One page per file. The filename is the page title, with hyphens for spaces:
-  `Adding-Tables.md` becomes the page **Adding Tables**.
-- Link between pages with the page name and no extension:
-  `[Adding Tables](Adding-Tables)`.
-- `Home.md` is the landing page. `_Sidebar.md` is the navigation shown beside
-  every page.
-- This README is not published; it is only a note to whoever maintains the wiki.
+> Links between pages use wiki syntax, `[[Page Name]]`, so they render as literal
+> brackets when read here in the repository. They resolve correctly once
+> published.
