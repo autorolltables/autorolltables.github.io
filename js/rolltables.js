@@ -993,7 +993,22 @@ function filter() {
     .children(item)
     .show();
 
+  sync_group_labels();
   leftscrolltop();
+}
+
+// A group label is not a list item, so the pass above leaves it behind when
+// every table under it has been filtered out, which reads as an empty
+// heading. Show a label only while something in its group is still visible.
+function sync_group_labels() {
+  $("#left-display-list")
+    .children(".list-group-label")
+    .each(function () {
+      var showing = $(this)
+        .nextUntil(".list-group-label", ".list-item")
+        .filter(":visible").length;
+      $(this).toggle(showing > 0);
+    });
 }
 
 function showalert(alert) {
