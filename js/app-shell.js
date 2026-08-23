@@ -423,8 +423,15 @@
       armClearCustoms(false);
       clearCustoms.disabled = customs === 0;
     }
+    var resetBtn = document.getElementById("set-reset-stats");
+    if (resetBtn) {
+      armResetStats(false);
+      resetBtn.disabled = !window.Stats || Stats.read().rolls === 0;
+    }
     var clearFavs = document.getElementById("set-clear-favorites");
     if (clearFavs) clearFavs.disabled = favoriteCount() === 0;
+
+    renderStats();
 
     var count = document.getElementById("set-fav-count");
     if (count) {
@@ -436,6 +443,99 @@
     }
   }
 
+
+  /* ------------------------------------------------------------------
+   * Stats
+   * ---------------------------------------------------------------- */
+  function plural(n, one, many) {
+    return n.toLocaleString() + " " + (n === 1 ? one : many || one + "s");
+  }
+
+  function shortDate(iso) {
+    if (!iso) return "never";
+    var d = new Date(iso);
+    if (isNaN(d)) return "never";
+    return d.toLocaleDateString(undefined, { year: "numeric", month: "short", day: "numeric" });
+  }
+
+  function tile(value, label, hint) {
+    return (
+      '<div class="stat-tile"' + (hint ? ' title="' + esc(hint) + '"' : "") + ">" +
+      '<span class="stat-value">' + value + "</span>" +
+      '<span class="stat-label">' + esc(label) + "</span>" +
+      "</div>"
+    );
+  }
+
+  function bar(rows) {
+    if (!rows.length) return '<p class="small faint">Nothing yet.</p>';
+    var max = rows[0].count || 1;
+    var html = '<div class="stat-bars">';
+    for (var i = 0; i < rows.length; i++) {
+      var pct = Math.max(4, Math.round((rows[i].count / max) * 100));
+      html +=
+        '<div class="stat-bar-row">' +
+        '<span class="stat-bar-name">' + esc(rows[i].name) + "</span>" +
+        '<span class="stat-bar-track"><span class="stat-bar-fill" style="width:' + pct + '%"></span></span>' +
+        '<span class="stat-bar-count">' + rows[i].count.toLocaleString() + "</span>" +
+        "</div>";
+    }
+    return html + "</div>";
+  }
+
+  function renderStats() {
+    var el = document.getElementById("set-stats");
+    if (!el || !window.Stats) return;
+    var s = Stats.summary();
+
+    if (!s.rolls) {
+      el.innerHTML =
+        '<p class="small faint">No rolls yet. Roll a table and this fills up: how much you have rolled, ' +
+        "what you reach for most, and how long you have been at it.</p>";
+      return;
+    }
+
+    var html = '<div class="stat-grid">';
+    html += tile(s.rolls.toLocaleString(), "rolls made", "Tables rolled from the list");
+    html += tile(s.results.toLocaleString(), "results generated", "Every line of result text produced for you");
+    html += tile(s.tableRolls.toLocaleString(), "tables consulted", "Underlying tables rolled, sub-rolls included");
+    html += tile(s.inlineRolls.toLocaleString(), "inline sub-rolls", "Results that rolled again inside themselves");
+    html += tile(s.deepest.toLocaleString(), "tables per roll", "Average number of tables behind one click");
+    html += tile(s.distinctTables.toLocaleString(), s.distinctTables === 1 ? "different table" : "different tables", "Distinct tables you have rolled at least once");
+    html += tile(plural(s.daysActive, "day"), "spent rolling", "Days on which you rolled at least once");
+    html += tile(plural(s.longestStreak, "day"), "longest streak", "Longest run of consecutive days");
+    html += "</div>";
+
+    html += '<div class="stat-cols">';
+
+    html += "<div><h3>Most rolled</h3>" + bar(s.topTables) + "</div>";
+    html += "<div><h3>By category</h3>" + bar(s.topCategories) + "</div>";
+
+    var facts = [];
+    facts.push("You first rolled on <b>" + esc(shortDate(s.firstRoll)) + "</b> and last on <b>" + esc(shortDate(s.lastRoll)) + "</b>.");
+    if (s.busiestDay) {
+      facts.push("Your busiest day was <b>" + esc(s.busiestDay.name) + "</b>, with " + plural(s.busiestDay.count, "roll") + ".");
+    }
+    if (s.customRolls) {
+      facts.push(plural(s.customRolls, "roll") + " of those were on tables you wrote yourself.");
+    }
+    if (s.subResults) {
+      facts.push("Count sub-rolls have generated " + plural(s.subResults, "extra result") + " for you, things like castle rooms and crew members.");
+    }
+    facts.push("You have starred " + plural(s.favoritesAdded, "table") + " over time and unstarred " + plural(s.favoritesRemoved, "table") + ", leaving <b>" + s.favorites + "</b> now.");
+    facts.push("You have written " + plural(s.customTablesCreated, "custom table") + ", of which <b>" + s.customTables + "</b> are still here.");
+    if (s.exports || s.imports) {
+      facts.push(plural(s.exports, "export") + " and " + plural(s.imports, "import") + " so far.");
+    }
+    facts.push("All of it takes up about <b>" + Math.max(1, Math.round(s.bytes / 1024)) + " KB</b> in this browser.");
+
+    html += "<div><h3>Odds and ends</h3><ul class=\"stat-facts small muted\">";
+    for (var f = 0; f < facts.length; f++) html += "<li>" + facts[f] + "</li>";
+    html += "</ul></div>";
+
+    html += "</div>";
+    el.innerHTML = html;
+  }
   function initSettings() {
     bindSegmented("set-theme", function (value) {
       setPref(PREFS.theme, value);
@@ -483,6 +583,32 @@
         }
       });
     }
+
+    // same two-step as the clear buttons: the counts cannot be rebuilt
+    var resetStats = document.getElementById("set-reset-stats");
+    if (resetStats) {
+      resetStats.addEventListener("click", function () {
+        if (!statsArmed) {
+          armResetStats(true);
+          return;
+        }
+        armResetStats(false);
+        if (window.Stats) Stats.reset();
+        syncSettings();
+        if (typeof window.showalert === "function") window.showalert("stats reset");
+      });
+    }
+  }
+
+  // the confirm state for "Reset stats"
+  var statsArmed = false;
+
+  function armResetStats(on) {
+    var btn = document.getElementById("set-reset-stats");
+    if (!btn) return;
+    statsArmed = !!on;
+    btn.textContent = on ? "Really reset?" : "Reset stats";
+    btn.classList.toggle("danger", !!on);
   }
 
   // the confirm state for "Clear all custom tables"
