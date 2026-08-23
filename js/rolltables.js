@@ -155,6 +155,9 @@ function get_table(table) {
     case "plots":
       return top.plots;
       break;
+    case "magicitems":
+      return top.magicitems;
+      break;
     case "skills":
       return top.skills;
       break;
@@ -663,27 +666,6 @@ function perform_roll() {
       "</span>"
   );
 
-  if (if_zero_dont_show_mainrolls != 0) {
-    side(" ");
-    side_display(" ");
-
-    // iterate the menu, displaying the values for main rolls
-    for (var i = 0; i < roll_table.main_rolls.length; i++) {
-      id = get_roll_id(roll_table.main_rolls[i]);
-      table = get_roll_table(roll_table.main_rolls[i]);
-      roll = get_roll(id, table);
-      value = roll_roll(id, table);
-
-      // care for sub-rolls if they exist
-      if (value.match(inline_roll_match)) {
-        value = inline_roll(value);
-      }
-
-      side(roll.title + " : " + value);
-      side_display(roll.title + " : <b>" + value + "</b>");
-    }
-  }
-
   // A pick roll chooses one of several tables and then rolls the one it landed
   // on, rather than rolling all of them the way main_rolls does. "Random Plot
   // Hook" uses it: pick an environment first, then draw a hook from that
@@ -709,6 +691,28 @@ function perform_roll() {
     side(picked.title + " : " + picked_value);
     side_display(picked.title + " : <b>" + picked_value + "</b>");
   }
+
+  if (if_zero_dont_show_mainrolls != 0) {
+    side(" ");
+    side_display(" ");
+
+    // iterate the menu, displaying the values for main rolls
+    for (var i = 0; i < roll_table.main_rolls.length; i++) {
+      id = get_roll_id(roll_table.main_rolls[i]);
+      table = get_roll_table(roll_table.main_rolls[i]);
+      roll = get_roll(id, table);
+      value = roll_roll(id, table);
+
+      // care for sub-rolls if they exist
+      if (value.match(inline_roll_match)) {
+        value = inline_roll(value);
+      }
+
+      side(roll.title + " : " + value);
+      side_display(roll.title + " : <b>" + value + "</b>");
+    }
+  }
+
 
   if (if_zero_dont_show_subrolls != 0) {
     side(" ");
