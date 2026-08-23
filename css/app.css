@@ -651,14 +651,18 @@ input:focus, select:focus, textarea:focus, .btn:focus-visible, .nav-item:focus-v
 }
 .stat-cols h3 { font-size: 0.95rem; margin-bottom: 8px; }
 
-.stat-bars { display: flex; flex-direction: column; gap: 7px; }
-.stat-bar-row {
+/* One grid for the whole list, with each row contributing its three cells to
+   it, so the tracks line up down the column. Giving every row its own grid
+   sized the count column to its own content, which left the bars starting at
+   a different x on each line. */
+.stat-bars {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 64px auto;
   align-items: center;
-  gap: 8px;
+  gap: 7px 8px;
   font-size: 0.82rem;
 }
+.stat-bar-row { display: contents; }
 .stat-bar-name {
   color: var(--text-dim);
   overflow: hidden;

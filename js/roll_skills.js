@@ -9,7 +9,7 @@
 
 top.skills = [
   {
-    title: "The skill is called",
+    title: "d20 The skill is called",
     id: "d20skillnamefirst_skills",
     roll: [
       "Ashfall",
@@ -35,7 +35,7 @@ top.skills = [
     ],
   },
   {
-    title: "and the rest of the name",
+    title: "d20 and the rest of the name",
     id: "d20skillnamesecond_skills",
     roll: [
       "Stance",
@@ -61,7 +61,7 @@ top.skills = [
     ],
   },
   {
-    title: "Discipline",
+    title: "d16 Discipline",
     id: "d16discipline_skills",
     roll: [
       "A martial form, drilled until the body does it without asking.",
@@ -83,7 +83,7 @@ top.skills = [
     ],
   },
   {
-    title: "What it lets you do",
+    title: "d20 What it lets you do",
     id: "d20effect_skills",
     roll: [
       "Read the last strong emotion left in a room.",
@@ -109,7 +109,7 @@ top.skills = [
     ],
   },
   {
-    title: "How it is performed",
+    title: "d20 How it is performed",
     id: "d20performance_skills",
     roll: [
       "A precise sequence of breaths, counted under your breath.",
@@ -135,7 +135,7 @@ top.skills = [
     ],
   },
   {
-    title: "What it costs",
+    title: "d16 What it costs",
     id: "d16cost_skills",
     roll: [
       "Nothing at all, which worries people who understand it.",
@@ -157,7 +157,7 @@ top.skills = [
     ],
   },
   {
-    title: "Drawback",
+    title: "d20 Drawback",
     id: "d20drawback_skills",
     roll: [
       "It works twice as well on people you like, which is a problem.",
@@ -183,7 +183,7 @@ top.skills = [
     ],
   },
   {
-    title: "Reach",
+    title: "d10 Reach",
     id: "d10reach_skills",
     roll: [
       "Touch only, skin to skin.",
@@ -199,7 +199,7 @@ top.skills = [
     ],
   },
   {
-    title: "How long it lasts",
+    title: "d10 How long it lasts",
     id: "d10duration_skills",
     roll: [
       "An instant. Blink and it has already happened.",
@@ -215,7 +215,7 @@ top.skills = [
     ],
   },
   {
-    title: "Where it came from",
+    title: "d16 Where it came from",
     id: "d16origin_skills",
     roll: [
       "Taught by a parent who refused to say where they learned it.",
@@ -237,7 +237,7 @@ top.skills = [
     ],
   },
   {
-    title: "The tell",
+    title: "d20 The tell",
     id: "d20tell_skills",
     roll: [
       "Your breath fogs, whatever the weather.",
@@ -263,7 +263,7 @@ top.skills = [
     ],
   },
   {
-    title: "How good you are at it",
+    title: "d12 How good you are at it",
     id: "d12mastery_skills",
     roll: [
       "Barely. It has worked three times and failed nine.",
@@ -281,7 +281,7 @@ top.skills = [
     ],
   },
   {
-    title: "One more thing",
+    title: "d20 One more thing",
     id: "d20quirk_skills",
     roll: [
       "Someone is looking for whoever can do this. They are not friendly.",

@@ -914,16 +914,37 @@ function clearhistory(show) {
   }
 }
 
-function collapse_history() {
-  $(".panel").removeClass("show");
-  $(".accordion").removeClass("active");
+// A history entry carries its open state in three places: the panel is shown
+// by .show, the header is outlined by .active, and the chevron points up or
+// down. Expand and Collapse used to set the first two and clicking an entry
+// set the first and the third, so the three drifted apart: expanding left
+// every chevron pointing down, and a click could close a panel while leaving
+// the header still outlined. One setter keeps them in step.
+function set_history_entry(accordion, open) {
+  var entry = $(accordion);
+  entry.toggleClass("active", open);
+  entry.next(".panel").toggleClass("show", open);
+  entry
+    .find(".expand-collapse")
+    .toggleClass("glyphicon-chevron-up", open)
+    .toggleClass("glyphicon-chevron-down", !open);
+}
+
+function each_history_entry(open) {
+  $("#rightview-history-display")
+    .find(".accordion")
+    .each(function () {
+      set_history_entry(this, open);
+    });
   blur();
 }
 
+function collapse_history() {
+  each_history_entry(false);
+}
+
 function expand_history() {
-  $(".panel").addClass("show");
-  $(".accordion").addClass("active");
-  blur();
+  each_history_entry(true);
 }
 
 function create_guid() {
@@ -1166,28 +1187,9 @@ $("body").on("click", ".accordion", function(e) {
     $(this).remove();
     process_history();
     showalert("history item deleted");
-    delete_enabled = false;
+    delete_enabled = false;
   } else {
-    if (
-      $(this)
-        .children(".history-item-menu")
-        .children(".glyphicon-chevron-down").length
-    ) {
-      $(this)
-        .children(".history-item-menu")
-        .children(".glyphicon-chevron-down")
-        .toggleClass("glyphicon-chevron-up")
-        .toggleClass("glyphicon-chevron-down");
-    } else {
-      $(this)
-        .children(".history-item-menu")
-        .children(".glyphicon-chevron-up")
-        .toggleClass("glyphicon-chevron-down")
-        .toggleClass("glyphicon-chevron-up");
-    }
-    $(this)
-      .next()
-      .toggleClass("show");
+    set_history_entry(this, !$(this).next(".panel").hasClass("show"));
     blur();
   }
 });
