@@ -133,6 +133,7 @@
       favorites: readJSON("favorites", []),
       customTables: readJSON("art:customTables", []),
       history: readHistory(),
+      stats: window.Stats ? Stats.read() : null,
     };
   }
 
@@ -158,6 +159,7 @@
       URL.revokeObjectURL(url);
     }, 1000);
 
+    if (window.Stats) Stats.note("exports");
     if (typeof window.showalert === "function") window.showalert("backup exported");
   }
 
@@ -173,7 +175,13 @@
   }
 
   function applyBackup(data) {
-    var added = { favorites: 0, tables: 0, history: 0 };
+    var added = { favorites: 0, tables: 0, history: 0, stats: false };
+
+    // usage counts add up rather than replace, so importing another device's
+    // file gives one combined history instead of whichever was newer
+    if (data.stats && window.Stats) {
+      added.stats = Stats.merge(data.stats);
+    }
 
     // favorites: union, so nothing already starred is lost
     if (Array.isArray(data.favorites)) {
@@ -254,7 +262,7 @@
         setStatus("That backup came from a different app.", true);
         return;
       }
-      if (!data.favorites && !data.customTables && !data.history) {
+      if (!data.favorites && !data.customTables && !data.history && !data.stats) {
         setStatus("Nothing to import from that file.", true);
         return;
       }
@@ -263,9 +271,11 @@
       setStatus(
         "Imported " + added.tables + " custom " + (added.tables === 1 ? "table" : "tables") +
           ", " + added.favorites + " " + (added.favorites === 1 ? "favorite" : "favorites") +
-          " and " + added.history + " history " + (added.history === 1 ? "entry" : "entries") + ".",
+          " and " + added.history + " history " + (added.history === 1 ? "entry" : "entries") +
+          (added.stats ? ", and merged the usage stats" : "") + ".",
         false
       );
+      if (window.Stats) Stats.note("imports");
       if (typeof window.showalert === "function") window.showalert("backup imported");
     };
     reader.onerror = function () {

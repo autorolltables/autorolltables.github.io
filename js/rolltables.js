@@ -155,6 +155,9 @@ function get_table(table) {
     case "plots":
       return top.plots;
       break;
+    case "skills":
+      return top.skills;
+      break;
     case "settlements":
       return top.settlements;
       break;
@@ -364,6 +367,10 @@ function editFavorites(target) {
     favorites = favorites.filter((favorite) => favorite !== title);
   }
 
+  if (window.Stats) {
+    Stats.note(isFavorite ? "favoritesRemoved" : "favoritesAdded");
+  }
+
   target.toggleClass("favorite");
 
   writeLocalStorage("favorites", favorites);
@@ -427,6 +434,7 @@ function inline_roll(roll_text) {
   var result = found[1].trim().replace(/[;,.]$/, "");
 
   // return display in a clear format
+  if (window.Stats) Stats.bump("inlineRolls");
   return "(d" + die + ") " + roll_description + ": " + result;
 }
 
@@ -447,6 +455,7 @@ function roll_roll(id, table) {
       var length = table[i].roll.length;
       // log("roll length:"+length);
       var rand = Math.floor(Math.random() * length);
+      if (window.Stats) Stats.bump("tableRolls");
       return table[i].roll[rand];
     }
   }
@@ -473,6 +482,7 @@ function roll_sub_roll(id, table) {
           var length = table[i].roll.length;
           var amount = get_roll_value(number);
           amount = Math.ceil(amount * (percent_of / 100));
+          if (window.Stats) Stats.bump("subResults", amount);
 
           side(title + " : " + amount);
           side_display(title + " : <b>" + amount + "</b>");
@@ -516,6 +526,7 @@ function roll_sub_roll(id, table) {
           var singular_item = table[i].singular;
           var amount = get_roll_value(number);
           amount = Math.ceil(amount * (percent_of / 100));
+          if (window.Stats) Stats.bump("subResults", amount);
 
           side(title + " : " + amount);
           side_display(title + " : <b>" + amount + "</b>");
@@ -712,6 +723,10 @@ function perform_roll() {
     }
   }
 
+  if (window.Stats) {
+    Stats.commit(roll_table_title, current ? current.id : "", false);
+  }
+
   display_side();
   rightscrolltop();
   blur();
@@ -753,6 +768,10 @@ function perform_custom_roll(roll_table) {
 
   side("Result : " + value);
   side_display("<b>" + value + "</b>");
+
+  if (window.Stats) {
+    Stats.commit(title, current ? current.id : "", true);
+  }
 
   display_side();
   rightscrolltop();

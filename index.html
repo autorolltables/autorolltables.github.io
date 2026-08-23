@@ -15,7 +15,7 @@
   <link rel="icon" type="image/png" sizes="512x512" href="img/d20-icon-512.png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-  <link rel="stylesheet" href="css/app.css?v=17">
+  <link rel="stylesheet" href="css/app.css?v=18">
 
   <script>
     // apply the saved theme before first paint so there is no flash
@@ -40,6 +40,7 @@
   <script src="js/roll_npcs.js"></script>
   <script src="js/roll_objects.js"></script>
   <script src="js/roll_plots.js"></script>
+  <script src="js/roll_skills.js"></script>
   <script src="js/roll_settlements.js"></script>
   <script src="js/roll_wilderness.js"></script>
   <script src="js/roll_subrolls.js"></script>
@@ -214,6 +215,16 @@
         </div>
 
         <div class="card" style="grid-column: 1 / -1">
+          <h2>Your stats</h2>
+          <p class="small muted">Everything you have rolled on this device, counted as you go. Kept in this browser like the rest of your data, and included in a backup so it survives a move.</p>
+          <div id="set-stats"></div>
+          <div class="btn-row" style="margin-top:14px">
+            <button type="button" class="btn small" id="set-reset-stats">Reset stats</button>
+          </div>
+          <p class="small faint" style="margin-top:10px">Resetting clears the counts only. Your favorites, custom tables and history are untouched.</p>
+        </div>
+
+        <div class="card" style="grid-column: 1 / -1">
           <h2>Attribution</h2>
           <p class="small muted">The roll tables collected here were written and shared by the tabletop community. Enormous thanks to <b>OrkishBlade</b> and everyone at <a href="https://www.reddit.com/r/BehindTheTables/" target="_blank" rel="noopener">/r/BehindTheTables</a>, whose tables make up the bulk of this site.</p>
           <h3>Table authors</h3>
@@ -273,10 +284,11 @@
 </dialog>
 
 <script src="includes/jquery-3.7.1.min.js"></script>
-<script src="js/custom-tables.js?v=17"></script>
-<script src="js/backup.js?v=17"></script>
-<script src="js/app-shell.js?v=17"></script>
-<script src="js/rolltables.js?v=17"></script>
+<script src="js/stats.js?v=18"></script>
+<script src="js/custom-tables.js?v=18"></script>
+<script src="js/backup.js?v=18"></script>
+<script src="js/app-shell.js?v=18"></script>
+<script src="js/rolltables.js?v=18"></script>
 
 <!-- Start of StatCounter Code for Default Guide -->
 <script type="text/javascript">

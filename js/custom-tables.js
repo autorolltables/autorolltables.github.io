@@ -187,6 +187,8 @@
       });
     }
 
+    if (wasNew && window.Stats) Stats.note("customTablesCreated");
+
     if (typeof window.showalert === "function") {
       window.showalert(wasNew ? "custom added" : "custom saved");
     }
