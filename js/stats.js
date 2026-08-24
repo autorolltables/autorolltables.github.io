@@ -53,6 +53,7 @@
     try {
       localStorage.setItem(KEY, JSON.stringify(s));
     } catch (e) {}
+    if (window.Autosave) Autosave.schedule();
   }
 
   function today() {

@@ -28,6 +28,7 @@ function init() {
 
   CustomTables.init();
   Backup.init();
+  Autosave.init();
 
   // the shell renders the nav and opens whichever category the URL asks for,
   // which is what fills the table list
@@ -88,6 +89,7 @@ function display_side() {
   }
 
   rightscrolltop();
+  if (window.Autosave) Autosave.schedule();
 }
 
 function output_filter(obj) {
@@ -341,6 +343,7 @@ function loadLocalStorage(key) {
 
 function writeLocalStorage(key, obj) {
   localStorage.setItem(key, JSON.stringify(obj));
+  if (window.Autosave) Autosave.schedule();
 }
 
 function loadFavorites() {
@@ -829,6 +832,7 @@ copyTextareaBtn.addEventListener("click", function(event) {
 });
 
 function process_history() {
+  if (window.Autosave) Autosave.schedule();
   var separator = "------------------------------------------\n";
   var copy_list = document
     .getElementById("rightview-history-display")

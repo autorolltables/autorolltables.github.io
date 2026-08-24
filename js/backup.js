@@ -276,6 +276,7 @@
         false
       );
       if (window.Stats) Stats.note("imports");
+      if (window.Autosave) Autosave.schedule();
       if (typeof window.showalert === "function") window.showalert("backup imported");
     };
     reader.onerror = function () {

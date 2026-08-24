@@ -15,7 +15,7 @@
   <link rel="icon" type="image/png" sizes="512x512" href="img/d20-icon-512.png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-  <link rel="stylesheet" href="css/app.css?v=21">
+  <link rel="stylesheet" href="css/app.css?v=22">
 
   <script>
     // apply the saved theme before first paint so there is no flash
@@ -201,6 +201,17 @@
             </button>
             <input type="file" id="set-import-file" accept=".json,application/json" hidden>
           </div>
+
+          <div id="autosave-panel" hidden>
+            <h3>Auto-save to a file</h3>
+            <p class="small muted">Choose a file once and every later change is written to it, so this browser stops being the only copy. The file is the same format the Export button produces.</p>
+            <div class="btn-row">
+              <button type="button" class="btn small" id="autosave-pick">Choose a file...</button>
+              <button type="button" class="btn small" id="autosave-now" hidden>Save now</button>
+              <button type="button" class="btn small" id="autosave-stop" hidden>Stop auto-saving</button>
+            </div>
+            <p class="small faint" id="autosave-status" style="margin-top:10px"></p>
+          </div>
           <p class="small muted" id="set-backup-status" role="status" style="margin-top:10px"></p>
         </div>
 
@@ -286,11 +297,12 @@
 </dialog>
 
 <script src="includes/jquery-3.7.1.min.js"></script>
-<script src="js/stats.js?v=21"></script>
-<script src="js/custom-tables.js?v=21"></script>
-<script src="js/backup.js?v=21"></script>
-<script src="js/app-shell.js?v=21"></script>
-<script src="js/rolltables.js?v=21"></script>
+<script src="js/stats.js?v=22"></script>
+<script src="js/custom-tables.js?v=22"></script>
+<script src="js/backup.js?v=22"></script>
+<script src="js/autosave.js?v=22"></script>
+<script src="js/app-shell.js?v=22"></script>
+<script src="js/rolltables.js?v=22"></script>
 
 <!-- Start of StatCounter Code for Default Guide -->
 <script type="text/javascript">

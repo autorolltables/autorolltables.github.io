@@ -44,6 +44,7 @@
     } catch (e) {
       if (typeof window.showalert === "function") window.showalert("custom save failed");
     }
+    if (window.Autosave) Autosave.schedule();
   }
 
   function newId() {
