@@ -157,6 +157,12 @@ function get_table(table) {
     case "plots":
       return top.plots;
       break;
+    case "potions":
+      return top.potions;
+      break;
+    case "scrolls":
+      return top.scrolls;
+      break;
     case "magicitems":
       return top.magicitems;
       break;
