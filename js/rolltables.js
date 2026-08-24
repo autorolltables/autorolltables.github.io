@@ -158,6 +158,9 @@ function get_table(table) {
     case "magicitems":
       return top.magicitems;
       break;
+    case "achievements":
+      return top.achievements;
+      break;
     case "skills":
       return top.skills;
       break;
