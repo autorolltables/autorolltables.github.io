@@ -609,6 +609,9 @@ input:focus, select:focus, textarea:focus, .btn:focus-visible, .nav-item:focus-v
 .seg:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
 .muted { color: var(--text-dim); }
 .faint { color: var(--text-faint); }
+/* A one-line aside under a status message, on its own line so the sentence
+   above it keeps its inline Resume button. */
+.block-hint { display: block; margin-top: 6px; color: var(--text-faint); }
 .small { font-size: 0.83rem; }
 .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 14px; align-items: start; }
 
