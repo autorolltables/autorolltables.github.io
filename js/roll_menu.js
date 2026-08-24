@@ -373,6 +373,47 @@ top.menu = [
         sub_rolls: [],
       },
       {
+        title: "Achievement Unlocked",
+        use:
+          "An award for something the party actually did, with a prize attached. The category of achievement is picked first, so the kind of joke changes each roll, and the prize is picked separately: a legendary feat can still pay out in novelty socks. Audience, sponsors, titles and disputes turn up by chance.",
+        main_rolls: [
+          "achievements/d20commentary_achievements",
+          "achievements/d16tier_achievements",
+          "achievements/d12rarity_achievements",
+          "achievements/d16conditions_achievements",
+        ],
+        pick_rolls: [
+          "achievements/d16combat_achievements",
+          "achievements/d16selfinflicted_achievements",
+          "achievements/d14social_achievements",
+          "achievements/d14exploration_achievements",
+          "achievements/d14trade_achievements",
+          "achievements/d14survival_achievements",
+          "achievements/d14animals_achievements",
+          "achievements/d14food_achievements",
+          "achievements/d16unclassifiable_achievements",
+        ],
+        sub_rolls: [
+          "achievements/gateprize_achievements",
+          "achievements/gateaudience_achievements",
+          "achievements/gateleaderboard_achievements",
+          "achievements/gatesponsor_achievements",
+          "achievements/gatetitle_achievements",
+          "achievements/gatenexttier_achievements",
+          "achievements/gatesimultaneous_achievements",
+          "achievements/gatecontested_achievements",
+          "achievements/gateprizeproblem_achievements",
+          "achievements/gatefirstever_achievements",
+        ],
+      },
+      {
+        title: "- Achievement Sweep (1d4)",
+        use:
+          "A session worth of awards at a glance: one line each, with a prize named in brief. Roll the full table above for any of them that deserve the paperwork.",
+        main_rolls: [],
+        sub_rolls: ["achievements/gatesweep_achievements"],
+      },
+      {
         title: "Battle Events",
         use:
           "Use these tables for inspiration or roll them up randomly. Some of the tables could be rolled more.",
@@ -9752,6 +9793,47 @@ top.menu = [
     title: "Plots",
     id: "Plots",
     items: [
+      {
+        title: "Achievement Unlocked",
+        use:
+          "An award for something the party actually did, with a prize attached. The category of achievement is picked first, so the kind of joke changes each roll, and the prize is picked separately: a legendary feat can still pay out in novelty socks. Audience, sponsors, titles and disputes turn up by chance.",
+        main_rolls: [
+          "achievements/d20commentary_achievements",
+          "achievements/d16tier_achievements",
+          "achievements/d12rarity_achievements",
+          "achievements/d16conditions_achievements",
+        ],
+        pick_rolls: [
+          "achievements/d16combat_achievements",
+          "achievements/d16selfinflicted_achievements",
+          "achievements/d14social_achievements",
+          "achievements/d14exploration_achievements",
+          "achievements/d14trade_achievements",
+          "achievements/d14survival_achievements",
+          "achievements/d14animals_achievements",
+          "achievements/d14food_achievements",
+          "achievements/d16unclassifiable_achievements",
+        ],
+        sub_rolls: [
+          "achievements/gateprize_achievements",
+          "achievements/gateaudience_achievements",
+          "achievements/gateleaderboard_achievements",
+          "achievements/gatesponsor_achievements",
+          "achievements/gatetitle_achievements",
+          "achievements/gatenexttier_achievements",
+          "achievements/gatesimultaneous_achievements",
+          "achievements/gatecontested_achievements",
+          "achievements/gateprizeproblem_achievements",
+          "achievements/gatefirstever_achievements",
+        ],
+      },
+      {
+        title: "- Achievement Sweep (1d4)",
+        use:
+          "A session worth of awards at a glance: one line each, with a prize named in brief. Roll the full table above for any of them that deserve the paperwork.",
+        main_rolls: [],
+        sub_rolls: ["achievements/gatesweep_achievements"],
+      },
       {
         title: "Battle Events",
         use:
