@@ -169,6 +169,9 @@ function get_table(table) {
     case "achievements":
       return top.achievements;
       break;
+    case "classes":
+      return top.classes;
+      break;
     case "skills":
       return top.skills;
       break;
