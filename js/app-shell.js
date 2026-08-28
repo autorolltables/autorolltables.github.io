@@ -306,8 +306,17 @@
   // routes that have been renamed, so older bookmarks still land somewhere
   var ROUTE_ALIASES = { Monsters: "Creatures" };
 
-  function currentRoute() {
+  // A hash can carry a query of its own, as in #/Items?f=potion. The route is
+  // what comes before the ?, and the rest is read by url_filter_text() in
+  // rolltables.js, so a link can name a tab and a search at once.
+  function hashRoute() {
     var h = String(location.hash || "").replace(/^#\/?/, "");
+    var mark = h.indexOf("?");
+    return mark < 0 ? h : h.substring(0, mark);
+  }
+
+  function currentRoute() {
+    var h = hashRoute();
     if (ROUTE_ALIASES[h]) h = ROUTE_ALIASES[h];
     if (h === "settings") return "settings";
     for (var i = 0; i < CATEGORIES.length; i++) if (CATEGORIES[i].id === h) return h;
@@ -364,8 +373,14 @@
   function applyRoute() {
     closeMoreSheet();
     var route = currentRoute();
-    if (route === "settings") showSettings();
-    else showCategory(route);
+    if (route === "settings") {
+      showSettings();
+    } else {
+      showCategory(route);
+      // the list exists now, so a filter carried in the URL can be applied to
+      // it: the link lands on the tab with the search already run
+      if (typeof window.apply_url_filter === "function") window.apply_url_filter();
+    }
     var main = document.getElementById("main");
     if (main) main.scrollTop = 0;
   }

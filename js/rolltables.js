@@ -37,12 +37,9 @@ function init() {
   // check querystring for menuhover
   menuhovercheck();
 
-  // querystring filter
-  var urlParams = new URLSearchParams(window.location.search);
-  if (urlParams.has("filter")) {
-    $("#filter").val(urlParams.get("filter"));
-    filter();
-  }
+  // AppShell.boot() has already built the list, so a filter carried in the URL
+  // can be applied to it now
+  apply_url_filter();
 }
 
 // placeholder shown in the result pane before anything has been rolled
@@ -992,6 +989,40 @@ jQuery.expr[":"].regex = function(elem, index, match) {
     );
   return regex.test(jQuery(elem)[attr.method](attr.property));
 };
+
+// A filter can arrive in the URL two ways: as ?filter= or ?f= ahead of the
+// hash, and as #/Items?f= inside it. The hash form is the one worth linking,
+// since the tab lives in the hash too, so it wins when both are present.
+function url_filter_text() {
+  var text = "";
+  try {
+    var search = new URLSearchParams(window.location.search);
+    if (search.has("filter")) text = search.get("filter");
+    if (search.has("f")) text = search.get("f");
+
+    var hash = String(window.location.hash || "");
+    var mark = hash.indexOf("?");
+    if (mark >= 0) {
+      var inside = new URLSearchParams(hash.substring(mark + 1));
+      if (inside.has("filter")) text = inside.get("filter");
+      if (inside.has("f")) text = inside.get("f");
+    }
+  } catch (e) {
+    return "";
+  }
+  return text || "";
+}
+
+// Called on load and after every route change, so #/Items?f=potion opens that
+// tab with the box filled and the list already narrowed. A URL carrying no
+// filter leaves whatever the reader has typed alone, which is what keeps a
+// typed filter alive while they move between tabs.
+function apply_url_filter() {
+  var text = url_filter_text();
+  if (!text) return;
+  if ($("#filter").val() !== text) $("#filter").val(text);
+  filter();
+}
 
 function filter() {
   // hide all elements in left nav
