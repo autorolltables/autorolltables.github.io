@@ -333,7 +333,7 @@ top.potions = [
       "Enough for the whole party, thinly, and nobody will get the full effect.",
       "One dose, and a residue that is worth analysing.",
       "It refills, slowly, at a rate of about a dose a season.",
-      "Doses remaining: (d4): 1. one; 2. two; 3. three; 4. more than there should be",
+      "Doses remaining (d4): 1. one; 2. two; 3. three; 4. more than there should be",
     ],
   },
   {
